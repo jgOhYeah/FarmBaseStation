@@ -10,13 +10,52 @@
  * @date 2023-08-08
  */
 #include "defines.h"
-#include "fields.h"
-#include <ThingsBoard.h>
+#include "src/fields.h"
+#include "src/networking.h"
+// #include "src/rpc.h"
+// #include "src/io.h"
+// #include "src/timeseries.h"
+
+WiFiClient wifi;
+PubSubClient mqtt(wifi);
+
+// QueueHandle_t rpcQueue;
+// QueueHandle_t ioQueue;
+// SemaphoreHandle_t hwsMutex;
+SemaphoreHandle_t mqttMutex;
+SemaphoreHandle_t serialMutex;
 
 void setup() {
+    // pinMode(PIN_HWS, OUTPUT);
+    // digitalWrite(PIN_HWS, LOW);
 
+    // Setup queues and mutexes
+    // rpcQueue = xQueueCreate(CONCURRENT_RPC_CALLS, sizeof(RpcMessage));
+    // ioQueue = xQueueCreate(CONCURRENT_RPC_CALLS, sizeof(IoInstruction));
+    // hwsMutex = xSemaphoreCreateMutex();
+    mqttMutex = xSemaphoreCreateMutex();
+    serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
+
+    // Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
+    Serial.setDebugOutput(true);
+    LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
+
+    if (!mqttMutex || !serialMutex) {
+        LOGE("Setup", "Could not create something!!!");
+    }
+
+    xTaskCreatePinnedToCore (
+        networkingTask,
+        "Networking",
+        4096,
+        NULL,
+        1,
+        NULL,
+        1
+    );
+    
+    vTaskDelete(NULL); // Don't need the loop, so can remove the main Arduino task.
 }
 
 void loop() {
-
 }
