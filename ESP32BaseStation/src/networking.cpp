@@ -12,6 +12,7 @@ extern WiFiClient wifi;
 extern PubSubClient mqtt;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
+extern DeviceManager deviceManager;
 
 /**
  * @brief Connects to WiFi.
@@ -90,7 +91,7 @@ void mqttSubscribe()
 {
     mqtt.connect(THINGSBOARD_NAME, THINGSBOARD_TOKEN, NULL);
     mqtt.subscribe(Topic::RPC);
-    // TODO: Add devices
+    deviceManager.connectDevices();
 }
 
 /**

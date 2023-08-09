@@ -10,12 +10,6 @@
  * @date 2023-08-08
  */
 #include "defines.h"
-#include "src/topics.h"
-#include "src/fields.h"
-#include "src/networking.h"
-// #include "src/rpc.h"
-// #include "src/io.h"
-// #include "src/timeseries.h"
 
 WiFiClient wifi;
 PubSubClient mqtt(wifi);
@@ -25,6 +19,13 @@ PubSubClient mqtt(wifi);
 // SemaphoreHandle_t hwsMutex;
 SemaphoreHandle_t mqttMutex;
 SemaphoreHandle_t serialMutex;
+
+#include "src/topics.h"
+#include "src/lookups.h"
+#include "src/fields.h"
+#include "src/devices.h"
+#include "device_list.h"
+#include "src/networking.h"
 
 void setup() {
     // pinMode(PIN_HWS, OUTPUT);

@@ -9,6 +9,7 @@
 #pragma once
 #include "../defines.h"
 #include "topics.h"
+#include "devices.h"
 
 void wifiConnect();
 void mqttReceived(char *topic, byte *message, unsigned int length);
