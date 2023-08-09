@@ -4,8 +4,10 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-08
+ * @date 2023-08-09
  */
+
+#pragma once
 
 class Lookupable
 {
@@ -17,20 +19,21 @@ public:
 
 /**
  * @brief Class for looking up and managing devices and fields.
- * 
+ *
  */
+template <typename LookupableClass>
 class LookupManager
 {
 public:
-    LookupManager(Lookupable* items, const uint8_t count): m_items(items), m_count(count) {}
+    LookupManager(LookupableClass *items, const uint8_t count) : m_items(items), m_count(count) {}
 
     /**
      * @brief Gets the object with the given symbol.
-     * 
-     * @param symbol 
-     * @return Lookupable* 
+     *
+     * @param symbol
+     * @return Lookupable*
      */
-    Lookupable* getWithSymbol(char symbol)
+    LookupableClass *getWithSymbol(char symbol)
     {
         for (uint8_t i = 0; i < m_count; i++)
         {
@@ -46,9 +49,9 @@ public:
 
     /**
      * @brief Gets the object matching the given name.
-     * 
+     *
      */
-    Lookupable* getWithName(const char* name)
+    LookupableClass *getWithName(const char *name)
     {
         for (uint8_t i = 0; i < m_count; i++)
         {
@@ -63,7 +66,7 @@ public:
     }
 
 private:
-    Lookupable* const m_items;
+    LookupableClass *const m_items;
     const uint8_t m_count;
 };
 
@@ -111,4 +114,20 @@ class Device : public Lookupable
 {
 public:
     Device(const char *name, const char symbol) : Lookupable(name, symbol) {}
+    // Device(const char *name, const char symbol, LookupManager<Field> fields) : Lookupable(name, symbol), fields(fields) {}
+    // LookupManager<Field<char>> fields;
+};
+
+/**
+ * @brief Class for managing all devices
+ *
+ */
+class DeviceManager : public LookupManager<Device>
+{
+    DeviceManager(Device *items, const uint8_t count) : LookupManager(items, count) {}
+
+    void connectDevices()
+    {
+        // TODO: Take mqtt object and semaphore, for each device, publish it to connect. release semaphore.
+    }
 };

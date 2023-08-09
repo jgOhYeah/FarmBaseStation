@@ -1,5 +1,5 @@
 build
 .vscode
-HotWaterServiceControl/credentials.h
+ESP32BaseStation/credentials.h
 Doxygen
 .doxygen

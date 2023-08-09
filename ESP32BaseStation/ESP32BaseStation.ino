@@ -10,6 +10,7 @@
  * @date 2023-08-08
  */
 #include "defines.h"
+#include "src/topics.h"
 #include "src/fields.h"
 #include "src/networking.h"
 // #include "src/rpc.h"
