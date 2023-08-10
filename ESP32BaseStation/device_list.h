@@ -11,27 +11,27 @@
 #include "src/fields.h"
 #include "src/devices.h"
 
-Field fieldsList[] = {
-    TenthsField("Battery Voltage", 'V'),
-    LongUIntField("Uptime", 't'),
-    TenthsField("Temperature", 'T'),
-    ByteField("Transmit Enabled", 'r'),
-    ByteField("Fence Enabled", 'F'),
-    FlagField("Request status", 's'),
-    ByteField("Transmit Interval", 'I'),
-    PumpOnTimeField("Pump on time", 'P'),
-    PumpOnTimeField("Average pump on time", 'a'),
-    UIntField("Water capacitive reading", 'w'),
-    PumpOnTimeField("Maximum pump on time in block", 'm'),
-    PumpOnTimeField("Minimum pump on time in block", 'n'),
-    UIntField("Count of pump starts in block", 'c'),
-    ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
+Field *fieldsList[] = {
+    new TenthsField("Battery Voltage", 'V'),
+    new LongUIntField("Uptime", 't'),
+    new TenthsField("Temperature", 'T'),
+    new ByteField("Transmit Enabled", 'r'),
+    new ByteField("Fence Enabled", 'F'),
+    new FlagField("Request status", 's'),
+    new ByteField("Transmit Interval", 'I'),
+    new PumpOnTimeField("Pump on time", 'P'),
+    new PumpOnTimeField("Average pump on time", 'a'),
+    new UIntField("Water capacitive reading", 'w'),
+    new PumpOnTimeField("Maximum pump on time in block", 'm'),
+    new PumpOnTimeField("Minimum pump on time in block", 'n'),
+    new UIntField("Count of pump starts in block", 'c'),
+    new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
 };
 
-Device deviceList[] = {
-    Device("Main Pressure Pump", 0x5A),
-    Device("Solar Electric Fence", 0x4A),
-    Device("Irrigation Water Detector", 0x47)
+Device *deviceList[] = {
+    new Device("Main Pressure Pump", 0x5A),
+    new Device("Solar Electric Fence", 0x4A),
+    new Device("Irrigation Water Detector", 0x47)
 };
 
 DeviceManager deviceManager(deviceList, sizeof(deviceList));

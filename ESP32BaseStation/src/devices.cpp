@@ -12,6 +12,37 @@
 extern SemaphoreHandle_t serialMutex;
 extern PubSubClient mqtt;
 
+void Device::decodePacket(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json)
+{
+    // Check we have at least 1 character to decode.
+    if (length == 0)
+    {
+        LOGI("DEVICES", "Was given a packet to decode with 0 length.");
+        return;
+    }
+
+    // For each field, add it to the document.
+    for (uint8_t i = 0; i < length; i++)
+    {
+        Field *field = fields.getWithSymbol(payload[i]);
+        if (field)
+        {
+            uint8_t valueStart = i+1;
+            uint8_t result = field->decode(&payload[valueStart], length - valueStart, json); // TODO: Add device name
+            if (result != FIELD_NO_MEMORY)
+            {
+                LOGI("DEVICES", "Ran out of spots in the packet to properly decode.");
+                i += result;
+            }
+        }
+        else
+        {
+            LOGI("DEVICES", "Unrecognised field. Discarding from here on.");
+            return;
+        }
+    }
+}
+
 void DeviceManager::connectDevices()
 {
     // For each device, connect it.
@@ -19,7 +50,7 @@ void DeviceManager::connectDevices()
     {
         // Generate a json object with everything required.
         StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
-        json["device"] = m_items[i].name;
+        json["device"] = m_items[i]->name;
         char charBuff[MAX_JSON_TEXT_LENGTH];
         serializeJson(json, charBuff, sizeof(charBuff));
 

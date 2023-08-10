@@ -8,7 +8,7 @@
  */
 #include "conversions.h"
 
-void uLongToCharArray(uint32_t integer, char *charBuffer)
+void uLongToByteArray(uint32_t integer, uint8_t *charBuffer)
 {
     // For each byte, generate a char from it.
     for (uint8_t i = 0; i < 4; i++)
@@ -18,7 +18,7 @@ void uLongToCharArray(uint32_t integer, char *charBuffer)
     }
 }
 
-uint32_t charArrayToULong(char *charBuffer)
+uint32_t byteArrayToULong(uint8_t *charBuffer)
 {
     // For each byte, generate a char from it.
     uint32_t integer = 0;
@@ -30,13 +30,13 @@ uint32_t charArrayToULong(char *charBuffer)
     return integer;
 }
 
-void uIntToCharArray(uint16_t integer, char *charBuffer)
+void uIntToByteArray(uint16_t integer, uint8_t *charBuffer)
 {
     charBuffer[0] = integer & 0xFF;
     charBuffer[1] = (integer >> 8);
 }
 
-uint16_t charArrayToUInt(char *charBuffer)
+uint16_t byteArrayToUInt(uint8_t *charBuffer)
 {
     uint16_t integer = (uint8_t)charBuffer[0] | (((uint8_t)charBuffer[1]) << 8);
     return integer;

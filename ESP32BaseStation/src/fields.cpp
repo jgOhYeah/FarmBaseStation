@@ -9,85 +9,91 @@
 #include "fields.h"
 
 extern SemaphoreHandle_t serialMutex;
-extern uint16_t charArrayToUInt(char *charBuffer);
-extern uint32_t charArrayToULong(char *charBuffer);
+extern uint16_t byteArrayToUInt(uint8_t *charBuffer);
+extern uint32_t byteArrayToULong(uint8_t *charBuffer);
 
 char Field::writeSymbol()
 {
     return symbol | 0x80;
 }
 
-void Field::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json) {}
+int8_t Field::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json) {}
 
-void TenthsField::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 2)
     {
         LOGI("FIELDS", "Got a field without enough bytes");
-        return;
+        return FIELD_NO_MEMORY;
     }
 
     // Convert and save to json
-    float value = (int16_t)charArrayToUInt(bytes) / 10.;
+    float value = (int16_t)byteArrayToUInt(bytes) / 10.;
     json[name] = value;
+    return 2;
 }
 
-void LongUIntField::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t LongUIntField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 4)
     {
         LOGI("FIELDS", "Got a field without enough bytes");
-        return;
+        return FIELD_NO_MEMORY;
     }
 
     // Convert and save to json
-    json[name] = charArrayToULong(bytes);
+    json[name] = byteArrayToULong(bytes);
+    return 4;
 }
 
-void ByteField::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t ByteField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 1)
     {
         LOGI("FIELDS", "Got a field without enough bytes");
-        return;
+        return FIELD_NO_MEMORY;
     }
 
     // Convert and save to json
     json[name] = (uint8_t)bytes[0];
+    return 1;
 }
 
-void FlagField::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t FlagField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Convert and save to json
     json[name] = 1; // Set to a constant
+    return 0;
 }
 
-void PumpOnTimeField::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t PumpOnTimeField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 2)
     {
         LOGI("FIELDS", "Got a field without enough bytes");
-        return;
+        return FIELD_NO_MEMORY;
     }
 
     // Convert and save to json
-    float value = charArrayToUInt(bytes) / 2.;
+    float value = byteArrayToUInt(bytes) / 2.;
     json[name] = value;
+    return 2;
 }
 
-void UIntField::decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t UIntField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 4)
     {
         LOGI("FIELDS", "Got a field without enough bytes");
-        return;
+        return FIELD_NO_MEMORY;
     }
 
     // Convert and save to json
-    json[name] = charArrayToULong(bytes);
+    json[name] = byteArrayToULong(bytes);
+    return 4;
 }

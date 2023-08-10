@@ -14,14 +14,14 @@
  * @param charBuffer The char array to put the number in. Must be at least 4 chars + startPos long.
  * @param startPos [Optional, default 0] The position in the char array to put the given long in.
  */
-void uLongToCharArray(uint32_t integer, char *charBuffer);
+void uLongToByteArray(uint32_t integer, uint8_t *charBuffer);
 
 /**
  * Converts a char array to a long (4 bytes) in little endian format.
  * @param charBuffer The char array to use. Must be at least 4 chars + startPos long.
  * @param startPos [Optional, default 0] The position in the char array to read the given long from.
  */
-uint32_t charArrayToULong(char *charBuffer);
+uint32_t byteArrayToULong(uint8_t *charBuffer);
 
 /**
  * Converts an unsigned int (2 bytes) to a char array in little endian format.
@@ -29,11 +29,11 @@ uint32_t charArrayToULong(char *charBuffer);
  * @param charBuffer The char array to put the number in. Must be at least 4 chars + startPos long.
  * @param startPos [Optional, default 0] The position in the char array to put the given long in.
  */
-void uIntToCharArray(uint16_t integer, char *charBuffer);
+void uIntToByteArray(uint16_t integer, uint8_t *charBuffer);
 
 /**
  * Converts a char array to an unsigned int (2 bytes) in little endian format.
  * @param charBuffer The char array to use. Must be at least 4 chars + startPos long.
  * @param startPos [Optional, default 0] The position in the char array to read the given long from.
  */
-uint16_t charArrayToUInt(char *charBuffer);
+uint16_t byteArrayToUInt(uint8_t *charBuffer);

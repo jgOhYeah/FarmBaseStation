@@ -12,6 +12,8 @@
 #include "lookups.h"
 #include "conversions.h"
 
+#define FIELD_NO_MEMORY -1
+
 /**
  * @brief Class for handling data fields in messages.
  *
@@ -36,7 +38,7 @@ public:
      * @param length the amount of data remaining from the start of bytes.
      * @param json the document to place the results into.
      */
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 
     /**
      * @brief Returns the symbol in write mode (MSB set to 1).
@@ -52,7 +54,7 @@ class TenthsField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 };
 
 /**
@@ -63,7 +65,7 @@ class LongUIntField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 };
 
 /**
@@ -74,7 +76,7 @@ class ByteField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 };
 
 /**
@@ -85,7 +87,7 @@ class FlagField : public Field
 {
     using Field::Field;
 
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 };
 
 /**
@@ -96,7 +98,7 @@ class PumpOnTimeField : public Field
 {
     using Field::Field;
 
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 };
 
 // TODO: Make decode return the number of bytes read.
@@ -109,5 +111,5 @@ class UIntField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual void decode(char *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 };
