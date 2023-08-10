@@ -8,7 +8,6 @@
  */
 #pragma once
 #include "../defines.h"
-#include "topics.h"
 #include "devices.h"
 
 void wifiConnect();

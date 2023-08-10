@@ -20,10 +20,6 @@ PubSubClient mqtt(wifi);
 SemaphoreHandle_t mqttMutex;
 SemaphoreHandle_t serialMutex;
 
-#include "src/topics.h"
-#include "src/lookups.h"
-#include "src/fields.h"
-#include "src/devices.h"
 #include "device_list.h"
 #include "src/networking.h"
 
@@ -60,4 +56,5 @@ void setup() {
 }
 
 void loop() {
+    // Not used
 }

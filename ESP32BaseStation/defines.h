@@ -47,3 +47,4 @@
 #define STRINGS_MATCH(A, B) (strcmp(A, B) == 0)
 
 #include "credentials.h"
+#include "src/topics.h"

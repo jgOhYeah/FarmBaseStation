@@ -8,6 +8,9 @@
  * @date 2023-08-09
  */
 #pragma once
+#include "../defines.h"
+#include "lookups.h"
+#include "fields.h"
 
 /**
  * @brief Each sensor / device on the PJON network.
@@ -34,22 +37,5 @@ public:
      * @brief Registers each device to Thingsboard over MQTT.
      *
      */
-    void connectDevices()
-    {
-        // For each device, connect it.
-        for (uint8_t i = 0; i < m_count; i++)
-        {
-            // Generate a json object with everything required.
-            StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
-            json["device"] = m_items[i].name;
-            char charBuff[MAX_JSON_TEXT_LENGTH];
-            serializeJson(json, charBuff, sizeof(charBuff));
-
-            // Do the sending.
-            // xSemaphoreTake(mqttMutex, portMAX_DELAY);
-            LOGI("DEVICES", "Registering %s", charBuff);
-            mqtt.publish(Topic::DEVICE_CONNECT, charBuff);
-            // xSemaphoreGive(mqttMutex);
-        }
-    }
+    void connectDevices();
 };

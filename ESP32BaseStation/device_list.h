@@ -8,7 +8,7 @@
  */
 
 #pragma once
-
+#include "src/devices.h"
 
 Device deviceList[] = {
     Device("Main Pressure Pump", 0x5A),

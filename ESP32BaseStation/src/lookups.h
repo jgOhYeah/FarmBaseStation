@@ -8,7 +8,7 @@
  */
 
 #pragma once
-
+#include "../defines.h"
 /**
  * @brief Class for fields and devices that can be managed by LookupManager.
  * 
@@ -38,37 +38,13 @@ public:
      * @param symbol
      * @return Lookupable*
      */
-    LookupableClass *getWithSymbol(char symbol)
-    {
-        for (uint8_t i = 0; i < m_count; i++)
-        {
-            if (m_items[i].symbol == symbol)
-            {
-                // Found the item.
-                return &m_items[i];
-            }
-        }
-        // Couldn't find the item.
-        return NULL;
-    }
+    LookupableClass *getWithSymbol(char symbol);
 
     /**
      * @brief Gets the object matching the given name.
      *
      */
-    LookupableClass *getWithName(const char *name)
-    {
-        for (uint8_t i = 0; i < m_count; i++)
-        {
-            if (strcmp(m_items[i].name, name))
-            {
-                // Found the item.
-                return &m_items[i];
-            }
-        }
-        // Couldn't find the item.
-        return NULL;
-    }
+    LookupableClass *getWithName(const char *name);
 
     LookupableClass* const m_items;
     const uint8_t m_count;
