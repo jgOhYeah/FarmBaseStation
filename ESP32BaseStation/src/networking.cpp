@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-08
+ * @date 2023-08-10
  */
 #include "networking.h"
 
@@ -56,7 +56,7 @@ void mqttConnect()
     LOGI("Networking", "Connecting to MQTT broker '" MQTT_BROKER "' on port " xstr(MQTT_PORT) ".");
     mqtt.setServer(MQTT_BROKER, MQTT_PORT);
     mqtt.setCallback(mqttReceived);
-    mqttSubscribe();
+    mqttSetup();
     int iterations = 0;
     while (!mqtt.connected())
     {
@@ -75,7 +75,7 @@ void mqttConnect()
         if (iterations == MQTT_RETRY_ITERATIONS)
         {
             LOGD("Networking", "Having another go at connecting MQTT.");
-            mqttSubscribe();
+            mqttSetup();
             iterations = 0;
         }
     }
@@ -84,10 +84,10 @@ void mqttConnect()
 }
 
 /**
- * @brief Subscribes to the required topics.
+ * @brief Subscribes to the required topics and registers devices.
  *
  */
-void mqttSubscribe()
+void mqttSetup()
 {
     mqtt.connect(THINGSBOARD_NAME, THINGSBOARD_TOKEN, NULL);
     mqtt.subscribe(Topic::RPC);

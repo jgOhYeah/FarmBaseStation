@@ -1,13 +1,13 @@
 /**
  * @file ESP32BaseStation.ino
  * @brief Main file for a base station to connect to remote sensors on a farm.
- * 
+ *
  * This is a base station to convert between PJON through LoRa to Thingsboard
  * MQTT.
- * 
+ *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-08
+ * @date 2023-08-10
  */
 #include "defines.h"
 
@@ -23,7 +23,8 @@ SemaphoreHandle_t serialMutex;
 #include "device_list.h"
 #include "src/networking.h"
 
-void setup() {
+void setup()
+{
     // pinMode(PIN_HWS, OUTPUT);
     // digitalWrite(PIN_HWS, LOW);
 
@@ -38,23 +39,24 @@ void setup() {
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
 
-    if (!mqttMutex || !serialMutex) {
+    if (!mqttMutex || !serialMutex)
+    {
         LOGE("Setup", "Could not create something!!!");
     }
 
-    xTaskCreatePinnedToCore (
+    xTaskCreatePinnedToCore(
         networkingTask,
         "Networking",
         4096,
         NULL,
         1,
         NULL,
-        1
-    );
-    
+        1);
+
     vTaskDelete(NULL); // Don't need the loop, so can remove the main Arduino task.
 }
 
-void loop() {
+void loop()
+{
     // Not used
 }
