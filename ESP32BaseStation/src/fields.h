@@ -23,14 +23,6 @@ class Field : public Lookupable
 public:
     Field(const char *name, char symbol) : Lookupable(name, symbol) {}
 
-    // /** // TODO
-    //  * @brief Encodes the value as bytes ready to send.
-    //  *
-    //  * @param value the value to encode.
-    //  * @param bytes pointer to the memory to write the encoded value to.
-    //  */
-    // virtual void encode(DataFormat value, uint8_t *bytes) {}
-
     /**
      * @brief Decodes the value from bytes into an existing json document.
      * 
@@ -38,7 +30,7 @@ public:
      * @param length the amount of data remaining from the start of bytes.
      * @param json the document to place the results into.
      */
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 
     /**
      * @brief Returns the symbol in write mode (MSB set to 1).
@@ -54,7 +46,7 @@ class TenthsField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -65,7 +57,7 @@ class LongUIntField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -76,7 +68,7 @@ class ByteField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -87,7 +79,7 @@ class FlagField : public Field
 {
     using Field::Field;
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -98,7 +90,7 @@ class PumpOnTimeField : public Field
 {
     using Field::Field;
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 // TODO: Make decode return the number of bytes read.
@@ -111,5 +103,5 @@ class UIntField : public Field
 {
     using Field::Field; // Inherit field constructors.
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };

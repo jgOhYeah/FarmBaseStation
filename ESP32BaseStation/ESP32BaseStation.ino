@@ -13,15 +13,16 @@
 
 WiFiClient wifi;
 PubSubClient mqtt(wifi);
-
+PJONThroughLora bus(255);
 // QueueHandle_t rpcQueue;
 // QueueHandle_t ioQueue;
-// SemaphoreHandle_t hwsMutex;
+SemaphoreHandle_t loraMutex;
 SemaphoreHandle_t mqttMutex;
 SemaphoreHandle_t serialMutex;
 
 #include "device_list.h"
 #include "src/networking.h"
+#include "src/lora.h"
 
 void setup()
 {

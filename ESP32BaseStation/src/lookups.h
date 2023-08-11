@@ -45,6 +45,6 @@ public:
      */
     LookupableClass *getWithName(const char *name);
 
-    LookupableClass *const *m_items;
+    const LookupableClass *const *m_items;
     const uint8_t m_count;
 };

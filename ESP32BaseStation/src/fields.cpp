@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-09
+ * @date 2023-08-11
  */
 #include "fields.h"
 
@@ -17,9 +17,9 @@ char Field::writeSymbol()
     return symbol | 0x80;
 }
 
-int8_t Field::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json) {}
+int8_t Field::decode(uint8_t *bytes, uint8_t length, JsonObject &json) {}
 
-int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 2)
@@ -34,7 +34,7 @@ int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MA
     return 2;
 }
 
-int8_t LongUIntField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t LongUIntField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 4)
@@ -48,7 +48,7 @@ int8_t LongUIntField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<
     return 4;
 }
 
-int8_t ByteField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t ByteField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 1)
@@ -62,14 +62,14 @@ int8_t ByteField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_
     return 1;
 }
 
-int8_t FlagField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t FlagField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {
     // Convert and save to json
     json[name] = 1; // Set to a constant
     return 0;
 }
 
-int8_t PumpOnTimeField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t PumpOnTimeField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 2)
@@ -84,7 +84,7 @@ int8_t PumpOnTimeField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocumen
     return 2;
 }
 
-int8_t UIntField::decode(uint8_t *bytes, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+int8_t UIntField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {
     // Check we have enough bytes to safely complete this.
     if (length < 4)

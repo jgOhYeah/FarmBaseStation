@@ -12,14 +12,9 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+#include <PJONThroughLora.h>
 
 #define VERSION "0.0.1a"
-
-// #define TOPIC_RPC_REQUEST_BASE "v1/devices/me/rpc/request/"
-// #define TOPIC_RPC_REQUEST TOPIC_RPC_REQUEST_BASE "+"
-// #define TOPIC_RPC_RESPOND_BASE "v1/devices/me/rpc/response/"
-// #define TOPIC_TIMESERIES "v1/devices/me/telemetry"
-// TODO
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 #define PIN_WIFI_LED LED_BUILTIN

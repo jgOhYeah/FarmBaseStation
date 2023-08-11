@@ -5,14 +5,14 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-09
+ * @date 2023-08-11
  */
 #include "devices.h"
 
 extern SemaphoreHandle_t serialMutex;
 extern PubSubClient mqtt;
 
-void Device::decodePacket(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json)
+void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     // Check we have at least 1 character to decode.
     if (length == 0)
@@ -21,6 +21,11 @@ void Device::decodePacket(uint8_t *payload, uint8_t length, StaticJsonDocument<M
         return;
     }
 
+    // Make the object that will be used
+    JsonArray deviceArray = json.createNestedArray(name);
+    JsonObject pointInTime = deviceArray.createNestedObject();
+    JsonObject valuesObject = pointInTime.createNestedObject("values");
+
     // For each field, add it to the document.
     for (uint8_t i = 0; i < length; i++)
     {
@@ -28,7 +33,7 @@ void Device::decodePacket(uint8_t *payload, uint8_t length, StaticJsonDocument<M
         if (field)
         {
             uint8_t valueStart = i+1;
-            uint8_t result = field->decode(&payload[valueStart], length - valueStart, json); // TODO: Add device name
+            uint8_t result = field->decode(&payload[valueStart], length - valueStart, valuesObject);
             if (result != FIELD_NO_MEMORY)
             {
                 LOGI("DEVICES", "Ran out of spots in the packet to properly decode.");

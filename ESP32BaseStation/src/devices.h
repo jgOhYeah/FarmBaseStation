@@ -5,7 +5,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-09
+ * @date 2023-08-11
  */
 #pragma once
 #include "../defines.h"
@@ -20,17 +20,17 @@ class Device : public Lookupable
 {
 public:
     Device(const char *name, const char symbol, LookupManager<Field> &fields) : Lookupable(name, symbol), fields(fields) {}
-    LookupManager<Field> &fields;
 
     /**
      * @brief Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON.
-     * 
+     *
      * @param payload the packet payload from PJON.
      * @param length the length of the payload.
      * @param json the JSON document to place the output in.
      */
-    void decodePacket(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json);
+    void decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
 
+    LookupManager<Field> &fields;
 };
 
 /**

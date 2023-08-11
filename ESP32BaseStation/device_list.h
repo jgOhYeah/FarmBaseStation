@@ -28,10 +28,12 @@ Field *fieldsList[] = {
     new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
 };
 
+LookupManager<Field> fieldsManager(fieldsList, sizeof(fieldsList) / sizeof(*fieldsList)); // TODO: Create a place to store data for each.
+
 Device *deviceList[] = {
-    new Device("Main Pressure Pump", 0x5A),
-    new Device("Solar Electric Fence", 0x4A),
-    new Device("Irrigation Water Detector", 0x47)
+    new Device("Main Pressure Pump", 0x5A, fieldsManager),
+    new Device("Solar Electric Fence", 0x4A, fieldsManager),
+    new Device("Irrigation Water Detector", 0x47, fieldsManager)
 };
 
-DeviceManager deviceManager(deviceList, sizeof(deviceList));
+DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(*deviceList));
