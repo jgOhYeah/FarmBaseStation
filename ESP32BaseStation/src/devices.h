@@ -13,6 +13,12 @@
 #include "fields.h"
 
 /**
+ * @brief List of statuses to return when decoding packets.
+ * 
+ */
+enum DecodeResult {DECODE_SUCCESS, DECODE_PARTIAL, DECODE_FAIL};
+
+/**
  * @brief Each sensor / device on the PJON network.
  *
  */
@@ -28,7 +34,18 @@ public:
      * @param length the length of the payload.
      * @param json the JSON document to place the output in.
      */
-    void decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+
+    /**
+     * @brief Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet metadata.
+     *
+     * @param payload the packet payload from PJON.
+     * @param length the length of the payload.
+     * @param json the JSON document to place the output in.
+     * @param rssi the RSSI of the received packet.
+     * @param snr the SNR of the received packet.
+     */
+    DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json, int rssi, float snr);
 
     LookupManager<Field> &fields;
 };

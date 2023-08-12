@@ -12,6 +12,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+#define PJON_INCLUDE_TL
 #include <PJONThroughLora.h>
 
 #define VERSION "0.0.1a"

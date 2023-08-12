@@ -13,7 +13,7 @@
 
 WiFiClient wifi;
 PubSubClient mqtt(wifi);
-PJONThroughLora bus(255);
+PJONThroughLora bus(PJON_DEVICE_ID);
 // QueueHandle_t rpcQueue;
 // QueueHandle_t ioQueue;
 SemaphoreHandle_t loraMutex;
@@ -45,6 +45,7 @@ void setup()
         LOGE("SETUP", "Could not create something!!!");
     }
 
+    // Create tasks
     xTaskCreatePinnedToCore(
         networkingTask,
         "Networking",
@@ -53,7 +54,7 @@ void setup()
         1,
         NULL,
         1);
-    
+
     xTaskCreatePinnedToCore(
         fakeReceiveTask,
         "FakeData",
@@ -63,10 +64,21 @@ void setup()
         NULL,
         1);
 
-    vTaskDelete(NULL); // Don't need the loop, so can remove the main Arduino task.
+    // xTaskCreatePinnedToCore(
+    //     pjonTask,
+    //     "PJON",
+    //     4096,
+    //     NULL,
+    //     1,
+    //     NULL,
+    //     1);
+
+    // Don't need the loop, so can remove the main Arduino task.
+    vTaskDelete(NULL);
 }
 
 void loop()
 {
-    // Not used
+    // Not used.
+    // TODO: OTA updates
 }

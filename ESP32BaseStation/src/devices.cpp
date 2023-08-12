@@ -13,21 +13,22 @@ extern SemaphoreHandle_t serialMutex;
 extern SemaphoreHandle_t mqttMutex;
 extern PubSubClient mqtt;
 
-void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
     LOGD("DEVICES", "Decoding packet of length %d.", length);
-    // Check we have at least 1 character to decode.
-    if (length == 0)
-    {
-        LOGI("DEVICES", "Was given a packet to decode with 0 length.");
-        return;
-    }
 
     // Make the object that will be used.
     // This doesn't quite follow the documentation - leaving out ts at least
     // means that the nested values object in an array isn't needed.
     JsonArray deviceArray = json.createNestedArray(name);
     JsonObject valuesObject = deviceArray.createNestedObject();
+
+    // Check we have at least 1 character to decode.
+    if (length == 0)
+    {
+        LOGI("DEVICES", "Was given a packet to decode with 0 length.");
+        return DECODE_FAIL;
+    }
 
 
     // For each field, add it to the document.
@@ -40,21 +41,40 @@ void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocu
             int8_t result = field->decode(&payload[valueStart], length - valueStart, valuesObject);
             if (result != FIELD_NO_MEMORY)
             {
+                // Successfully got the field. Account for the space taken up by the value.
                 i += result;
             }
             else
             {
+                // Not enough memory to decode the packet.
                 LOGI("DEVICES", "Seeing as we ran out of packet, the rest will be discarded.");
-                return;
+                // If we got at least one term, then not a complete failure.
+                return i ? DECODE_PARTIAL : DECODE_FAIL;
             }
         }
         else
         {
             LOGI("DEVICES", "Unrecognised field. Discarding from here on.");
-            return;
+            // If we got at least one term, then not a complete failure.
+            return i ? DECODE_PARTIAL : DECODE_FAIL;
         }
     }
     LOGD("DEVICES", "Finished decoding packet.");
+    return DECODE_SUCCESS;
+}
+
+DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json, int rssi, float snr)
+{
+    // Do the decoding as per normal
+    DecodeResult result = Device::decodePacketFields(payload, length, json);
+
+    // Add the snr and rssi
+    JsonObject valuesObject = json[name][0];
+    valuesObject["SNR"] = snr;
+    valuesObject["RSSI"] = rssi;
+
+    // Return the result
+    return result;
 }
 
 void DeviceManager::connectDevices()

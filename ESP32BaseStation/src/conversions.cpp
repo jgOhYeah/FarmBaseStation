@@ -11,7 +11,7 @@
 void uLongToByteArray(uint32_t integer, uint8_t *charBuffer)
 {
     // For each byte, generate a char from it.
-    for (uint8_t i = 0; i < 4; i++)
+    for (uint8_t i = 0; i != 4; i++)
     {
         charBuffer[i] = integer & 0xFF;
         integer = integer >> 8;
