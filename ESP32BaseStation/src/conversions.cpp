@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-10
+ * @date 2023-08-12
  */
 #include "conversions.h"
 
@@ -22,7 +22,7 @@ uint32_t byteArrayToULong(uint8_t *charBuffer)
 {
     // For each byte, generate a char from it.
     uint32_t integer = 0;
-    for (uint8_t i = 3; i >= 0; i--)
+    for (int8_t i = 3; i >= 0; i--)
     {
         integer = integer << 8;
         integer += (uint8_t)charBuffer[i];

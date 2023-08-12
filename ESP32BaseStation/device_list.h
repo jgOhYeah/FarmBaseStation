@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-09
+ * @date 2023-08-12
  */
 
 #pragma once
@@ -28,7 +28,7 @@ Field *fieldsList[] = {
     new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
 };
 
-LookupManager<Field> fieldsManager(fieldsList, sizeof(fieldsList) / sizeof(*fieldsList)); // TODO: Create a place to store data for each.
+LookupManager<Field> fieldsManager(fieldsList, sizeof(fieldsList) / sizeof(Field*)); // TODO: Create a place to store data for each.
 
 Device *deviceList[] = {
     new Device("Main Pressure Pump", 0x5A, fieldsManager),
@@ -36,4 +36,4 @@ Device *deviceList[] = {
     new Device("Irrigation Water Detector", 0x47, fieldsManager)
 };
 
-DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(*deviceList));
+DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(Device*));

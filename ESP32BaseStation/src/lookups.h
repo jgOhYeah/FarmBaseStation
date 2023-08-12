@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-09
+ * @date 2023-08-12
  */
 
 #pragma once
@@ -35,7 +35,7 @@ public:
      * @brief Gets the object with the given symbol.
      *
      * @param symbol
-     * @return Lookupable*
+     * @return LookupableClass*
      */
     LookupableClass *getWithSymbol(char symbol);
 

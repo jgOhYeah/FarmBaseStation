@@ -5,7 +5,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-11
+ * @date 2023-08-12
  */
 #pragma once
 #include "../defines.h"
@@ -48,3 +48,7 @@ public:
      */
     void connectDevices();
 };
+
+// Explicit template instantiation
+// From https://stackoverflow.com/a/13952386
+template class LookupManager<Device>;

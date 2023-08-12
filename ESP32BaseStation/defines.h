@@ -4,7 +4,7 @@
  * 
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-02-24
+ * @date 2023-08-12
  */
 #pragma once
 
@@ -38,8 +38,9 @@
 #define str(s) #s
 
 #define MAX_JSON_TEXT_LENGTH 200
-#define MAX_ID_TEXT_LENGTH 11
 #define STRINGS_MATCH(A, B) (strcmp(A, B) == 0)
+
+#define PJON_DEVICE_ID 255
 
 #include "credentials.h"
 #include "src/topics.h"

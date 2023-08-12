@@ -5,7 +5,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-11
+ * @date 2023-08-12
  */
 #include "devices.h"
 
@@ -29,11 +29,11 @@ void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocu
     // For each field, add it to the document.
     for (uint8_t i = 0; i < length; i++)
     {
-        Field *field = fields.getWithSymbol(payload[i]);
+        Field *field = fields.getWithSymbol((char)payload[i]);
         if (field)
         {
             uint8_t valueStart = i+1;
-            uint8_t result = field->decode(&payload[valueStart], length - valueStart, valuesObject);
+            int8_t result = field->decode(&payload[valueStart], length - valueStart, valuesObject);
             if (result != FIELD_NO_MEMORY)
             {
                 LOGI("DEVICES", "Ran out of spots in the packet to properly decode.");

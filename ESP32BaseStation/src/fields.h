@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-09
+ * @date 2023-08-12
  */
 
 #pragma once
@@ -105,3 +105,7 @@ class UIntField : public Field
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
+
+// Explicit template instantiation
+// From https://stackoverflow.com/a/13952386
+template class LookupManager<Field>;

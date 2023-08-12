@@ -7,7 +7,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-10
+ * @date 2023-08-12
  */
 #include "defines.h"
 
@@ -32,17 +32,17 @@ void setup()
     // Setup queues and mutexes
     // rpcQueue = xQueueCreate(CONCURRENT_RPC_CALLS, sizeof(RpcMessage));
     // ioQueue = xQueueCreate(CONCURRENT_RPC_CALLS, sizeof(IoInstruction));
-    // hwsMutex = xSemaphoreCreateMutex();
     mqttMutex = xSemaphoreCreateMutex();
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
+    loraMutex = xSemaphoreCreateMutex();
 
     // Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
 
-    if (!mqttMutex || !serialMutex)
+    if (!mqttMutex || !serialMutex || !loraMutex)
     {
-        LOGE("Setup", "Could not create something!!!");
+        LOGE("SETUP", "Could not create something!!!");
     }
 
     xTaskCreatePinnedToCore(

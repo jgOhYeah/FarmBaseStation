@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-11
+ * @date 2023-08-12
  */
 #include "fields.h"
 
@@ -17,7 +17,10 @@ char Field::writeSymbol()
     return symbol | 0x80;
 }
 
-int8_t Field::decode(uint8_t *bytes, uint8_t length, JsonObject &json) {}
+int8_t Field::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
+{
+    return 0;
+}
 
 int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
 {

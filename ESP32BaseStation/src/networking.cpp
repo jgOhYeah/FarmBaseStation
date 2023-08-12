@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-10
+ * @date 2023-08-12
  */
 #include "networking.h"
 
@@ -92,6 +92,7 @@ void mqttSetup()
     mqtt.connect(THINGSBOARD_NAME, THINGSBOARD_TOKEN, NULL);
     mqtt.subscribe(Topic::RPC);
     deviceManager.connectDevices();
+    fakeReceive();
 }
 
 /**
