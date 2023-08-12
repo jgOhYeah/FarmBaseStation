@@ -53,6 +53,15 @@ void setup()
         1,
         NULL,
         1);
+    
+    xTaskCreatePinnedToCore(
+        fakeReceiveTask,
+        "FakeData",
+        4096,
+        NULL,
+        1,
+        NULL,
+        1);
 
     vTaskDelete(NULL); // Don't need the loop, so can remove the main Arduino task.
 }

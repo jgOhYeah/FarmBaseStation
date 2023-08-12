@@ -10,10 +10,12 @@
 #include "devices.h"
 
 extern SemaphoreHandle_t serialMutex;
+extern SemaphoreHandle_t mqttMutex;
 extern PubSubClient mqtt;
 
 void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
 {
+    LOGD("DEVICES", "Decoding packet of length %d.", length);
     // Check we have at least 1 character to decode.
     if (length == 0)
     {
@@ -60,9 +62,9 @@ void DeviceManager::connectDevices()
         serializeJson(json, charBuff, sizeof(charBuff));
 
         // Do the sending.
-        // xSemaphoreTake(mqttMutex, portMAX_DELAY);
+        xSemaphoreTake(mqttMutex, portMAX_DELAY);
         LOGI("DEVICES", "Registering %s", charBuff);
         mqtt.publish(Topic::DEVICE_CONNECT, charBuff);
-        // xSemaphoreGive(mqttMutex);
+        xSemaphoreGive(mqttMutex);
     }
 }

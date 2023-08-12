@@ -36,6 +36,17 @@ public:
      * @brief Returns the symbol in write mode (MSB set to 1).
      */
     char writeSymbol();
+
+protected:
+    /**
+     * @brief Checks if the value can be decoded from the packet.
+     * 
+     * @param length the number of bytes provided.
+     * @param required the number of bytes required to decode.
+     * @return true if the packet can be successfully decoded.
+     * @return false otherwise.
+     */
+    bool checkDecodeable(uint8_t length, uint8_t required);
 };
 
 /**

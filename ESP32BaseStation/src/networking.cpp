@@ -81,18 +81,17 @@ void mqttConnect()
     }
     LOGI("Networking", "Connected to broker.");
     xSemaphoreGive(mqttMutex);
+    deviceManager.connectDevices(); // Publish the connected devices
 }
 
 /**
- * @brief Subscribes to the required topics and registers devices.
+ * @brief Subscribes to the required topics.
  *
  */
 void mqttSetup()
 {
     mqtt.connect(THINGSBOARD_NAME, THINGSBOARD_TOKEN, NULL);
     mqtt.subscribe(Topic::RPC);
-    deviceManager.connectDevices();
-    fakeReceive();
 }
 
 /**

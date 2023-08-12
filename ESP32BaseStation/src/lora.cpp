@@ -30,7 +30,7 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
         // Log and send to console
         LOGI("LORA", "Sending '%s'", jsonText);
         xSemaphoreTake(mqttMutex, portMAX_DELAY);
-        mqtt.publish(Topic::DEVICE_CONNECT, jsonText);
+        mqtt.publish(Topic::TELEMETRY_UPLOAD, jsonText);
         xSemaphoreGive(mqttMutex);
     }
     else
@@ -39,16 +39,24 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
     }
 }
 
-void fakeReceive()
+void fakeReceiveTask(void *pvParameters)
 {
-    LOGI("LORA", "Receiving fake data for testing purposes");
-    PJON_Packet_Info info;
-    info.rx.id = 255;
-    info.tx.id = 0x5A; // Pressure pump
-    uint8_t pressurePump[] = {80, 26, 0, 97, 51, 0, 99, 1, 0};
-    pjonReceive(pressurePump, sizeof(pressurePump) / sizeof(uint8_t), info);
+    while (true)
+    {
+        LOGI("LORA", "Receiving fake pump data");
+        PJON_Packet_Info info;
+        info.rx.id = 255;
+        info.tx.id = 0x5A; // Pressure pump
+        uint8_t pressurePump[] = {80, 26, 0, 97, 51, 0, 99, 1, 0};
+        pjonReceive(pressurePump, sizeof(pressurePump) / sizeof(uint8_t), info);
 
-    info.tx.id = 0x4A; // Fence
-    uint8_t electricFence[] = {86, 122, 0, 84, 21, 0, 70, 1, 114, 1, 73, 10};
-    pjonReceive(electricFence, sizeof(electricFence) / sizeof(uint8_t), info);
+        delay(2000);
+
+        LOGI("LORA", "Receiving fake fence data");
+        info.tx.id = 0x4A; // Fence
+        uint8_t electricFence[] = {86, 122, 0, 84, 21, 0, 70, 1, 114, 1, 73, 10};
+        pjonReceive(electricFence, sizeof(electricFence) / sizeof(uint8_t), info);
+
+        delay(3000);
+    }
 }

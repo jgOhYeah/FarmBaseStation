@@ -25,4 +25,4 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
  * @brief "Receives" some fake data for testing purposes.
  *
  */
-void fakeReceive();
+void fakeReceiveTask(void *pvParameters);
