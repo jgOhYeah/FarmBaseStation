@@ -2,6 +2,9 @@
  * @file lookups.h
  * @brief Lookupable and lookupable manager base classes.
  *
+ * Note that the LookupManager class is implemented in the header file so that
+ * templates work more easily.
+ *
  * @author Jotham Gates
  * @version 0.1
  * @date 2023-08-12
@@ -29,7 +32,7 @@ template <typename LookupableClass>
 class LookupManager
 {
 public:
-    LookupManager(const LookupableClass *const *items, const uint8_t count) : m_items(items), m_count(count) {}
+    LookupManager(LookupableClass **items, uint8_t count) : m_items(items), m_count(count) {}
 
     /**
      * @brief Gets the object with the given symbol.
@@ -37,14 +40,38 @@ public:
      * @param symbol
      * @return LookupableClass*
      */
-    LookupableClass *getWithSymbol(char symbol);
+    LookupableClass *getWithSymbol(char symbol)
+    {
+        for (uint8_t i = 0; i < m_count; i++)
+        {
+            if (m_items[i]->symbol == symbol)
+            {
+                // Found the item.
+                return m_items[i];
+            }
+        }
+        // Couldn't find the item.
+        return NULL;
+    }
 
     /**
      * @brief Gets the object matching the given name.
      *
      */
-    LookupableClass *getWithName(const char *name);
+    LookupableClass *getWithName(const char *name)
+    {
+        for (uint8_t i = 0; i < m_count; i++)
+        {
+            if (strcmp(m_items[i]->name, name))
+            {
+                // Found the item.
+                return m_items[i];
+            }
+        }
+        // Couldn't find the item.
+        return NULL;
+    }
 
-    const LookupableClass *const *m_items;
-    const uint8_t m_count;
+    LookupableClass **m_items;
+    uint8_t m_count;
 };

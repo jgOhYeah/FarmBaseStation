@@ -40,7 +40,7 @@ public:
 class DeviceManager : public LookupManager<Device>
 {
 public:
-    DeviceManager(const Device *const *items, const uint8_t count) : LookupManager(items, count) {}
+    DeviceManager(Device **items, uint8_t count) : LookupManager(items, count) {}
 
     /**
      * @brief Registers each device to Thingsboard over MQTT.
@@ -48,7 +48,3 @@ public:
      */
     void connectDevices();
 };
-
-// Explicit template instantiation
-// From https://stackoverflow.com/a/13952386
-template class LookupManager<Device>;
