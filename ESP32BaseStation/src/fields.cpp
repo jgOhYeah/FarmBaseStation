@@ -42,7 +42,7 @@ int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
         int16_t value = (int16_t)byteArrayToUInt(bytes);
         // Use sprintf to manually format to avoid floating point rounding issues.
         char charBuff[8];
-        sprintf(charBuff, "%d.%d", value / 10, value % 10);
+        sprintf(charBuff, "%d.%d", value / 10, abs(value) % 10);
         json[name] = serialized(charBuff);
         return 2;
     }

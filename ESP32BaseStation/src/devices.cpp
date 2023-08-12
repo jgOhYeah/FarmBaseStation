@@ -23,10 +23,12 @@ void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocu
         return;
     }
 
-    // Make the object that will be used
+    // Make the object that will be used.
+    // This doesn't quite follow the documentation - leaving out ts at least
+    // means that the nested values object in an array isn't needed.
     JsonArray deviceArray = json.createNestedArray(name);
-    JsonObject pointInTime = deviceArray.createNestedObject();
-    JsonObject valuesObject = pointInTime.createNestedObject("values");
+    JsonObject valuesObject = deviceArray.createNestedObject();
+
 
     // For each field, add it to the document.
     for (uint8_t i = 0; i < length; i++)
@@ -38,8 +40,12 @@ void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocu
             int8_t result = field->decode(&payload[valueStart], length - valueStart, valuesObject);
             if (result != FIELD_NO_MEMORY)
             {
-                LOGI("DEVICES", "Ran out of spots in the packet to properly decode.");
                 i += result;
+            }
+            else
+            {
+                LOGI("DEVICES", "Seeing as we ran out of packet, the rest will be discarded.");
+                return;
             }
         }
         else
@@ -48,6 +54,7 @@ void Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocu
             return;
         }
     }
+    LOGD("DEVICES", "Finished decoding packet.");
 }
 
 void DeviceManager::connectDevices()
