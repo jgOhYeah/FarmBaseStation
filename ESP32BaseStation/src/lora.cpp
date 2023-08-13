@@ -68,6 +68,7 @@ void pjonError(uint8_t code, uint16_t data, void *customPointer)
 
 void fakeReceiveTask(void *pvParameters)
 {
+    const uint32_t TIME_BETWEEN = 20000;
     while (true)
     {
         LOGI("LORA", "Receiving fake pump data");
@@ -77,26 +78,26 @@ void fakeReceiveTask(void *pvParameters)
         uint8_t pressurePump[] = {80, 26, 0, 97, 51, 0, 99, 1, 0};
         pjonReceive(pressurePump, sizeof(pressurePump) / sizeof(uint8_t), info, -90, 10);
 
-        delay(2000);
+        delay(TIME_BETWEEN);
 
         LOGI("LORA", "Receiving fake pump data 2");
         uint8_t pressurePump2[] = {80, 58, 0, 97, 57, 0, 99, 2, 0};
         pjonReceive(pressurePump2, sizeof(pressurePump2) / sizeof(uint8_t), info, -87, 5);
 
-        delay(2000);
+        delay(TIME_BETWEEN);
 
         LOGI("LORA", "Receiving fake fence data");
         info.tx.id = 0x4A; // Fence
         uint8_t electricFence[] = {86, 122, 0, 84, 21, 0, 70, 1, 114, 1, 73, 10};
         pjonReceive(electricFence, sizeof(electricFence) / sizeof(uint8_t), info, -20, 25);
 
-        delay(2000);
+        delay(TIME_BETWEEN);
 
         LOGI("LORA", "Receiving fake fence data 2");
         uint8_t electricFence2[] = {86, 123, 0, 84, 244, 255, 70, 1, 114, 1, 73, 10};
         pjonReceive(electricFence2, sizeof(electricFence2) / sizeof(uint8_t), info, -150, -25);
 
-        delay(2000);
+        delay(TIME_BETWEEN);
     }
 }
 

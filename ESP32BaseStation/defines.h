@@ -38,6 +38,7 @@
 #define xstr(s) str(s)
 #define str(s) #s
 
+#define MAX_ID_TEXT_LENGTH 11
 #define MAX_JSON_TEXT_LENGTH 200
 #define STRINGS_MATCH(A, B) (strcmp(A, B) == 0)
 

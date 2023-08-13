@@ -13,6 +13,7 @@ extern PubSubClient mqtt;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
 extern DeviceManager deviceManager;
+extern void mqttReceived(char *topic, byte *message, unsigned int length);
 
 /**
  * @brief Connects to WiFi.
@@ -31,20 +32,6 @@ void wifiConnect()
         vTaskDelay(100 / portTICK_RATE_MS);
     }
     LOGI("Networking", "Connected with IP address '%s'.", WiFi.localIP().toString().c_str());
-}
-
-/**
- * @brief Function that is called when an mqtt message is received.
- *
- */
-void mqttReceived(char *topic, byte *message, unsigned int length)
-{
-    LOGD("Networking", "MQTT received on topic '%s'.", topic);
-    // if(isRpc(topic)) {
-    //     LOGD("Networking", "RPC Message");
-    //     addRpc(topic, message, length);
-    // }
-    // TODO
 }
 
 /**
@@ -91,7 +78,8 @@ void mqttConnect()
 void mqttSetup()
 {
     mqtt.connect(THINGSBOARD_NAME, THINGSBOARD_TOKEN, NULL);
-    mqtt.subscribe(Topic::RPC);
+    mqtt.subscribe(Topic::RPC_GATEWAY);
+    mqtt.subscribe(Topic::RPC_ME_SUBSCRIBE);
 }
 
 /**

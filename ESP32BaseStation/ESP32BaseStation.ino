@@ -14,8 +14,7 @@
 WiFiClient wifi;
 PubSubClient mqtt(wifi);
 PJONThroughLora bus(PJON_DEVICE_ID);
-// QueueHandle_t rpcQueue;
-// QueueHandle_t ioQueue;
+QueueHandle_t alarmQueue;
 SemaphoreHandle_t loraMutex;
 SemaphoreHandle_t mqttMutex;
 SemaphoreHandle_t serialMutex;
@@ -23,15 +22,13 @@ SemaphoreHandle_t serialMutex;
 #include "device_list.h"
 #include "src/networking.h"
 #include "src/lora.h"
+#include "src/rpc.h"
+#include "src/alarm.h"
 
 void setup()
 {
-    // pinMode(PIN_HWS, OUTPUT);
-    // digitalWrite(PIN_HWS, LOW);
-
     // Setup queues and mutexes
-    // rpcQueue = xQueueCreate(CONCURRENT_RPC_CALLS, sizeof(RpcMessage));
-    // ioQueue = xQueueCreate(CONCURRENT_RPC_CALLS, sizeof(IoInstruction));
+    alarmQueue = xQueueCreate(3, sizeof(AlarmState));
     mqttMutex = xSemaphoreCreateMutex();
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
     loraMutex = xSemaphoreCreateMutex();
@@ -40,7 +37,7 @@ void setup()
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
 
-    if (!mqttMutex || !serialMutex || !loraMutex)
+    if (!alarmQueue || !mqttMutex || !serialMutex || !loraMutex)
     {
         LOGE("SETUP", "Could not create something!!!");
     }
@@ -55,14 +52,14 @@ void setup()
         NULL,
         1);
 
-    xTaskCreatePinnedToCore(
-        fakeReceiveTask,
-        "FakeData",
-        4096,
-        NULL,
-        1,
-        NULL,
-        1);
+    // xTaskCreatePinnedToCore(
+    //     fakeReceiveTask,
+    //     "FakeData",
+    //     4096,
+    //     NULL,
+    //     1,
+    //     NULL,
+    //     1);
 
     // xTaskCreatePinnedToCore(
     //     pjonTask,
@@ -72,6 +69,15 @@ void setup()
     //     1,
     //     NULL,
     //     1);
+
+    xTaskCreatePinnedToCore(
+        alarmTask,
+        "Alarm",
+        4096,
+        NULL,
+        1,
+        NULL,
+        1);
 
     // Don't need the loop, so can remove the main Arduino task.
     vTaskDelete(NULL);
