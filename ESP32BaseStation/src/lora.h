@@ -54,3 +54,10 @@ void fakeReceiveTask(void *pvParameters);
  *
  */
 void pjonTask(void *pvParameters);
+
+/**
+ * @brief Task that checks if the radio is connected.
+ * 
+ * @param pvParameters 
+ */
+void loraWatchdogTask(void *pvParameters);

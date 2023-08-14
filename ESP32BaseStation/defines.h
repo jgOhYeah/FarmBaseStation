@@ -44,5 +44,15 @@
 
 #define PJON_DEVICE_ID 255
 
+// VSPI is default without specifying
+#define PIN_LORA_CS 5
+#define PIN_LORA_MOSI 23
+#define PIN_LORA_MISO 19
+#define PIN_LORA_SCLK 18
+#define PIN_LORA_DIO 17
+#define PIN_LORA_RESET 16
+
+#define LORA_CHECK_INTERVAL 5000
+
 #include "credentials.h"
 #include "src/topics.h"

@@ -14,6 +14,7 @@ extern DeviceManager deviceManager;
 extern SemaphoreHandle_t serialMutex;
 extern SemaphoreHandle_t mqttMutex;
 extern PubSubClient mqtt;
+extern SemaphoreHandle_t loraMutex;
 
 void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packetInfo, int rssi, float snr)
 {
@@ -104,20 +105,53 @@ void fakeReceiveTask(void *pvParameters)
 void pjonTask(void *pvParameters)
 {
     // Setup LoRa and PJON
+    xSemaphoreTake(loraMutex, portMAX_DELAY);
+    LOGD("LORA", "Starting bus");
     bus.set_acknowledge(false);
     bus.set_communication_mode(PJON_SIMPLEX);
     bus.set_receiver(pjonReceive);
     bus.set_error(pjonError);
-    bus.strategy.setFrequency(433E6);
+    // LoRa.setSPIFrequency(4E6);
+    bus.strategy.setPins(PIN_LORA_CS, PIN_LORA_RESET, PIN_LORA_DIO);
+    bus.strategy.setFrequency(433E6); // Calls LoRa.begin()
     bus.strategy.setSpreadingFactor(9);
-    LoRa.setSPIFrequency(4E6);
     bus.begin();
+    xSemaphoreGive(loraMutex);
+
+    xTaskCreatePinnedToCore(
+        loraWatchdogTask,
+        "LoRa Watchdog",
+        1024,
+        NULL,
+        1,
+        NULL,
+        1);
 
     while (true)
     {
         // Check if we have to send or receive anything
+        xSemaphoreTake(loraMutex, portMAX_DELAY);
         bus.update();
         bus.receive();
+        xSemaphoreGive(loraMutex);
         yield();
+    }
+}
+
+void loraWatchdogTask(void *pvParameters)
+{
+    TickType_t lastWakeTime;
+    while(true)
+    {
+        // Check if the radio is connected
+        xSemaphoreTake(loraMutex, portMAX_DELAY);
+        if (!LoRa.isConnected())
+        {
+            LOGE("LORA_WATCHDOG", "LoRa radio is not connected.");
+            // TODO: Take stronger action
+        }
+        xSemaphoreGive(loraMutex);
+
+        xTaskDelayUntil(&lastWakeTime, LORA_CHECK_INTERVAL / portTICK_PERIOD_MS);
     }
 }

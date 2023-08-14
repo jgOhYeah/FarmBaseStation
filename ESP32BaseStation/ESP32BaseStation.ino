@@ -61,14 +61,14 @@ void setup()
     //     NULL,
     //     1);
 
-    // xTaskCreatePinnedToCore(
-    //     pjonTask,
-    //     "PJON",
-    //     4096,
-    //     NULL,
-    //     1,
-    //     NULL,
-    //     1);
+    xTaskCreatePinnedToCore(
+        pjonTask,
+        "PJON",
+        4096,
+        NULL,
+        1,
+        NULL,
+        1);
 
     xTaskCreatePinnedToCore(
         alarmTask,
