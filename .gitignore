@@ -3,3 +3,4 @@ build
 ESP32BaseStation/credentials.h
 Doxygen
 .doxygen
+BaseStationSchematics/BaseStationSchematics-backups

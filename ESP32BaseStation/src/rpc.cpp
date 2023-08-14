@@ -12,6 +12,7 @@
 extern PubSubClient mqtt;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
+extern QueueHandle_t alarmQueue;
 
 void mqttReceived(char *topic, byte *message, unsigned int length)
 {
@@ -57,8 +58,31 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
     if (STRINGS_MATCH(method, "alarm"))
     {
         LOGI("MQTT", "Alarm method");
+
+        // Extract the alarm level
+        // TODO: Track individual alarms.
         const char* params = json["params"];
-        // TODO: Alarm part. Parameters contain the level / sound effect.
+        AlarmState state = ALARM_OFF;
+        if (params)
+        {
+            // Might not be any params provided.
+            if (STRINGS_MATCH(params, "Critical"))
+            {
+                state = ALARM_HIGH;
+            }
+            else if (STRINGS_MATCH(params, "Major"))
+            {
+                state = ALARM_HIGH;
+            }
+            else if (STRINGS_MATCH(params, "Minor"))
+            {
+                state = ALARM_MEDIUM;
+            }
+        }
+
+        // Add to the queue
+        const unsigned int ALARM_TIMEOUT = 3000;
+        xQueueSend(alarmQueue, (void*)&state, ALARM_TIMEOUT / portTICK_PERIOD_MS);
         replyMeRpc(id, "{}");
     } else {
         LOGI("MQTT", "Unrecognised MQTT method '%s' for me.", method);
