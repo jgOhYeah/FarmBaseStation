@@ -118,7 +118,7 @@ void pjonTask(void *pvParameters)
     bus.begin();
     xSemaphoreGive(loraMutex);
 
-    xTaskCreatePinnedToCore(
+    xTaskCreatePinnedToCore( // TODO: Create this task with all the others.
         loraWatchdogTask,
         "LoRa Watchdog",
         1024,

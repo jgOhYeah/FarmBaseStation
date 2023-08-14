@@ -47,6 +47,22 @@ public:
      */
     DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json, int rssi, float snr);
 
+    /**
+     * @brief Checks if a transmission is required.
+     * 
+     * @returns true if a transmission is required (latest received value != value to set to).
+     */
+    bool rpcWaiting();
+
+    /**
+     * @brief Generates a packet containing all the fields and instructions to set.
+     * 
+     * @param payload is the PJON payload to put this in.
+     * @param maxLength the maximum length of the payload available.
+     * @return uint8_t the length of the payload used.
+     */
+    int8_t generatePacket(uint8_t *payload, uint8_t maxLength);
+
     LookupManager<Field> &fields;
 };
 

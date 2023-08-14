@@ -77,6 +77,48 @@ DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, Static
     return result;
 }
 
+bool Device::rpcWaiting()
+{
+    // For each field, check if it needs to be transmitted.
+    for (uint8_t i = 0; i < fields.m_count; i++)
+    {
+        if (fields.m_items[i]->txRequired())
+        {
+            return true;
+        }
+    }
+
+    // Nothing needs to be transmitted.
+    return false;
+
+}
+
+int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
+{
+    // For each field, check if it needs to be transmitted.
+    int8_t length = 0;
+    for (uint8_t i = 0; i < fields.m_count; i++)
+    {
+        if (fields.m_items[i]->txRequired())
+        {
+            // Need to encode this field.
+            int8_t result = fields.m_items[i]->encode(payload, maxLength - length);
+            if (result != FIELD_NO_MEMORY)
+            {
+                length += result;
+            }
+            else
+            {
+                return FIELD_NO_MEMORY;
+            }
+        }
+    }
+
+    // Return the size of the buffer that was actually used.
+    return length;
+
+}
+
 void DeviceManager::connectDevices()
 {
     // For each device, connect it.

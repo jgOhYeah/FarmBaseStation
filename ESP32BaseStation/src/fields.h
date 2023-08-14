@@ -21,11 +21,11 @@
 class Field : public Lookupable
 {
 public:
-    Field(const char *name, char symbol) : Lookupable(name, symbol) {}
+    Field(const char *name, char symbol, const uint8_t encodedLength) : Lookupable(name, symbol), encodedLength(encodedLength) {}
 
     /**
      * @brief Decodes the value from bytes into an existing json document.
-     * 
+     *
      * @param bytes the data to decode.
      * @param length the amount of data remaining from the start of bytes.
      * @param json the document to place the results into.
@@ -33,73 +33,180 @@ public:
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 
     /**
+     * @brief Encodes the value to set into a packet ready to send if needed.
+     * 
+     * @param bytes the payload to place in.
+     * @param length the available length.
+     * @returns the number of bytes used, including the symbol for the field.
+     */
+    virtual int8_t encode(uint8_t *bytes, uint8_t length);
+
+    /**
      * @brief Returns the symbol in write mode (MSB set to 1).
      */
     char writeSymbol();
 
+    /**
+     * @brief handles an RPC call for a field.
+     *
+     * @param reply
+     */
+    virtual void handleRpc(JsonObject &params, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &reply);
+
+    /**
+     * @brief Returns true if a new packet needs to be transmitted to update the field.
+     */
+    virtual bool txRequired();
+
+    const uint8_t encodedLength;
+
 protected:
     /**
      * @brief Checks if the value can be decoded from the packet.
-     * 
+     *
      * @param length the number of bytes provided.
-     * @param required the number of bytes required to decode.
      * @return true if the packet can be successfully decoded.
      * @return false otherwise.
      */
-    bool checkDecodeable(uint8_t length, uint8_t required);
+    bool checkDecodeable(uint8_t length);
+};
+
+/**
+ * @brief Class for fields that can be set.
+ *
+ * @tparam T
+ */
+template <typename T>
+class SettableField : public Field
+{
+public:
+    using Field::Field;
+
+    T setValue;
+    T curValue;
+
+    /**
+     * @brief Returns true if a new packet needs to be transmitted to update the field.
+     */
+    virtual bool txRequired();
+
+    /**
+     * @brief handles an RPC call for a field.
+     *
+     * @param reply
+     */
+    virtual void handleRpc(JsonObject &params, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &reply);
+
+protected:
+    /**
+     * @brief Checks if the given value is acceptable to transmit.
+     *
+     * @param value
+     * @return true
+     * @return false
+     */
+    virtual bool isValidNewValue(T value);
 };
 
 /**
  * @brief Field for decoding 2 byte signed data in tenths.
- * 
+ *
  */
 class TenthsField : public Field
 {
-    using Field::Field; // Inherit field constructors.
+public:
+    TenthsField(const char *name, char symbol) : Field(name, symbol, 2) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
  * @brief Fields that contain an unsigned, 4 byte integer.
- * 
+ *
  */
 class LongUIntField : public Field
 {
-    using Field::Field; // Inherit field constructors.
+public:
+    LongUIntField(const char *name, char symbol) : Field(name, symbol, 4) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
  * @brief Fields that contain an unsigned, single byte integer.
- * 
+ *
  */
 class ByteField : public Field
 {
-    using Field::Field; // Inherit field constructors.
+public:
+    ByteField(const char *name, char symbol) : Field(name, symbol, 1) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+}; // TODO: Settable byte field
+
+/**
+ * @brief Fields that contain an unsigned, single byte integer that can be set
+ * using an RPC call.
+ *
+ */
+class SettableByteField : public SettableField<int8_t>
+{
+public:
+    SettableByteField(const char *name, char symbol) : SettableField(name, symbol, 0) {}
+
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+
+    /**
+     * @brief Encodes the value to set into a packet ready to send.
+     * 
+     * @param bytes the payload to place in.
+     * @param length the available length.
+     * @returns the number of bytes used, including the symbol for the field.
+     */
+    virtual int8_t encode(uint8_t *bytes, uint8_t length);
 };
 
 /**
  * @brief Fields that don't have any value or payload.
- * 
+ *
  */
 class FlagField : public Field
 {
-    using Field::Field;
+public:
+    FlagField(const char *name, char symbol) : Field(name, symbol, 0) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
+ * @brief Class for flags that can be set via an RPC call.
+ *
+ */
+class SettableFlagField : public SettableField<int8_t>
+{
+public:
+    SettableFlagField(const char *name, char symbol) : SettableField(name, symbol, 0) {}
+
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+
+    /**
+     * @brief Encodes the value to set into a packet ready to send.
+     * 
+     * @param bytes the payload to place in.
+     * @param length the available length.
+     * @returns the number of bytes used, including the symbol for the field.
+     */
+    virtual int8_t encode(uint8_t *bytes, uint8_t length);
+};
+
+/**
  * @brief Fields for pump on times (2 bytes in 0.5s increments)
- * 
+ *
  */
 class PumpOnTimeField : public Field
 {
-    using Field::Field;
+public:
+    PumpOnTimeField(const char *name, char symbol) : Field(name, symbol, 2) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
@@ -108,11 +215,12 @@ class PumpOnTimeField : public Field
 
 /**
  * @brief Fields that contain an unsigned, 2 byte integer.
- * 
+ *
  */
 class UIntField : public Field
 {
-    using Field::Field; // Inherit field constructors.
+public:
+    UIntField(const char *name, char symbol) : Field(name, symbol, 2) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
