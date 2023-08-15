@@ -62,7 +62,7 @@ public:
     {
         for (uint8_t i = 0; i < m_count; i++)
         {
-            if (strcmp(m_items[i]->name, name))
+            if (STRINGS_MATCH(m_items[i]->name, name))
             {
                 // Found the item.
                 return m_items[i];

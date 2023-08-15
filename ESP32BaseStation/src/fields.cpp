@@ -27,7 +27,7 @@ int8_t Field::encode(uint8_t *bytes, uint8_t length)
     return 0;
 }
 
-void Field::handleRpc(JsonObject &params, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &reply)
+void Field::handleRpc(JsonObject &data, JsonObject &replyData)
 {
 }
 
@@ -44,18 +44,18 @@ bool SettableField<T>::txRequired()
 }
 
 template <typename T>
-void SettableField<T>::handleRpc(JsonObject &data, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &reply)
+void SettableField<T>::handleRpc(JsonObject &data, JsonObject &replyData)
 {
     T candidate = data["params"];
     if (isValidNewValue(candidate))
     {
         setValue = candidate;
-        reply["success"] = true;
+        replyData["success"] = true;
         LOGD("RPC", "Successfully setting rpc call");
     }
     else
     {
-        reply["success"] = false;
+        replyData["success"] = false;
         LOGD("RPC", "Invalid rpc call value to method '%s'", name);
     }
 }
@@ -125,7 +125,8 @@ int8_t SettableByteField::decode(uint8_t *bytes, uint8_t length, JsonObject &jso
     {
 
         // Convert and save to json
-        json[name] = (uint8_t)bytes[0];
+        json[name] = (int8_t)bytes[0];
+        curValue = bytes[0];
         return 1;
     }
     return FIELD_NO_MEMORY;
@@ -167,6 +168,7 @@ int8_t SettableFlagField::decode(uint8_t *bytes, uint8_t length, JsonObject &jso
     {
         // Convert and save to json
         json[name] = 1; // Set to a constant
+        // TODO: Some way to know when this has been successfully sent and received.
         return 0;
     }
     return FIELD_NO_MEMORY;

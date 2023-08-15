@@ -79,6 +79,16 @@ void setup()
         NULL,
         1);
 
+    xTaskCreatePinnedToCore(
+        loraTxTask,
+        "LoRa TX",
+        4096,
+        NULL,
+        1,
+        NULL,
+        1);
+    // TODO: Actually measure ram and high water marks rather than guessing.
+    
     // Don't need the loop, so can remove the main Arduino task.
     vTaskDelete(NULL);
 }

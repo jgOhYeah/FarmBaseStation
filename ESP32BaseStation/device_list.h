@@ -13,53 +13,39 @@
 
 // TODO: Something less horrible for instantiating fields than this (fields can't be shared between devices as they store the current and next values).
 Field *pumpFieldsList[] = {
-    new TenthsField("Battery Voltage", 'V'),
-    new LongUIntField("Uptime", 't'),
-    new TenthsField("Temperature", 'T'),
-    new ByteField("Transmit Enabled", 'r'),
-    new ByteField("Fence Enabled", 'F'),
-    new FlagField("Request status", 's'),
-    new ByteField("Transmit Interval", 'I'),
+    // new LongUIntField("Uptime", 't'),
+    // new TenthsField("Temperature", 'T'),
+    // new SettableByteField("Transmit Enabled", 'r'),
+    // new FlagField("Request status", 's'),
+    // new ByteField("Transmit Interval", 'I'),
     new PumpOnTimeField("Pump on time", 'P'),
     new PumpOnTimeField("Average pump on time", 'a'),
-    new UIntField("Water capacitive reading", 'w'),
+    // new UIntField("Water capacitive reading", 'w'),
     new PumpOnTimeField("Maximum pump on time in block", 'm'),
     new PumpOnTimeField("Minimum pump on time in block", 'n'),
     new UIntField("Count of pump starts in block", 'c'),
-    new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
+    new ByteField("Reset", 'X') // Needs value to be set to 101 to reset. // TODO: Make settable
 };
 
 Field *fenceFieldsList[] = {
     new TenthsField("Battery Voltage", 'V'),
-    new LongUIntField("Uptime", 't'),
+    // new LongUIntField("Uptime", 't'),
     new TenthsField("Temperature", 'T'),
-    new ByteField("Transmit Enabled", 'r'),
-    new ByteField("Fence Enabled", 'F'),
-    new FlagField("Request status", 's'),
-    new ByteField("Transmit Interval", 'I'),
-    new PumpOnTimeField("Pump on time", 'P'),
-    new PumpOnTimeField("Average pump on time", 'a'),
-    new UIntField("Water capacitive reading", 'w'),
-    new PumpOnTimeField("Maximum pump on time in block", 'm'),
-    new PumpOnTimeField("Minimum pump on time in block", 'n'),
-    new UIntField("Count of pump starts in block", 'c'),
+    new SettableByteField("TransmitEnabled", 'r'),
+    new SettableByteField("FenceEnabled", 'F'),
+    new FlagField("RequestStatus", 's'),
+    new ByteField("TransmitInterval", 'I'),
     new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
 };
 
 Field *waterBabyFieldsList[] = {
     new TenthsField("Battery Voltage", 'V'),
-    new LongUIntField("Uptime", 't'),
-    new TenthsField("Temperature", 'T'),
-    new ByteField("Transmit Enabled", 'r'),
-    new ByteField("Fence Enabled", 'F'),
-    new FlagField("Request status", 's'),
-    new ByteField("Transmit Interval", 'I'),
-    new PumpOnTimeField("Pump on time", 'P'),
-    new PumpOnTimeField("Average pump on time", 'a'),
+    // new LongUIntField("Uptime", 't'),
+    // new TenthsField("Temperature", 'T'),
+    // new SettableByteField("Transmit Enabled", 'r'),
+    new FlagField("RequestStatus", 's'),
+    // new ByteField("TransmitInterval", 'I'),
     new UIntField("Water capacitive reading", 'w'),
-    new PumpOnTimeField("Maximum pump on time in block", 'm'),
-    new PumpOnTimeField("Minimum pump on time in block", 'n'),
-    new UIntField("Count of pump starts in block", 'c'),
     new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
 };
 

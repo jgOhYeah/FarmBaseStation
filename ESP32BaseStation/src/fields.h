@@ -51,7 +51,7 @@ public:
      *
      * @param reply
      */
-    virtual void handleRpc(JsonObject &params, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &reply);
+    virtual void handleRpc(JsonObject &data,  JsonObject &replyData);
 
     /**
      * @brief Returns true if a new packet needs to be transmitted to update the field.
@@ -82,8 +82,8 @@ class SettableField : public Field
 public:
     using Field::Field;
 
-    T setValue;
-    T curValue;
+    T setValue = 255; // TODO: Start off at some unkown value that any change will force TX.
+    T curValue = 255;
 
     /**
      * @brief Returns true if a new packet needs to be transmitted to update the field.
@@ -95,7 +95,7 @@ public:
      *
      * @param reply
      */
-    virtual void handleRpc(JsonObject &params, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &reply);
+    virtual void handleRpc(JsonObject &data,  JsonObject &replyData);
 
 protected:
     /**

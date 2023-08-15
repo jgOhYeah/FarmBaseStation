@@ -5,3 +5,4 @@ Doxygen
 .doxygen
 BaseStationSchematics/BaseStationSchematics-backups
 fp-info-cache
+*.lck

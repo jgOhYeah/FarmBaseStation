@@ -11,6 +11,8 @@
 #include "../defines.h"
 #include "topics.h"
 #include "alarm.h"
+#include "devices.h"
+#include "fields.h"
 
 
 /**
@@ -35,6 +37,15 @@ void rpcMe(char *id, uint8_t *message, uint16_t length);
  * @param reply the payload to return.
  */
 void replyMeRpc(char *id, char *reply);
+
+/**
+ * @brief Handles an RPC message addressed to remote devices.
+ * 
+ * @param id id number as a char array to reply with.
+ * @param message the incoming message.
+ * @param length the length of the incoming message.
+ */
+void rpcGateway(uint8_t *message, uint16_t length);
 
 /**
  * @brief Checks if one string starts with another (quicker than strstr?)

@@ -64,6 +64,9 @@ void pjonError(uint8_t code, uint16_t data, void *customPointer)
     case PJON_CONTENT_TOO_LONG:
         LOGE("PJON", "PJON content too long (length %d).", data);
         break;
+
+    default:
+        LOGE("PJON", "There was an unkown error (code %d, data %d).", code, data);
     }
 }
 
@@ -105,8 +108,8 @@ void fakeReceiveTask(void *pvParameters)
 void pjonTask(void *pvParameters)
 {
     // Setup LoRa and PJON
-    xSemaphoreTake(loraMutex, portMAX_DELAY);
     LOGD("LORA", "Starting bus");
+    xSemaphoreTake(loraMutex, portMAX_DELAY);
     bus.set_acknowledge(false);
     bus.set_communication_mode(PJON_SIMPLEX);
     bus.set_receiver(pjonReceive);
@@ -121,7 +124,7 @@ void pjonTask(void *pvParameters)
     xTaskCreatePinnedToCore( // TODO: Create this task with all the others.
         loraWatchdogTask,
         "LoRa Watchdog",
-        1024,
+        2024,
         NULL,
         1,
         NULL,
@@ -134,24 +137,85 @@ void pjonTask(void *pvParameters)
         bus.update();
         bus.receive();
         xSemaphoreGive(loraMutex);
-        yield();
+        // yield();
+        LOGD("LORA_WATCHDOG", "Active");
+        delay(1000); // TODO: Replace
     }
 }
 
 void loraWatchdogTask(void *pvParameters)
 {
     TickType_t lastWakeTime;
-    while(true)
+    while (true)
     {
         // Check if the radio is connected
         xSemaphoreTake(loraMutex, portMAX_DELAY);
-        if (!LoRa.isConnected())
+        bool connected = LoRa.isConnected();
+        xSemaphoreGive(loraMutex);
+        if (!connected)
         {
             LOGE("LORA_WATCHDOG", "LoRa radio is not connected.");
             // TODO: Take stronger action
         }
-        xSemaphoreGive(loraMutex);
 
         xTaskDelayUntil(&lastWakeTime, LORA_CHECK_INTERVAL / portTICK_PERIOD_MS);
     }
+}
+
+void loraTxTask(void *pvParameters)
+{
+    while (true)
+    {
+        for (uint8_t i = 0; i < deviceManager.m_count; i++)
+        {
+            Device *device = deviceManager.m_items[i];
+            // For each device, check if we need to send a packet.
+            if (device->rpcWaiting())
+            {
+                // Need to send something.
+                LOGD("LORA_TX", "Sending packet to '%s'.", deviceManager.m_items[i]->name);
+                uint8_t payload[LORA_MAX_PACKET_SIZE];
+                int8_t length = device->generatePacket(payload, LORA_MAX_PACKET_SIZE);
+                if (length != FIELD_NO_MEMORY)
+                {
+                    LOGD("LORA_TX", "Successfully encoded:");
+                    debugLoRaPacket(payload, length);
+                    // Send
+                    xSemaphoreTake(loraMutex, portMAX_DELAY);
+                    bus.send(device->symbol, payload, length);
+                    xSemaphoreGive(loraMutex);
+                    LOGD("LORA_TX", "Packet added to send queue");
+                    // Wait for a while between transmissions to allow a reply / fairer spectrum usage.
+                    vTaskDelay(LORA_TX_INTERVAL / portTICK_PERIOD_MS);
+                }
+                else
+                {
+                    // Couldn't encode
+                    LOGE("LORA_TX", "Ran out of memory to encode packet. Will not send.");
+                }
+            }
+        }
+        delay(1000);
+        LOGD("LORA_TX", "Checking devices");
+    }
+}
+
+void debugLoRaPacket(uint8_t *payload, uint8_t length)
+{
+    SERIAL_TAKE();
+    Serial.print('{');
+    if (length > 0)
+    {
+        Serial.print(payload[0]);
+        if (length > 1)
+        {
+            for (uint8_t i = 1; i < length; i++)
+            {
+                Serial.print(", ");
+                Serial.print(payload[i]);
+            }
+        }
+    }
+    Serial.println('}');
+    SERIAL_GIVE();
 }

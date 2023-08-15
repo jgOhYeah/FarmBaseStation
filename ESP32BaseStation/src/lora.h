@@ -61,3 +61,18 @@ void pjonTask(void *pvParameters);
  * @param pvParameters 
  */
 void loraWatchdogTask(void *pvParameters);
+
+/**
+ * @brief Task for sending packets when needed.
+ * 
+ * @param pvParameters 
+ */
+void loraTxTask(void *pvParameters);
+
+/**
+ * @brief Task for printing out a byte array.
+ * 
+ * @param payload 
+ * @param length 
+ */
+void debugLoRaPacket(uint8_t *payload, uint8_t length);

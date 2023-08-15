@@ -13,6 +13,7 @@ extern PubSubClient mqtt;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
 extern QueueHandle_t alarmQueue;
+extern DeviceManager deviceManager;
 
 void mqttReceived(char *topic, byte *message, unsigned int length)
 {
@@ -33,6 +34,7 @@ void mqttReceived(char *topic, byte *message, unsigned int length)
     if (startsWith(topic, Topic::RPC_GATEWAY))
     {
         LOGD("MQTT", "MQTT message is RPC for a connected device.");
+        rpcGateway(message, length);
     }
     else if (startsWith(topic, Topic::RPC_ME))
     {
@@ -55,7 +57,7 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
 
     // Handle each known method
     const char* method = json["method"];
-    if (STRINGS_MATCH(method, "alarm"))
+    if (method && STRINGS_MATCH(method, "alarm"))
     {
         LOGI("MQTT", "Alarm method");
 
@@ -99,9 +101,77 @@ void replyMeRpc(char *id, char *reply)
     memcpy(topic + rpcBaseLength, id, MAX_ID_TEXT_LENGTH);
 
     // Publish
-    LOGD("MQTT", "Replying to topic %s", topic); // TODO: Seems to crash.
+    LOGD("MQTT", "Replying to topic %s", topic);
     // xSemaphoreTake(mqttMutex, portMAX_DELAY);
     mqtt.publish(topic, reply);
+    // xSemaphoreGive(mqttMutex);
+}
+
+void rpcGateway(uint8_t *message, uint16_t length)
+{
+    // Deserialise
+    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+    DeserializationError error = deserializeJson(json, message, length);
+    if (error)
+    {
+        LOGW("MQTT", "Could not deserialise the json document. Discarding.");
+        return;
+    }
+
+    // Find the device this command is for.
+    const char *deviceName = json["device"];
+    if (!deviceName)
+    {
+        LOGW("MQTT", "Device not provided. Discarding.");
+        return;
+    }
+    Device *device = deviceManager.getWithName(deviceName);
+    if (!device)
+    {
+        LOGW("MQTT", "Device '%s' not recognised. Discarding.", deviceName);
+        return;
+    }
+
+    // Find the field.
+    JsonObject data = json["data"];
+    if (!data)
+    {
+        LOGW("MQTT", "No data provided.");
+        return;
+    }
+    const char *method = data["method"];
+    LOGD("MQTT", "Method is %s", method);
+    if (!method)
+    {
+        LOGW("MQTT", "Method or data not provided.");
+        return;
+    }
+    Field *field = device->fields.getWithName(method);
+    if (!field)
+    {
+        LOGW("MQTT", "Field not recognised.");
+        return;
+    }
+    else
+    {
+        LOGD("MQTT", "Field is '%s'", field->name);
+    }
+
+    // Handle the RPC call
+    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> reply;
+    JsonObject replyData = reply.createNestedObject("data");
+    field->handleRpc(data, replyData);
+
+    // Add the other metadata and send the reply
+    reply["id"] = data["id"];
+    reply["device"] = deviceName;
+
+    char replyText[MAX_JSON_TEXT_LENGTH];
+    serializeJson(reply, replyText, MAX_JSON_TEXT_LENGTH);
+
+    LOGD("MQTT", "Replying with payload '%s'", replyText);
+    // xSemaphoreTake(mqttMutex, portMAX_DELAY);
+    mqtt.publish(Topic::RPC_GATEWAY, replyText);
     // xSemaphoreGive(mqttMutex);
 }
 

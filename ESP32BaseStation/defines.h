@@ -52,7 +52,9 @@
 #define PIN_LORA_DIO 17
 #define PIN_LORA_RESET 16
 
-#define LORA_CHECK_INTERVAL 5000
+#define LORA_CHECK_INTERVAL 30000
+#define LORA_TX_INTERVAL 10000
+#define LORA_MAX_PACKET_SIZE 50
 
 #include "credentials.h"
 #include "src/topics.h"
