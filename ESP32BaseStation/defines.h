@@ -15,6 +15,10 @@
 #define PJON_INCLUDE_TL
 #include <PJONThroughLora.h>
 
+// For alarm tunes
+// #include <AudioTools.h>
+// #include <AudioCodecs/CodecMP3Helix.h>
+
 #define VERSION "0.0.1a"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
@@ -35,8 +39,8 @@
 #define LOGE(tag, format, ...) SERIAL_TAKE(); ESP_LOGE(tag, format, ##__VA_ARGS__); SERIAL_GIVE()
 
 // https://gcc.gnu.org/onlinedocs/gcc-4.8.5/cpp/Stringification.html
-#define xstr(s) str(s)
-#define str(s) #s
+#define xstringify(s) stringify(s)
+#define stringify(s) #s
 
 #define MAX_ID_TEXT_LENGTH 11
 #define MAX_JSON_TEXT_LENGTH 200

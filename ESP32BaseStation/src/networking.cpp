@@ -40,7 +40,7 @@ void wifiConnect()
 void mqttConnect()
 {
     xSemaphoreTake(mqttMutex, portMAX_DELAY);
-    LOGI("Networking", "Connecting to MQTT broker '" MQTT_BROKER "' on port " xstr(MQTT_PORT) ".");
+    LOGI("Networking", "Connecting to MQTT broker '" MQTT_BROKER "' on port " xstringify(MQTT_PORT) ".");
     mqtt.setServer(MQTT_BROKER, MQTT_PORT);
     mqtt.setCallback(mqttReceived);
     mqttSetup();
