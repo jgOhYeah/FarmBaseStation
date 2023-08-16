@@ -27,6 +27,9 @@ SemaphoreHandle_t serialMutex;
 
 void setup()
 {
+    pinMode(PIN_LED_TOP, OUTPUT);
+    pinMode(PIN_LED_INSIDE, OUTPUT);
+
     // Setup queues and mutexes
     alarmQueue = xQueueCreate(3, sizeof(AlarmState));
     mqttMutex = xSemaphoreCreateMutex();
@@ -90,11 +93,19 @@ void setup()
     // TODO: Actually measure ram and high water marks rather than guessing.
     
     // Don't need the loop, so can remove the main Arduino task.
-    vTaskDelete(NULL);
+    // vTaskDelete(NULL);
 }
 
 void loop()
 {
     // Not used.
     // TODO: OTA updates
+    digitalWrite(PIN_LED_TOP, HIGH);
+    delay(1000);
+    digitalWrite(PIN_LED_INSIDE, HIGH);
+    delay(1000);
+    digitalWrite(PIN_LED_TOP, LOW);
+    delay(1000);
+    digitalWrite(PIN_LED_INSIDE, LOW);
+    delay(1000);
 }

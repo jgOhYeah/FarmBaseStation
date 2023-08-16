@@ -44,6 +44,8 @@
 
 #define PJON_DEVICE_ID 255
 
+// Pins
+// LoRa
 // VSPI is default without specifying
 #define PIN_LORA_CS 5
 #define PIN_LORA_MOSI 23
@@ -51,6 +53,10 @@
 #define PIN_LORA_SCLK 18
 #define PIN_LORA_DIO 17
 #define PIN_LORA_RESET 16
+
+// LEDs
+#define PIN_LED_TOP 33
+#define PIN_LED_INSIDE 32
 
 #define LORA_CHECK_INTERVAL 30000
 #define LORA_TX_INTERVAL 10000
