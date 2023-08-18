@@ -1,0 +1,6 @@
+<map id="SettableFlagField" name="SettableFlagField">
+<area shape="rect" id="node1" title="Class for flags that can be set via an RPC call." alt="" coords="25,229,160,256"/>
+<area shape="rect" id="node2" href="$class_settable_field.html" title=" " alt="" coords="5,155,180,181"/>
+<area shape="rect" id="node3" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="66,80,119,107"/>
+<area shape="rect" id="node4" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="45,5,141,32"/>
+</map>

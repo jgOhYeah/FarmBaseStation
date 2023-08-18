@@ -1,0 +1,14 @@
+<map id="ESP32BaseStation/src/lookups.h" name="ESP32BaseStation/src/lookups.h">
+<area shape="rect" id="node1" title="Lookupable and lookupable manager base classes." alt="" coords="461,5,624,47"/>
+<area shape="rect" id="node2" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="461,184,624,225"/>
+<area shape="rect" id="node5" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="640,273,803,315"/>
+<area shape="rect" id="node11" href="$fields_8h.html" title="Contains fields classes." alt="" coords="275,95,437,136"/>
+<area shape="rect" id="node3" href="$device__list_8h.html" title="List of all devices and fields known to the system." alt="" coords="5,273,192,315"/>
+<area shape="rect" id="node4" href="$devices_8cpp.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="403,273,565,315"/>
+<area shape="rect" id="node7" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="521,363,684,404"/>
+<area shape="rect" id="node9" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="216,273,379,315"/>
+<area shape="rect" id="node6" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="708,363,871,404"/>
+<area shape="rect" id="node8" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="521,452,684,493"/>
+<area shape="rect" id="node10" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="216,363,379,404"/>
+<area shape="rect" id="node12" href="$fields_8cpp.html" title="Contains fields classes." alt="" coords="275,184,437,225"/>
+</map>

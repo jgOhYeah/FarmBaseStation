@@ -1,0 +1,4 @@
+<map id="ESP32BaseStation/src/networking.h" name="ESP32BaseStation/src/networking.h">
+<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="5,5,168,47"/>
+<area shape="rect" id="node2" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="5,95,168,136"/>
+</map>

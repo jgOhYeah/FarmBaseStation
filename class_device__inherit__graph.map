@@ -1,0 +1,4 @@
+<map id="Device" name="Device">
+<area shape="rect" id="node1" title="Each sensor / device on the PJON network." alt="" coords="20,80,87,107"/>
+<area shape="rect" id="node2" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="5,5,101,32"/>
+</map>

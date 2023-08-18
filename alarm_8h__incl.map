@@ -1,0 +1,12 @@
+<map id="ESP32BaseStation/src/alarm.h" name="ESP32BaseStation/src/alarm.h">
+<area shape="rect" id="node1" title="Handles alarms." alt="" coords="395,5,558,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="430,95,523,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,89,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,169,176,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="201,169,321,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="345,169,456,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="481,169,627,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="651,169,755,196"/>
+<area shape="rect" id="node9" title=" " alt="" coords="779,169,886,196"/>
+<area shape="rect" id="node10" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="910,169,1006,196"/>
+</map>
