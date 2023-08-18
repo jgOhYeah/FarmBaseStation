@@ -20,7 +20,6 @@ void alarmTask(void *pvParameters)
     {
         AlarmState state;
         int result = xQueueReceive(alarmQueue, (void *)&state, 1000 / portTICK_RATE_MS);
-        LOGD("ALARM", "Queue got something or expired.");
         if (result)
         {
             // We actually got something:

@@ -48,7 +48,7 @@ void setup()
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
     loraMutex = xSemaphoreCreateMutex();
 
-    // Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
+    Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
 
@@ -106,7 +106,7 @@ void setup()
     xTaskCreatePinnedToCore(
         loraTxTask,
         "LoRa TX",
-        2048,
+        4096,
         NULL,
         1,
         NULL,

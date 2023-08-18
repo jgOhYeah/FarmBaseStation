@@ -102,9 +102,11 @@ int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
         if (fields.m_items[i]->txRequired())
         {
             // Need to encode this field.
+            LOGD("LORA_TX", "Encoding field '%s'.", fields.m_items[i]->name);
             int8_t result = fields.m_items[i]->encode(payload, maxLength - length);
             if (result != FIELD_NO_MEMORY)
             {
+                LOGD("LORA_TX", "This field was %d bytes long including header", result);
                 length += result;
             }
             else

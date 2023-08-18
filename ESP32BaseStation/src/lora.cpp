@@ -137,9 +137,7 @@ void pjonTask(void *pvParameters)
         bus.update();
         bus.receive();
         xSemaphoreGive(loraMutex);
-        // yield();
-        LOGD("LORA_WATCHDOG", "Active");
-        delay(1000); // TODO: Replace
+        vTaskDelay(1);
     }
 }
 
@@ -178,7 +176,7 @@ void loraTxTask(void *pvParameters)
                 int8_t length = device->generatePacket(payload, LORA_MAX_PACKET_SIZE);
                 if (length != FIELD_NO_MEMORY)
                 {
-                    LOGD("LORA_TX", "Successfully encoded:");
+                    LOGD("LORA_TX", "Successfully encoded packet of length %d:", length);
                     debugLoRaPacket(payload, length);
                     // Send
                     xSemaphoreTake(loraMutex, portMAX_DELAY);
@@ -195,8 +193,7 @@ void loraTxTask(void *pvParameters)
                 }
             }
         }
-        delay(1000);
-        LOGD("LORA_TX", "Checking devices");
+        vTaskDelay(10);
     }
 }
 

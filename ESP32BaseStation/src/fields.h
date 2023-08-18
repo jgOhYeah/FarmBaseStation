@@ -152,7 +152,7 @@ public:
 class SettableByteField : public SettableField<int8_t>
 {
 public:
-    SettableByteField(const char *name, char symbol) : SettableField(name, symbol, 0) {}
+    SettableByteField(const char *name, char symbol) : SettableField(name, symbol, 1) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 
