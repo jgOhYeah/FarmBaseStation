@@ -16,8 +16,7 @@
 #include <PJONThroughLora.h>
 
 // For alarm tunes
-// #include <AudioTools.h>
-// #include <AudioCodecs/CodecMP3Helix.h>
+#include <TunePlayer.h>
 
 #define VERSION "0.0.1a"
 
@@ -59,8 +58,11 @@
 #define PIN_LORA_RESET 16
 
 // LEDs
-#define PIN_LED_TOP 33
-#define PIN_LED_INSIDE 32
+#define PIN_LED_TOP 32
+#define PIN_LED_INSIDE 33
+
+// Speaker
+#define PIN_SPEAKER 25
 
 #define LORA_CHECK_INTERVAL 30000
 #define LORA_TX_INTERVAL 10000

@@ -47,7 +47,7 @@ void alarmTask(void *pvParameters)
         case ALARM_HIGH:
             // LED on top flashing, inside on.
             digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
-            digitalWrite(PIN_LED_INSIDE, LOW);
+            digitalWrite(PIN_LED_INSIDE, HIGH);
             break;
         }
     }
