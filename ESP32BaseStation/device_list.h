@@ -56,7 +56,7 @@ LookupManager<Field> waterBabyFieldsManager(waterBabyFieldsList, sizeof(waterBab
 Device *deviceList[] = {
     new Device("Main Pressure Pump", 0x5A, pumpFieldsManager),
     new Device("Solar Electric Fence", 0x4A, fenceFieldsManager),
-    new Device("Irrigation Water Detector", 0x47, waterBabyFieldsManager)
+    new Device("Irrigation Water Detector", 167, waterBabyFieldsManager)
 };
 
 DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(Device*));
