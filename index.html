@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Farm ESP32 LoRa PJON base station: Main Page</title>
+<title>Farm ESP32 LoRa PJON base station: Base station for connecting remote sensors to Thingsboard.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,11 +60,43 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Farm ESP32 LoRa PJON base station Documentation</div>  </div>
+<div class="title">Base station for connecting remote sensors to Thingsboard. </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_Readme"></a>Remote sensors use <a href="https://github.com/gioblu/PJON">PJON over LoRa</a> radio to communicate. The <a href="https://thingsboard.io/docs/reference/gateway-mqtt-api/">Thingsboard Gateway MQTT API</a> is used to connect on the Thingsboard side.</p>
+<p>See <a href="https://github.com/jgOhYeah/Farm-PJON-LoRa-network">here</a> for other sensors and more information on the system.</p>
+<p>Written by Jotham Gates August 2023</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Photos</h1>
+<p><img src="Photos/Inside.jpg" alt="Inside the enclosure." width="50%" class="inline"/> <img src="Photos/Completed.jpg" alt="The completed unit." width="49%" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Getting started</h1>
+<ol type="1">
+<li>Install the ESP32 Arduino boards manager.</li>
+<li>Install the following libraries using the Arduino library manager:<ul>
+<li><a href="https://github.com/knolleary/pubsubclient"><code>PubSubClient1</code></a></li>
+<li><a href="https://arduinojson.org/"><code>ArduinoJson</code></a></li>
+<li><a href="https://github.com/gioblu/PJON"><code>PJON</code></a></li>
+<li><a href="https://github.com/sandeepmistry/arduino-LoRa"><code>LoRa</code></a></li>
+<li><a href="https://github.com/jgOhYeah/TunePlayer"><code>TunePlayer</code></a> (A library I have written).</li>
+</ul>
+</li>
+<li>Create a copy of <a href="./ESP32BaseStation/credentials.example.h"><code>credentials.example.h</code></a> and name this <code>credentials.h</code>. Fill out the settings in this file for the WiFi network to connect to, MQTT broker and Thingsboard credentials.</li>
+<li>Upload the code to the ESP32.</li>
+<li>Assemble the electronics as shown in the schematics and optionally place inside a case.</li>
+<li>Test with other sensors and the Thingsboard server.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Schematics</h1>
+<p>The base station uses an ESP32 development board as its base. An SX1278 LoRa radio module breakout board is connected via jumper leads. LEDs are soldered along with their respective current limiting resistors to wires that can be plugged into the ESP32 board. An audio amplifier and speaker can also be connected for alarm functionality. I salvaged this from the sound effects module of a broken children's ride on toy car.</p>
+<p><img src="BaseStationSchematics/Exports/BaseStationSchematics.svg" alt="The schematic for the base station" style="pointer-events: none;" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Fun part / experiments</h1>
+<p>I originally planned to use the build in DAC of the ESP32 to play sounds on alarm conditions. At this point I haven't succeded in this (currently using the <a href="https://github.com/jgOhYeah/TunePlayer">TunePlayer</a> library to play simple monotonic songs instead). I did come across the <a href="https://github.com/pschatzmann/ESP32-A2DP">ESP32-A2DP</a> library that allows the use of this unit as a terrible sounding bluetooth speaker.</p>
+<p><a href="Fun/BluetoothSpeaker/BluetoothSpeaker.ino">This sketch</a> is the <code>bt_music_receiver_to_internal_dac</code> example from the ESP32-A2DP library with the addition of flashing lights. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
