@@ -8,10 +8,14 @@ Written by Jotham Gates
 August 2023
 
 ## Photos
-<img src="Photos/Inside.jpg" alt="Inside the enclosure." width="50%">
-<img src="Photos/Completed.jpg" alt="The completed unit." width="49%">
+<!-- <img src="Photos/Inside.jpg" alt="Inside the enclosure." width="50%">
+<img src="Photos/Completed.jpg" alt="The completed unit." width="49%"> -->
+![Inside the enclosure.](Photos/Inside.jpg)
+![The completed unit.](Photos/Completed.jpg)
 
 ## Getting started
+The Github repository containing all design files and code is [here](https://github.com/jgOhYeah/FarmBaseStation).
+
 1. Install the ESP32 Arduino boards manager.
 2. Install the following libraries using the Arduino library manager:
    - [`PubSubClient1`](https://github.com/knolleary/pubsubclient)
