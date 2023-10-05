@@ -1,8 +1,9 @@
 <map id="ESP32BaseStation/src/alarm.h" name="ESP32BaseStation/src/alarm.h">
-<area shape="rect" id="node1" title="Handles alarms." alt="" coords="192,5,355,47"/>
-<area shape="rect" id="node2" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="5,95,168,136"/>
-<area shape="rect" id="node3" href="$audio_8h.html" title="Plays audio." alt="" coords="192,95,355,136"/>
-<area shape="rect" id="node5" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="379,95,541,136"/>
-<area shape="rect" id="node4" href="$audio_8cpp.html" title="Plays audio." alt="" coords="192,184,355,225"/>
-<area shape="rect" id="node6" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="379,184,541,225"/>
+<area shape="rect" id="node1" title="Handles alarms." alt="" coords="251,5,413,47"/>
+<area shape="rect" id="node2" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="237,184,453,225"/>
+<area shape="rect" id="node3" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="192,95,355,136"/>
+<area shape="rect" id="node4" href="$audio_8h.html" title="Plays audio." alt="" coords="5,95,168,136"/>
+<area shape="rect" id="node6" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="429,95,592,136"/>
+<area shape="rect" id="node5" href="$audio_8cpp.html" title="Plays audio." alt="" coords="5,184,168,225"/>
+<area shape="rect" id="node7" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="477,184,640,225"/>
 </map>

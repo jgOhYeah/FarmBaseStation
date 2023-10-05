@@ -1,0 +1,22 @@
+<map id="ESP32BaseStation/ESP32BaseStation.ino" name="ESP32BaseStation/ESP32BaseStation.ino">
+<area shape="rect" id="node1" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="611,5,827,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="534,468,615,495"/>
+<area shape="rect" id="node11" href="$device__list_8h.html" title="List of all devices and fields known to the system." alt="" coords="523,169,627,196"/>
+<area shape="rect" id="node16" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="384,95,515,121"/>
+<area shape="rect" id="node17" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="387,169,445,196"/>
+<area shape="rect" id="node18" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="756,169,833,196"/>
+<area shape="rect" id="node19" href="$alarm_8h.html" title="Handles alarms." alt="" coords="857,244,929,271"/>
+<area shape="rect" id="node20" href="$audio_8h.html" title="Plays audio." alt="" coords="908,169,1001,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="435,543,519,569"/>
+<area shape="rect" id="node4" title=" " alt="" coords="543,543,606,569"/>
+<area shape="rect" id="node5" title=" " alt="" coords="631,543,751,569"/>
+<area shape="rect" id="node6" title=" " alt="" coords="775,543,886,569"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,543,152,569"/>
+<area shape="rect" id="node8" title=" " alt="" coords="176,543,280,569"/>
+<area shape="rect" id="node9" title=" " alt="" coords="304,543,411,569"/>
+<area shape="rect" id="node10" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,543,1007,569"/>
+<area shape="rect" id="node12" href="$fields_8h.html" title="Contains fields classes." alt="" coords="529,319,621,345"/>
+<area shape="rect" id="node15" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="429,244,536,271"/>
+<area shape="rect" id="node13" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="359,393,443,420"/>
+<area shape="rect" id="node14" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="519,393,631,420"/>
+</map>
