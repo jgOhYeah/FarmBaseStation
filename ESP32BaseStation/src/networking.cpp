@@ -10,6 +10,7 @@
 
 extern WiFiClient wifi;
 extern PubSubClient mqtt;
+extern QueueHandle_t mqttPublishQueue;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
 extern DeviceManager deviceManager;
@@ -113,9 +114,18 @@ void networkingTask(void *pvParameters)
         // Depending on whic connect function was called, the LED may be off.
         digitalWrite(PIN_WIFI_LED, HIGH);
 
-        // Thread safe loop.
+        // Thread safe mqtt operations.
         xSemaphoreTake(mqttMutex, portMAX_DELAY);
         mqtt.loop();
+
+        // Check if there is anything to publish
+        MqttMsg msg;
+        int result = xQueueReceive(mqttPublishQueue, (void *)&msg, 0);
+        if (result)
+        {
+            // Something needs to be published.
+            mqtt.publish(msg.topic, msg.payload);
+        }
         xSemaphoreGive(mqttMutex);
         taskYIELD();
     }

@@ -11,6 +11,8 @@
 #include "../defines.h"
 #include "lookups.h"
 #include "devices.h"
+#include "networking.h"
+#include "rpc.h"
 
 /**
  * @brief Handles an incoming packet received from the radio. Uses the latest
@@ -76,3 +78,24 @@ void loraTxTask(void *pvParameters);
  * @param length 
  */
 void debugLoRaPacket(uint8_t *payload, uint8_t length);
+
+/**
+ * @brief Sends an attribute over mqtt depending on the state of the radio
+ * connection.
+ * 
+ */
+void sendRadioConnectedMsg(bool state);
+
+/**
+ * @brief Sets the state for if there are packets left to send.
+ * 
+ */
+void sendTxWaitingMsg(bool state);
+
+/**
+ * @brief updates the attribute waiting to false if required.
+ * 
+ * @return the new value for whether there was a message to send in the previous
+ * loop.
+ */
+bool sendOnTxNotRequired(bool previous);

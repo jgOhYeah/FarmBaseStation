@@ -13,7 +13,7 @@
 #include "alarm.h"
 #include "devices.h"
 #include "fields.h"
-
+#include "networking.h"
 
 /**
  * @brief Function that is called when an mqtt message is received.
@@ -55,3 +55,9 @@ void rpcGateway(uint8_t *message, uint16_t length);
  * @return Whether input starts with compare.
  */
 bool startsWith(char *input, const char *compare);
+
+/**
+ * @brief Sets the state of an attribute.
+ * 
+ */
+void setAttributeState(const char* const attribute, bool state);

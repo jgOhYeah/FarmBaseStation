@@ -11,6 +11,12 @@
 #include "devices.h"
 #include "lora.h"
 
+struct MqttMsg
+{
+    const char* topic;
+    char payload[MAX_JSON_TEXT_LENGTH];
+};
+
 void wifiConnect();
 void mqttReceived(char *topic, byte *message, unsigned int length);
 void mqttConnect();

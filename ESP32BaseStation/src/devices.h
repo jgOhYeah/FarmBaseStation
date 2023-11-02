@@ -80,4 +80,12 @@ public:
      *
      */
     void connectDevices();
+
+    /**
+     * @brief Returns the number of packets that need to be sent across all
+     * devices.
+     * 
+     * @return uint8_t 
+     */
+    uint8_t txRequired();
 };

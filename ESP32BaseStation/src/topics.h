@@ -19,4 +19,5 @@ namespace Topic
     const char* const RPC_ME = "v1/devices/me/rpc/request/";
     const char* const RPC_ME_SUBSCRIBE = "v1/devices/me/rpc/request/+";
     const char* const RPC_ME_RESPOND = "v1/devices/me/rpc/response/";
+    const char* const ATTRIBUTE_ME_UPLOAD = "v1/devices/me/attributes";
 }

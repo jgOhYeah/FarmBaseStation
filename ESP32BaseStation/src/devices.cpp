@@ -30,14 +30,13 @@ DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, Static
         return DECODE_FAIL;
     }
 
-
     // For each field, add it to the document.
     for (uint8_t i = 0; i < length; i++)
     {
         Field *field = fields.getWithSymbol((char)payload[i]);
         if (field)
         {
-            uint8_t valueStart = i+1;
+            uint8_t valueStart = i + 1;
             int8_t result = field->decode(&payload[valueStart], length - valueStart, valuesObject);
             if (result != FIELD_NO_MEMORY)
             {
@@ -90,7 +89,6 @@ bool Device::rpcWaiting()
 
     // Nothing needs to be transmitted.
     return false;
-
 }
 
 int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
@@ -118,7 +116,6 @@ int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
 
     // Return the size of the buffer that was actually used.
     return length;
-
 }
 
 void DeviceManager::connectDevices()
@@ -138,4 +135,20 @@ void DeviceManager::connectDevices()
         mqtt.publish(Topic::DEVICE_CONNECT, charBuff);
         xSemaphoreGive(mqttMutex);
     }
+}
+
+uint8_t DeviceManager::txRequired()
+{
+    uint8_t count = 0;
+    // For each device, check if it needs to send a packet.
+    for (uint8_t i = 0; i < m_count; i++)
+    {
+        if (m_items[i]->rpcWaiting())
+        {
+            // Transmission waiting
+            count++;
+        }
+    }
+
+    return count;
 }

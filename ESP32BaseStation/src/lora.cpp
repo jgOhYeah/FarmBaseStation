@@ -11,10 +11,13 @@
 
 extern PJONThroughLora bus;
 extern DeviceManager deviceManager;
+extern QueueHandle_t mqttPublishQueue;
 extern SemaphoreHandle_t serialMutex;
 extern SemaphoreHandle_t mqttMutex;
 extern PubSubClient mqtt;
 extern SemaphoreHandle_t loraMutex;
+extern void setAttributeState(const char* const attribute, bool state);
+
 
 void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packetInfo, int rssi, float snr)
 {
@@ -29,14 +32,12 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
         device->decodePacketFields(payload, length, json, rssi, snr);
 
         // Convert to a string
-        char jsonText[MAX_JSON_TEXT_LENGTH];
-        serializeJson(json, jsonText, MAX_JSON_TEXT_LENGTH);
+        MqttMsg msg{Topic::TELEMETRY_UPLOAD, ""};
+        serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
 
         // Log and send to console
-        LOGI("LORA", "Sending '%s'", jsonText);
-        xSemaphoreTake(mqttMutex, portMAX_DELAY);
-        mqtt.publish(Topic::TELEMETRY_UPLOAD, jsonText);
-        xSemaphoreGive(mqttMutex);
+        LOGI("LORA", "Sending '%s'", msg.payload);
+        xQueueSend(mqttPublishQueue, (void *)&msg, portMAX_DELAY);
     }
     else
     {
@@ -143,6 +144,10 @@ void pjonTask(void *pvParameters)
 
 void loraWatchdogTask(void *pvParameters)
 {
+    // Inform the server whether the radio is connected.
+    sendRadioConnectedMsg(LoRa.isConnected());
+
+    // Main loop.
     TickType_t lastWakeTime;
     while (true)
     {
@@ -152,8 +157,11 @@ void loraWatchdogTask(void *pvParameters)
         xSemaphoreGive(loraMutex);
         if (!connected)
         {
-            LOGE("LORA_WATCHDOG", "LoRa radio is not connected.");
-            // TODO: Take stronger action
+            // Not connected. We have issues.
+            LOGE("LORA_WATCHDOG", "LoRa radio is not connected. Resetting");
+            sendRadioConnectedMsg(false);
+            delay(10000);
+            ESP.restart(); // TODO: Safely disconnect from WiFi first.
         }
 
         xTaskDelayUntil(&lastWakeTime, LORA_CHECK_INTERVAL / portTICK_PERIOD_MS);
@@ -162,12 +170,14 @@ void loraWatchdogTask(void *pvParameters)
 
 void loraTxTask(void *pvParameters)
 {
+    bool previousTxState = false;
+    sendTxWaitingMsg(false);
     while (true)
     {
         for (uint8_t i = 0; i < deviceManager.m_count; i++)
         {
-            Device *device = deviceManager.m_items[i];
             // For each device, check if we need to send a packet.
+            Device *device = deviceManager.m_items[i];
             if (device->rpcWaiting())
             {
                 // Need to send something.
@@ -182,9 +192,24 @@ void loraTxTask(void *pvParameters)
                     xSemaphoreTake(loraMutex, portMAX_DELAY);
                     bus.send(device->symbol, payload, length);
                     xSemaphoreGive(loraMutex);
-                    LOGD("LORA_TX", "Packet added to send queue");
+                    LOGD("LORA_TX", "Packet sent");
+
+                    // Update the send queue info.
+                    if (!previousTxState)
+                    {
+                        // First time we have had to send something in a while.
+                        previousTxState = true;
+                    }
+                    // Always send each TX so we know it happened.
+                    sendTxWaitingMsg(true);
+
                     // Wait for a while between transmissions to allow a reply / fairer spectrum usage.
-                    vTaskDelay(LORA_TX_INTERVAL / portTICK_PERIOD_MS);
+                    for (uint i = 0; i < LORA_TX_INTERVAL / 10; i++)
+                    {
+                        vTaskDelay(10 / portTICK_PERIOD_MS);
+                        // Send a no queue message when needed.
+                        previousTxState = sendOnTxNotRequired(previousTxState);
+                    }
                 }
                 else
                 {
@@ -194,6 +219,9 @@ void loraTxTask(void *pvParameters)
             }
         }
         vTaskDelay(10);
+
+        // Send a no queue message when needed.
+        previousTxState = sendOnTxNotRequired(previousTxState);
     }
 }
 
@@ -215,4 +243,27 @@ void debugLoRaPacket(uint8_t *payload, uint8_t length)
     }
     Serial.println('}');
     SERIAL_GIVE();
+}
+
+void sendRadioConnectedMsg(bool state)
+{
+    setAttributeState("radioConnected", state);
+}
+
+void sendTxWaitingMsg(bool state)
+{
+    setAttributeState("txWaiting", state);
+}
+
+bool sendOnTxNotRequired(bool previous)
+{
+    if (previous && !deviceManager.txRequired())
+    {
+        // Was sending something, but now don't have to.
+        sendTxWaitingMsg(false);
+        return false;
+    }
+
+    // No change.
+    return previous;
 }

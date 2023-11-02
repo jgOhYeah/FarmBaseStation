@@ -10,6 +10,7 @@
 #include "rpc.h"
 
 extern PubSubClient mqtt;
+extern QueueHandle_t mqttPublishQueue;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
 extern QueueHandle_t alarmQueue;
@@ -185,4 +186,13 @@ bool startsWith(char *input, const char *compare)
         }
     }
     return true;
+}
+
+void setAttributeState(const char* const attribute, bool state)
+{
+    MqttMsg msg{Topic::ATTRIBUTE_ME_UPLOAD, ""};
+    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+    json[attribute] = state;
+    serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
+    xQueueSend(mqttPublishQueue, (void *)&msg, portMAX_DELAY);
 }

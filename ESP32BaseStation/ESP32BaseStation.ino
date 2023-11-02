@@ -16,18 +16,10 @@ PubSubClient mqtt(wifi);
 PJONThroughLora bus(PJON_DEVICE_ID);
 QueueHandle_t alarmQueue;
 QueueHandle_t audioQueue;
+QueueHandle_t mqttPublishQueue;
 SemaphoreHandle_t loraMutex;
 SemaphoreHandle_t mqttMutex;
 SemaphoreHandle_t serialMutex;
-
-// const char *urls[] = {
-//     "DESKTOP-RVE60DS.local:8000/TardisTakeoff.mp3",
-//     "DESKTOP-RVE60DS.local:8000/TardisCloister.mp3"};
-// URLStream urlStream;
-// AudioSourceURL source(urlStream, urls, "audio/mp3");
-// AnalogAudioStream analog;
-// MP3DecoderHelix decoder;
-// AudioPlayer player(source, analog, decoder);
 
 #include "device_list.h"
 #include "src/networking.h"
@@ -44,6 +36,7 @@ void setup()
     // Setup queues and mutexes
     alarmQueue = xQueueCreate(3, sizeof(AlarmState));
     audioQueue = xQueueCreate(3, sizeof(AlarmState));
+    mqttPublishQueue = xQueueCreate(6, sizeof(MqttMsg));
     mqttMutex = xSemaphoreCreateMutex();
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
     loraMutex = xSemaphoreCreateMutex();
@@ -52,7 +45,7 @@ void setup()
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
 
-    if (!alarmQueue || !audioQueue || !mqttMutex || !serialMutex || !loraMutex)
+    if (!alarmQueue || !audioQueue || !mqttPublishQueue || !mqttMutex || !serialMutex || !loraMutex)
     {
         LOGE("SETUP", "Could not create something!!!");
     }

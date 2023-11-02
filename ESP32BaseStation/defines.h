@@ -18,7 +18,7 @@
 // For alarm tunes
 #include <TunePlayer.h>
 
-#define VERSION "0.0.1a"
+#define VERSION "0.1.0"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 #define PIN_WIFI_LED LED_BUILTIN
@@ -43,6 +43,7 @@
 
 #define MAX_ID_TEXT_LENGTH 11
 #define MAX_JSON_TEXT_LENGTH 200
+#define MAX_TOPIC_LENGTH 50
 #define STRINGS_MATCH(A, B) (strcmp(A, B) == 0)
 
 #define PJON_DEVICE_ID 255
