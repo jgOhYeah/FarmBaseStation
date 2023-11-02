@@ -77,38 +77,19 @@ $(function() {
 <div class="textblock"><code>#include &quot;<a class="el" href="defines_8h_source.html">../defines.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lookups_8h_source.html">lookups.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="devices_8h_source.html">devices.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="networking_8h_source.html">networking.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rpc_8h_source.html">rpc.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for lora.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="lora_8h__incl.png" border="0" usemap="#a_e_s_p32_base_station_2src_2lora_8h" alt=""/></div>
-<map name="a_e_s_p32_base_station_2src_2lora_8h" id="a_e_s_p32_base_station_2src_2lora_8h">
-<area shape="rect" title="File that handles the LoRa radio and PJON." alt="" coords="446,5,609,47"/>
-<area shape="rect" href="defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="430,319,523,345"/>
-<area shape="rect" href="lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="608,244,692,271"/>
-<area shape="rect" href="devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="485,95,569,121"/>
-<area shape="rect" title=" " alt="" coords="5,393,89,420"/>
-<area shape="rect" title=" " alt="" coords="113,393,176,420"/>
-<area shape="rect" title=" " alt="" coords="201,393,321,420"/>
-<area shape="rect" title=" " alt="" coords="345,393,456,420"/>
-<area shape="rect" title=" " alt="" coords="481,393,627,420"/>
-<area shape="rect" title=" " alt="" coords="651,393,755,420"/>
-<area shape="rect" title=" " alt="" coords="779,393,886,420"/>
-<area shape="rect" href="topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="910,393,1006,420"/>
-<area shape="rect" href="fields_8h.html" title="Contains fields classes." alt="" coords="493,169,562,196"/>
-<area shape="rect" href="conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="421,244,533,271"/>
-</map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="lora_8h__dep__incl.png" border="0" usemap="#a_e_s_p32_base_station_2src_2lora_8hdep" alt=""/></div>
-<map name="a_e_s_p32_base_station_2src_2lora_8hdep" id="a_e_s_p32_base_station_2src_2lora_8hdep">
-<area shape="rect" title="File that handles the LoRa radio and PJON." alt="" coords="105,5,268,47"/>
-<area shape="rect" href="_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="5,184,221,225"/>
-<area shape="rect" href="lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="105,95,268,136"/>
-<area shape="rect" href="networking_8h.html" title="Header file for networking.cpp." alt="" coords="292,95,455,136"/>
-<area shape="rect" href="networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="292,184,455,225"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8h__dep__incl.svg" width="506" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 </div>
 <p><a href="lora_8h_source.html">Go to the source code of this file.</a></p>
@@ -141,6 +122,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora
 <tr class="memitem:afbd9f56608d04cb8a75d69112cd89885"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8h.html#afbd9f56608d04cb8a75d69112cd89885">debugLoRaPacket</a> (uint8_t *payload, uint8_t length)</td></tr>
 <tr class="memdesc:afbd9f56608d04cb8a75d69112cd89885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task for printing out a byte array.  <a href="lora_8h.html#afbd9f56608d04cb8a75d69112cd89885">More...</a><br /></td></tr>
 <tr class="separator:afbd9f56608d04cb8a75d69112cd89885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae7cd913b330750fef4bda6cadbf95b"><td class="memItemLeft" align="right" valign="top"><a id="aeae7cd913b330750fef4bda6cadbf95b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8h.html#aeae7cd913b330750fef4bda6cadbf95b">sendRadioConnectedMsg</a> (bool state)</td></tr>
+<tr class="memdesc:aeae7cd913b330750fef4bda6cadbf95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an attribute over mqtt depending on the state of the radio connection. <br /></td></tr>
+<tr class="separator:aeae7cd913b330750fef4bda6cadbf95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9cd66992a99394d4aa4030fcdbf6182"><td class="memItemLeft" align="right" valign="top"><a id="ab9cd66992a99394d4aa4030fcdbf6182"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8h.html#ab9cd66992a99394d4aa4030fcdbf6182">sendTxWaitingMsg</a> (bool state)</td></tr>
+<tr class="memdesc:ab9cd66992a99394d4aa4030fcdbf6182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for if there are packets left to send. <br /></td></tr>
+<tr class="separator:ab9cd66992a99394d4aa4030fcdbf6182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d91a7f25182323f789a4e986c08cd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8h.html#ab4d91a7f25182323f789a4e986c08cd8">sendOnTxNotRequired</a> (bool previous)</td></tr>
+<tr class="memdesc:ab4d91a7f25182323f789a4e986c08cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the attribute waiting to false if required.  <a href="lora_8h.html#ab4d91a7f25182323f789a4e986c08cd8">More...</a><br /></td></tr>
+<tr class="separator:ab4d91a7f25182323f789a4e986c08cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File that handles the LoRa radio and PJON. </p>
@@ -380,6 +372,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab4d91a7f25182323f789a4e986c08cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d91a7f25182323f789a4e986c08cd8">&#9670;&nbsp;</a></span>sendOnTxNotRequired()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sendOnTxNotRequired </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>previous</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>updates the attribute waiting to false if required. </p>
+<dl class="section return"><dt>Returns</dt><dd>the new value for whether there was a message to send in the previous loop. </dd></dl>
 
 </div>
 </div>

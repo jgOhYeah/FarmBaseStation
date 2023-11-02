@@ -1,9 +1,13 @@
 <map id="ESP32BaseStation/src/alarm.h" name="ESP32BaseStation/src/alarm.h">
-<area shape="rect" id="node1" title="Handles alarms." alt="" coords="251,5,413,47"/>
-<area shape="rect" id="node2" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="237,184,453,225"/>
-<area shape="rect" id="node3" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="192,95,355,136"/>
-<area shape="rect" id="node4" href="$audio_8h.html" title="Plays audio." alt="" coords="5,95,168,136"/>
-<area shape="rect" id="node6" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="429,95,592,136"/>
-<area shape="rect" id="node5" href="$audio_8cpp.html" title="Plays audio." alt="" coords="5,184,168,225"/>
-<area shape="rect" id="node7" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="477,184,640,225"/>
+<area shape="rect" id="node1" title="Handles alarms." alt="" coords="118,5,280,47"/>
+<area shape="rect" id="node2" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="278,363,494,404"/>
+<area shape="rect" id="node3" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="24,95,187,136"/>
+<area shape="rect" id="node4" href="$audio_8h.html" title="Plays audio." alt="" coords="211,95,374,136"/>
+<area shape="rect" id="node6" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="423,95,586,136"/>
+<area shape="rect" id="node5" href="$audio_8cpp.html" title="Plays audio." alt="" coords="186,184,348,225"/>
+<area shape="rect" id="node7" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="423,184,586,225"/>
+<area shape="rect" id="node11" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="610,184,772,225"/>
+<area shape="rect" id="node8" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="474,273,636,315"/>
+<area shape="rect" id="node9" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="660,273,823,315"/>
+<area shape="rect" id="node10" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="660,363,823,404"/>
 </map>

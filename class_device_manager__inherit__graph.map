@@ -1,4 +1,5 @@
 <map id="DeviceManager" name="DeviceManager">
-<area shape="rect" id="node1" title="Class for managing all devices." alt="" coords="43,80,167,107"/>
-<area shape="rect" id="node2" href="$class_lookup_manager.html" title=" " alt="" coords="5,5,205,32"/>
+<area shape="rect" id="node1" title="Class for managing all devices." alt="" coords="51,185,175,212"/>
+<area shape="rect" id="node2" href="$class_lookup_manager.html" title=" " alt="" coords="13,109,213,136"/>
+<area shape="rect" id="node3" href="$class_lookup_manager.html" title="Class for looking up and managing devices and fields." alt="" coords="5,5,220,47"/>
 </map>
