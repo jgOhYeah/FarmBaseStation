@@ -11,7 +11,6 @@
 #include "src/fields.h"
 #include "src/devices.h"
 
-// TODO: Something less horrible for instantiating fields than this (fields can't be shared between devices as they store the current and next values).
 Field *pumpFieldsList[] = {
     // new LongUIntField("Uptime", 't'),
     // new TenthsField("Temperature", 'T'),

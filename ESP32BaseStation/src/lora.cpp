@@ -21,7 +21,8 @@ extern void setAttributeState(const char* const attribute, bool state);
 
 void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packetInfo, int rssi, float snr)
 {
-    // TODO: Queue to send
+    digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
+    
     // Get the device, decode the payload and add it to the json object.
     LOGD("PJON", "Received a packet.");
     Device *device = deviceManager.getWithSymbol((char)(packetInfo.tx.id));
@@ -43,6 +44,7 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
     {
         LOGI("LORA", "Received packet for unkown device '%d'. Discarding.", packetInfo.tx.id);
     }
+    digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
 }
 
 void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packetInfo)
@@ -252,6 +254,7 @@ void sendRadioConnectedMsg(bool state)
 
 void sendTxWaitingMsg(bool state)
 {
+    digitalWrite(PIN_LED_TOP, state);
     setAttributeState("txWaiting", state);
 }
 

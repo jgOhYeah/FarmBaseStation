@@ -60,6 +60,7 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
     const char* method = json["method"];
     if (method && STRINGS_MATCH(method, "alarm"))
     {
+        // Alarms
         LOGI("MQTT", "Alarm method");
 
         // Extract the alarm level
@@ -87,6 +88,13 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
         const unsigned int ALARM_TIMEOUT = 3000;
         xQueueSend(alarmQueue, (void*)&state, ALARM_TIMEOUT / portTICK_PERIOD_MS);
         replyMeRpc(id, "{}");
+    } else if (method && STRINGS_MATCH(method, "reset"))
+    {
+        // Reset
+        LOGI("MQTT", "Reset method. Restarting in a few seconds");
+        replyMeRpc(id, "{}");
+        delay(10000);
+        ESP.restart();
     } else {
         LOGI("MQTT", "Unrecognised MQTT method '%s' for me.", method);
     }

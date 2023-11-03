@@ -48,14 +48,19 @@ void audioTask(void *pvParameters)
 {
     // begin processing
     LOGD("AUDIO", "Beginning");
+    bool skipWait = false;
     while (true)
     {
         // // Wait for something to play.
         LOGD("AUDIO", "Waiting for a play instruction.");
         int fileIndex = 0;
         AlarmState state;
-        xQueueReceive(audioQueue, (void *)&state, portMAX_DELAY);
-        // TODO: Stop sound on clear;
+        if (!skipWait)
+        {
+            xQueueReceive(audioQueue, (void *)&state, portMAX_DELAY);
+        }
+        skipWait = false;
+
         if (state != ALARM_OFF)
         {
             // Start playing
@@ -69,7 +74,11 @@ void audioTask(void *pvParameters)
             {
                 tune.update();
                 yield();
-            } while (tune.isPlaying());
+                if (xQueueReceive(audioQueue, (void *)&state, 0))
+                {
+                    skipWait = true;
+                }
+            } while (tune.isPlaying() && !skipWait);
             tune.stop(); // Go back to beginning.
         }
     }

@@ -82,7 +82,7 @@ class SettableField : public Field
 public:
     using Field::Field;
 
-    T setValue = 255; // TODO: Start off at some unkown value that any change will force TX.
+    T setValue = 255;
     T curValue = 255;
 
     /**
@@ -142,7 +142,7 @@ public:
     ByteField(const char *name, char symbol) : Field(name, symbol, 1) {}
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
-}; // TODO: Settable byte field
+};
 
 /**
  * @brief Fields that contain an unsigned, single byte integer that can be set
@@ -210,8 +210,6 @@ public:
 
     virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
-
-// TODO: Make decode return the number of bytes read.
 
 /**
  * @brief Fields that contain an unsigned, 2 byte integer.

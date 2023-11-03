@@ -16,6 +16,7 @@ extern QueueHandle_t audioQueue;
 void alarmTask(void *pvParameters)
 {
     AlarmState curState = ALARM_OFF;
+    AlarmState prevState = ALARM_HIGH;
     while (true)
     {
         AlarmState state;
@@ -28,26 +29,36 @@ void alarmTask(void *pvParameters)
             xQueueSend(audioQueue, (void *)&state, portMAX_DELAY);
         }
 
-        // Flash the LEDs as needed
+        // Flash the LEDs as needed (only on state change.)
         switch (curState)
         {
         case ALARM_OFF:
             // All LEDs off.
-            digitalWrite(PIN_LED_TOP, LOW);
-            digitalWrite(PIN_LED_INSIDE, LOW);
+            if (curState != prevState)
+            {
+                digitalWrite(PIN_LED_TOP, LOW);
+                digitalWrite(PIN_LED_INSIDE, LOW);
+            }
             break;
 
         case ALARM_MEDIUM:
             // LED on top on, inside off.
-            digitalWrite(PIN_LED_TOP, HIGH);
-            digitalWrite(PIN_LED_INSIDE, LOW);
+            if (curState != prevState)
+            {
+                digitalWrite(PIN_LED_TOP, HIGH);
+                digitalWrite(PIN_LED_INSIDE, LOW);
+            }
             break;
 
         case ALARM_HIGH:
             // LED on top flashing, inside on.
             digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
-            digitalWrite(PIN_LED_INSIDE, HIGH);
+            if (curState != prevState)
+            {
+                digitalWrite(PIN_LED_INSIDE, HIGH);
+            }
             break;
         }
+        prevState = curState;
     }
 }

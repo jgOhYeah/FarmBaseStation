@@ -33,6 +33,10 @@ void setup()
     pinMode(PIN_LED_TOP, OUTPUT);
     pinMode(PIN_LED_INSIDE, OUTPUT);
 
+    // In case a reset pccured at the wrong time.
+    pinMode(PIN_SPEAKER, OUTPUT);
+    digitalWrite(PIN_SPEAKER, LOW);
+
     // Setup queues and mutexes
     alarmQueue = xQueueCreate(3, sizeof(AlarmState));
     audioQueue = xQueueCreate(3, sizeof(AlarmState));

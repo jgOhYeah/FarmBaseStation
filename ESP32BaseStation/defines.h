@@ -21,7 +21,6 @@
 #define VERSION "0.1.0"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
-#define PIN_WIFI_LED LED_BUILTIN
 
 #define MQTT_TOPIC_SEPARATOR '/'
 
@@ -61,6 +60,8 @@
 // LEDs
 #define PIN_LED_TOP 32
 #define PIN_LED_INSIDE 33
+// #define PIN_WIFI_LED LED_BUILTIN
+#define PIN_WIFI_LED PIN_LED_INSIDE
 
 // Speaker
 #define PIN_SPEAKER 25
