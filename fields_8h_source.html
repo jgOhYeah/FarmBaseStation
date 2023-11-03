@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">using</span> Field::Field;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    T setValue = 255; <span class="comment">// TODO: Start off at some unkown value that any change will force TX.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    T setValue = 255;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    T curValue = 255;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_settable_field.html#a2e3c1110a6c7251b8389cd10cd51203b">txRequired</a>();</div>
@@ -137,7 +137,7 @@ $(function() {
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="class_byte_field.html">ByteField</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">char</span> symbol) : <a class="code" href="class_field.html">Field</a>(name, symbol, 1) {}</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">virtual</span> int8_t <a class="code" href="class_byte_field.html#ab81d073f3c791b9a8e0ba15f7f6b1af0">decode</a>(uint8_t *bytes, uint8_t length, JsonObject &amp;json);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}; <span class="comment">// TODO: Settable byte field</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="class_settable_byte_field.html">  152</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_settable_byte_field.html">SettableByteField</a> : <span class="keyword">public</span> <a class="code" href="class_settable_field.html">SettableField</a>&lt;int8_t&gt;</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
@@ -175,15 +175,13 @@ $(function() {
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">virtual</span> int8_t <a class="code" href="class_pump_on_time_field.html#afc688cd2270f95d14f75fa31d4dbbd84">decode</a>(uint8_t *bytes, uint8_t length, JsonObject &amp;json);</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;};</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">// TODO: Make decode return the number of bytes read.</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="class_u_int_field.html">  220</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_int_field.html">UIntField</a> : <span class="keyword">public</span> <a class="code" href="class_field.html">Field</a></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;{</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <a class="code" href="class_u_int_field.html">UIntField</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">char</span> symbol) : <a class="code" href="class_field.html">Field</a>(name, symbol, 2) {}</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">virtual</span> int8_t <a class="code" href="class_u_int_field.html#a72984fadf6b1619c513442c0036fe96f">decode</a>(uint8_t *bytes, uint8_t length, JsonObject &amp;json);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;};</div>
+<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="class_u_int_field.html">  218</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_u_int_field.html">UIntField</a> : <span class="keyword">public</span> <a class="code" href="class_field.html">Field</a></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <a class="code" href="class_u_int_field.html">UIntField</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">char</span> symbol) : <a class="code" href="class_field.html">Field</a>(name, symbol, 2) {}</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">virtual</span> int8_t <a class="code" href="class_u_int_field.html#a72984fadf6b1619c513442c0036fe96f">decode</a>(uint8_t *bytes, uint8_t length, JsonObject &amp;json);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;};</div>
 <div class="ttc" id="aclass_byte_field_html"><div class="ttname"><a href="class_byte_field.html">ByteField</a></div><div class="ttdoc">Fields that contain an unsigned, single byte integer.</div><div class="ttdef"><b>Definition:</b> fields.h:140</div></div>
 <div class="ttc" id="aclass_byte_field_html_ab81d073f3c791b9a8e0ba15f7f6b1af0"><div class="ttname"><a href="class_byte_field.html#ab81d073f3c791b9a8e0ba15f7f6b1af0">ByteField::decode</a></div><div class="ttdeci">virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &amp;json)</div><div class="ttdoc">Decodes the value from bytes into an existing json document.</div><div class="ttdef"><b>Definition:</b> fields.cpp:108</div></div>
 <div class="ttc" id="aclass_field_html"><div class="ttname"><a href="class_field.html">Field</a></div><div class="ttdoc">Class for handling data fields in messages.</div><div class="ttdef"><b>Definition:</b> fields.h:22</div></div>
@@ -212,7 +210,7 @@ $(function() {
 <div class="ttc" id="aclass_settable_flag_field_html_ab24dbdb23e45a176c378b3d6c3f2345c"><div class="ttname"><a href="class_settable_flag_field.html#ab24dbdb23e45a176c378b3d6c3f2345c">SettableFlagField::encode</a></div><div class="ttdeci">virtual int8_t encode(uint8_t *bytes, uint8_t length)</div><div class="ttdoc">Encodes the value to set into a packet ready to send.</div><div class="ttdef"><b>Definition:</b> fields.cpp:177</div></div>
 <div class="ttc" id="aclass_tenths_field_html"><div class="ttname"><a href="class_tenths_field.html">TenthsField</a></div><div class="ttdoc">Field for decoding 2 byte signed data in tenths.</div><div class="ttdef"><b>Definition:</b> fields.h:116</div></div>
 <div class="ttc" id="aclass_tenths_field_html_a559987579b531c15fcb383aad6487d43"><div class="ttname"><a href="class_tenths_field.html#a559987579b531c15fcb383aad6487d43">TenthsField::decode</a></div><div class="ttdeci">virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &amp;json)</div><div class="ttdoc">Decodes the value from bytes into an existing json document.</div><div class="ttdef"><b>Definition:</b> fields.cpp:80</div></div>
-<div class="ttc" id="aclass_u_int_field_html"><div class="ttname"><a href="class_u_int_field.html">UIntField</a></div><div class="ttdoc">Fields that contain an unsigned, 2 byte integer.</div><div class="ttdef"><b>Definition:</b> fields.h:221</div></div>
+<div class="ttc" id="aclass_u_int_field_html"><div class="ttname"><a href="class_u_int_field.html">UIntField</a></div><div class="ttdoc">Fields that contain an unsigned, 2 byte integer.</div><div class="ttdef"><b>Definition:</b> fields.h:219</div></div>
 <div class="ttc" id="aclass_u_int_field_html_a72984fadf6b1619c513442c0036fe96f"><div class="ttname"><a href="class_u_int_field.html#a72984fadf6b1619c513442c0036fe96f">UIntField::decode</a></div><div class="ttdeci">virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &amp;json)</div><div class="ttdoc">Decodes the value from bytes into an existing json document.</div><div class="ttdef"><b>Definition:</b> fields.cpp:209</div></div>
 <div class="ttc" id="aconversions_8h_html"><div class="ttname"><a href="conversions_8h.html">conversions.h</a></div><div class="ttdoc">General functions for converting to and from char arrays.</div></div>
 <div class="ttc" id="alookups_8h_html"><div class="ttname"><a href="lookups_8h.html">lookups.h</a></div><div class="ttdoc">Lookupable and lookupable manager base classes.</div></div>
