@@ -31,16 +31,14 @@ void Field::handleRpc(JsonObject &data, JsonObject &replyData)
 {
 }
 
-bool Field::txRequired()
-{
-    // Never update by default
-    return false;
-}
-
 template <typename T>
-bool SettableField<T>::txRequired()
+void SettableField<T>::setTxRequired()
 {
-    return setValue != curValue;
+    if (setValue == curValue)
+    {
+        // Mission accomplished
+        txRequired = false;
+    }
 }
 
 template <typename T>
@@ -50,6 +48,7 @@ void SettableField<T>::handleRpc(JsonObject &data, JsonObject &replyData)
     if (isValidNewValue(candidate))
     {
         setValue = candidate;
+        txRequired = true;
         replyData["success"] = true;
         LOGD("RPC", "Successfully setting rpc call");
     }
@@ -127,6 +126,7 @@ int8_t SettableByteField::decode(uint8_t *bytes, uint8_t length, JsonObject &jso
         // Convert and save to json
         json[name] = (int8_t)bytes[0];
         curValue = bytes[0];
+        setTxRequired();
         return 1;
     }
     return FIELD_NO_MEMORY;
@@ -169,6 +169,7 @@ int8_t SettableFlagField::decode(uint8_t *bytes, uint8_t length, JsonObject &jso
         // Convert and save to json
         json[name] = 1; // Set to a constant
         // TODO: Some way to know when this has been successfully sent and received.
+        setTxRequired();
         return 0;
     }
     return FIELD_NO_MEMORY;

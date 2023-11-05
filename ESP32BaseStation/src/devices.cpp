@@ -81,7 +81,7 @@ bool Device::rpcWaiting()
     // For each field, check if it needs to be transmitted.
     for (uint8_t i = 0; i < fields.m_count; i++)
     {
-        if (fields.m_items[i]->txRequired())
+        if (fields.m_items[i]->txRequired)
         {
             return true;
         }
@@ -97,7 +97,7 @@ int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
     int8_t length = 0;
     for (uint8_t i = 0; i < fields.m_count; i++)
     {
-        if (fields.m_items[i]->txRequired())
+        if (fields.m_items[i]->txRequired)
         {
             // Need to encode this field.
             LOGD("LORA_TX", "Encoding field '%s'.", fields.m_items[i]->name);

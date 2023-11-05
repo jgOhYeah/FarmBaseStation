@@ -37,7 +37,7 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
         serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
 
         // Log and send to console
-        LOGI("LORA", "Sending '%s'", msg.payload);
+        LOGI("LORA", "Received, MQTT '%s'", msg.payload);
         xQueueSend(mqttPublishQueue, (void *)&msg, portMAX_DELAY);
     }
     else

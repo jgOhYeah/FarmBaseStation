@@ -33,7 +33,7 @@ Field *fenceFieldsList[] = {
     new SettableByteField("TransmitEnabled", 'r'),
     new SettableByteField("FenceEnabled", 'F'),
     new FlagField("RequestStatus", 's'),
-    new ByteField("TransmitInterval", 'I'),
+    new SettableByteField("TransmitInterval", 'I'),
     new ByteField("Reset", 'X') // Needs value to be set to 101 to reset.
 };
 

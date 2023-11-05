@@ -53,12 +53,8 @@ public:
      */
     virtual void handleRpc(JsonObject &data,  JsonObject &replyData);
 
-    /**
-     * @brief Returns true if a new packet needs to be transmitted to update the field.
-     */
-    virtual bool txRequired();
-
     const uint8_t encodedLength;
+    bool txRequired = false;
 
 protected:
     /**
@@ -86,9 +82,9 @@ public:
     T curValue = 255;
 
     /**
-     * @brief Returns true if a new packet needs to be transmitted to update the field.
+     * @brief Updates txRequired (if setValue == current, then not required).
      */
-    virtual bool txRequired();
+    virtual void setTxRequired();
 
     /**
      * @brief handles an RPC call for a field.
