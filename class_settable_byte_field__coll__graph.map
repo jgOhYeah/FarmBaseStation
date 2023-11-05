@@ -1,11 +1,12 @@
 <map id="SettableByteField" name="SettableByteField">
-<area shape="rect" id="node1" title="Fields that contain an unsigned, single byte integer that can be set using an RPC call." alt="" coords="116,453,253,480"/>
-<area shape="rect" id="node2" href="$class_settable_field.html" title=" " alt="" coords="97,377,272,404"/>
-<area shape="rect" id="node3" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="197,184,250,211"/>
-<area shape="rect" id="node8" href="$class_settable_field.html" title="Class for fields that can be set." alt="" coords="57,288,203,315"/>
+<area shape="rect" id="node1" title="Fields that contain an unsigned, single byte integer that can be set using an RPC call." alt="" coords="159,453,296,480"/>
+<area shape="rect" id="node2" href="$class_settable_field.html" title=" " alt="" coords="140,377,315,404"/>
+<area shape="rect" id="node3" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="239,184,293,211"/>
+<area shape="rect" id="node9" href="$class_settable_field.html" title="Class for fields that can be set." alt="" coords="100,288,245,315"/>
 <area shape="rect" id="node4" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="93,95,189,121"/>
 <area shape="rect" id="node5" title=" " alt="" coords="5,5,140,32"/>
 <area shape="rect" id="node6" title=" " alt="" coords="164,5,253,32"/>
 <area shape="rect" id="node7" title=" " alt="" coords="213,95,319,121"/>
-<area shape="rect" id="node9" title=" " alt="" coords="107,184,145,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="375,95,426,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="149,184,188,211"/>
 </map>

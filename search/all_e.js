@@ -8,5 +8,6 @@ var searchData=
   ['settablefield_69',['SettableField',['../class_settable_field.html',1,'']]],
   ['settablefield_3c_20int8_5ft_20_3e_70',['SettableField&lt; int8_t &gt;',['../class_settable_field.html',1,'']]],
   ['settableflagfield_71',['SettableFlagField',['../class_settable_flag_field.html',1,'']]],
-  ['startswith_72',['startsWith',['../rpc_8cpp.html#adfc4d7c2e3b046a5fb41b597ebd9f727',1,'startsWith(char *input, const char *compare):&#160;rpc.cpp'],['../rpc_8h.html#adfc4d7c2e3b046a5fb41b597ebd9f727',1,'startsWith(char *input, const char *compare):&#160;rpc.cpp']]]
+  ['settxrequired_72',['setTxRequired',['../class_settable_field.html#a6ee15f7dd88d8e012b9a01912134a905',1,'SettableField']]],
+  ['startswith_73',['startsWith',['../rpc_8cpp.html#adfc4d7c2e3b046a5fb41b597ebd9f727',1,'startsWith(char *input, const char *compare):&#160;rpc.cpp'],['../rpc_8h.html#adfc4d7c2e3b046a5fb41b597ebd9f727',1,'startsWith(char *input, const char *compare):&#160;rpc.cpp']]]
 ];

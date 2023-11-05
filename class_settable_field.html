@@ -84,16 +84,16 @@ Inheritance diagram for SettableField&lt; T &gt;:</div>
 <div class="dynheader">
 Collaboration diagram for SettableField&lt; T &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_settable_field__coll__graph.svg" width="348" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_settable_field__coll__graph.svg" width="466" height="320"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2e3c1110a6c7251b8389cd10cd51203b"><td class="memItemLeft" align="right" valign="top"><a id="a2e3c1110a6c7251b8389cd10cd51203b"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settable_field.html#a2e3c1110a6c7251b8389cd10cd51203b">txRequired</a> ()</td></tr>
-<tr class="memdesc:a2e3c1110a6c7251b8389cd10cd51203b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if a new packet needs to be transmitted to update the field. <br /></td></tr>
-<tr class="separator:a2e3c1110a6c7251b8389cd10cd51203b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ee15f7dd88d8e012b9a01912134a905"><td class="memItemLeft" align="right" valign="top"><a id="a6ee15f7dd88d8e012b9a01912134a905"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settable_field.html#a6ee15f7dd88d8e012b9a01912134a905">setTxRequired</a> ()</td></tr>
+<tr class="memdesc:a6ee15f7dd88d8e012b9a01912134a905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates txRequired (if setValue == current, then not required). <br /></td></tr>
+<tr class="separator:a6ee15f7dd88d8e012b9a01912134a905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad98edd7c450f4a2f5df7667effa4e63b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_settable_field.html#ad98edd7c450f4a2f5df7667effa4e63b">handleRpc</a> (JsonObject &amp;data, JsonObject &amp;replyData)</td></tr>
 <tr class="memdesc:ad98edd7c450f4a2f5df7667effa4e63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">handles an RPC call for a field.  <a href="class_settable_field.html#ad98edd7c450f4a2f5df7667effa4e63b">More...</a><br /></td></tr>
 <tr class="separator:ad98edd7c450f4a2f5df7667effa4e63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +131,9 @@ T&#160;</td><td class="memItemRight" valign="bottom"><b>curValue</b> = 255</td><
 <tr class="memitem:a8690d36b4638befd0c9c1f05ef1522df inherit pub_attribs_class_field"><td class="memItemLeft" align="right" valign="top"><a id="a8690d36b4638befd0c9c1f05ef1522df"></a>
 const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>encodedLength</b></td></tr>
 <tr class="separator:a8690d36b4638befd0c9c1f05ef1522df inherit pub_attribs_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cb633a739b7b79892eee5f508a1590 inherit pub_attribs_class_field"><td class="memItemLeft" align="right" valign="top"><a id="ae9cb633a739b7b79892eee5f508a1590"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>txRequired</b> = false</td></tr>
+<tr class="separator:ae9cb633a739b7b79892eee5f508a1590 inherit pub_attribs_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_lookupable"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_lookupable')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_lookupable.html">Lookupable</a></td></tr>
 <tr class="memitem:a3098652b534211d9fca075ab17be53a5 inherit pub_attribs_class_lookupable"><td class="memItemLeft" align="right" valign="top"><a id="a3098652b534211d9fca075ab17be53a5"></a>
 const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
