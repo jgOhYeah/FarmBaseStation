@@ -82,6 +82,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="rpc_8h_source.html">src/rpc.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="alarm_8h_source.html">src/alarm.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="audio_8h_source.html">src/audio.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="leds_8h_source.html">src/leds.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ESP32BaseStation.ino:</div>
 <div class="dyncontent">
@@ -127,6 +128,21 @@ SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>mqttMute
 <tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top"><a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
 SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>serialMutex</b></td></tr>
 <tr class="separator:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memItemLeft" align="right" valign="top"><a id="a02c06ace1c03dc373b36d9679b1b5ca8"></a>
+SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>stateUpdateMutex</b></td></tr>
+<tr class="separator:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd568d62e5874b7857eb86c4486f708"><td class="memItemLeft" align="right" valign="top"><a id="a4cd568d62e5874b7857eb86c4486f708"></a>
+AlarmState&#160;</td><td class="memItemRight" valign="bottom"><b>alarmState</b></td></tr>
+<tr class="separator:a4cd568d62e5874b7857eb86c4486f708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497d6241a06724341fc7fb212fb29611"><td class="memItemLeft" align="right" valign="top"><a id="a497d6241a06724341fc7fb212fb29611"></a>
+NetworkState&#160;</td><td class="memItemRight" valign="bottom"><b>networkState</b></td></tr>
+<tr class="separator:a497d6241a06724341fc7fb212fb29611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844666af5004f892e728d60f1b86c0df"><td class="memItemLeft" align="right" valign="top"><a id="a844666af5004f892e728d60f1b86c0df"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>lastLoRaTime</b></td></tr>
+<tr class="separator:a844666af5004f892e728d60f1b86c0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9227c54721d0ff94543483e0faece60e"><td class="memItemLeft" align="right" valign="top"><a id="a9227c54721d0ff94543483e0faece60e"></a>
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ledTaskHandle</b></td></tr>
+<tr class="separator:a9227c54721d0ff94543483e0faece60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main file for a base station to connect to remote sensors on a farm. </p>

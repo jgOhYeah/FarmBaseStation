@@ -1,9 +1,11 @@
 <map id="ESP32BaseStation/src/networking.h" name="ESP32BaseStation/src/networking.h">
-<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="193,5,356,47"/>
-<area shape="rect" id="node2" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="192,273,408,315"/>
-<area shape="rect" id="node3" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="75,184,237,225"/>
-<area shape="rect" id="node5" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="499,95,661,136"/>
-<area shape="rect" id="node6" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="312,95,475,136"/>
-<area shape="rect" id="node4" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="5,273,168,315"/>
-<area shape="rect" id="node7" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="363,184,525,225"/>
+<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="355,5,518,47"/>
+<area shape="rect" id="node2" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="142,273,358,315"/>
+<area shape="rect" id="node3" href="$leds_8h.html" title="Controls the LEDs on the unit." alt="" coords="25,95,187,136"/>
+<area shape="rect" id="node5" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="539,184,702,225"/>
+<area shape="rect" id="node7" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="449,95,611,136"/>
+<area shape="rect" id="node8" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="262,95,425,136"/>
+<area shape="rect" id="node4" href="$leds_8cpp.html" title="Controls the LEDs on the unit." alt="" coords="25,184,187,225"/>
+<area shape="rect" id="node6" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="539,273,702,315"/>
+<area shape="rect" id="node9" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="313,184,475,225"/>
 </map>

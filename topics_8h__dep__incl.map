@@ -1,23 +1,25 @@
 <map id="ESP32BaseStation/src/topics.h" name="ESP32BaseStation/src/topics.h">
-<area shape="rect" id="node1" title="MQTT topics for a thingsboard gateway." alt="" coords="488,5,651,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="595,95,797,121"/>
-<area shape="rect" id="node8" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="531,437,693,479"/>
-<area shape="rect" id="node3" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="436,705,652,747"/>
-<area shape="rect" id="node4" href="$alarm_8h.html" title="Handles alarms." alt="" coords="192,348,355,389"/>
-<area shape="rect" id="node6" href="$audio_8h.html" title="Plays audio." alt="" coords="268,437,431,479"/>
-<area shape="rect" id="node9" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="1139,527,1301,568"/>
-<area shape="rect" id="node11" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="1020,616,1183,657"/>
-<area shape="rect" id="node14" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="615,169,777,211"/>
-<area shape="rect" id="node16" href="$fields_8h.html" title="Contains fields classes." alt="" coords="768,259,931,300"/>
-<area shape="rect" id="node18" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="955,348,1117,389"/>
-<area shape="rect" id="node21" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="1005,169,1168,211"/>
-<area shape="rect" id="node5" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="5,437,168,479"/>
-<area shape="rect" id="node7" href="$audio_8cpp.html" title="Plays audio." alt="" coords="243,527,405,568"/>
-<area shape="rect" id="node13" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="581,527,744,568"/>
-<area shape="rect" id="node10" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="1257,616,1420,657"/>
-<area shape="rect" id="node12" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="1020,705,1183,747"/>
-<area shape="rect" id="node15" href="$conversions_8cpp.html" title="General functions for converting to and from char arrays." alt="" coords="581,259,744,300"/>
-<area shape="rect" id="node17" href="$device__list_8h.html" title="List of all devices and fields known to the system." alt="" coords="717,437,904,479"/>
-<area shape="rect" id="node20" href="$fields_8cpp.html" title="Contains fields classes." alt="" coords="768,348,931,389"/>
-<area shape="rect" id="node19" href="$devices_8cpp.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="928,437,1091,479"/>
+<area shape="rect" id="node1" title="MQTT topics for a thingsboard gateway." alt="" coords="519,5,681,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="644,95,847,121"/>
+<area shape="rect" id="node10" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="517,437,680,479"/>
+<area shape="rect" id="node3" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="617,795,833,836"/>
+<area shape="rect" id="node4" href="$alarm_8h.html" title="Handles alarms." alt="" coords="263,348,425,389"/>
+<area shape="rect" id="node6" href="$audio_8h.html" title="Plays audio." alt="" coords="331,437,493,479"/>
+<area shape="rect" id="node8" href="$leds_8h.html" title="Controls the LEDs on the unit." alt="" coords="161,705,324,747"/>
+<area shape="rect" id="node11" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="941,527,1104,568"/>
+<area shape="rect" id="node13" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="753,616,916,657"/>
+<area shape="rect" id="node16" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="724,169,887,211"/>
+<area shape="rect" id="node18" href="$fields_8h.html" title="Contains fields classes." alt="" coords="911,259,1073,300"/>
+<area shape="rect" id="node20" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="957,348,1120,389"/>
+<area shape="rect" id="node23" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="1148,169,1311,211"/>
+<area shape="rect" id="node5" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="93,437,256,479"/>
+<area shape="rect" id="node7" href="$audio_8cpp.html" title="Plays audio." alt="" coords="212,527,375,568"/>
+<area shape="rect" id="node9" href="$leds_8cpp.html" title="Controls the LEDs on the unit." alt="" coords="161,795,324,836"/>
+<area shape="rect" id="node15" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="449,527,612,568"/>
+<area shape="rect" id="node12" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="1025,616,1188,657"/>
+<area shape="rect" id="node14" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="788,705,951,747"/>
+<area shape="rect" id="node17" href="$conversions_8cpp.html" title="General functions for converting to and from char arrays." alt="" coords="724,259,887,300"/>
+<area shape="rect" id="node19" href="$device__list_8h.html" title="List of all devices and fields known to the system." alt="" coords="1093,437,1280,479"/>
+<area shape="rect" id="node22" href="$fields_8cpp.html" title="Contains fields classes." alt="" coords="771,348,933,389"/>
+<area shape="rect" id="node21" href="$devices_8cpp.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="856,437,1019,479"/>
 </map>
