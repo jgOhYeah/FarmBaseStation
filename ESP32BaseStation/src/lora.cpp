@@ -16,13 +16,13 @@ extern SemaphoreHandle_t serialMutex;
 extern SemaphoreHandle_t mqttMutex;
 extern PubSubClient mqtt;
 extern SemaphoreHandle_t loraMutex;
-extern void setAttributeState(const char* const attribute, bool state);
-
+extern TaskHandle_t ledTaskHandle;
+extern SemaphoreHandle_t stateUpdateMutex;
+extern uint32_t lastLoRaTime;
+extern void setAttributeState(const char *const attribute, bool state);
 
 void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packetInfo, int rssi, float snr)
 {
-    digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
-    
     // Get the device, decode the payload and add it to the json object.
     LOGD("PJON", "Received a packet.");
     Device *device = deviceManager.getWithSymbol((char)(packetInfo.tx.id));
@@ -37,14 +37,16 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
         serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
 
         // Log and send to console
-        LOGI("LORA", "Received, MQTT '%s'", msg.payload);
         xQueueSend(mqttPublishQueue, (void *)&msg, portMAX_DELAY);
     }
     else
     {
         LOGI("LORA", "Received packet for unkown device '%d'. Discarding.", packetInfo.tx.id);
     }
-    digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
+    xSemaphoreTake(stateUpdateMutex, portMAX_DELAY);
+    lastLoRaTime = millis();
+    xSemaphoreGive(stateUpdateMutex);
+    xTaskNotifyGive(ledTaskHandle); // Tell the led task something changed.
 }
 
 void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &packetInfo)
@@ -163,7 +165,7 @@ void loraWatchdogTask(void *pvParameters)
             LOGE("LORA_WATCHDOG", "LoRa radio is not connected. Resetting");
             sendRadioConnectedMsg(false);
             delay(10000);
-            ESP.restart(); // TODO: Safely disconnect from WiFi first.
+            ESP.restart();
         }
 
         xTaskDelayUntil(&lastWakeTime, LORA_CHECK_INTERVAL / portTICK_PERIOD_MS);
@@ -176,14 +178,14 @@ void loraTxTask(void *pvParameters)
     sendTxWaitingMsg(false);
     while (true)
     {
-        for (uint8_t i = 0; i < deviceManager.m_count; i++)
+        for (uint8_t i = 0; i < deviceManager.count; i++)
         {
             // For each device, check if we need to send a packet.
-            Device *device = deviceManager.m_items[i];
+            Device *device = deviceManager.items[i];
             if (device->rpcWaiting())
             {
                 // Need to send something.
-                LOGD("LORA_TX", "Sending packet to '%s'.", deviceManager.m_items[i]->name);
+                LOGD("LORA_TX", "Sending packet to '%s'.", deviceManager.items[i]->name);
                 uint8_t payload[LORA_MAX_PACKET_SIZE];
                 int8_t length = device->generatePacket(payload, LORA_MAX_PACKET_SIZE);
                 if (length != FIELD_NO_MEMORY)
@@ -204,6 +206,12 @@ void loraTxTask(void *pvParameters)
                     }
                     // Always send each TX so we know it happened.
                     sendTxWaitingMsg(true);
+
+                    // Log the time that this was sent.
+                    xSemaphoreTake(stateUpdateMutex, portMAX_DELAY);
+                    lastLoRaTime = millis();
+                    xSemaphoreGive(stateUpdateMutex);
+                    xTaskNotifyGive(ledTaskHandle); // Tell the led task something changed.
 
                     // Wait for a while between transmissions to allow a reply / fairer spectrum usage.
                     for (uint i = 0; i < LORA_TX_INTERVAL / 10; i++)
@@ -254,7 +262,6 @@ void sendRadioConnectedMsg(bool state)
 
 void sendTxWaitingMsg(bool state)
 {
-    digitalWrite(PIN_LED_TOP, state);
     setAttributeState("txWaiting", state);
 }
 

@@ -79,9 +79,9 @@ DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, Static
 bool Device::rpcWaiting()
 {
     // For each field, check if it needs to be transmitted.
-    for (uint8_t i = 0; i < fields.m_count; i++)
+    for (uint8_t i = 0; i < fields.count; i++)
     {
-        if (fields.m_items[i]->txRequired)
+        if (fields.items[i]->txRequired)
         {
             return true;
         }
@@ -95,13 +95,13 @@ int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
 {
     // For each field, check if it needs to be transmitted.
     int8_t length = 0;
-    for (uint8_t i = 0; i < fields.m_count; i++)
+    for (uint8_t i = 0; i < fields.count; i++)
     {
-        if (fields.m_items[i]->txRequired)
+        if (fields.items[i]->txRequired)
         {
             // Need to encode this field.
-            LOGD("LORA_TX", "Encoding field '%s'.", fields.m_items[i]->name);
-            int8_t result = fields.m_items[i]->encode(payload, maxLength - length);
+            LOGD("LORA_TX", "Encoding field '%s'.", fields.items[i]->name);
+            int8_t result = fields.items[i]->encode(payload, maxLength - length);
             if (result != FIELD_NO_MEMORY)
             {
                 LOGD("LORA_TX", "This field was %d bytes long including header", result);
@@ -121,11 +121,11 @@ int8_t Device::generatePacket(uint8_t *payload, uint8_t maxLength)
 void DeviceManager::connectDevices()
 {
     // For each device, connect it.
-    for (uint8_t i = 0; i < m_count; i++)
+    for (uint8_t i = 0; i < count; i++)
     {
         // Generate a json object with everything required.
         StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
-        json["device"] = m_items[i]->name;
+        json["device"] = items[i]->name;
         char charBuff[MAX_JSON_TEXT_LENGTH];
         serializeJson(json, charBuff, sizeof(charBuff));
 
@@ -139,16 +139,16 @@ void DeviceManager::connectDevices()
 
 uint8_t DeviceManager::txRequired()
 {
-    uint8_t count = 0;
+    uint8_t tx_count = 0;
     // For each device, check if it needs to send a packet.
-    for (uint8_t i = 0; i < m_count; i++)
+    for (uint8_t i = 0; i < count; i++)
     {
-        if (m_items[i]->rpcWaiting())
+        if (items[i]->rpcWaiting())
         {
             // Transmission waiting
-            count++;
+            tx_count++;
         }
     }
 
-    return count;
+    return tx_count;
 }

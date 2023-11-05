@@ -17,6 +17,8 @@ struct MqttMsg
     char payload[MAX_JSON_TEXT_LENGTH];
 };
 
+enum NetworkState {NETWORK_NONE, NETWORK_WIFI_CONNECTING, NETWORK_MQTT_CONNECTING, NETWORK_CONNECTED};
+
 void wifiConnect();
 void mqttReceived(char *topic, byte *message, unsigned int length);
 void mqttConnect();

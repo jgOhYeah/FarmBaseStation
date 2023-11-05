@@ -12,53 +12,23 @@
 extern SemaphoreHandle_t serialMutex;
 extern QueueHandle_t alarmQueue;
 extern QueueHandle_t audioQueue;
+extern SemaphoreHandle_t stateUpdateMutex;
+extern AlarmState alarmState;
+extern TaskHandle_t ledTaskHandle;
 
 void alarmTask(void *pvParameters)
 {
-    AlarmState curState = ALARM_OFF;
-    AlarmState prevState = ALARM_HIGH;
     while (true)
     {
+        // TODO: Get rid of this task.
         AlarmState state;
-        int result = xQueueReceive(alarmQueue, (void *)&state, 1000 / portTICK_RATE_MS);
-        if (result)
-        {
-            // We actually got something:
-            LOGD("ALARM", "State set to %d", state);
-            curState = state;
-            xQueueSend(audioQueue, (void *)&state, portMAX_DELAY);
-        }
-
-        // Flash the LEDs as needed (only on state change.)
-        switch (curState)
-        {
-        case ALARM_OFF:
-            // All LEDs off.
-            if (curState != prevState)
-            {
-                digitalWrite(PIN_LED_TOP, LOW);
-                digitalWrite(PIN_LED_INSIDE, LOW);
-            }
-            break;
-
-        case ALARM_MEDIUM:
-            // LED on top on, inside off.
-            if (curState != prevState)
-            {
-                digitalWrite(PIN_LED_TOP, HIGH);
-                digitalWrite(PIN_LED_INSIDE, LOW);
-            }
-            break;
-
-        case ALARM_HIGH:
-            // LED on top flashing, inside on.
-            digitalWrite(PIN_LED_TOP, !digitalRead(PIN_LED_TOP));
-            if (curState != prevState)
-            {
-                digitalWrite(PIN_LED_INSIDE, HIGH);
-            }
-            break;
-        }
-        prevState = curState;
+        xQueueReceive(alarmQueue, (void *)&state, portMAX_DELAY);
+        
+        // We actually got something:
+        LOGD("ALARM", "State set to %d", state);
+        xSemaphoreTake(stateUpdateMutex, portMAX_DELAY);
+        alarmState = state;
+        xSemaphoreGive(stateUpdateMutex);
+        xQueueSend(audioQueue, (void *)&state, portMAX_DELAY);
     }
 }

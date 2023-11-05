@@ -32,7 +32,7 @@ template <typename LookupableClass>
 class LookupManager
 {
 public:
-    LookupManager(LookupableClass **items, uint8_t count) : m_items(items), m_count(count) {}
+    LookupManager(LookupableClass **items, uint8_t count) : items(items), count(count) {}
 
     /**
      * @brief Gets the object with the given symbol.
@@ -42,12 +42,12 @@ public:
      */
     LookupableClass *getWithSymbol(char symbol)
     {
-        for (uint8_t i = 0; i < m_count; i++)
+        for (uint8_t i = 0; i < count; i++)
         {
-            if (m_items[i]->symbol == symbol)
+            if (items[i]->symbol == symbol)
             {
                 // Found the item.
-                return m_items[i];
+                return items[i];
             }
         }
         // Couldn't find the item.
@@ -60,18 +60,18 @@ public:
      */
     LookupableClass *getWithName(const char *name)
     {
-        for (uint8_t i = 0; i < m_count; i++)
+        for (uint8_t i = 0; i < count; i++)
         {
-            if (STRINGS_MATCH(m_items[i]->name, name))
+            if (STRINGS_MATCH(items[i]->name, name))
             {
                 // Found the item.
-                return m_items[i];
+                return items[i];
             }
         }
         // Couldn't find the item.
         return NULL;
     }
 
-    LookupableClass **m_items;
-    uint8_t m_count;
+    LookupableClass **items;
+    uint8_t count;
 };

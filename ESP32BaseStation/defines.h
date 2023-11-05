@@ -46,6 +46,7 @@
 #define STRINGS_MATCH(A, B) (strcmp(A, B) == 0)
 
 #define PJON_DEVICE_ID 255
+#define LORA_LED_FLASH_TIME 100
 
 // Pins
 // LoRa

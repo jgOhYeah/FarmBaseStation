@@ -14,7 +14,12 @@ extern QueueHandle_t mqttPublishQueue;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
 extern DeviceManager deviceManager;
+extern NetworkState networkState;
+extern SemaphoreHandle_t stateUpdateMutex;
+extern TaskHandle_t ledTaskHandle;
 extern void mqttReceived(char *topic, byte *message, unsigned int length);
+
+#define SET_NETWORK_STATE(STATE) xSemaphoreTake(stateUpdateMutex, portMAX_DELAY); networkState = STATE; xSemaphoreGive(stateUpdateMutex)
 
 /**
  * @brief Connects to WiFi.
@@ -24,13 +29,11 @@ void wifiConnect()
 {
     WiFi.disconnect();
     LOGI("Networking", "Connecting to '" WIFI_SSID "'.");
+    SET_NETWORK_STATE(NETWORK_WIFI_CONNECTING);
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     while (WiFi.status() != WL_CONNECTED)
     {
-        digitalWrite(PIN_WIFI_LED, HIGH);
-        vTaskDelay(900 / portTICK_RATE_MS);
-        digitalWrite(PIN_WIFI_LED, LOW);
-        vTaskDelay(100 / portTICK_RATE_MS);
+        vTaskDelay(1);
     }
     LOGI("Networking", "Connected with IP address '%s'.", WiFi.localIP().toString().c_str());
 }
@@ -42,21 +45,21 @@ void mqttConnect()
 {
     xSemaphoreTake(mqttMutex, portMAX_DELAY);
     LOGI("Networking", "Connecting to MQTT broker '" MQTT_BROKER "' on port " xstringify(MQTT_PORT) ".");
+    SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
     mqtt.setServer(MQTT_BROKER, MQTT_PORT);
     mqtt.setCallback(mqttReceived);
     mqttSetup();
     int iterations = 0;
     while (!mqtt.connected())
     {
-        digitalWrite(PIN_WIFI_LED, LOW);
-        vTaskDelay(900 / portTICK_RATE_MS);
-        digitalWrite(PIN_WIFI_LED, HIGH);
-        vTaskDelay(100 / portTICK_RATE_MS);
+        vTaskDelay(1000 / portTICK_RATE_MS);
 
         // Check if WiFi is connected and reconnect if needed.
         if (WiFi.status() != WL_CONNECTED)
         {
             wifiConnect();
+            SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
+            
         }
         // Attempt to start the connection every so often.
         iterations++;
@@ -88,19 +91,18 @@ void mqttSetup()
  */
 void networkingTask(void *pvParameters)
 {
-    pinMode(PIN_WIFI_LED, OUTPUT);
-    digitalWrite(PIN_WIFI_LED, HIGH);
-
+    SET_NETWORK_STATE(NETWORK_NONE);
     while (true)
     {
         // Connect to WiFi
         if (WiFi.status() != WL_CONNECTED)
         {
+            SET_NETWORK_STATE(NETWORK_NONE);
             LOGW("Networking", "LOST WIFI CONNECTION!!!");
             vTaskDelay(RECONNECT_DELAY / portTICK_PERIOD_MS);
             wifiConnect();
             vTaskDelay(RECONNECT_DELAY / portTICK_PERIOD_MS);
-            mqttConnect();
+            mqttConnect(); // Force reconnection to mqtt after messing with WiFi.
         }
 
         // Connect to MQTT
@@ -111,8 +113,8 @@ void networkingTask(void *pvParameters)
             mqttConnect();
         }
 
-        // Depending on whic connect function was called, the LED may be off.
-        digitalWrite(PIN_WIFI_LED, HIGH);
+        // Should be connected if we reached this point.
+        SET_NETWORK_STATE(NETWORK_CONNECTED);
 
         // Thread safe mqtt operations.
         xSemaphoreTake(mqttMutex, portMAX_DELAY);
@@ -124,6 +126,7 @@ void networkingTask(void *pvParameters)
         if (result)
         {
             // Something needs to be published.
+            LOGI("Networking", "Publishing on topic '%s' message '%s'", msg.topic, msg.payload);
             mqtt.publish(msg.topic, msg.payload);
         }
         xSemaphoreGive(mqttMutex);

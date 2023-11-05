@@ -27,29 +27,37 @@ SemaphoreHandle_t serialMutex;
 #include "src/rpc.h"
 #include "src/alarm.h"
 #include "src/audio.h"
+#include "src/leds.h"
+
+// States used for LED control.
+SemaphoreHandle_t stateUpdateMutex;
+AlarmState alarmState;
+NetworkState networkState;
+uint32_t lastLoRaTime;
+TaskHandle_t ledTaskHandle;
 
 void setup()
 {
-    pinMode(PIN_LED_TOP, OUTPUT);
-    pinMode(PIN_LED_INSIDE, OUTPUT);
-
     // In case a reset pccured at the wrong time.
     pinMode(PIN_SPEAKER, OUTPUT);
     digitalWrite(PIN_SPEAKER, LOW);
 
     // Setup queues and mutexes
+    // TODO: Swap to notifications
     alarmQueue = xQueueCreate(3, sizeof(AlarmState));
     audioQueue = xQueueCreate(3, sizeof(AlarmState));
     mqttPublishQueue = xQueueCreate(6, sizeof(MqttMsg));
     mqttMutex = xSemaphoreCreateMutex();
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
     loraMutex = xSemaphoreCreateMutex();
+    stateUpdateMutex = xSemaphoreCreateMutex();
 
     Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
 
-    if (!alarmQueue || !audioQueue || !mqttPublishQueue || !mqttMutex || !serialMutex || !loraMutex)
+    if (!alarmQueue || !audioQueue || !mqttPublishQueue || !mqttMutex ||
+        !serialMutex || !loraMutex || !stateUpdateMutex)
     {
         LOGE("SETUP", "Could not create something!!!");
     }
@@ -107,6 +115,15 @@ void setup()
         NULL,
         1,
         NULL,
+        1);
+
+    xTaskCreatePinnedToCore(
+        ledTask,
+        "LEDs",
+        2048,
+        NULL,
+        1,
+        &ledTaskHandle,
         1);
     // TODO: Actually measure ram and high water marks rather than guessing.
 
