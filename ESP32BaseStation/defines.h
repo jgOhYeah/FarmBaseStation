@@ -18,7 +18,7 @@
 // For alarm tunes
 #include <TunePlayer.h>
 
-#define VERSION "0.1.0"
+#define VERSION "0.1.1"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 
@@ -26,6 +26,7 @@
 
 #define RECONNECT_DELAY 1000
 #define MQTT_RETRY_ITERATIONS 20
+#define WIFI_RECONNECT_ATTEMPT_TIME 60000 // If not connected in 1 minute, disconnect and attempt again.
 
 // Logging (with mutexes)
 #define SERIAL_TAKE() xSemaphoreTake(serialMutex, portMAX_DELAY)

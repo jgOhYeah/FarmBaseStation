@@ -54,7 +54,7 @@ void setup()
 
     Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
     Serial.setDebugOutput(true);
-    LOGI("Setup", "Farm PJON LoRa base station v" VERSION ".");
+    LOGI("Setup", "Farm PJON LoRa base station v" VERSION ". Compiled " __DATE__ ", " __TIME__);
 
     if (!alarmQueue || !audioQueue || !mqttPublishQueue || !mqttMutex ||
         !serialMutex || !loraMutex || !stateUpdateMutex)

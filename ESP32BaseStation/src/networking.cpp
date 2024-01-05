@@ -19,7 +19,10 @@ extern SemaphoreHandle_t stateUpdateMutex;
 extern TaskHandle_t ledTaskHandle;
 extern void mqttReceived(char *topic, byte *message, unsigned int length);
 
-#define SET_NETWORK_STATE(STATE) xSemaphoreTake(stateUpdateMutex, portMAX_DELAY); networkState = STATE; xSemaphoreGive(stateUpdateMutex)
+#define SET_NETWORK_STATE(STATE)                     \
+    xSemaphoreTake(stateUpdateMutex, portMAX_DELAY); \
+    networkState = STATE;                            \
+    xSemaphoreGive(stateUpdateMutex)
 
 /**
  * @brief Connects to WiFi.
@@ -27,14 +30,17 @@ extern void mqttReceived(char *topic, byte *message, unsigned int length);
  */
 void wifiConnect()
 {
-    WiFi.disconnect();
-    LOGI("Networking", "Connecting to '" WIFI_SSID "'.");
-    SET_NETWORK_STATE(NETWORK_WIFI_CONNECTING);
-    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-    while (WiFi.status() != WL_CONNECTED)
+    do
     {
-        vTaskDelay(1);
-    }
+        WiFi.disconnect();
+        LOGI("Networking", "Connecting to '" WIFI_SSID "'.");
+        SET_NETWORK_STATE(NETWORK_WIFI_CONNECTING);
+        WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+        for (uint32_t iterCount = 0; WiFi.status() != WL_CONNECTED && iterCount < WIFI_RECONNECT_ATTEMPT_TIME; iterCount++)
+        {
+            vTaskDelay(1);
+        }
+    } while (WiFi.status() != WL_CONNECTED);
     LOGI("Networking", "Connected with IP address '%s'.", WiFi.localIP().toString().c_str());
 }
 
@@ -59,7 +65,6 @@ void mqttConnect()
         {
             wifiConnect();
             SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
-            
         }
         // Attempt to start the connection every so often.
         iterations++;
