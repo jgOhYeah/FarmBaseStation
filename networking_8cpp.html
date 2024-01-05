@@ -86,8 +86,7 @@ Include dependency graph for networking.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4cb718a4ae4e8a8a5b3284649647a1f5"><td class="memItemLeft" align="right" valign="top"><a id="a4cb718a4ae4e8a8a5b3284649647a1f5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SET_NETWORK_STATE</b>(STATE)&#160;&#160;&#160;xSemaphoreTake(stateUpdateMutex, portMAX_DELAY); networkState = STATE; xSemaphoreGive(stateUpdateMutex)</td></tr>
+<tr class="memitem:a4cb718a4ae4e8a8a5b3284649647a1f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>SET_NETWORK_STATE</b>(STATE)</td></tr>
 <tr class="separator:a4cb718a4ae4e8a8a5b3284649647a1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -145,7 +144,29 @@ TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ledTaskHandle
 <dl class="section author"><dt>Author</dt><dd>Jotham Gates </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-08-12 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a4cb718a4ae4e8a8a5b3284649647a1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb718a4ae4e8a8a5b3284649647a1f5">&#9670;&nbsp;</a></span>SET_NETWORK_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_NETWORK_STATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">STATE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    xSemaphoreTake(stateUpdateMutex, portMAX_DELAY); \</div>
+<div class="line">    networkState = STATE;                            \</div>
+<div class="line">    xSemaphoreGive(stateUpdateMutex)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ad26b4549029330bc2b554fa4ed1e5bc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad26b4549029330bc2b554fa4ed1e5bc7">&#9670;&nbsp;</a></span>networkingTask()</h2>
 
