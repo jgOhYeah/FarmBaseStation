@@ -1,16 +1,16 @@
 <map id="ESP32BaseStation/device_list.h" name="ESP32BaseStation/device_list.h">
-<area shape="rect" id="node1" title="List of all devices and fields known to the system." alt="" coords="399,5,586,47"/>
-<area shape="rect" id="node2" href="$fields_8h.html" title="Contains fields classes." alt="" coords="401,169,493,196"/>
-<area shape="rect" id="node14" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="485,95,591,121"/>
-<area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="430,319,523,345"/>
-<area shape="rect" id="node12" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="496,244,580,271"/>
-<area shape="rect" id="node13" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="359,244,471,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,393,89,420"/>
-<area shape="rect" id="node5" title=" " alt="" coords="113,393,176,420"/>
-<area shape="rect" id="node6" title=" " alt="" coords="201,393,321,420"/>
-<area shape="rect" id="node7" title=" " alt="" coords="345,393,456,420"/>
-<area shape="rect" id="node8" title=" " alt="" coords="481,393,627,420"/>
-<area shape="rect" id="node9" title=" " alt="" coords="651,393,755,420"/>
-<area shape="rect" id="node10" title=" " alt="" coords="779,393,886,420"/>
-<area shape="rect" id="node11" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="910,393,1006,420"/>
+<area shape="rect" id="node1" title="List of all devices and fields known to the system." alt="" coords="384,5,571,47"/>
+<area shape="rect" id="node2" href="$fields_8h.html" title="Contains fields classes." alt="" coords="386,169,478,196"/>
+<area shape="rect" id="node14" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="469,95,576,121"/>
+<area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="415,319,508,345"/>
+<area shape="rect" id="node12" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="481,244,565,271"/>
+<area shape="rect" id="node13" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="344,244,456,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,393,112,420"/>
+<area shape="rect" id="node5" title=" " alt="" coords="137,393,221,420"/>
+<area shape="rect" id="node6" title=" " alt="" coords="245,393,307,420"/>
+<area shape="rect" id="node7" title=" " alt="" coords="332,393,452,420"/>
+<area shape="rect" id="node8" title=" " alt="" coords="477,393,587,420"/>
+<area shape="rect" id="node9" title=" " alt="" coords="612,393,759,420"/>
+<area shape="rect" id="node10" title=" " alt="" coords="783,393,887,420"/>
+<area shape="rect" id="node11" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,393,1007,420"/>
 </map>

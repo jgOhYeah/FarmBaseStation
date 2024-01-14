@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 655;
+var viewWidth = 700;
 var viewHeight = 374;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>ESP32BaseStation/src/alarm.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-370 650.8,-370 650.8,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-370 696.16,-370 696.16,4 -4,4"/>
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="Handles alarms.">
-<polygon fill="#bfbfbf" stroke="black" points="169.8,-335.5 169.8,-365.5 291.8,-365.5 291.8,-335.5 169.8,-335.5"/>
-<text text-anchor="start" x="177.8" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="230.8" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/alarm.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="164,-335.5 164,-365.5 286,-365.5 286,-335.5 164,-335.5"/>
+<text text-anchor="start" x="172" y="-353.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="225" y="-342.5" font-family="Helvetica,sans-Serif" font-size="10.00">/alarm.h</text>
 </a>
 </g>
 </g>
@@ -69,241 +69,279 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="_e_s_p32_base_station_8ino.html" target="_top" xlink:title="Main file for a base station to connect to remote sensors on a farm.">
-<polygon fill="white" stroke="black" points="180.8,-0.5 180.8,-30.5 342.8,-30.5 342.8,-0.5 180.8,-0.5"/>
-<text text-anchor="start" x="188.8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/ESP32Base</text>
-<text text-anchor="middle" x="261.8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Station.ino</text>
+<polygon fill="white" stroke="black" points="259,-0.5 259,-30.5 421,-30.5 421,-0.5 259,-0.5"/>
+<text text-anchor="start" x="267" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/ESP32Base</text>
+<text text-anchor="middle" x="340" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Station.ino</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M159.6,-340.47C106.6,-332.31 40.23,-318.56 20.8,-299 -5.41,-272.61 1.8,-254.69 1.8,-217.5 1.8,-217.5 1.8,-217.5 1.8,-148.5 1.8,-67.12 104.32,-35.9 180.61,-23.93"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="159.25,-343.96 169.66,-341.98 160.29,-337.04 159.25,-343.96"/>
+<path fill="none" stroke="midnightblue" d="M187.21,-329.98C175.15,-321.95 162.9,-311.55 155,-299 131.63,-261.86 125.55,-241.26 143,-201 178.41,-119.31 269.78,-57.25 314.53,-30.68"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="185.56,-333.07 195.9,-335.4 189.27,-327.14 185.56,-333.07"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="alarm_8cpp.html" target="_top" xlink:title="Handles alarms.">
-<polygon fill="white" stroke="black" points="29.8,-268.5 29.8,-298.5 151.8,-298.5 151.8,-268.5 29.8,-268.5"/>
-<text text-anchor="start" x="37.8" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="90.8" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/alarm.cpp</text>
+<polygon fill="white" stroke="black" points="450,-268.5 450,-298.5 572,-298.5 572,-268.5 450,-268.5"/>
+<text text-anchor="start" x="458" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="511" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/alarm.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M191.24,-331.13C168.99,-320.8 141.65,-308.11 121.12,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="189.88,-334.36 200.42,-335.4 192.83,-328.01 189.88,-334.36"/>
+<path fill="none" stroke="midnightblue" d="M295.85,-333.4C343.05,-322.67 404.47,-308.71 449.6,-298.46"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="294.98,-330.01 286,-335.64 296.53,-336.83 294.98,-330.01"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:href="audio_8h.html" target="_top" xlink:title="Plays audio.">
-<polygon fill="white" stroke="black" points="169.8,-268.5 169.8,-298.5 291.8,-298.5 291.8,-268.5 169.8,-268.5"/>
-<text text-anchor="start" x="177.8" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="230.8" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/audio.h</text>
+<polygon fill="white" stroke="black" points="164,-268.5 164,-298.5 286,-298.5 286,-268.5 164,-268.5"/>
+<text text-anchor="start" x="172" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="225" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/audio.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge3" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M230.8,-325.11C230.8,-316.15 230.8,-306.32 230.8,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="227.3,-325.4 230.8,-335.4 234.3,-325.4 227.3,-325.4"/>
+<path fill="none" stroke="midnightblue" d="M225,-325.11C225,-316.15 225,-306.32 225,-298.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="221.5,-325.4 225,-335.4 228.5,-325.4 221.5,-325.4"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="leds_8h.html" target="_top" xlink:title="Controls the LEDs on the unit.">
-<polygon fill="white" stroke="black" points="524.8,-67.5 524.8,-97.5 646.8,-97.5 646.8,-67.5 524.8,-67.5"/>
-<text text-anchor="start" x="532.8" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="585.8" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/leds.h</text>
+<polygon fill="white" stroke="black" points="0,-67.5 0,-97.5 122,-97.5 122,-67.5 0,-67.5"/>
+<text text-anchor="start" x="8" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="61" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/leds.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M302.19,-337.49C399.55,-319.42 565.72,-281.96 598.8,-232 626.66,-189.92 604.54,-125.79 592.41,-97.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="301.32,-334.09 292.12,-339.34 302.58,-340.98 301.32,-334.09"/>
+<path fill="none" stroke="midnightblue" d="M156.3,-331.52C139.03,-324.02 122.01,-313.54 110,-299 59.55,-237.91 58.61,-135.16 60.13,-97.7"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="155.31,-334.9 165.9,-335.39 157.93,-328.41 155.31,-334.9"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:href="rpc_8h.html" target="_top" xlink:title="Handles RPC calls.">
-<polygon fill="white" stroke="black" points="309.8,-268.5 309.8,-298.5 431.8,-298.5 431.8,-268.5 309.8,-268.5"/>
-<text text-anchor="start" x="317.8" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="370.8" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/rpc.h</text>
+<polygon fill="white" stroke="black" points="310,-268.5 310,-298.5 432,-298.5 432,-268.5 310,-268.5"/>
+<text text-anchor="start" x="318" y="-286.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="371" y="-275.5" font-family="Helvetica,sans-Serif" font-size="10.00">/rpc.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M270.37,-331.13C292.61,-320.8 319.95,-308.11 340.48,-298.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="268.78,-328.01 261.18,-335.4 271.72,-334.36 268.78,-328.01"/>
+<path fill="none" stroke="midnightblue" d="M265.95,-331.27C289.2,-320.92 317.87,-308.15 339.38,-298.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="264.39,-328.13 256.68,-335.4 267.24,-334.53 264.39,-328.13"/>
 </g>
 <!-- Node4&#45;&gt;Node2 -->
 <g id="edge4" class="edge">
 <title>Node4&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M226.08,-258.5C219.09,-218.02 208.85,-134.01 228.8,-67 232.81,-53.55 241.66,-40.34 249.19,-30.81"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="222.66,-259.28 227.89,-268.49 229.55,-258.03 222.66,-259.28"/>
+<path fill="none" stroke="midnightblue" d="M254.97,-262.16C265.18,-253.89 275.82,-243.54 283,-232 324.91,-164.64 336.25,-66.97 339.1,-30.73"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="252.73,-259.47 246.94,-268.34 257,-265.02 252.73,-259.47"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:href="audio_8cpp.html" target="_top" xlink:title="Plays audio.">
-<polygon fill="white" stroke="black" points="54.8,-201.5 54.8,-231.5 176.8,-231.5 176.8,-201.5 54.8,-201.5"/>
-<text text-anchor="start" x="62.8" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="115.8" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/audio.cpp</text>
+<polygon fill="white" stroke="black" points="152,-201.5 152,-231.5 274,-231.5 274,-201.5 152,-201.5"/>
+<text text-anchor="start" x="160" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="213" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/audio.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge5" class="edge">
 <title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M196.83,-263.3C178.83,-253.12 157.12,-240.85 140.71,-231.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="195.42,-266.52 205.85,-268.4 198.87,-260.43 195.42,-266.52"/>
+<path fill="none" stroke="midnightblue" d="M220.55,-258.4C218.88,-249.37 217.04,-239.41 215.6,-231.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="217.14,-259.2 222.4,-268.4 224.02,-257.93 217.14,-259.2"/>
 </g>
 <!-- Node6&#45;&gt;Node2 -->
 <g id="edge7" class="edge">
 <title>Node6&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M514.82,-66.81C447.7,-53.21 381.8,-40.13 333.27,-30.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="514.23,-70.26 524.72,-68.82 515.62,-63.4 514.23,-70.26"/>
+<path fill="none" stroke="midnightblue" d="M131.03,-65.19C176.72,-54.54 235.77,-40.78 279.43,-30.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="130.14,-61.8 121.2,-67.48 131.73,-68.62 130.14,-61.8"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="leds_8cpp.html" target="_top" xlink:title="Controls the LEDs on the unit.">
-<polygon fill="white" stroke="black" points="524.8,-0.5 524.8,-30.5 646.8,-30.5 646.8,-0.5 524.8,-0.5"/>
-<text text-anchor="start" x="532.8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="585.8" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/leds.cpp</text>
+<polygon fill="white" stroke="black" points="0,-0.5 0,-30.5 122,-30.5 122,-0.5 0,-0.5"/>
+<text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="61" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/leds.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge8" class="edge">
 <title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M585.8,-57.11C585.8,-48.15 585.8,-38.32 585.8,-30.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="582.3,-57.4 585.8,-67.4 589.3,-57.4 582.3,-57.4"/>
+<path fill="none" stroke="midnightblue" d="M61,-57.11C61,-48.15 61,-38.32 61,-30.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="57.5,-57.4 61,-67.4 64.5,-57.4 57.5,-57.4"/>
 </g>
 <!-- Node8&#45;&gt;Node2 -->
 <g id="edge10" class="edge">
 <title>Node8&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M319.01,-263.9C304.46,-256.21 290.09,-245.78 280.8,-232 237.57,-167.83 251.61,-67.39 258.75,-30.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="317.53,-267.07 328.05,-268.34 320.62,-260.79 317.53,-267.07"/>
+<path fill="none" stroke="midnightblue" d="M368.15,-258.07C361.8,-203.57 346.65,-73.52 341.64,-30.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="364.7,-258.67 369.33,-268.2 371.65,-257.86 364.7,-258.67"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
 <g id="a_node9"><a xlink:href="lora_8h.html" target="_top" xlink:title="File that handles the LoRa radio and PJON.">
-<polygon fill="white" stroke="black" points="289.8,-201.5 289.8,-231.5 411.8,-231.5 411.8,-201.5 289.8,-201.5"/>
-<text text-anchor="start" x="297.8" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="350.8" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/lora.h</text>
+<polygon fill="white" stroke="black" points="406,-201.5 406,-231.5 528,-231.5 528,-201.5 406,-201.5"/>
+<text text-anchor="start" x="414" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="467" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/lora.h</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node9 -->
 <g id="edge11" class="edge">
 <title>Node8&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M363.48,-258.7C360.67,-249.59 357.57,-239.49 355.13,-231.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="360.18,-259.87 366.46,-268.4 366.87,-257.81 360.18,-259.87"/>
+<path fill="none" stroke="midnightblue" d="M400.19,-262.73C415.05,-252.68 432.76,-240.68 446.21,-231.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="398.15,-259.89 391.83,-268.4 402.07,-265.69 398.15,-259.89"/>
 </g>
-<!-- Node13 -->
-<g id="node13" class="node">
-<title>Node13</title>
-<g id="a_node13"><a xlink:href="rpc_8cpp.html" target="_top" xlink:title="Handles RPC calls.">
-<polygon fill="white" stroke="black" points="467.8,-201.5 467.8,-231.5 589.8,-231.5 589.8,-201.5 467.8,-201.5"/>
-<text text-anchor="start" x="475.8" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="528.8" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/rpc.cpp</text>
+<!-- Node15 -->
+<g id="node15" class="node">
+<title>Node15</title>
+<g id="a_node15"><a xlink:href="rpc_8cpp.html" target="_top" xlink:title="Handles RPC calls.">
+<polygon fill="white" stroke="black" points="546,-201.5 546,-231.5 668,-231.5 668,-201.5 546,-201.5"/>
+<text text-anchor="start" x="554" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="607" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">/rpc.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node13 -->
-<g id="edge20" class="edge">
-<title>Node8&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M414.45,-264.54C439.73,-254.14 471.1,-241.24 494.59,-231.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="413,-261.35 405.09,-268.4 415.67,-267.83 413,-261.35"/>
+<!-- Node8&#45;&gt;Node15 -->
+<g id="edge23" class="edge">
+<title>Node8&#45;&gt;Node15</title>
+<path fill="none" stroke="midnightblue" d="M431.94,-265.71C470.35,-255.14 519.37,-241.63 555.77,-231.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="430.63,-262.45 421.92,-268.48 432.49,-269.19 430.63,-262.45"/>
 </g>
 <!-- Node9&#45;&gt;Node2 -->
 <g id="edge12" class="edge">
 <title>Node9&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M324.53,-194.66C315.52,-186.3 306.13,-176.04 299.8,-165 274.13,-120.21 265.54,-58.02 262.89,-30.53"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="322.44,-197.48 332.25,-201.48 327.07,-192.24 322.44,-197.48"/>
+<path fill="none" stroke="midnightblue" d="M538.01,-200.29C588.58,-188.87 649.1,-173.75 658,-165 689.65,-133.91 705.95,-100.62 677,-67 660.49,-47.84 515.68,-31.74 421.33,-23.17"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="537.04,-196.92 528.05,-202.53 538.57,-203.75 537.04,-196.92"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
 <g id="a_node10"><a xlink:href="lora_8cpp.html" target="_top" xlink:title="File that handles the LoRa radio and PJON.">
-<polygon fill="white" stroke="black" points="308.8,-134.5 308.8,-164.5 430.8,-164.5 430.8,-134.5 308.8,-134.5"/>
-<text text-anchor="start" x="316.8" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="369.8" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/lora.cpp</text>
+<polygon fill="white" stroke="black" points="527,-134.5 527,-164.5 649,-164.5 649,-134.5 527,-134.5"/>
+<text text-anchor="start" x="535" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="588" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/lora.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node10 -->
 <g id="edge13" class="edge">
 <title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M357.76,-191.7C360.42,-182.59 363.37,-172.49 365.69,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="354.37,-190.82 354.92,-201.4 361.09,-192.78 354.37,-190.82"/>
+<path fill="none" stroke="midnightblue" d="M502.23,-196.57C521.26,-186.35 544.37,-173.94 561.8,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="500.41,-193.58 493.26,-201.4 503.72,-199.75 500.41,-193.58"/>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
 <g id="a_node11"><a xlink:href="networking_8h.html" target="_top" xlink:title="Header file for networking.cpp.">
-<polygon fill="white" stroke="black" points="448.8,-134.5 448.8,-164.5 570.8,-164.5 570.8,-134.5 448.8,-134.5"/>
-<text text-anchor="start" x="456.8" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="509.8" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/networking.h</text>
+<polygon fill="white" stroke="black" points="387,-134.5 387,-164.5 509,-164.5 509,-134.5 387,-134.5"/>
+<text text-anchor="start" x="395" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="448" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">/networking.h</text>
 </a>
 </g>
 </g>
 <!-- Node9&#45;&gt;Node11 -->
 <g id="edge14" class="edge">
 <title>Node9&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M388.94,-197.41C413.36,-187.03 444.9,-174.2 469.69,-164.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="387.44,-194.24 379.62,-201.4 390.19,-200.68 387.44,-194.24"/>
+<path fill="none" stroke="midnightblue" d="M453.61,-191.99C450.44,-182.8 447.73,-172.58 446.44,-164.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="450.37,-193.3 457.2,-201.4 456.91,-190.81 450.37,-193.3"/>
 </g>
 <!-- Node11&#45;&gt;Node2 -->
 <g id="edge15" class="edge">
 <title>Node11&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M454.28,-131.22C429.59,-122.62 400.58,-111.23 375.8,-98 338.89,-78.29 300.12,-48.27 278.65,-30.7"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="453.26,-134.57 463.85,-134.49 455.52,-127.95 453.26,-134.57"/>
+<path fill="none" stroke="midnightblue" d="M424.82,-127.27C415.77,-118.54 405.53,-108.12 397,-98 378.19,-75.69 359.38,-47.32 348.76,-30.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="422.42,-129.82 432.09,-134.16 427.24,-124.74 422.42,-129.82"/>
 </g>
 <!-- Node11&#45;&gt;Node6 -->
 <g id="edge16" class="edge">
 <title>Node11&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M533.91,-127.88C545.46,-118.01 558.99,-106.43 569.34,-97.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="531.62,-125.24 526.29,-134.4 536.17,-130.56 531.62,-125.24"/>
+<path fill="none" stroke="midnightblue" d="M376.63,-136.51C303.54,-124.24 191.12,-105.36 122.03,-93.75"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="376.24,-140 386.68,-138.2 377.4,-133.09 376.24,-140"/>
 </g>
 <!-- Node11&#45;&gt;Node8 -->
-<g id="edge19" class="edge">
+<g id="edge22" class="edge">
 <title>Node11&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M487.55,-171.64C458.96,-198.78 410.13,-245.15 385.68,-268.37"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="490.19,-173.95 495.03,-164.52 485.37,-168.87 490.19,-173.95"/>
+<path fill="none" stroke="midnightblue" d="M422.07,-171.55C413.1,-179.92 403.64,-190.15 397,-201 383.81,-222.53 376.67,-251.41 373.37,-268.38"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="424.62,-173.97 429.74,-164.69 419.95,-168.75 424.62,-173.97"/>
 </g>
 <!-- Node11&#45;&gt;Node9 -->
 <g id="edge17" class="edge">
 <title>Node11&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M471.73,-168.56C447.33,-178.94 415.79,-191.77 390.98,-201.4"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="473.23,-171.73 481.04,-164.58 470.47,-165.3 473.23,-171.73"/>
+<path fill="none" stroke="midnightblue" d="M461.38,-173.98C464.55,-183.16 467.27,-193.39 468.56,-201.4"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="464.62,-172.67 457.79,-164.58 458.08,-175.17 464.62,-172.67"/>
 </g>
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
 <g id="a_node12"><a xlink:href="networking_8cpp.html" target="_top" xlink:title="File that handles connecting to WiFi and MQTT and staying connected.">
-<polygon fill="white" stroke="black" points="384.8,-67.5 384.8,-97.5 506.8,-97.5 506.8,-67.5 384.8,-67.5"/>
-<text text-anchor="start" x="392.8" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
-<text text-anchor="middle" x="445.8" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/networking.cpp</text>
+<polygon fill="white" stroke="black" points="406,-67.5 406,-97.5 528,-97.5 528,-67.5 406,-67.5"/>
+<text text-anchor="start" x="414" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="467" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/networking.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge18" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M488.66,-127.02C479.12,-117.34 468.13,-106.17 459.66,-97.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="486.4,-129.73 495.91,-134.4 491.39,-124.81 486.4,-129.73"/>
+<path fill="none" stroke="midnightblue" d="M454.96,-124.7C457.62,-115.59 460.57,-105.49 462.89,-97.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="451.57,-123.82 452.12,-134.4 458.29,-125.78 451.57,-123.82"/>
+</g>
+<!-- Node13 -->
+<g id="node13" class="node">
+<title>Node13</title>
+<g id="a_node13"><a xlink:href="ota_8h.html" target="_top" xlink:title="Handles over the air (OTA) updates.">
+<polygon fill="white" stroke="black" points="546,-67.5 546,-97.5 668,-97.5 668,-67.5 546,-67.5"/>
+<text text-anchor="start" x="554" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="607" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/ota.h</text>
+</a>
+</g>
+</g>
+<!-- Node11&#45;&gt;Node13 -->
+<g id="edge19" class="edge">
+<title>Node11&#45;&gt;Node13</title>
+<path fill="none" stroke="midnightblue" d="M491.92,-130.54C517.37,-120.14 548.93,-107.24 572.57,-97.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="490.43,-127.37 482.5,-134.4 493.08,-133.85 490.43,-127.37"/>
+</g>
+<!-- Node13&#45;&gt;Node2 -->
+<g id="edge20" class="edge">
+<title>Node13&#45;&gt;Node2</title>
+<path fill="none" stroke="midnightblue" d="M539.43,-65.05C495.78,-54.43 439.58,-40.74 397.96,-30.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="538.85,-68.51 549.39,-67.48 540.51,-61.71 538.85,-68.51"/>
+</g>
+<!-- Node14 -->
+<g id="node14" class="node">
+<title>Node14</title>
+<g id="a_node14"><a xlink:href="ota_8cpp.html" target="_top" xlink:title="Handles over the air (OTA) updates.">
+<polygon fill="white" stroke="black" points="546,-0.5 546,-30.5 668,-30.5 668,-0.5 546,-0.5"/>
+<text text-anchor="start" x="554" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">ESP32BaseStation/src</text>
+<text text-anchor="middle" x="607" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/ota.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node13&#45;&gt;Node14 -->
+<g id="edge21" class="edge">
+<title>Node13&#45;&gt;Node14</title>
+<path fill="none" stroke="midnightblue" d="M607,-57.11C607,-48.15 607,-38.32 607,-30.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="603.5,-57.4 607,-67.4 610.5,-57.4 603.5,-57.4"/>
 </g>
 </g>
 </svg>

@@ -74,13 +74,13 @@ $(function() {
 
 <p>Definitions and other preprocessor and global stuff.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;credentials.h&quot;</code><br />
+<code>#include &lt;Arduino.h&gt;</code><br />
 <code>#include &lt;WiFi.h&gt;</code><br />
 <code>#include &lt;PubSubClient.h&gt;</code><br />
 <code>#include &lt;ArduinoJson.h&gt;</code><br />
 <code>#include &lt;PJONThroughLora.h&gt;</code><br />
 <code>#include &lt;TunePlayer.h&gt;</code><br />
-<code>#include &quot;credentials.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="topics_8h_source.html">src/topics.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for defines.h:</div>
@@ -103,7 +103,7 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>PJON_INCLUDE_TL</b></td></tr>
 <tr class="separator:aeebf956fc71944a6237c3af6a038ff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c6d5de492ac61ad29aec7aa9a436bbf"><td class="memItemLeft" align="right" valign="top"><a id="a1c6d5de492ac61ad29aec7aa9a436bbf"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>VERSION</b>&#160;&#160;&#160;&quot;0.1.1&quot;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>VERSION</b>&#160;&#160;&#160;&quot;0.2.0&quot;</td></tr>
 <tr class="separator:a1c6d5de492ac61ad29aec7aa9a436bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94df10e7efe7613d074c105099c7fd0e"><td class="memItemLeft" align="right" valign="top"><a id="a94df10e7efe7613d074c105099c7fd0e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SERIAL_BAUD</b>&#160;&#160;&#160;115200</td></tr>
@@ -126,20 +126,15 @@ Macros</h2></td></tr>
 <tr class="memitem:a81dee8e36f61410d32bf9686d682e467"><td class="memItemLeft" align="right" valign="top"><a id="a81dee8e36f61410d32bf9686d682e467"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SERIAL_GIVE</b>()&#160;&#160;&#160;xSemaphoreGive(serialMutex)</td></tr>
 <tr class="separator:a81dee8e36f61410d32bf9686d682e467"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab3f271bb9e86231c5a9627d7cfd95f"><td class="memItemLeft" align="right" valign="top"><a id="a8ab3f271bb9e86231c5a9627d7cfd95f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGV</b>(tag,  format, ...)&#160;&#160;&#160;SERIAL_TAKE(); ESP_LOGV(tag, format, ##__VA_ARGS__); SERIAL_GIVE()</td></tr>
+<tr class="memitem:a8ab3f271bb9e86231c5a9627d7cfd95f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGV</b>(tag,  format, ...)</td></tr>
 <tr class="separator:a8ab3f271bb9e86231c5a9627d7cfd95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdf406b7d439825893ac12961fa69980"><td class="memItemLeft" align="right" valign="top"><a id="afdf406b7d439825893ac12961fa69980"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGD</b>(tag,  format, ...)&#160;&#160;&#160;SERIAL_TAKE(); ESP_LOGD(tag, format, ##__VA_ARGS__); SERIAL_GIVE()</td></tr>
+<tr class="memitem:afdf406b7d439825893ac12961fa69980"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGD</b>(tag,  format, ...)</td></tr>
 <tr class="separator:afdf406b7d439825893ac12961fa69980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1688db883baa23d21b46385ee1c1ce03"><td class="memItemLeft" align="right" valign="top"><a id="a1688db883baa23d21b46385ee1c1ce03"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGI</b>(tag,  format, ...)&#160;&#160;&#160;SERIAL_TAKE(); ESP_LOGI(tag, format, ##__VA_ARGS__); SERIAL_GIVE()</td></tr>
+<tr class="memitem:a1688db883baa23d21b46385ee1c1ce03"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGI</b>(tag,  format, ...)</td></tr>
 <tr class="separator:a1688db883baa23d21b46385ee1c1ce03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d8f896407d20e4582abfae30edd3d65"><td class="memItemLeft" align="right" valign="top"><a id="a1d8f896407d20e4582abfae30edd3d65"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGW</b>(tag,  format, ...)&#160;&#160;&#160;SERIAL_TAKE(); ESP_LOGW(tag, format, ##__VA_ARGS__); SERIAL_GIVE()</td></tr>
+<tr class="memitem:a1d8f896407d20e4582abfae30edd3d65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGW</b>(tag,  format, ...)</td></tr>
 <tr class="separator:a1d8f896407d20e4582abfae30edd3d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b7497afe2144f4901b6a3836de53235"><td class="memItemLeft" align="right" valign="top"><a id="a8b7497afe2144f4901b6a3836de53235"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGE</b>(tag,  format, ...)&#160;&#160;&#160;SERIAL_TAKE(); ESP_LOGE(tag, format, ##__VA_ARGS__); SERIAL_GIVE()</td></tr>
+<tr class="memitem:a8b7497afe2144f4901b6a3836de53235"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOGE</b>(tag,  format, ...)</td></tr>
 <tr class="separator:a8b7497afe2144f4901b6a3836de53235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0799be6ced379688a49c8a981927d1d5"><td class="memItemLeft" align="right" valign="top"><a id="a0799be6ced379688a49c8a981927d1d5"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>xstringify</b>(s)&#160;&#160;&#160;stringify(s)</td></tr>
@@ -210,7 +205,193 @@ Macros</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Jotham Gates </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-08-12 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="afdf406b7d439825893ac12961fa69980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf406b7d439825893ac12961fa69980">&#9670;&nbsp;</a></span>LOGD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    SERIAL_TAKE();                        \</div>
+<div class="line">    ESP_LOGD(tag, format, ##__VA_ARGS__); \</div>
+<div class="line">    SERIAL_GIVE()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b7497afe2144f4901b6a3836de53235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7497afe2144f4901b6a3836de53235">&#9670;&nbsp;</a></span>LOGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    SERIAL_TAKE();                        \</div>
+<div class="line">    ESP_LOGE(tag, format, ##__VA_ARGS__); \</div>
+<div class="line">    SERIAL_GIVE()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1688db883baa23d21b46385ee1c1ce03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1688db883baa23d21b46385ee1c1ce03">&#9670;&nbsp;</a></span>LOGI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGI</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    SERIAL_TAKE();                        \</div>
+<div class="line">    ESP_LOGI(tag, format, ##__VA_ARGS__); \</div>
+<div class="line">    SERIAL_GIVE()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ab3f271bb9e86231c5a9627d7cfd95f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab3f271bb9e86231c5a9627d7cfd95f">&#9670;&nbsp;</a></span>LOGV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGV</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    SERIAL_TAKE();                        \</div>
+<div class="line">    ESP_LOGV(tag, format, ##__VA_ARGS__); \</div>
+<div class="line">    SERIAL_GIVE()</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1d8f896407d20e4582abfae30edd3d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8f896407d20e4582abfae30edd3d65">&#9670;&nbsp;</a></span>LOGW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOGW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">tag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">format, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    SERIAL_TAKE();                        \</div>
+<div class="line">    ESP_LOGW(tag, format, ##__VA_ARGS__); \</div>
+<div class="line">    SERIAL_GIVE()</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
