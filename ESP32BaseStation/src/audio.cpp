@@ -53,7 +53,6 @@ void audioTask(void *pvParameters)
     {
         // // Wait for something to play.
         LOGD("AUDIO", "Waiting for a play instruction.");
-        int fileIndex = 0;
         AlarmState state;
         if (!skipWait)
         {

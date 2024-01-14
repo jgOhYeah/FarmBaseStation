@@ -1,12 +1,13 @@
 /**
  * @file defines.h
  * @brief Definitions and other preprocessor and global stuff.
- * 
+ *
  * @author Jotham Gates
  * @version 0.1
  * @date 2023-08-12
  */
 #pragma once
+#include "credentials.h"
 
 #include <Arduino.h>
 #include <WiFi.h>
@@ -15,10 +16,15 @@
 #define PJON_INCLUDE_TL
 #include <PJONThroughLora.h>
 
+// OTA (enable or disable in credentials.h)
+#ifdef OTA_ENABLE
+#include <ArduinoOTA.h>
+#endif
+
 // For alarm tunes
 #include <TunePlayer.h>
 
-#define VERSION "0.1.1"
+#define VERSION "0.2.0"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 
@@ -31,11 +37,26 @@
 // Logging (with mutexes)
 #define SERIAL_TAKE() xSemaphoreTake(serialMutex, portMAX_DELAY)
 #define SERIAL_GIVE() xSemaphoreGive(serialMutex)
-#define LOGV(tag, format, ...) SERIAL_TAKE(); ESP_LOGV(tag, format, ##__VA_ARGS__); SERIAL_GIVE()
-#define LOGD(tag, format, ...) SERIAL_TAKE(); ESP_LOGD(tag, format, ##__VA_ARGS__); SERIAL_GIVE()
-#define LOGI(tag, format, ...) SERIAL_TAKE(); ESP_LOGI(tag, format, ##__VA_ARGS__); SERIAL_GIVE()
-#define LOGW(tag, format, ...) SERIAL_TAKE(); ESP_LOGW(tag, format, ##__VA_ARGS__); SERIAL_GIVE()
-#define LOGE(tag, format, ...) SERIAL_TAKE(); ESP_LOGE(tag, format, ##__VA_ARGS__); SERIAL_GIVE()
+#define LOGV(tag, format, ...)            \
+    SERIAL_TAKE();                        \
+    ESP_LOGV(tag, format, ##__VA_ARGS__); \
+    SERIAL_GIVE()
+#define LOGD(tag, format, ...)            \
+    SERIAL_TAKE();                        \
+    ESP_LOGD(tag, format, ##__VA_ARGS__); \
+    SERIAL_GIVE()
+#define LOGI(tag, format, ...)            \
+    SERIAL_TAKE();                        \
+    ESP_LOGI(tag, format, ##__VA_ARGS__); \
+    SERIAL_GIVE()
+#define LOGW(tag, format, ...)            \
+    SERIAL_TAKE();                        \
+    ESP_LOGW(tag, format, ##__VA_ARGS__); \
+    SERIAL_GIVE()
+#define LOGE(tag, format, ...)            \
+    SERIAL_TAKE();                        \
+    ESP_LOGE(tag, format, ##__VA_ARGS__); \
+    SERIAL_GIVE()
 
 // https://gcc.gnu.org/onlinedocs/gcc-4.8.5/cpp/Stringification.html
 #define xstringify(s) stringify(s)
@@ -72,5 +93,4 @@
 #define LORA_TX_INTERVAL 10000
 #define LORA_MAX_PACKET_SIZE 50
 
-#include "credentials.h"
 #include "src/topics.h"

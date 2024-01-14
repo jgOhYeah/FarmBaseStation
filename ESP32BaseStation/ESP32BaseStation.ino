@@ -28,6 +28,7 @@ SemaphoreHandle_t serialMutex;
 #include "src/alarm.h"
 #include "src/audio.h"
 #include "src/leds.h"
+#include "src/ota.h"
 
 // States used for LED control.
 SemaphoreHandle_t stateUpdateMutex;
@@ -127,14 +128,19 @@ void setup()
         1);
     // TODO: Actually measure ram and high water marks rather than guessing.
 
+#ifdef OTA_ENABLE
+    // Setup OTA
+    OTAManager::setupOTA();
+#else
     // Don't need the loop, so can remove the main Arduino task.
     vTaskDelete(NULL);
+#endif
 }
 
 void loop()
 {
-    // Not used.
-    // TODO: OTA updates
-    // delay(10000);
-    // LOGD("M", "Hi");
+#ifdef OTA_ENABLE
+    OTAManager::handleOTA();
+    yield();
+#endif
 }

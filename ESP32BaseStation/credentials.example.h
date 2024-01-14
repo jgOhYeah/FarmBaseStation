@@ -4,7 +4,7 @@
  * @brief Credentials and system specific settings.
  * @version 0.1
  * @date 2023-08-08
- * 
+ *
  * Create a copy of this file and name is `crendentials.h`. Edit the settings in
  * this new file and leave `credentials.example.h` untouched.
  */
@@ -21,3 +21,11 @@
 // Thingsboard settings
 #define THINGSBOARD_TOKEN "Copy access token in the devices list"
 #define THINGSBOARD_NAME "Farm PJON Gateway"
+
+// OTA settings
+#define OTA_ENABLE
+#ifdef OTA_ENABLE
+#define OTA_PORT 3232
+#define OTA_HOSTNAME "farmgateway"
+#define OTA_PASSWORD "MyOTAPassword"
+#endif

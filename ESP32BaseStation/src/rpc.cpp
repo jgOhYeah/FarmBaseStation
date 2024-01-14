@@ -87,12 +87,12 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
         // Add to the queue
         const unsigned int ALARM_TIMEOUT = 3000;
         xQueueSend(alarmQueue, (void*)&state, ALARM_TIMEOUT / portTICK_PERIOD_MS);
-        replyMeRpc(id, "{}");
+        replyMeRpc(id, (char*)"{}");
     } else if (method && STRINGS_MATCH(method, "reset"))
     {
         // Reset
         LOGI("MQTT", "Reset method. Restarting in a few seconds");
-        replyMeRpc(id, "{}");
+        replyMeRpc(id, (char*)"{}");
         delay(10000);
         ESP.restart();
     } else {
