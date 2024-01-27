@@ -24,7 +24,7 @@
 // For alarm tunes
 #include <TunePlayer.h>
 
-#define VERSION "0.2.0"
+#define VERSION "0.2.0a"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 
