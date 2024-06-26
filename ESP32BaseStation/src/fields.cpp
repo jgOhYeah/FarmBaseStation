@@ -82,10 +82,21 @@ int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
     if (checkDecodeable(length))
     {
         // Convert and save to json
+        // Obtain the value
         int16_t value = (int16_t)byteArrayToUInt(bytes);
+
+        // Separate the sign and magnitude into a string and variable
+        char signStr[2] = "-";
+        if (value >= 0)
+        {
+            // No sign. Replace with a null char to make the string empty.
+            signStr[0] = '\0';
+        }
+        value = abs(value);
+
         // Use sprintf to manually format to avoid floating point rounding issues.
         char charBuff[8];
-        sprintf(charBuff, "%d.%d", value / 10, abs(value) % 10);
+        sprintf(charBuff, "%s%d.%d", signStr, value / 10, value % 10);
         json[name] = serialized(charBuff);
         return 2;
     }
