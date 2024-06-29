@@ -1,0 +1,4 @@
+<map id="loraTxTask" name="loraTxTask">
+<area shape="rect" id="node1" title="Task for sending packets when needed." alt="" coords="5,5,97,32"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182" title="Sets the state for if there are packets left to send." alt="" coords="145,5,291,32"/>
+</map>

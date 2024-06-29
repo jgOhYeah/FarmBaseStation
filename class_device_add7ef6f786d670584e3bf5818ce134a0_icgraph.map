@@ -1,0 +1,4 @@
+<map id="Device::decodePacketFields" name="Device::decodePacketFields">
+<area shape="rect" id="node1" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="256,5,459,32"/>
+<area shape="rect" id="node2" href="$class_device.html#a44edcfdcd677e11331e1423ddfd26a5e" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet ..." alt="" coords="5,5,208,32"/>
+</map>

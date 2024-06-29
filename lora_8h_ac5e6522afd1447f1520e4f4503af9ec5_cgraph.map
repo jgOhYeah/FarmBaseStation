@@ -1,0 +1,4 @@
+<map id="loraWatchdogTask" name="loraWatchdogTask">
+<area shape="rect" id="node1" title="Task that checks if the radio is connected." alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="193,5,380,32"/>
+</map>

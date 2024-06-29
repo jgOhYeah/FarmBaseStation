@@ -1,0 +1,4 @@
+<map id="SettableFlagField::encode" name="SettableFlagField::encode">
+<area shape="rect" id="node1" title="Encodes the value to set into a packet ready to send." alt="" coords="5,5,148,47"/>
+<area shape="rect" id="node2" href="$class_field.html#ac8db4e4765d2de5d53ff4bbfb1150f31" title="Returns the symbol in write mode (MSB set to 1)." alt="" coords="196,13,339,39"/>
+</map>
