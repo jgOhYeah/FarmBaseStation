@@ -3,9 +3,9 @@
  * @author Jotham Gates
  * @brief Credentials and system specific settings.
  * @version 0.1
- * @date 2023-08-08
+ * @date 2024-06-26
  *
- * Create a copy of this file and name is `crendentials.h`. Edit the settings in
+ * Create a copy of this file and name it `crendentials.h`. Edit the settings in
  * this new file and leave `credentials.example.h` untouched.
  */
 #pragma once

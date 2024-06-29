@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-12
+ * @date 2024-06-29
  */
 #pragma once
 #include "credentials.h"
@@ -24,7 +24,7 @@
 // For alarm tunes
 #include <TunePlayer.h>
 
-#define VERSION "0.2.0a"
+#define VERSION "0.2.1"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 
