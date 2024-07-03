@@ -7,7 +7,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-12
+ * @date 2024-07-03
  */
 #include "defines.h"
 
@@ -47,7 +47,7 @@ void setup()
     // TODO: Swap to notifications
     alarmQueue = xQueueCreate(3, sizeof(AlarmState));
     audioQueue = xQueueCreate(3, sizeof(AlarmState));
-    mqttPublishQueue = xQueueCreate(6, sizeof(MqttMsg));
+    mqttPublishQueue = xQueueCreate(15, sizeof(MqttMsg));
     mqttMutex = xSemaphoreCreateMutex();
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
     loraMutex = xSemaphoreCreateMutex();
