@@ -1,0 +1,4 @@
+<map id="TenthsByteField::decode" name="TenthsByteField::decode">
+<area shape="rect" id="node1" title="Decodes the value from bytes into an existing json document." alt="" coords="5,5,185,32"/>
+<area shape="rect" id="node2" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="233,5,409,32"/>
+</map>

@@ -134,6 +134,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a5d72fd035043ba0f56e695e42104d341"><td class="memItemLeft" align="right" valign="top"><a id="a5d72fd035043ba0f56e695e42104d341"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>FIELD_FENCE</b>&#160;&#160;&#160;<a class="el" href="class_settable_byte_field.html">SettableByteField</a>(&quot;FenceEnabled&quot;, 'F')</td></tr>
 <tr class="separator:a5d72fd035043ba0f56e695e42104d341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf000177d6d405a1130ba02c94e87778"><td class="memItemLeft" align="right" valign="top"><a id="adf000177d6d405a1130ba02c94e87778"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FIELD_FENCE_VOLTAGE</b>&#160;&#160;&#160;<a class="el" href="class_tenths_byte_field.html">TenthsByteField</a>(&quot;Fence Voltage&quot;, 'k')</td></tr>
+<tr class="separator:adf000177d6d405a1130ba02c94e87778"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade6fe95fe5831334b6965cb898ed403b"><td class="memItemLeft" align="right" valign="top"><a id="ade6fe95fe5831334b6965cb898ed403b"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>FIELD_WATER_CAPACITIVE</b>&#160;&#160;&#160;<a class="el" href="class_u_int_field.html">UIntField</a>(&quot;Water capacitive reading&quot;, 'w')</td></tr>
 <tr class="separator:ade6fe95fe5831334b6965cb898ed403b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,6 +152,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a801acdc17df80de5ba0335535896f719"><td class="memItemLeft" align="right" valign="top"><a id="a801acdc17df80de5ba0335535896f719"></a>
 <a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>waterBabyFieldsManager</b> (waterBabyFieldsList, sizeof(waterBabyFieldsList)/sizeof(<a class="el" href="class_field.html">Field</a> *))</td></tr>
 <tr class="separator:a801acdc17df80de5ba0335535896f719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a9b760d3122038f78c1b263afd81b3"><td class="memItemLeft" align="right" valign="top"><a id="a24a9b760d3122038f78c1b263afd81b3"></a>
+<a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fenceMonitorFieldsManager</b> (fenceMonitorFieldsList, sizeof(fenceMonitorFieldsList)/sizeof(<a class="el" href="class_field.html">Field</a> *))</td></tr>
+<tr class="separator:a24a9b760d3122038f78c1b263afd81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dded8a605f0c8734e383814bda6b422"><td class="memItemLeft" align="right" valign="top"><a id="a2dded8a605f0c8734e383814bda6b422"></a>
 <a class="el" href="class_device_manager.html">DeviceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>deviceManager</b> (deviceList, sizeof(deviceList)/sizeof(<a class="el" href="class_device.html">Device</a> *))</td></tr>
 <tr class="separator:a2dded8a605f0c8734e383814bda6b422"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,6 +167,8 @@ Variables</h2></td></tr>
 <tr class="separator:af3ab56b2304bf0956530586379f2f884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc49ea12b68e2a19c50c9b5b54446f99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_field.html">Field</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>waterBabyFieldsList</b> []</td></tr>
 <tr class="separator:acc49ea12b68e2a19c50c9b5b54446f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37613d90d9883ba23125d745649a426a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_field.html">Field</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>fenceMonitorFieldsList</b> []</td></tr>
+<tr class="separator:a37613d90d9883ba23125d745649a426a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dc9940961302db756e3ea64b11d20af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device.html">Device</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>deviceList</b> []</td></tr>
 <tr class="separator:a6dc9940961302db756e3ea64b11d20af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -168,7 +176,7 @@ Variables</h2></td></tr>
 <div class="textblock"><p>List of all devices and fields known to the system. </p>
 <dl class="section author"><dt>Author</dt><dd>Jotham Gates </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2023-08-12 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-12-19 </dd></dl>
 </div><h2 class="groupheader">Variable Documentation</h2>
 <a id="a6dc9940961302db756e3ea64b11d20af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6dc9940961302db756e3ea64b11d20af">&#9670;&nbsp;</a></span>deviceList</h2>
@@ -184,7 +192,8 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <span class="keyword">new</span> <a class="code" href="class_device.html">Device</a>(<span class="stringliteral">&quot;Main Pressure Pump&quot;</span>, 0x5A, pumpFieldsManager),</div>
 <div class="line">    <span class="keyword">new</span> <a class="code" href="class_device.html">Device</a>(<span class="stringliteral">&quot;Solar Electric Fence&quot;</span>, 0x4A, fenceFieldsManager),</div>
-<div class="line">    <span class="keyword">new</span> <a class="code" href="class_device.html">Device</a>(<span class="stringliteral">&quot;Irrigation Water Detector&quot;</span>, 167, waterBabyFieldsManager)</div>
+<div class="line">    <span class="keyword">new</span> <a class="code" href="class_device.html">Device</a>(<span class="stringliteral">&quot;Irrigation Water Detector&quot;</span>, 167, waterBabyFieldsManager),</div>
+<div class="line">    <span class="keyword">new</span> <a class="code" href="class_device.html">Device</a>(<span class="stringliteral">&quot;Electric fence monitor&quot;</span>, 168, fenceMonitorFieldsManager)</div>
 <div class="line">}</div>
 <div class="ttc" id="aclass_device_html"><div class="ttname"><a href="class_device.html">Device</a></div><div class="ttdoc">Each sensor / device on the PJON network.</div><div class="ttdef"><b>Definition:</b> devices.h:26</div></div>
 </div><!-- fragment -->
@@ -209,6 +218,24 @@ Variables</h2></td></tr>
 <div class="line">    <span class="keyword">new</span> FIELD_STATUS,</div>
 <div class="line">    <span class="keyword">new</span> FIELD_TX_INTERVAL,</div>
 <div class="line">    <span class="keyword">new</span> FIELD_RESET</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a37613d90d9883ba23125d745649a426a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37613d90d9883ba23125d745649a426a">&#9670;&nbsp;</a></span>fenceMonitorFieldsList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_field.html">Field</a>* fenceMonitorFieldsList[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="keyword">new</span> FIELD_BATTERY_VOLTAGE,</div>
+<div class="line">    <span class="keyword">new</span> FIELD_FENCE_VOLTAGE</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 </div>

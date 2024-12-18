@@ -1,0 +1,5 @@
+<map id="TenthsByteField" name="TenthsByteField">
+<area shape="rect" id="node1" title="Field for decoding 1 byte signed data in tenths." alt="" coords="5,155,131,181"/>
+<area shape="rect" id="node2" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="41,80,95,107"/>
+<area shape="rect" id="node3" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="20,5,116,32"/>
+</map>
