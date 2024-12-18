@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-12
+ * @date 2024-12-19
  */
 
 #pragma once
@@ -30,7 +30,8 @@
 #define FIELD_PUMP_START_COUNT UIntField("Count of pump starts in block", 'c')
 
 // Fence specific
-#define FIELD_FENCE SettableByteField("FenceEnabled", 'F')
+#define FIELD_FENCE SettableByteField("FenceEnabled", 'F') // Remote control
+#define FIELD_FENCE_VOLTAGE TenthsByteField("Fence Voltage", 'k') // Monitor
 
 // Water baby
 #define FIELD_WATER_CAPACITIVE UIntField("Water capacitive reading", 'w')
@@ -63,14 +64,21 @@ Field *waterBabyFieldsList[] = {
     new FIELD_RESET
 };
 
+Field *fenceMonitorFieldsList[] = {
+    new FIELD_BATTERY_VOLTAGE,
+    new FIELD_FENCE_VOLTAGE
+};
+
 LookupManager<Field> pumpFieldsManager(pumpFieldsList, sizeof(pumpFieldsList) / sizeof(Field*));
 LookupManager<Field> fenceFieldsManager(fenceFieldsList, sizeof(fenceFieldsList) / sizeof(Field*));
 LookupManager<Field> waterBabyFieldsManager(waterBabyFieldsList, sizeof(waterBabyFieldsList) / sizeof(Field*));
+LookupManager<Field> fenceMonitorFieldsManager(fenceMonitorFieldsList, sizeof(fenceMonitorFieldsList) / sizeof(Field*));
 
 Device *deviceList[] = {
     new Device("Main Pressure Pump", 0x5A, pumpFieldsManager),
     new Device("Solar Electric Fence", 0x4A, fenceFieldsManager),
-    new Device("Irrigation Water Detector", 167, waterBabyFieldsManager)
+    new Device("Irrigation Water Detector", 167, waterBabyFieldsManager),
+    new Device("Electric fence monitor", 168, fenceMonitorFieldsManager)
 };
 
 DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(Device*));

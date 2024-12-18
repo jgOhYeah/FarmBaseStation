@@ -7,7 +7,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2024-07-03
+ * @date 2024-12-19
  */
 #include "defines.h"
 
@@ -55,7 +55,7 @@ void setup()
 
     Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
     Serial.setDebugOutput(true);
-    LOGI("Setup", "Farm PJON LoRa base station v" SW_VERSION ". Compiled " __DATE__ ", " __TIME__);
+    LOGI("Setup", "Farm PJON LoRa base station v" VERSION ". Compiled " __DATE__ ", " __TIME__);
 
     if (!alarmQueue || !audioQueue || !mqttPublishQueue || !mqttMutex ||
         !serialMutex || !loraMutex || !stateUpdateMutex)

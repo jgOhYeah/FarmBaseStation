@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2023-08-12
+ * @date 2024-12-19
  */
 
 #pragma once
@@ -102,6 +102,18 @@ protected:
      * @return false
      */
     virtual bool isValidNewValue(T value);
+};
+
+/**
+ * @brief Field for decoding 1 byte signed data in tenths.
+ * 
+ */
+class TenthsByteField : public Field
+{
+public:
+    TenthsByteField(const char *name, char symbol) : Field(name, symbol, 1) {}
+
+    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**

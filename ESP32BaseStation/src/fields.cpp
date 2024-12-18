@@ -4,7 +4,7 @@
  *
  * @author Jotham Gates
  * @version 0.1
- * @date 2024-06-26
+ * @date 2024-12-19
  */
 #include "fields.h"
 
@@ -74,6 +74,23 @@ bool Field::checkDecodeable(uint8_t length)
         return false;
     }
     return true;
+}
+
+int8_t TenthsByteField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
+{
+    // Check we have enough bytes to safely complete this.
+    if (checkDecodeable(length))
+    {
+        // Convert and save to json
+        // Obtain the value
+        uint8_t value = (uint8_t)bytes[0];
+        // Use sprintf to manually format to avoid floating point rounding issues.
+        char charBuff[8];
+        sprintf(charBuff, "%d.%d", value / 10, value % 10);
+        json[name] = serialized(charBuff);
+        return 1;
+    }
+    return FIELD_NO_MEMORY;
 }
 
 int8_t TenthsField::decode(uint8_t *bytes, uint8_t length, JsonObject &json)
