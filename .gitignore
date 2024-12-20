@@ -1,6 +1,7 @@
 build
 .vscode
-ESP32BaseStation/credentials.h
+BaseStationCode/src/credentials.h
+BaseStationCode/credentials.ini
 docs
 .doxygen
 BaseStationSchematics/BaseStationSchematics-backups
