@@ -1,0 +1,6 @@
+<map id="ledTask" name="ledTask">
+<area shape="rect" id="node1" title="Task that manages the LEDs on the unit." alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$class_led.html#aca41751e53023a56a30b541a1c23edfe" title="Initialises the pins." alt="" coords="181,5,270,32"/>
+<area shape="rect" id="node3" href="$class_led.html#ad977cfca6965684f274d8d6e33ac3548" title="Turns the LED on or off." alt="" coords="375,31,448,57"/>
+<area shape="rect" id="node4" href="$class_device_manager.html#ac356dbc3ba069ca92c67825081d7a8a8" title="Returns the number of packets that need to be sent across all devices." alt="" coords="124,107,327,133"/>
+</map>

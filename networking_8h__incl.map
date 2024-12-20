@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/networking.h" name="ESP32BaseStation/src/networking.h">
-<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="572,5,735,47"/>
+<map id="BaseStationCode/src/src/networking.h" name="BaseStationCode/src/src/networking.h">
+<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="575,5,731,47"/>
 <area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="581,468,675,495"/>
 <area shape="rect" id="node11" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="563,244,647,271"/>
 <area shape="rect" id="node15" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="557,95,616,121"/>

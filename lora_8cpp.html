@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Farm ESP32 LoRa PJON base station: ESP32BaseStation/src/lora.cpp File Reference</title>
+<title>Farm ESP32 LoRa PJON base station: BaseStationCode/src/src/lora.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ef5640e6ecd48a5ca5702d70d196d8dc.html">ESP32BaseStation</a></li><li class="navelem"><a class="el" href="dir_8498873338e7235b06db63270061d9c7.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1bfa34a7fd069c322cf9c40181e548fc.html">BaseStationCode</a></li><li class="navelem"><a class="el" href="dir_f63607e1acfe1c55d01a2faf58f7911a.html">src</a></li><li class="navelem"><a class="el" href="dir_bad7734e6982521456135a51120f4e1e.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -85,8 +85,7 @@ Include dependency graph for lora.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:adc3c5806492d2818ad6f5aff232765ec"><td class="memItemLeft" align="right" valign="top"><a id="adc3c5806492d2818ad6f5aff232765ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttributeState</b> (const char *const attribute, bool state)</td></tr>
+<tr class="memitem:adc3c5806492d2818ad6f5aff232765ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#adc3c5806492d2818ad6f5aff232765ec">setAttributeState</a> (const char *const attribute, bool state)</td></tr>
 <tr class="separator:adc3c5806492d2818ad6f5aff232765ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73337b280bec4397780b012ccc949113"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a73337b280bec4397780b012ccc949113">pjonReceive</a> (uint8_t *payload, uint16_t length, const PJON_Packet_Info &amp;packetInfo, int rssi, float snr)</td></tr>
 <tr class="memdesc:a73337b280bec4397780b012ccc949113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an incoming packet received from the radio and adds the given snr and rssi to the packet.  <a href="lora_8cpp.html#a73337b280bec4397780b012ccc949113">More...</a><br /></td></tr>
@@ -97,13 +96,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setAttributeState</b>
 <tr class="memitem:aef164eaa7a67eb3153407eb4b601f4f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aef164eaa7a67eb3153407eb4b601f4f0">pjonError</a> (uint8_t code, uint16_t data, void *customPointer)</td></tr>
 <tr class="memdesc:aef164eaa7a67eb3153407eb4b601f4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs PJON errors.  <a href="lora_8cpp.html#aef164eaa7a67eb3153407eb4b601f4f0">More...</a><br /></td></tr>
 <tr class="separator:aef164eaa7a67eb3153407eb4b601f4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8801dfe2a42386ac27371814cc9f987"><td class="memItemLeft" align="right" valign="top"><a id="aa8801dfe2a42386ac27371814cc9f987"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987">fakeReceiveTask</a> (void *pvParameters)</td></tr>
-<tr class="memdesc:aa8801dfe2a42386ac27371814cc9f987"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Receives" some fake data for testing purposes. <br /></td></tr>
+<tr class="memitem:aa8801dfe2a42386ac27371814cc9f987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987">fakeReceiveTask</a> (void *pvParameters)</td></tr>
+<tr class="memdesc:aa8801dfe2a42386ac27371814cc9f987"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Receives" some fake data for testing purposes.  <a href="lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987">More...</a><br /></td></tr>
 <tr class="separator:aa8801dfe2a42386ac27371814cc9f987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6042a1af9411d9eafc7088497f536eb8"><td class="memItemLeft" align="right" valign="top"><a id="a6042a1af9411d9eafc7088497f536eb8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8">pjonTask</a> (void *pvParameters)</td></tr>
-<tr class="memdesc:a6042a1af9411d9eafc7088497f536eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that manages the pjon protocol and radio. <br /></td></tr>
+<tr class="memitem:a6042a1af9411d9eafc7088497f536eb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8">pjonTask</a> (void *pvParameters)</td></tr>
+<tr class="memdesc:a6042a1af9411d9eafc7088497f536eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that manages the pjon protocol and radio.  <a href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8">More...</a><br /></td></tr>
 <tr class="separator:a6042a1af9411d9eafc7088497f536eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e6522afd1447f1520e4f4503af9ec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5">loraWatchdogTask</a> (void *pvParameters)</td></tr>
 <tr class="memdesc:ac5e6522afd1447f1520e4f4503af9ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that checks if the radio is connected.  <a href="lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5">More...</a><br /></td></tr>
@@ -114,13 +111,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora
 <tr class="memitem:afbd9f56608d04cb8a75d69112cd89885"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#afbd9f56608d04cb8a75d69112cd89885">debugLoRaPacket</a> (uint8_t *payload, uint8_t length)</td></tr>
 <tr class="memdesc:afbd9f56608d04cb8a75d69112cd89885"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task for printing out a byte array.  <a href="lora_8cpp.html#afbd9f56608d04cb8a75d69112cd89885">More...</a><br /></td></tr>
 <tr class="separator:afbd9f56608d04cb8a75d69112cd89885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeae7cd913b330750fef4bda6cadbf95b"><td class="memItemLeft" align="right" valign="top"><a id="aeae7cd913b330750fef4bda6cadbf95b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b">sendRadioConnectedMsg</a> (bool state)</td></tr>
-<tr class="memdesc:aeae7cd913b330750fef4bda6cadbf95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an attribute over mqtt depending on the state of the radio connection. <br /></td></tr>
+<tr class="memitem:aeae7cd913b330750fef4bda6cadbf95b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b">sendRadioConnectedMsg</a> (bool state)</td></tr>
+<tr class="memdesc:aeae7cd913b330750fef4bda6cadbf95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends an attribute over mqtt depending on the state of the radio connection.  <a href="lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b">More...</a><br /></td></tr>
 <tr class="separator:aeae7cd913b330750fef4bda6cadbf95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9cd66992a99394d4aa4030fcdbf6182"><td class="memItemLeft" align="right" valign="top"><a id="ab9cd66992a99394d4aa4030fcdbf6182"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182">sendTxWaitingMsg</a> (bool state)</td></tr>
-<tr class="memdesc:ab9cd66992a99394d4aa4030fcdbf6182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for if there are packets left to send. <br /></td></tr>
+<tr class="memitem:ab9cd66992a99394d4aa4030fcdbf6182"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182">sendTxWaitingMsg</a> (bool state)</td></tr>
+<tr class="memdesc:ab9cd66992a99394d4aa4030fcdbf6182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for if there are packets left to send.  <a href="lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182">More...</a><br /></td></tr>
 <tr class="separator:ab9cd66992a99394d4aa4030fcdbf6182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d91a7f25182323f789a4e986c08cd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8">sendOnTxNotRequired</a> (bool previous)</td></tr>
 <tr class="memdesc:ab4d91a7f25182323f789a4e986c08cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the attribute waiting to false if required.  <a href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8">More...</a><br /></td></tr>
@@ -128,35 +123,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a6357e928d0e3002e2b9e3c3f31809ddc"><td class="memItemLeft" align="right" valign="top"><a id="a6357e928d0e3002e2b9e3c3f31809ddc"></a>
-PJONThroughLora&#160;</td><td class="memItemRight" valign="bottom"><b>bus</b></td></tr>
+<tr class="memitem:a6357e928d0e3002e2b9e3c3f31809ddc"><td class="memItemLeft" align="right" valign="top">PJONThroughLora&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a6357e928d0e3002e2b9e3c3f31809ddc">bus</a></td></tr>
 <tr class="separator:a6357e928d0e3002e2b9e3c3f31809ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9194bede2521e116fbafd7bbe97f9dc4"><td class="memItemLeft" align="right" valign="top"><a id="a9194bede2521e116fbafd7bbe97f9dc4"></a>
-<a class="el" href="class_device_manager.html">DeviceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>deviceManager</b></td></tr>
+<tr class="memitem:a9194bede2521e116fbafd7bbe97f9dc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_manager.html">DeviceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a9194bede2521e116fbafd7bbe97f9dc4">deviceManager</a></td></tr>
 <tr class="separator:a9194bede2521e116fbafd7bbe97f9dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae46d4f4cd8a4f7443fdcd2f51ad4a686"><td class="memItemLeft" align="right" valign="top"><a id="ae46d4f4cd8a4f7443fdcd2f51ad4a686"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>mqttPublishQueue</b></td></tr>
+<tr class="memitem:ae46d4f4cd8a4f7443fdcd2f51ad4a686"><td class="memItemLeft" align="right" valign="top">QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ae46d4f4cd8a4f7443fdcd2f51ad4a686">mqttPublishQueue</a></td></tr>
 <tr class="separator:ae46d4f4cd8a4f7443fdcd2f51ad4a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top"><a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>serialMutex</b></td></tr>
+<tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a></td></tr>
 <tr class="separator:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25620e5c0ad6fb873f83bcc35fe39f8a"><td class="memItemLeft" align="right" valign="top"><a id="a25620e5c0ad6fb873f83bcc35fe39f8a"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>mqttMutex</b></td></tr>
+<tr class="memitem:a25620e5c0ad6fb873f83bcc35fe39f8a"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a25620e5c0ad6fb873f83bcc35fe39f8a">mqttMutex</a></td></tr>
 <tr class="separator:a25620e5c0ad6fb873f83bcc35fe39f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27702b084a4a8011efcd2bb59b3c191b"><td class="memItemLeft" align="right" valign="top"><a id="a27702b084a4a8011efcd2bb59b3c191b"></a>
-PubSubClient&#160;</td><td class="memItemRight" valign="bottom"><b>mqtt</b></td></tr>
+<tr class="memitem:a27702b084a4a8011efcd2bb59b3c191b"><td class="memItemLeft" align="right" valign="top">PubSubClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a27702b084a4a8011efcd2bb59b3c191b">mqtt</a></td></tr>
 <tr class="separator:a27702b084a4a8011efcd2bb59b3c191b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5356bd65631944b085e62ecdbb28d4f4"><td class="memItemLeft" align="right" valign="top"><a id="a5356bd65631944b085e62ecdbb28d4f4"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>loraMutex</b></td></tr>
+<tr class="memitem:a5356bd65631944b085e62ecdbb28d4f4"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a5356bd65631944b085e62ecdbb28d4f4">loraMutex</a></td></tr>
 <tr class="separator:a5356bd65631944b085e62ecdbb28d4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9227c54721d0ff94543483e0faece60e"><td class="memItemLeft" align="right" valign="top"><a id="a9227c54721d0ff94543483e0faece60e"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ledTaskHandle</b></td></tr>
+<tr class="memitem:a9227c54721d0ff94543483e0faece60e"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a9227c54721d0ff94543483e0faece60e">ledTaskHandle</a></td></tr>
 <tr class="separator:a9227c54721d0ff94543483e0faece60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memItemLeft" align="right" valign="top"><a id="a02c06ace1c03dc373b36d9679b1b5ca8"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>stateUpdateMutex</b></td></tr>
+<tr class="memitem:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a02c06ace1c03dc373b36d9679b1b5ca8">stateUpdateMutex</a></td></tr>
 <tr class="separator:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a844666af5004f892e728d60f1b86c0df"><td class="memItemLeft" align="right" valign="top"><a id="a844666af5004f892e728d60f1b86c0df"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>lastLoRaTime</b></td></tr>
+<tr class="memitem:a844666af5004f892e728d60f1b86c0df"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a844666af5004f892e728d60f1b86c0df">lastLoRaTime</a></td></tr>
 <tr class="separator:a844666af5004f892e728d60f1b86c0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -199,6 +184,38 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>lastLoRaTime</b><
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_afbd9f56608d04cb8a75d69112cd89885_icgraph.svg" width="394" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aa8801dfe2a42386ac27371814cc9f987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8801dfe2a42386ac27371814cc9f987">&#9670;&nbsp;</a></span>fakeReceiveTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fakeReceiveTask </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pvParameters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"Receives" some fake data for testing purposes. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aa8801dfe2a42386ac27371814cc9f987_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -228,7 +245,13 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>lastLoRaTime</b><
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aa56d712b5af48cc40bd9ef0dac6cb797_cgraph.svg" width="296" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aa56d712b5af48cc40bd9ef0dac6cb797_cgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aa56d712b5af48cc40bd9ef0dac6cb797_icgraph.svg" width="210" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -260,7 +283,13 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ac5e6522afd1447f1520e4f4503af9ec5_cgraph.svg" width="386" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ac5e6522afd1447f1520e4f4503af9ec5_cgraph.svg" width="567" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ac5e6522afd1447f1520e4f4503af9ec5_icgraph.svg" width="384" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -307,6 +336,12 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aef164eaa7a67eb3153407eb4b601f4f0_icgraph.svg" width="326" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -354,7 +389,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a0b02ed993c4ccbea85307991879844a6_cgraph.svg" width="264" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a0b02ed993c4ccbea85307991879844a6_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -416,9 +451,47 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_cgraph.svg" width="646" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_icgraph.svg" width="264" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_icgraph.svg" width="399" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6042a1af9411d9eafc7088497f536eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6042a1af9411d9eafc7088497f536eb8">&#9670;&nbsp;</a></span>pjonTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pjonTask </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pvParameters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Task that manages the pjon protocol and radio. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a6042a1af9411d9eafc7088497f536eb8_cgraph.svg" width="100%" height="423"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a6042a1af9411d9eafc7088497f536eb8_icgraph.svg" width="196" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -442,6 +515,337 @@ Here is the caller graph for this function:</div>
 
 <p>updates the attribute waiting to false if required. </p>
 <dl class="section return"><dt>Returns</dt><dd>the new value for whether there was a message to send in the previous loop. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ab4d91a7f25182323f789a4e986c08cd8_cgraph.svg" width="611" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ab4d91a7f25182323f789a4e986c08cd8_icgraph.svg" width="426" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aeae7cd913b330750fef4bda6cadbf95b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae7cd913b330750fef4bda6cadbf95b">&#9670;&nbsp;</a></span>sendRadioConnectedMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendRadioConnectedMsg </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends an attribute over mqtt depending on the state of the radio connection. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aeae7cd913b330750fef4bda6cadbf95b_cgraph.svg" width="379" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aeae7cd913b330750fef4bda6cadbf95b_icgraph.svg" width="619" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab9cd66992a99394d4aa4030fcdbf6182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9cd66992a99394d4aa4030fcdbf6182">&#9670;&nbsp;</a></span>sendTxWaitingMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendTxWaitingMsg </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the state for if there are packets left to send. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ab9cd66992a99394d4aa4030fcdbf6182_cgraph.svg" width="338" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_ab9cd66992a99394d4aa4030fcdbf6182_icgraph.svg" width="619" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adc3c5806492d2818ad6f5aff232765ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc3c5806492d2818ad6f5aff232765ec">&#9670;&nbsp;</a></span>setAttributeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAttributeState </td>
+          <td>(</td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>attribute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_adc3c5806492d2818ad6f5aff232765ec_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a6357e928d0e3002e2b9e3c3f31809ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6357e928d0e3002e2b9e3c3f31809ddc">&#9670;&nbsp;</a></span>bus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PJONThroughLora bus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9194bede2521e116fbafd7bbe97f9dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9194bede2521e116fbafd7bbe97f9dc4">&#9670;&nbsp;</a></span>deviceManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_device_manager.html">DeviceManager</a> deviceManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a844666af5004f892e728d60f1b86c0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844666af5004f892e728d60f1b86c0df">&#9670;&nbsp;</a></span>lastLoRaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t lastLoRaTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9227c54721d0ff94543483e0faece60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9227c54721d0ff94543483e0faece60e">&#9670;&nbsp;</a></span>ledTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t ledTaskHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5356bd65631944b085e62ecdbb28d4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5356bd65631944b085e62ecdbb28d4f4">&#9670;&nbsp;</a></span>loraMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t loraMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27702b084a4a8011efcd2bb59b3c191b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27702b084a4a8011efcd2bb59b3c191b">&#9670;&nbsp;</a></span>mqtt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PubSubClient mqtt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25620e5c0ad6fb873f83bcc35fe39f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25620e5c0ad6fb873f83bcc35fe39f8a">&#9670;&nbsp;</a></span>mqttMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t mqttMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae46d4f4cd8a4f7443fdcd2f51ad4a686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46d4f4cd8a4f7443fdcd2f51ad4a686">&#9670;&nbsp;</a></span>mqttPublishQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QueueHandle_t mqttPublishQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c899affa3f5b7282b6f09135ecfcc9">&#9670;&nbsp;</a></span>serialMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t serialMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02c06ace1c03dc373b36d9679b1b5ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c06ace1c03dc373b36d9679b1b5ca8">&#9670;&nbsp;</a></span>stateUpdateMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t stateUpdateMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

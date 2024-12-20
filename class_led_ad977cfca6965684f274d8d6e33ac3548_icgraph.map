@@ -1,4 +1,6 @@
 <map id="Led::set" name="Led::set">
-<area shape="rect" id="node1" title="Turns the LED on or off." alt="" coords="143,5,216,32"/>
-<area shape="rect" id="node2" href="$class_led.html#aca41751e53023a56a30b541a1c23edfe" title="Initialises the pins." alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node1" title="Turns the LED on or off." alt="" coords="368,31,441,57"/>
+<area shape="rect" id="node2" href="$class_led.html#aca41751e53023a56a30b541a1c23edfe" title="Initialises the pins." alt="" coords="231,5,320,32"/>
+<area shape="rect" id="node3" href="$leds_8cpp.html#a0e9abc4adafb917c6af448aca6042e96" title="Task that manages the LEDs on the unit." alt="" coords="112,31,183,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,31,64,57"/>
 </map>

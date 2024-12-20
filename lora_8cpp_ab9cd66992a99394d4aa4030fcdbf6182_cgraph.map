@@ -1,0 +1,4 @@
+<map id="sendTxWaitingMsg" name="sendTxWaitingMsg">
+<area shape="rect" id="node1" title="Sets the state for if there are packets left to send." alt="" coords="5,5,151,32"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="199,5,332,32"/>
+</map>

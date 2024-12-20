@@ -1,0 +1,7 @@
+<map id="DeviceManager::txRequired" name="DeviceManager::txRequired">
+<area shape="rect" id="node1" title="Returns the number of packets that need to be sent across all devices." alt="" coords="468,31,671,57"/>
+<area shape="rect" id="node2" href="$leds_8cpp.html#a0e9abc4adafb917c6af448aca6042e96" title="Task that manages the LEDs on the unit." alt="" coords="123,5,193,32"/>
+<area shape="rect" id="node4" href="$lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" title="updates the attribute waiting to false if required." alt="" coords="252,56,420,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,31,64,57"/>
+<area shape="rect" id="node5" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,56,204,83"/>
+</map>

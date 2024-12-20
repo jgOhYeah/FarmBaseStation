@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/ota.h" name="ESP32BaseStation/src/ota.h">
-<area shape="rect" id="node1" title="Handles over the air (OTA) updates." alt="" coords="139,5,301,47"/>
-<area shape="rect" id="node2" href="$_e_s_p32_base_station_8ino.html" title="Main file for a base station to connect to remote sensors on a farm." alt="" coords="5,95,221,136"/>
-<area shape="rect" id="node3" href="$ota_8cpp.html" title="Handles over the air (OTA) updates." alt="" coords="245,95,408,136"/>
+<map id="BaseStationCode/src/src/ota.h" name="BaseStationCode/src/src/ota.h">
+<area shape="rect" id="node1" title="Handles over the air (OTA) updates." alt="" coords="95,5,251,47"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title=" " alt="" coords="5,95,161,136"/>
+<area shape="rect" id="node3" href="$ota_8cpp.html" title="Handles over the air (OTA) updates." alt="" coords="185,95,341,136"/>
 </map>

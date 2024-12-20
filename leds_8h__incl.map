@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/leds.h" name="ESP32BaseStation/src/leds.h">
-<area shape="rect" id="node1" title="Controls the LEDs on the unit." alt="" coords="409,5,572,47"/>
+<map id="BaseStationCode/src/src/leds.h" name="BaseStationCode/src/src/leds.h">
+<area shape="rect" id="node1" title="Controls the LEDs on the unit." alt="" coords="413,5,569,47"/>
 <area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="367,543,460,569"/>
 <area shape="rect" id="node11" href="$alarm_8h.html" title="Handles alarms." alt="" coords="12,319,84,345"/>
 <area shape="rect" id="node12" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="304,95,411,121"/>

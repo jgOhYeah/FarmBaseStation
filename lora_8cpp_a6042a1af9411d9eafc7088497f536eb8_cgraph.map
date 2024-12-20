@@ -1,0 +1,11 @@
+<map id="pjonTask" name="pjonTask">
+<area shape="rect" id="node1" title="Task that manages the pjon protocol and radio." alt="" coords="5,56,84,83"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5" title="Task that checks if the radio is connected." alt="" coords="132,5,272,32"/>
+<area shape="rect" id="node5" href="$lora_8cpp.html#aef164eaa7a67eb3153407eb4b601f4f0" title="Logs PJON errors." alt="" coords="161,56,243,83"/>
+<area shape="rect" id="node6" href="$lora_8cpp.html#a73337b280bec4397780b012ccc949113" title="Handles an incoming packet received from the radio and adds the given snr and rssi to the packet." alt="" coords="151,107,253,133"/>
+<area shape="rect" id="node3" href="$lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="328,5,515,32"/>
+<area shape="rect" id="node4" href="$lora_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="621,5,754,32"/>
+<area shape="rect" id="node7" href="$class_device.html#add7ef6f786d670584e3bf5818ce134a0" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="320,81,523,108"/>
+<area shape="rect" id="node9" href="$class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" title="Gets the object with the given symbol." alt="" coords="571,132,804,159"/>
+<area shape="rect" id="node8" href="$class_field.html#aa036e196f5805e9406b8169200e3915a" title="Decodes the value from bytes into an existing json document." alt="" coords="633,81,741,108"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Farm ESP32 LoRa PJON base station: ESP32BaseStation/src/lookups.h Source File</title>
+<title>Farm ESP32 LoRa PJON base station: BaseStationCode/src/src/lookups.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ef5640e6ecd48a5ca5702d70d196d8dc.html">ESP32BaseStation</a></li><li class="navelem"><a class="el" href="dir_8498873338e7235b06db63270061d9c7.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1bfa34a7fd069c322cf9c40181e548fc.html">BaseStationCode</a></li><li class="navelem"><a class="el" href="dir_f63607e1acfe1c55d01a2faf58f7911a.html">src</a></li><li class="navelem"><a class="el" href="dir_bad7734e6982521456135a51120f4e1e.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,25 +75,25 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_lookupable.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lookupable.html">Lookupable</a></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_lookupable.html">Lookupable</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name, <span class="keywordtype">char</span> symbol) : name(name), symbol(symbol) {}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> name;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> symbol;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_lookupable.html#afceea6465cc34b00eb927e24d4810dd0">   22</a></span>&#160;    <a class="code" href="class_lookupable.html#afceea6465cc34b00eb927e24d4810dd0">Lookupable</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, <span class="keywordtype">char</span> <a class="code" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>) : <a class="code" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>(<a class="code" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>), <a class="code" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>(<a class="code" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>) {}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">   23</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> <a class="code" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">   24</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> LookupableClass&gt;</div>
 <div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_lookup_manager.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lookup_manager.html">LookupManager</a></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_lookup_manager.html">LookupManager</a>(LookupableClass **items, uint8_t count) : items(items), count(count) {}</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_lookup_manager.html#a3a823216371d34e6d441ddcf6033d480">   35</a></span>&#160;    <a class="code" href="class_lookup_manager.html#a3a823216371d34e6d441ddcf6033d480">LookupManager</a>(LookupableClass **<a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>, uint8_t <a class="code" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">count</a>) : <a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>(<a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>), <a class="code" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">count</a>(<a class="code" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">count</a>) {}</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326">   43</a></span>&#160;    LookupableClass *<a class="code" href="class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326">getWithSymbol</a>(<span class="keywordtype">char</span> symbol)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; count; i++)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; <a class="code" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">count</a>; i++)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (items[i]-&gt;symbol == symbol)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>[i]-&gt;symbol == symbol)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="comment">// Found the item.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span> items[i];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>[i];</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="comment">// Couldn&#39;t find the item.</span></div>
@@ -102,25 +102,32 @@ $(function() {
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_lookup_manager.html#aaa9c3082dae381c5079f5346e3c9426b">   61</a></span>&#160;    LookupableClass *<a class="code" href="class_lookup_manager.html#aaa9c3082dae381c5079f5346e3c9426b">getWithName</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *name)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; count; i++)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">for</span> (uint8_t i = 0; i &lt; <a class="code" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">count</a>; i++)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> (STRINGS_MATCH(items[i]-&gt;name, name))</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="defines_8h.html#a0c08d5b3d34db2a6543899ec7367ae32">STRINGS_MATCH</a>(<a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>[i]-&gt;name, name))</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="comment">// Found the item.</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> items[i];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>[i];</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">// Couldn&#39;t find the item.</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    LookupableClass **items;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    uint8_t count;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">   75</a></span>&#160;    LookupableClass **<a class="code" href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">items</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">   76</a></span>&#160;    uint8_t <a class="code" href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">count</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
 <div class="ttc" id="aclass_lookup_manager_html"><div class="ttname"><a href="class_lookup_manager.html">LookupManager</a></div><div class="ttdoc">Class for looking up and managing devices and fields.</div><div class="ttdef"><b>Definition:</b> lookups.h:33</div></div>
+<div class="ttc" id="aclass_lookup_manager_html_a11cee4144afa2fcca4a7257c5e0f9cd0"><div class="ttname"><a href="class_lookup_manager.html#a11cee4144afa2fcca4a7257c5e0f9cd0">LookupManager::count</a></div><div class="ttdeci">uint8_t count</div><div class="ttdef"><b>Definition:</b> lookups.h:76</div></div>
+<div class="ttc" id="aclass_lookup_manager_html_a3a823216371d34e6d441ddcf6033d480"><div class="ttname"><a href="class_lookup_manager.html#a3a823216371d34e6d441ddcf6033d480">LookupManager::LookupManager</a></div><div class="ttdeci">LookupManager(LookupableClass **items, uint8_t count)</div><div class="ttdef"><b>Definition:</b> lookups.h:35</div></div>
+<div class="ttc" id="aclass_lookup_manager_html_a6eea3e688f769ab7f320aa3ae6762e7d"><div class="ttname"><a href="class_lookup_manager.html#a6eea3e688f769ab7f320aa3ae6762e7d">LookupManager::items</a></div><div class="ttdeci">LookupableClass ** items</div><div class="ttdef"><b>Definition:</b> lookups.h:75</div></div>
 <div class="ttc" id="aclass_lookup_manager_html_a8d3d926f82bfb89594abd2430b9d4326"><div class="ttname"><a href="class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326">LookupManager::getWithSymbol</a></div><div class="ttdeci">LookupableClass * getWithSymbol(char symbol)</div><div class="ttdoc">Gets the object with the given symbol.</div><div class="ttdef"><b>Definition:</b> lookups.h:43</div></div>
 <div class="ttc" id="aclass_lookup_manager_html_aaa9c3082dae381c5079f5346e3c9426b"><div class="ttname"><a href="class_lookup_manager.html#aaa9c3082dae381c5079f5346e3c9426b">LookupManager::getWithName</a></div><div class="ttdeci">LookupableClass * getWithName(const char *name)</div><div class="ttdoc">Gets the object matching the given name.</div><div class="ttdef"><b>Definition:</b> lookups.h:61</div></div>
 <div class="ttc" id="aclass_lookupable_html"><div class="ttname"><a href="class_lookupable.html">Lookupable</a></div><div class="ttdoc">Class for fields and devices that can be managed by LookupManager.</div><div class="ttdef"><b>Definition:</b> lookups.h:20</div></div>
+<div class="ttc" id="aclass_lookupable_html_a3098652b534211d9fca075ab17be53a5"><div class="ttname"><a href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">Lookupable::name</a></div><div class="ttdeci">const char *const name</div><div class="ttdef"><b>Definition:</b> lookups.h:23</div></div>
+<div class="ttc" id="aclass_lookupable_html_a7be126bfcc36ce707f77acfd7f5dd9da"><div class="ttname"><a href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">Lookupable::symbol</a></div><div class="ttdeci">const char symbol</div><div class="ttdef"><b>Definition:</b> lookups.h:24</div></div>
+<div class="ttc" id="aclass_lookupable_html_afceea6465cc34b00eb927e24d4810dd0"><div class="ttname"><a href="class_lookupable.html#afceea6465cc34b00eb927e24d4810dd0">Lookupable::Lookupable</a></div><div class="ttdeci">Lookupable(const char *name, char symbol)</div><div class="ttdef"><b>Definition:</b> lookups.h:22</div></div>
+<div class="ttc" id="adefines_8h_html_a0c08d5b3d34db2a6543899ec7367ae32"><div class="ttname"><a href="defines_8h.html#a0c08d5b3d34db2a6543899ec7367ae32">STRINGS_MATCH</a></div><div class="ttdeci">#define STRINGS_MATCH(A, B)</div><div class="ttdef"><b>Definition:</b> defines.h:68</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -89,13 +89,12 @@ Collaboration diagram for Device:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a55ced7203bc0bee1136905db43002639"><td class="memItemLeft" align="right" valign="top"><a id="a55ced7203bc0bee1136905db43002639"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Device</b> (const char *name, const char symbol, <a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt; &amp;fields)</td></tr>
+<tr class="memitem:a55ced7203bc0bee1136905db43002639"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a55ced7203bc0bee1136905db43002639">Device</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, const char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>, <a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt; &amp;<a class="el" href="class_device.html#a9e26e38ca9917312c21bed16d0310d6e">fields</a>)</td></tr>
 <tr class="separator:a55ced7203bc0bee1136905db43002639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7ef6f786d670584e3bf5818ce134a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#add7ef6f786d670584e3bf5818ce134a0">decodePacketFields</a> (uint8_t *payload, uint8_t length, StaticJsonDocument&lt; MAX_JSON_TEXT_LENGTH &gt; &amp;json)</td></tr>
+<tr class="memitem:add7ef6f786d670584e3bf5818ce134a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#add7ef6f786d670584e3bf5818ce134a0">decodePacketFields</a> (uint8_t *payload, uint8_t length, StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;json)</td></tr>
 <tr class="memdesc:add7ef6f786d670584e3bf5818ce134a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON.  <a href="class_device.html#add7ef6f786d670584e3bf5818ce134a0">More...</a><br /></td></tr>
 <tr class="separator:add7ef6f786d670584e3bf5818ce134a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44edcfdcd677e11331e1423ddfd26a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a44edcfdcd677e11331e1423ddfd26a5e">decodePacketFields</a> (uint8_t *payload, uint8_t length, StaticJsonDocument&lt; MAX_JSON_TEXT_LENGTH &gt; &amp;json, int rssi, float snr)</td></tr>
+<tr class="memitem:a44edcfdcd677e11331e1423ddfd26a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a44edcfdcd677e11331e1423ddfd26a5e">decodePacketFields</a> (uint8_t *payload, uint8_t length, StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;json, int rssi, float snr)</td></tr>
 <tr class="memdesc:a44edcfdcd677e11331e1423ddfd26a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet metadata.  <a href="class_device.html#a44edcfdcd677e11331e1423ddfd26a5e">More...</a><br /></td></tr>
 <tr class="separator:a44edcfdcd677e11331e1423ddfd26a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac068e8e17f6536cc63e1631e0ba5837c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#ac068e8e17f6536cc63e1631e0ba5837c">rpcWaiting</a> ()</td></tr>
@@ -105,26 +104,65 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0fc7e0f4a048d2b7010c7bc6882bb987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a packet containing all the fields and instructions to set.  <a href="class_device.html#a0fc7e0f4a048d2b7010c7bc6882bb987">More...</a><br /></td></tr>
 <tr class="separator:a0fc7e0f4a048d2b7010c7bc6882bb987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_lookupable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lookupable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lookupable.html">Lookupable</a></td></tr>
-<tr class="memitem:afceea6465cc34b00eb927e24d4810dd0 inherit pub_methods_class_lookupable"><td class="memItemLeft" align="right" valign="top"><a id="afceea6465cc34b00eb927e24d4810dd0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Lookupable</b> (const char *name, char symbol)</td></tr>
+<tr class="memitem:afceea6465cc34b00eb927e24d4810dd0 inherit pub_methods_class_lookupable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lookupable.html#afceea6465cc34b00eb927e24d4810dd0">Lookupable</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>)</td></tr>
 <tr class="separator:afceea6465cc34b00eb927e24d4810dd0 inherit pub_methods_class_lookupable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a9e26e38ca9917312c21bed16d0310d6e"><td class="memItemLeft" align="right" valign="top"><a id="a9e26e38ca9917312c21bed16d0310d6e"></a>
-<a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>fields</b></td></tr>
+<tr class="memitem:a9e26e38ca9917312c21bed16d0310d6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a9e26e38ca9917312c21bed16d0310d6e">fields</a></td></tr>
 <tr class="separator:a9e26e38ca9917312c21bed16d0310d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_lookupable"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_lookupable')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_lookupable.html">Lookupable</a></td></tr>
-<tr class="memitem:a3098652b534211d9fca075ab17be53a5 inherit pub_attribs_class_lookupable"><td class="memItemLeft" align="right" valign="top"><a id="a3098652b534211d9fca075ab17be53a5"></a>
-const char *const&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a3098652b534211d9fca075ab17be53a5 inherit pub_attribs_class_lookupable"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a></td></tr>
 <tr class="separator:a3098652b534211d9fca075ab17be53a5 inherit pub_attribs_class_lookupable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7be126bfcc36ce707f77acfd7f5dd9da inherit pub_attribs_class_lookupable"><td class="memItemLeft" align="right" valign="top"><a id="a7be126bfcc36ce707f77acfd7f5dd9da"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><b>symbol</b></td></tr>
+<tr class="memitem:a7be126bfcc36ce707f77acfd7f5dd9da inherit pub_attribs_class_lookupable"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a></td></tr>
 <tr class="separator:a7be126bfcc36ce707f77acfd7f5dd9da inherit pub_attribs_class_lookupable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Each sensor / device on the PJON network. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a55ced7203bc0bee1136905db43002639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ced7203bc0bee1136905db43002639">&#9670;&nbsp;</a></span>Device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Device::Device </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>symbol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="add7ef6f786d670584e3bf5818ce134a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add7ef6f786d670584e3bf5818ce134a0">&#9670;&nbsp;</a></span>decodePacketFields() <span class="overload">[1/2]</span></h2>
 
@@ -146,7 +184,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>symbol</b></td>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">StaticJsonDocument&lt; MAX_JSON_TEXT_LENGTH &gt; &amp;&#160;</td>
+          <td class="paramtype">StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>json</em>&#160;</td>
         </tr>
         <tr>
@@ -167,9 +205,15 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>symbol</b></td>
   </dd>
 </dl>
 <div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_add7ef6f786d670584e3bf5818ce134a0_cgraph.svg" width="495" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_add7ef6f786d670584e3bf5818ce134a0_icgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_device_add7ef6f786d670584e3bf5818ce134a0_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -196,7 +240,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">StaticJsonDocument&lt; MAX_JSON_TEXT_LENGTH &gt; &amp;&#160;</td>
+          <td class="paramtype">StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>json</em>, </td>
         </tr>
         <tr>
@@ -233,7 +277,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_a44edcfdcd677e11331e1423ddfd26a5e_cgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_device_a44edcfdcd677e11331e1423ddfd26a5e_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -274,6 +318,18 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint8_t the length of the payload used. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_a0fc7e0f4a048d2b7010c7bc6882bb987_cgraph.svg" width="342" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_a0fc7e0f4a048d2b7010c7bc6882bb987_icgraph.svg" width="432" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -294,12 +350,33 @@ Here is the call graph for this function:</div>
 
 <p>Checks if a transmission is required. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if a transmission is required (latest received value != value to set to). </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_ac068e8e17f6536cc63e1631e0ba5837c_icgraph.svg" width="402" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9e26e38ca9917312c21bed16d0310d6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e26e38ca9917312c21bed16d0310d6e">&#9670;&nbsp;</a></span>fields</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_lookup_manager.html">LookupManager</a>&lt;<a class="el" href="class_field.html">Field</a>&gt;&amp; Device::fields</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>ESP32BaseStation/src/<a class="el" href="devices_8h_source.html">devices.h</a></li>
-<li>ESP32BaseStation/src/<a class="el" href="devices_8cpp.html">devices.cpp</a></li>
+<li>BaseStationCode/src/src/<a class="el" href="devices_8h_source.html">devices.h</a></li>
+<li>BaseStationCode/src/src/<a class="el" href="devices_8cpp.html">devices.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

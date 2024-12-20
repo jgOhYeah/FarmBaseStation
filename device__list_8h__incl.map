@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/device_list.h" name="ESP32BaseStation/device_list.h">
-<area shape="rect" id="node1" title="List of all devices and fields known to the system." alt="" coords="384,5,571,47"/>
+<map id="BaseStationCode/src/device_list.h" name="BaseStationCode/src/device_list.h">
+<area shape="rect" id="node1" title="List of all devices and fields known to the system." alt="" coords="399,5,555,47"/>
 <area shape="rect" id="node2" href="$fields_8h.html" title="Contains fields classes." alt="" coords="386,169,478,196"/>
 <area shape="rect" id="node14" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="469,95,576,121"/>
 <area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="415,319,508,345"/>

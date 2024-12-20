@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/rpc.cpp" name="ESP32BaseStation/src/rpc.cpp">
-<area shape="rect" id="node1" title="Handles RPC calls." alt="" coords="205,5,368,47"/>
+<map id="BaseStationCode/src/src/rpc.cpp" name="BaseStationCode/src/src/rpc.cpp">
+<area shape="rect" id="node1" title="Handles RPC calls." alt="" coords="209,5,365,47"/>
 <area shape="rect" id="node2" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="259,95,314,121"/>
 <area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="369,543,463,569"/>
 <area shape="rect" id="node11" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="5,617,101,644"/>

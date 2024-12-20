@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Farm ESP32 LoRa PJON base station: ESP32BaseStation/src/alarm.cpp File Reference</title>
+<title>Farm ESP32 LoRa PJON base station: BaseStationCode/src/src/alarm.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ef5640e6ecd48a5ca5702d70d196d8dc.html">ESP32BaseStation</a></li><li class="navelem"><a class="el" href="dir_8498873338e7235b06db63270061d9c7.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1bfa34a7fd069c322cf9c40181e548fc.html">BaseStationCode</a></li><li class="navelem"><a class="el" href="dir_f63607e1acfe1c55d01a2faf58f7911a.html">src</a></li><li class="navelem"><a class="el" href="dir_bad7734e6982521456135a51120f4e1e.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -91,23 +91,17 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top"><a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>serialMutex</b></td></tr>
+<tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alarm_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a></td></tr>
 <tr class="separator:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98638eff76c84c0fdccf45a5c021656b"><td class="memItemLeft" align="right" valign="top"><a id="a98638eff76c84c0fdccf45a5c021656b"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>alarmQueue</b></td></tr>
+<tr class="memitem:a98638eff76c84c0fdccf45a5c021656b"><td class="memItemLeft" align="right" valign="top">QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alarm_8cpp.html#a98638eff76c84c0fdccf45a5c021656b">alarmQueue</a></td></tr>
 <tr class="separator:a98638eff76c84c0fdccf45a5c021656b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3673742b3c48a3787f7f5afa035392"><td class="memItemLeft" align="right" valign="top"><a id="a3e3673742b3c48a3787f7f5afa035392"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>audioQueue</b></td></tr>
+<tr class="memitem:a3e3673742b3c48a3787f7f5afa035392"><td class="memItemLeft" align="right" valign="top">QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alarm_8cpp.html#a3e3673742b3c48a3787f7f5afa035392">audioQueue</a></td></tr>
 <tr class="separator:a3e3673742b3c48a3787f7f5afa035392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memItemLeft" align="right" valign="top"><a id="a02c06ace1c03dc373b36d9679b1b5ca8"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>stateUpdateMutex</b></td></tr>
+<tr class="memitem:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alarm_8cpp.html#a02c06ace1c03dc373b36d9679b1b5ca8">stateUpdateMutex</a></td></tr>
 <tr class="separator:a02c06ace1c03dc373b36d9679b1b5ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cd568d62e5874b7857eb86c4486f708"><td class="memItemLeft" align="right" valign="top"><a id="a4cd568d62e5874b7857eb86c4486f708"></a>
-AlarmState&#160;</td><td class="memItemRight" valign="bottom"><b>alarmState</b></td></tr>
+<tr class="memitem:a4cd568d62e5874b7857eb86c4486f708"><td class="memItemLeft" align="right" valign="top"><a class="el" href="alarm_8h.html#a493dfe4e2144bc496098813185ca09bf">AlarmState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alarm_8cpp.html#a4cd568d62e5874b7857eb86c4486f708">alarmState</a></td></tr>
 <tr class="separator:a4cd568d62e5874b7857eb86c4486f708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9227c54721d0ff94543483e0faece60e"><td class="memItemLeft" align="right" valign="top"><a id="a9227c54721d0ff94543483e0faece60e"></a>
-TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ledTaskHandle</b></td></tr>
+<tr class="memitem:a9227c54721d0ff94543483e0faece60e"><td class="memItemLeft" align="right" valign="top">TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="alarm_8cpp.html#a9227c54721d0ff94543483e0faece60e">ledTaskHandle</a></td></tr>
 <tr class="separator:a9227c54721d0ff94543483e0faece60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -139,6 +133,145 @@ TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>ledTaskHandle
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="alarm_8cpp_a6a2ca661c69cdb3d565c511a44da3a3e_icgraph.svg" width="207" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a98638eff76c84c0fdccf45a5c021656b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98638eff76c84c0fdccf45a5c021656b">&#9670;&nbsp;</a></span>alarmQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QueueHandle_t alarmQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cd568d62e5874b7857eb86c4486f708"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd568d62e5874b7857eb86c4486f708">&#9670;&nbsp;</a></span>alarmState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="alarm_8h.html#a493dfe4e2144bc496098813185ca09bf">AlarmState</a> alarmState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e3673742b3c48a3787f7f5afa035392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e3673742b3c48a3787f7f5afa035392">&#9670;&nbsp;</a></span>audioQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QueueHandle_t audioQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9227c54721d0ff94543483e0faece60e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9227c54721d0ff94543483e0faece60e">&#9670;&nbsp;</a></span>ledTaskHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t ledTaskHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c899affa3f5b7282b6f09135ecfcc9">&#9670;&nbsp;</a></span>serialMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t serialMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02c06ace1c03dc373b36d9679b1b5ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c06ace1c03dc373b36d9679b1b5ca8">&#9670;&nbsp;</a></span>stateUpdateMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t stateUpdateMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

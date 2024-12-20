@@ -1,0 +1,5 @@
+<map id="pjonError" name="pjonError">
+<area shape="rect" id="node1" title="Logs PJON errors." alt="" coords="239,5,320,32"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="Task that manages the pjon protocol and radio." alt="" coords="112,5,191,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,32"/>
+</map>

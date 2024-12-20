@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Farm ESP32 LoRa PJON base station: ESP32BaseStation/src/rpc.h File Reference</title>
+<title>Farm ESP32 LoRa PJON base station: BaseStationCode/src/src/rpc.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ef5640e6ecd48a5ca5702d70d196d8dc.html">ESP32BaseStation</a></li><li class="navelem"><a class="el" href="dir_8498873338e7235b06db63270061d9c7.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1bfa34a7fd069c322cf9c40181e548fc.html">BaseStationCode</a></li><li class="navelem"><a class="el" href="dir_f63607e1acfe1c55d01a2faf58f7911a.html">src</a></li><li class="navelem"><a class="el" href="dir_bad7734e6982521456135a51120f4e1e.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,7 +89,7 @@ Include dependency graph for rpc.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="rpc_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="rpc_8h__dep__incl.svg" width="643" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
@@ -97,9 +97,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a91d98374ed6fc205a7a2c9e2ef00dd97"><td class="memItemLeft" align="right" valign="top"><a id="a91d98374ed6fc205a7a2c9e2ef00dd97"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_8h.html#a91d98374ed6fc205a7a2c9e2ef00dd97">mqttReceived</a> (char *topic, byte *message, unsigned int length)</td></tr>
-<tr class="memdesc:a91d98374ed6fc205a7a2c9e2ef00dd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that is called when an mqtt message is received. <br /></td></tr>
+<tr class="memitem:a91d98374ed6fc205a7a2c9e2ef00dd97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_8h.html#a91d98374ed6fc205a7a2c9e2ef00dd97">mqttReceived</a> (char *topic, byte *message, unsigned int length)</td></tr>
+<tr class="memdesc:a91d98374ed6fc205a7a2c9e2ef00dd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that is called when an mqtt message is received.  <a href="rpc_8h.html#a91d98374ed6fc205a7a2c9e2ef00dd97">More...</a><br /></td></tr>
 <tr class="separator:a91d98374ed6fc205a7a2c9e2ef00dd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae128ecfe100603224c2fda1ff5f5ce0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_8h.html#ae128ecfe100603224c2fda1ff5f5ce0a">rpcMe</a> (char *id, uint8_t *message, uint16_t length)</td></tr>
 <tr class="memdesc:ae128ecfe100603224c2fda1ff5f5ce0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles an RPC message addressed to this device (not one of the remote devices).  <a href="rpc_8h.html#ae128ecfe100603224c2fda1ff5f5ce0a">More...</a><br /></td></tr>
@@ -113,9 +112,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_
 <tr class="memitem:adfc4d7c2e3b046a5fb41b597ebd9f727"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_8h.html#adfc4d7c2e3b046a5fb41b597ebd9f727">startsWith</a> (char *input, const char *compare)</td></tr>
 <tr class="memdesc:adfc4d7c2e3b046a5fb41b597ebd9f727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if one string starts with another (quicker than strstr?)  <a href="rpc_8h.html#adfc4d7c2e3b046a5fb41b597ebd9f727">More...</a><br /></td></tr>
 <tr class="separator:adfc4d7c2e3b046a5fb41b597ebd9f727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc3c5806492d2818ad6f5aff232765ec"><td class="memItemLeft" align="right" valign="top"><a id="adc3c5806492d2818ad6f5aff232765ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_8h.html#adc3c5806492d2818ad6f5aff232765ec">setAttributeState</a> (const char *const attribute, bool state)</td></tr>
-<tr class="memdesc:adc3c5806492d2818ad6f5aff232765ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state of an attribute. <br /></td></tr>
+<tr class="memitem:adc3c5806492d2818ad6f5aff232765ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_8h.html#adc3c5806492d2818ad6f5aff232765ec">setAttributeState</a> (const char *const attribute, bool state)</td></tr>
+<tr class="memdesc:adc3c5806492d2818ad6f5aff232765ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state of an attribute.  <a href="rpc_8h.html#adc3c5806492d2818ad6f5aff232765ec">More...</a><br /></td></tr>
 <tr class="separator:adc3c5806492d2818ad6f5aff232765ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -124,6 +122,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-08-12 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a91d98374ed6fc205a7a2c9e2ef00dd97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91d98374ed6fc205a7a2c9e2ef00dd97">&#9670;&nbsp;</a></span>mqttReceived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mqttReceived </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>topic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that is called when an mqtt message is received. </p>
+
+</div>
+</div>
 <a id="a8d99d63355a7dac3b1264ced57f255d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d99d63355a7dac3b1264ced57f255d9">&#9670;&nbsp;</a></span>replyMeRpc()</h2>
 
@@ -158,6 +192,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="rpc_8h_a8d99d63355a7dac3b1264ced57f255d9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -196,6 +236,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="rpc_8h_a4cfe66424e5527493ec95bc8ffed5bc7_cgraph.svg" width="382" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="rpc_8h_a4cfe66424e5527493ec95bc8ffed5bc7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -240,6 +292,48 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="rpc_8h_ae128ecfe100603224c2fda1ff5f5ce0a_cgraph.svg" width="220" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="rpc_8h_ae128ecfe100603224c2fda1ff5f5ce0a_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adc3c5806492d2818ad6f5aff232765ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc3c5806492d2818ad6f5aff232765ec">&#9670;&nbsp;</a></span>setAttributeState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAttributeState </td>
+          <td>(</td>
+          <td class="paramtype">const char *const&#160;</td>
+          <td class="paramname"><em>attribute</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the state of an attribute. </p>
 
 </div>
 </div>
@@ -278,6 +372,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rpc_
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether input starts with compare. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="rpc_8h_adfc4d7c2e3b046a5fb41b597ebd9f727_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>

@@ -1,11 +1,11 @@
-<map id="ESP32BaseStation/defines.h" name="ESP32BaseStation/defines.h">
-<area shape="rect" id="node1" title="Definitions and other preprocessor and global stuff." alt="" coords="360,5,563,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,112,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="137,80,221,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="245,80,307,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="332,80,452,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="477,80,587,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="612,80,759,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="783,80,887,107"/>
-<area shape="rect" id="node9" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,80,1007,107"/>
+<map id="BaseStationCode/src/defines.h" name="BaseStationCode/src/defines.h">
+<area shape="rect" id="node1" title="Definitions and other preprocessor and global stuff." alt="" coords="383,5,539,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,112,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="137,95,221,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="245,95,307,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="332,95,452,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="477,95,587,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="612,95,759,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="783,95,887,121"/>
+<area shape="rect" id="node9" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,95,1007,121"/>
 </map>

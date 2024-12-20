@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/ota.h" name="ESP32BaseStation/src/ota.h">
-<area shape="rect" id="node1" title="Handles over the air (OTA) updates." alt="" coords="527,5,689,47"/>
+<map id="BaseStationCode/src/src/ota.h" name="BaseStationCode/src/src/ota.h">
+<area shape="rect" id="node1" title="Handles over the air (OTA) updates." alt="" coords="530,5,686,47"/>
 <area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="413,543,507,569"/>
 <area shape="rect" id="node11" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="504,95,611,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="792,617,899,644"/>

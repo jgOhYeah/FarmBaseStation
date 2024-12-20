@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Farm ESP32 LoRa PJON base station: ESP32BaseStation/src/audio.cpp File Reference</title>
+<title>Farm ESP32 LoRa PJON base station: BaseStationCode/src/src/audio.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_ef5640e6ecd48a5ca5702d70d196d8dc.html">ESP32BaseStation</a></li><li class="navelem"><a class="el" href="dir_8498873338e7235b06db63270061d9c7.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1bfa34a7fd069c322cf9c40181e548fc.html">BaseStationCode</a></li><li class="navelem"><a class="el" href="dir_f63607e1acfe1c55d01a2faf58f7911a.html">src</a></li><li class="navelem"><a class="el" href="dir_bad7734e6982521456135a51120f4e1e.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -85,8 +85,7 @@ Include dependency graph for audio.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1b892168162b0ef4b8740a06508de154"><td class="memItemLeft" align="right" valign="top"><a id="a1b892168162b0ef4b8740a06508de154"></a>
-ToneSound&#160;</td><td class="memItemRight" valign="bottom"><b>piezo</b> (PIN_SPEAKER)</td></tr>
+<tr class="memitem:a1b892168162b0ef4b8740a06508de154"><td class="memItemLeft" align="right" valign="top">ToneSound&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#a1b892168162b0ef4b8740a06508de154">piezo</a> (<a class="el" href="defines_8h.html#a40a8044a70c2ac07d2456f23bd4522a3">PIN_SPEAKER</a>)</td></tr>
 <tr class="separator:a1b892168162b0ef4b8740a06508de154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce457fba5e42885e4c6fd06a9ca5121"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#acce457fba5e42885e4c6fd06a9ca5121">audioTask</a> (void *pvParameters)</td></tr>
 <tr class="memdesc:acce457fba5e42885e4c6fd06a9ca5121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task for playing audio.  <a href="audio_8cpp.html#acce457fba5e42885e4c6fd06a9ca5121">More...</a><br /></td></tr>
@@ -94,19 +93,15 @@ ToneSound&#160;</td><td class="memItemRight" valign="bottom"><b>piezo</b> (PIN_S
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top"><a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>serialMutex</b></td></tr>
+<tr class="memitem:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a></td></tr>
 <tr class="separator:ae1c899affa3f5b7282b6f09135ecfcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3673742b3c48a3787f7f5afa035392"><td class="memItemLeft" align="right" valign="top"><a id="a3e3673742b3c48a3787f7f5afa035392"></a>
-QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>audioQueue</b></td></tr>
+<tr class="memitem:a3e3673742b3c48a3787f7f5afa035392"><td class="memItemLeft" align="right" valign="top">QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#a3e3673742b3c48a3787f7f5afa035392">audioQueue</a></td></tr>
 <tr class="separator:a3e3673742b3c48a3787f7f5afa035392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19ba0638cf534c5925263094753902f1"><td class="memItemLeft" align="right" valign="top">const uint16_t Doctor_Who_Theme_Tuneplayer[]&#160;</td><td class="memItemRight" valign="bottom"><b>PROGMEM</b></td></tr>
+<tr class="memitem:a19ba0638cf534c5925263094753902f1"><td class="memItemLeft" align="right" valign="top">const uint16_t Doctor_Who_Theme_Tuneplayer[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#a19ba0638cf534c5925263094753902f1">PROGMEM</a></td></tr>
 <tr class="separator:a19ba0638cf534c5925263094753902f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac09995a4319d7a384a1b58a58d83e977"><td class="memItemLeft" align="right" valign="top"><a id="ac09995a4319d7a384a1b58a58d83e977"></a>
-FlashTuneLoader&#160;</td><td class="memItemRight" valign="bottom"><b>flashLoader</b></td></tr>
+<tr class="memitem:ac09995a4319d7a384a1b58a58d83e977"><td class="memItemLeft" align="right" valign="top">FlashTuneLoader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#ac09995a4319d7a384a1b58a58d83e977">flashLoader</a></td></tr>
 <tr class="separator:ac09995a4319d7a384a1b58a58d83e977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe876f646d104f57d139612ca3e6c11d"><td class="memItemLeft" align="right" valign="top"><a id="afe876f646d104f57d139612ca3e6c11d"></a>
-TunePlayer&#160;</td><td class="memItemRight" valign="bottom"><b>tune</b></td></tr>
+<tr class="memitem:afe876f646d104f57d139612ca3e6c11d"><td class="memItemLeft" align="right" valign="top">TunePlayer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="audio_8cpp.html#afe876f646d104f57d139612ca3e6c11d">tune</a></td></tr>
 <tr class="separator:afe876f646d104f57d139612ca3e6c11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -138,10 +133,82 @@ TunePlayer&#160;</td><td class="memItemRight" valign="bottom"><b>tune</b></td></
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="audio_8cpp_acce457fba5e42885e4c6fd06a9ca5121_cgraph.svg" width="203" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="audio_8cpp_acce457fba5e42885e4c6fd06a9ca5121_icgraph.svg" width="204" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1b892168162b0ef4b8740a06508de154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b892168162b0ef4b8740a06508de154">&#9670;&nbsp;</a></span>piezo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ToneSound piezo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="defines_8h.html#a40a8044a70c2ac07d2456f23bd4522a3">PIN_SPEAKER</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="audio_8cpp_a1b892168162b0ef4b8740a06508de154_icgraph.svg" width="310" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a3e3673742b3c48a3787f7f5afa035392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e3673742b3c48a3787f7f5afa035392">&#9670;&nbsp;</a></span>audioQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QueueHandle_t audioQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac09995a4319d7a384a1b58a58d83e977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09995a4319d7a384a1b58a58d83e977">&#9670;&nbsp;</a></span>flashLoader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FlashTuneLoader flashLoader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a19ba0638cf534c5925263094753902f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19ba0638cf534c5925263094753902f1">&#9670;&nbsp;</a></span>PROGMEM</h2>
 
@@ -179,6 +246,42 @@ TunePlayer&#160;</td><td class="memItemRight" valign="bottom"><b>tune</b></td></
 <div class="line">    0xf000 </div>
 <div class="line">}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="ae1c899affa3f5b7282b6f09135ecfcc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c899affa3f5b7282b6f09135ecfcc9">&#9670;&nbsp;</a></span>serialMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t serialMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe876f646d104f57d139612ca3e6c11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe876f646d104f57d139612ca3e6c11d">&#9670;&nbsp;</a></span>tune</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TunePlayer tune</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

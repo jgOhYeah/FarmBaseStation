@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/lookups.h" name="ESP32BaseStation/src/lookups.h">
-<area shape="rect" id="node1" title="Lookupable and lookupable manager base classes." alt="" coords="380,5,543,47"/>
+<map id="BaseStationCode/src/src/lookups.h" name="BaseStationCode/src/src/lookups.h">
+<area shape="rect" id="node1" title="Lookupable and lookupable manager base classes." alt="" coords="383,5,539,47"/>
 <area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="415,95,508,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,169,112,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="137,169,221,196"/>

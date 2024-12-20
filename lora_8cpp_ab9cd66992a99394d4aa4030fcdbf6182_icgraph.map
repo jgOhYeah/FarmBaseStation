@@ -1,0 +1,6 @@
+<map id="sendTxWaitingMsg" name="sendTxWaitingMsg">
+<area shape="rect" id="node1" title="Sets the state for if there are packets left to send." alt="" coords="468,5,613,32"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,5,204,32"/>
+<area shape="rect" id="node4" href="$lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" title="updates the attribute waiting to false if required." alt="" coords="252,31,420,57"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,32"/>
+</map>

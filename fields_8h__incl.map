@@ -1,5 +1,5 @@
-<map id="ESP32BaseStation/src/fields.h" name="ESP32BaseStation/src/fields.h">
-<area shape="rect" id="node1" title="Contains fields classes." alt="" coords="380,5,543,47"/>
+<map id="BaseStationCode/src/src/fields.h" name="BaseStationCode/src/src/fields.h">
+<area shape="rect" id="node1" title="Contains fields classes." alt="" coords="383,5,539,47"/>
 <area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="415,169,508,196"/>
 <area shape="rect" id="node11" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="419,95,503,121"/>
 <area shape="rect" id="node12" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="528,95,640,121"/>

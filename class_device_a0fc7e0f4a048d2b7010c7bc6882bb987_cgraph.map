@@ -1,0 +1,4 @@
+<map id="Device::generatePacket" name="Device::generatePacket">
+<area shape="rect" id="node1" title="Generates a packet containing all the fields and instructions to set." alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$class_field.html#a8411bfb2768fb0ea256f83f40941ba75" title="Encodes the value to set into a packet ready to send if needed." alt="" coords="228,5,336,32"/>
+</map>
