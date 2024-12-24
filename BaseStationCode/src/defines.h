@@ -24,7 +24,7 @@
 // For alarm tunes
 #include <TunePlayer.h>
 
-#define VERSION "0.2.3"
+#define VERSION "0.2.4"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 
@@ -71,23 +71,9 @@
 #define LORA_LED_FLASH_TIME 100
 
 // Pins
-// LoRa
-// VSPI is default without specifying. LORA pins are specified in platformio.ini
-// #define PIN_LORA_CS 5
-// #define PIN_LORA_MOSI 23
-// #define PIN_LORA_MISO 19
-// #define PIN_LORA_SCLK 18
-// #define PIN_LORA_DIO 17
-// #define PIN_LORA_RESET 16
-
-// LEDs
-#define PIN_LED_TOP 32
-#define PIN_LED_INSIDE 33
-// #define PIN_WIFI_LED LED_BUILTIN
-#define PIN_WIFI_LED PIN_LED_INSIDE
-
-// Speaker
-#define PIN_SPEAKER 25
+// LORA pins are specified in platformio.ini
+// LEDs (Defined in platformio.ini. If not defined, these LEDs will not be used (LED_BUILTIN will always be used).
+// Speaker (Defined in platformio.ini. If not defined, no audio capabilities will be included).
 
 #define LORA_CHECK_INTERVAL 30000
 #define LORA_TX_INTERVAL 10000

@@ -6,8 +6,8 @@
  * @version 0.1
  * @date 2023-08-18
  */
-
 #include "audio.h"
+#ifdef PIN_SPEAKER
 
 extern SemaphoreHandle_t serialMutex;
 extern QueueHandle_t audioQueue;
@@ -82,3 +82,4 @@ void audioTask(void *pvParameters)
         }
     }
 }
+#endif

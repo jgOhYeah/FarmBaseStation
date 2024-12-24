@@ -9,6 +9,8 @@
 
 #pragma once
 #include "../defines.h"
+
+#ifdef PIN_SPEAKER
 #include "alarm.h"
 
 /**
@@ -17,3 +19,4 @@
  * @param pvParameters 
  */
 void audioTask(void *pvParameters);
+#endif

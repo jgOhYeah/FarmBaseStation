@@ -15,7 +15,9 @@ WiFiClient wifi;
 PubSubClient mqtt(wifi);
 PJONThroughLora bus(PJON_DEVICE_ID);
 QueueHandle_t alarmQueue;
+#ifdef PIN_SPEAKER
 QueueHandle_t audioQueue;
+#endif
 QueueHandle_t mqttPublishQueue;
 SemaphoreHandle_t loraMutex;
 SemaphoreHandle_t mqttMutex;
@@ -39,14 +41,16 @@ TaskHandle_t ledTaskHandle;
 
 void setup()
 {
+#ifdef PIN_SPEAKER
     // In case a reset pccured at the wrong time.
     pinMode(PIN_SPEAKER, OUTPUT);
     digitalWrite(PIN_SPEAKER, LOW);
+    audioQueue = xQueueCreate(3, sizeof(AlarmState));
+#endif
 
     // Setup queues and mutexes
     // TODO: Swap to notifications
     alarmQueue = xQueueCreate(3, sizeof(AlarmState));
-    audioQueue = xQueueCreate(3, sizeof(AlarmState));
     mqttPublishQueue = xQueueCreate(15, sizeof(MqttMsg));
     mqttMutex = xSemaphoreCreateMutex();
     serialMutex = xSemaphoreCreateMutex(); // Needs to be created before logging anything.
@@ -57,8 +61,11 @@ void setup()
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ". Compiled " __DATE__ ", " __TIME__);
 
-    if (!alarmQueue || !audioQueue || !mqttPublishQueue || !mqttMutex ||
-        !serialMutex || !loraMutex || !stateUpdateMutex)
+    if (!alarmQueue ||
+#ifdef PIN_SPEAKER
+        !audioQueue ||
+#endif
+        !mqttPublishQueue || !mqttMutex || !serialMutex || !loraMutex || !stateUpdateMutex)
     {
         LOGE("SETUP", "Could not create something!!!");
     }
@@ -100,6 +107,7 @@ void setup()
         NULL,
         1);
 
+#ifdef PIN_SPEAKER
     xTaskCreatePinnedToCore(
         audioTask,
         "Audio",
@@ -108,6 +116,7 @@ void setup()
         1,
         NULL,
         1);
+#endif
 
     xTaskCreatePinnedToCore(
         loraTxTask,

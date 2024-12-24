@@ -45,12 +45,6 @@ public:
      */
     void set(bool state);
 
-    /**
-     * @brief Toggles the LED.
-     * 
-     */
-    void toggle();
-
 private:
     const uint8_t pin;
 };
