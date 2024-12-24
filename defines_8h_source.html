@@ -88,7 +88,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// For alarm tunes</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;TunePlayer.h&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="defines_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">   27</a></span>&#160;<span class="preprocessor">#define VERSION &quot;0.2.3&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="defines_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">   27</a></span>&#160;<span class="preprocessor">#define VERSION &quot;0.2.4&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="defines_8h.html#a94df10e7efe7613d074c105099c7fd0e">   29</a></span>&#160;<span class="preprocessor">#define SERIAL_BAUD 115200 </span><span class="comment">// Same as the bootloader.</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
@@ -135,29 +135,15 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="defines_8h.html#a7d937b2b478347cd36b945b6311712c6">   71</a></span>&#160;<span class="preprocessor">#define LORA_LED_FLASH_TIME 100</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">// Pins</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// LoRa</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// VSPI is default without specifying. LORA pins are specified in platformio.ini</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// #define PIN_LORA_CS 5</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">// #define PIN_LORA_MOSI 23</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">// #define PIN_LORA_MISO 19</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// #define PIN_LORA_SCLK 18</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// #define PIN_LORA_DIO 17</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">// #define PIN_LORA_RESET 16</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">// LEDs</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="defines_8h.html#a00fe14dfbb457cbe829d7d11a6ed6090">   84</a></span>&#160;<span class="preprocessor">#define PIN_LED_TOP 32</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="defines_8h.html#a6684ab9f980d8fdebf3a35fd97d96448">   85</a></span>&#160;<span class="preprocessor">#define PIN_LED_INSIDE 33</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">// #define PIN_WIFI_LED LED_BUILTIN</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="defines_8h.html#a81f06bc7d422dee3b6ee88215b4411d8">   87</a></span>&#160;<span class="preprocessor">#define PIN_WIFI_LED PIN_LED_INSIDE</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">// Speaker</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="defines_8h.html#a40a8044a70c2ac07d2456f23bd4522a3">   90</a></span>&#160;<span class="preprocessor">#define PIN_SPEAKER 25</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="defines_8h.html#ade99d483577232769e8f92abaeb3c792">   92</a></span>&#160;<span class="preprocessor">#define LORA_CHECK_INTERVAL 30000</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="defines_8h.html#ae5b0d520084bac8ea77df173518d5cc8">   93</a></span>&#160;<span class="preprocessor">#define LORA_TX_INTERVAL 10000</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="defines_8h.html#a00ce5943cb1b02c0b482bb99f5779183">   94</a></span>&#160;<span class="preprocessor">#define LORA_MAX_PACKET_SIZE 50</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="topics_8h.html">src/topics.h</a>&quot;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// LORA pins are specified in platformio.ini</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// LEDs (Defined in platformio.ini. If not defined, these LEDs will not be used (LED_BUILTIN will always be used).</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// Speaker (Defined in platformio.ini. If not defined, no audio capabilities will be included).</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="defines_8h.html#ade99d483577232769e8f92abaeb3c792">   78</a></span>&#160;<span class="preprocessor">#define LORA_CHECK_INTERVAL 30000</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="defines_8h.html#ae5b0d520084bac8ea77df173518d5cc8">   79</a></span>&#160;<span class="preprocessor">#define LORA_TX_INTERVAL 10000</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="defines_8h.html#a00ce5943cb1b02c0b482bb99f5779183">   80</a></span>&#160;<span class="preprocessor">#define LORA_MAX_PACKET_SIZE 50</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="topics_8h.html">src/topics.h</a>&quot;</span></div>
 <div class="ttc" id="atopics_8h_html"><div class="ttname"><a href="topics_8h.html">topics.h</a></div><div class="ttdoc">MQTT topics for a thingsboard gateway.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

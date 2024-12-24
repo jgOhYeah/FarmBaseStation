@@ -87,23 +87,20 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_led.html#ad977cfca6965684f274d8d6e33ac3548">set</a>(<span class="keywordtype">bool</span> state);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_led.html#a4f4d5ff6609d84f66aaf97544d783c93">toggle</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_led.html#aabe1d444ced5babf28316b72adf59529">   55</a></span>&#160;    <span class="keyword">const</span> uint8_t <a class="code" href="class_led.html#aabe1d444ced5babf28316b72adf59529">pin</a>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="leds_8h.html#a0e9abc4adafb917c6af448aca6042e96">ledTask</a>(<span class="keywordtype">void</span> *pvParameters);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_led.html#aabe1d444ced5babf28316b72adf59529">   49</a></span>&#160;    <span class="keyword">const</span> uint8_t <a class="code" href="class_led.html#aabe1d444ced5babf28316b72adf59529">pin</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="leds_8h.html#a0e9abc4adafb917c6af448aca6042e96">ledTask</a>(<span class="keywordtype">void</span> *pvParameters);</div>
 <div class="ttc" id="aalarm_8h_html"><div class="ttname"><a href="alarm_8h.html">alarm.h</a></div><div class="ttdoc">Handles alarms.</div></div>
 <div class="ttc" id="aclass_led_html"><div class="ttname"><a href="class_led.html">Led</a></div><div class="ttdoc">Class for controlling an LED.</div><div class="ttdef"><b>Definition:</b> leds.h:20</div></div>
-<div class="ttc" id="aclass_led_html_a4f4d5ff6609d84f66aaf97544d783c93"><div class="ttname"><a href="class_led.html#a4f4d5ff6609d84f66aaf97544d783c93">Led::toggle</a></div><div class="ttdeci">void toggle()</div><div class="ttdoc">Toggles the LED.</div><div class="ttdef"><b>Definition:</b> leds.cpp:34</div></div>
-<div class="ttc" id="aclass_led_html_aabe1d444ced5babf28316b72adf59529"><div class="ttname"><a href="class_led.html#aabe1d444ced5babf28316b72adf59529">Led::pin</a></div><div class="ttdeci">const uint8_t pin</div><div class="ttdef"><b>Definition:</b> leds.h:55</div></div>
+<div class="ttc" id="aclass_led_html_aabe1d444ced5babf28316b72adf59529"><div class="ttname"><a href="class_led.html#aabe1d444ced5babf28316b72adf59529">Led::pin</a></div><div class="ttdeci">const uint8_t pin</div><div class="ttdef"><b>Definition:</b> leds.h:49</div></div>
 <div class="ttc" id="aclass_led_html_ab7effd93495c207e450a63e5831fd642"><div class="ttname"><a href="class_led.html#ab7effd93495c207e450a63e5831fd642">Led::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdoc">Called regularly to update the LED during fades and animations.</div><div class="ttdef"><b>Definition:</b> leds.cpp:24</div></div>
 <div class="ttc" id="aclass_led_html_aca41751e53023a56a30b541a1c23edfe"><div class="ttname"><a href="class_led.html#aca41751e53023a56a30b541a1c23edfe">Led::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdoc">Initialises the pins.</div><div class="ttdef"><b>Definition:</b> leds.cpp:18</div></div>
 <div class="ttc" id="aclass_led_html_ad8ab252c2643f288663538dd847d500e"><div class="ttname"><a href="class_led.html#ad8ab252c2643f288663538dd847d500e">Led::Led</a></div><div class="ttdeci">Led(const uint8_t pin)</div><div class="ttdoc">Construct a new Led object.</div><div class="ttdef"><b>Definition:</b> leds.h:27</div></div>
 <div class="ttc" id="aclass_led_html_ad977cfca6965684f274d8d6e33ac3548"><div class="ttname"><a href="class_led.html#ad977cfca6965684f274d8d6e33ac3548">Led::set</a></div><div class="ttdeci">void set(bool state)</div><div class="ttdoc">Turns the LED on or off.</div><div class="ttdef"><b>Definition:</b> leds.cpp:29</div></div>
 <div class="ttc" id="adevices_8h_html"><div class="ttname"><a href="devices_8h.html">devices.h</a></div><div class="ttdoc">Devices and manager for all known devices the base station connects to.</div></div>
-<div class="ttc" id="aleds_8h_html_a0e9abc4adafb917c6af448aca6042e96"><div class="ttname"><a href="leds_8h.html#a0e9abc4adafb917c6af448aca6042e96">ledTask</a></div><div class="ttdeci">void ledTask(void *pvParameters)</div><div class="ttdoc">Task that manages the LEDs on the unit.</div><div class="ttdef"><b>Definition:</b> leds.cpp:41</div></div>
+<div class="ttc" id="aleds_8h_html_a0e9abc4adafb917c6af448aca6042e96"><div class="ttname"><a href="leds_8h.html#a0e9abc4adafb917c6af448aca6042e96">ledTask</a></div><div class="ttdeci">void ledTask(void *pvParameters)</div><div class="ttdoc">Task that manages the LEDs on the unit.</div><div class="ttdef"><b>Definition:</b> leds.cpp:46</div></div>
 <div class="ttc" id="anetworking_8h_html"><div class="ttname"><a href="networking_8h.html">networking.h</a></div><div class="ttdoc">Header file for networking.cpp.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
