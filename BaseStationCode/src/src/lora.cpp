@@ -120,6 +120,7 @@ void pjonTask(void *pvParameters)
     bus.set_receiver(pjonReceive);
     bus.set_error(pjonError);
     // LoRa.setSPIFrequency(4E6);
+    SPI.begin(PIN_LORA_SCLK, PIN_LORA_MISO, PIN_LORA_MOSI);
     bus.strategy.setPins(PIN_LORA_CS, PIN_LORA_RESET, PIN_LORA_DIO);
     bus.strategy.setFrequency(433E6); // Calls LoRa.begin()
     bus.strategy.setSpreadingFactor(9);

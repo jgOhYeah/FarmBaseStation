@@ -72,13 +72,13 @@
 
 // Pins
 // LoRa
-// VSPI is default without specifying
-#define PIN_LORA_CS 5
-#define PIN_LORA_MOSI 23
-#define PIN_LORA_MISO 19
-#define PIN_LORA_SCLK 18
-#define PIN_LORA_DIO 17
-#define PIN_LORA_RESET 16
+// VSPI is default without specifying. LORA pins are specified in platformio.ini
+// #define PIN_LORA_CS 5
+// #define PIN_LORA_MOSI 23
+// #define PIN_LORA_MISO 19
+// #define PIN_LORA_SCLK 18
+// #define PIN_LORA_DIO 17
+// #define PIN_LORA_RESET 16
 
 // LEDs
 #define PIN_LED_TOP 32
