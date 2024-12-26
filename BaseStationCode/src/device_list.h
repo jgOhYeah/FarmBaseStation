@@ -36,6 +36,11 @@
 // Water baby
 #define FIELD_WATER_CAPACITIVE UIntField("Water capacitive reading", 'w')
 
+// Gate monitor
+#define FIELD_GATE_STATE FlagField("Gate state", 'g')
+#define FIELD_LIGHT_LEVEL ByteField("Light level", 'l')
+#define FIELD_MOVEMENT_DETECTED FlagField("Movement detected", 'M')
+
 Field *pumpFieldsList[] = {
     new FIELD_TEMPERATURE,
     new FIELD_HUMIDITY,
@@ -69,16 +74,27 @@ Field *fenceMonitorFieldsList[] = {
     new FIELD_FENCE_VOLTAGE
 };
 
+Field *gateMonitorFieldsList[] = {
+    new FIELD_GATE_STATE,
+    new FIELD_BATTERY_VOLTAGE,
+    new FIELD_TEMPERATURE,
+    new FIELD_HUMIDITY,
+    new FIELD_LIGHT_LEVEL,
+    new FIELD_MOVEMENT_DETECTED
+};
+
 LookupManager<Field> pumpFieldsManager(pumpFieldsList, sizeof(pumpFieldsList) / sizeof(Field*));
 LookupManager<Field> fenceFieldsManager(fenceFieldsList, sizeof(fenceFieldsList) / sizeof(Field*));
 LookupManager<Field> waterBabyFieldsManager(waterBabyFieldsList, sizeof(waterBabyFieldsList) / sizeof(Field*));
 LookupManager<Field> fenceMonitorFieldsManager(fenceMonitorFieldsList, sizeof(fenceMonitorFieldsList) / sizeof(Field*));
+LookupManager<Field> gateMonitorFieldsManager(gateMonitorFieldsList, sizeof(gateMonitorFieldsList) / sizeof(Field*));
 
 Device *deviceList[] = {
     new Device("Main Pressure Pump", 0x5A, pumpFieldsManager),
     new Device("Solar Electric Fence", 0x4A, fenceFieldsManager),
     new Device("Irrigation Water Detector", 167, waterBabyFieldsManager),
-    new Device("Electric fence monitor", 168, fenceMonitorFieldsManager)
+    new Device("Electric fence monitor", 168, fenceMonitorFieldsManager),
+    new Device("Front gate monitor", 169, gateMonitorFieldsManager)
 };
 
 DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(Device*));

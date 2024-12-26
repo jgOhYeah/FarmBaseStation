@@ -43,6 +43,7 @@ void Led::set(bool state)
 #else
 #define SET_LED_INSIDE(STATE)
 #endif
+
 void ledTask(void *pvParameters)
 {
     LOGD("LED", "LED task started.");

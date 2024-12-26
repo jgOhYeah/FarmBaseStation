@@ -1105,14 +1105,10 @@
 		)
 	)
 	(junction
-		(at 162.56 88.9)
+		(at 162.56 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "5b2f9ac2-bedb-4763-af30-bcbd39c9f6bc")
-	)
-	(no_connect
-		(at 127 104.14)
-		(uuid "2640dd7a-35a2-4b99-b7f8-b7fa2ad01f49")
+		(uuid "30d6ca0d-736f-4b6a-ab9a-ace13e4c7a82")
 	)
 	(no_connect
 		(at 127 86.36)
@@ -1266,7 +1262,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 88.9) (xy 162.56 88.9)
+			(xy 157.48 104.14) (xy 162.56 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1316,7 +1312,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 88.9) (xy 152.4 88.9)
+			(xy 147.32 104.14) (xy 149.86 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1326,7 +1322,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 88.9) (xy 142.24 88.9)
+			(xy 127 104.14) (xy 139.7 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1346,7 +1342,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 88.9) (xy 162.56 76.2)
+			(xy 162.56 76.2) (xy 162.56 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1446,13 +1442,13 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 93.98) (xy 162.56 88.9)
+			(xy 162.56 93.98) (xy 162.56 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f5ed287d-4b71-4416-8d8e-dd00918becc8")
+		(uuid "fb8d67f6-de7b-4d21-833b-5389a4e30625")
 	)
 	(label "GND"
 		(at 97.79 91.44 0)
@@ -1531,8 +1527,8 @@
 		)
 		(uuid "e7e79621-f5d9-4d2a-9fca-e65ef2faef29")
 	)
-	(label "GPIO36"
-		(at 128.27 88.9 0)
+	(label "GPIO15"
+		(at 128.27 104.14 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1640,16 +1636,15 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 146.05 88.9 90)
+		(at 143.51 104.14 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "7687e044-e128-46ab-8cc2-c1f5686785dd")
 		(property "Reference" "R1"
-			(at 146.05 82.55 90)
+			(at 139.446 106.934 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1657,15 +1652,15 @@
 			)
 		)
 		(property "Value" "220"
-			(at 146.05 85.09 90)
+			(at 143.51 106.934 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 146.05 90.678 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P15.24mm_Horizontal"
+			(at 143.51 105.918 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1674,7 +1669,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.05 88.9 0)
+			(at 143.51 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1683,7 +1678,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 146.05 88.9 0)
+			(at 143.51 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1708,16 +1703,15 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 156.21 88.9 180)
+		(at 153.67 104.14 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c433f9f8-c749-4faa-8e6f-013757860483")
 		(property "Reference" "D1"
-			(at 157.7975 81.28 0)
+			(at 151.892 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1725,15 +1719,15 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 157.7975 83.82 0)
+			(at 156.21 106.934 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 156.21 88.9 0)
+		(property "Footprint" "LED_THT:LED_D3.0mm"
+			(at 153.67 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1742,7 +1736,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 88.9 0)
+			(at 153.67 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1751,7 +1745,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 156.21 88.9 0)
+			(at 153.67 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
