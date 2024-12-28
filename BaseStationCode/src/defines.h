@@ -53,23 +53,23 @@
 #define SERIAL_GIVE() xSemaphoreGive(serialMutex)
 #define LOGV(tag, format, ...)            \
     SERIAL_TAKE();                        \
-    ESP_LOGV(tag, format, ##__VA_ARGS__); \
+    log_v("[" tag "] " format, ##__VA_ARGS__); \
     SERIAL_GIVE()
 #define LOGD(tag, format, ...)            \
     SERIAL_TAKE();                        \
-    ESP_LOGD(tag, format, ##__VA_ARGS__); \
+    log_d("[" tag "] " format, ##__VA_ARGS__); \
     SERIAL_GIVE()
 #define LOGI(tag, format, ...)            \
     SERIAL_TAKE();                        \
-    ESP_LOGI(tag, format, ##__VA_ARGS__); \
+    log_i("[" tag "] " format, ##__VA_ARGS__); \
     SERIAL_GIVE()
 #define LOGW(tag, format, ...)            \
     SERIAL_TAKE();                        \
-    ESP_LOGW(tag, format, ##__VA_ARGS__); \
+    log_w("[" tag "] " format, ##__VA_ARGS__); \
     SERIAL_GIVE()
 #define LOGE(tag, format, ...)            \
     SERIAL_TAKE();                        \
-    ESP_LOGE(tag, format, ##__VA_ARGS__); \
+    log_e("[" tag "] " format, ##__VA_ARGS__); \
     SERIAL_GIVE()
 
 // https://gcc.gnu.org/onlinedocs/gcc-4.8.5/cpp/Stringification.html

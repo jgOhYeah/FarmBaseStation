@@ -122,8 +122,12 @@ void pjonTask(void *pvParameters)
     // LoRa.setSPIFrequency(4E6);
     SPI.begin(PIN_LORA_SCLK, PIN_LORA_MISO, PIN_LORA_MOSI);
     bus.strategy.setPins(PIN_LORA_CS, PIN_LORA_RESET, PIN_LORA_DIO);
-    bus.strategy.setFrequency(433E6); // Calls LoRa.begin()
-    bus.strategy.setSpreadingFactor(9);
+    while (!bus.strategy.setFrequency(433E6)) // Calls LoRa.begin()
+    {
+        LOGE("LORA", "Could not set frequency / talk to radio!");
+        vTaskDelay(1000/portTICK_PERIOD_MS);
+    }
+    bus.strategy.setSpreadingFactor(9); // Crashes with divide by zero if not connected.
     bus.begin();
     xSemaphoreGive(loraMutex);
 

@@ -66,10 +66,10 @@ void setup()
     stateUpdateMutex = xSemaphoreCreateMutex();
 
     Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
-    Serial.setDebugOutput(true);
+    // Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ". Compiled " __DATE__ ", " __TIME__ ". Connecting using " CONNECTION_METHOD ".");
-    // LOGI("Setup", PIO_VERSION_STR);
-    Serial.println(PIO_VERSION_STR);
+    LOGI("Setup", PIO_VERSION_STR);
+    // Serial.println(PIO_VERSION_STR);
 
     if (!alarmQueue ||
 #ifdef PIN_SPEAKER
@@ -160,6 +160,6 @@ void loop()
 {
 #ifdef OTA_ENABLE
     OTAManager::handleOTA();
-    yield();
+    vTaskDelay(1000/portTICK_PERIOD_MS);
 #endif
 }
