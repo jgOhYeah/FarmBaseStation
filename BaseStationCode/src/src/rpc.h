@@ -61,3 +61,9 @@ bool startsWith(char *input, const char *compare);
  * 
  */
 void setAttributeState(const char* const attribute, bool state);
+
+/**
+ * @brief Informs thingsboard what software version is running.
+ * 
+ */
+void setVersionAttribute();

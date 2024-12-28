@@ -13,15 +13,15 @@ extern SemaphoreHandle_t serialMutex;
 extern SemaphoreHandle_t mqttMutex;
 extern PubSubClient mqtt;
 
-DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json)
+DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, JsonDocument &json)
 {
     LOGD("DEVICES", "Decoding packet of length %d.", length);
 
     // Make the object that will be used.
     // This doesn't quite follow the documentation - leaving out ts at least
     // means that the nested values object in an array isn't needed.
-    JsonArray deviceArray = json.createNestedArray(name);
-    JsonObject valuesObject = deviceArray.createNestedObject();
+    JsonArray deviceArray = json[name].to<JsonArray>();
+    JsonObject valuesObject = deviceArray.add<JsonObject>();
 
     // Check we have at least 1 character to decode.
     if (length == 0)
@@ -62,7 +62,7 @@ DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, Static
     return DECODE_SUCCESS;
 }
 
-DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json, int rssi, float snr)
+DecodeResult Device::decodePacketFields(uint8_t *payload, uint8_t length, JsonDocument &json, int rssi, float snr)
 {
     // Do the decoding as per normal
     DecodeResult result = Device::decodePacketFields(payload, length, json);
@@ -124,7 +124,7 @@ void DeviceManager::connectDevices()
     for (uint8_t i = 0; i < count; i++)
     {
         // Generate a json object with everything required.
-        StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+        JsonDocument json;
         json["device"] = items[i]->name;
         char charBuff[MAX_JSON_TEXT_LENGTH];
         serializeJson(json, charBuff, sizeof(charBuff));

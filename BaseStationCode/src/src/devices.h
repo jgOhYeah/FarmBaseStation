@@ -34,7 +34,7 @@ public:
      * @param length the length of the payload.
      * @param json the JSON document to place the output in.
      */
-    DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json);
+    DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, JsonDocument &json);
 
     /**
      * @brief Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet metadata.
@@ -45,7 +45,7 @@ public:
      * @param rssi the RSSI of the received packet.
      * @param snr the SNR of the received packet.
      */
-    DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument<MAX_JSON_TEXT_LENGTH> &json, int rssi, float snr);
+    DecodeResult decodePacketFields(uint8_t *payload, uint8_t length, JsonDocument &json, int rssi, float snr);
 
     /**
      * @brief Checks if a transmission is required.

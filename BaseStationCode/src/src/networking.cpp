@@ -7,7 +7,7 @@
  * @date 2023-08-12
  */
 #include "networking.h"
-
+#include "rpc.h"
 #ifdef USE_ETHERNET
 extern NetworkClient client;
 extern bool ethernetConnected;
@@ -148,6 +148,7 @@ void mqttConnect()
     }
     LOGI("Networking", "Connected to broker.");
     xSemaphoreGive(mqttMutex);
+    setVersionAttribute();
     deviceManager.connectDevices(); // Publish the connected devices
 }
 

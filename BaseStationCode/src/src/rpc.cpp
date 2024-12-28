@@ -48,7 +48,7 @@ void mqttReceived(char *topic, byte *message, unsigned int length)
 
 void rpcMe(char *id, uint8_t *message, uint16_t length)
 {
-    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+    JsonDocument json;
     DeserializationError error = deserializeJson(json, message, length);
     if (error)
     {
@@ -119,7 +119,7 @@ void replyMeRpc(char *id, char *reply)
 void rpcGateway(uint8_t *message, uint16_t length)
 {
     // Deserialise
-    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+    JsonDocument json;
     DeserializationError error = deserializeJson(json, message, length);
     if (error)
     {
@@ -167,8 +167,8 @@ void rpcGateway(uint8_t *message, uint16_t length)
     }
 
     // Handle the RPC call
-    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> reply;
-    JsonObject replyData = reply.createNestedObject("data");
+    JsonDocument reply;
+    JsonObject replyData = reply["data"].to<JsonObject>();
     field->handleRpc(data, replyData);
 
     // Add the other metadata and send the reply
@@ -199,8 +199,25 @@ bool startsWith(char *input, const char *compare)
 void setAttributeState(const char* const attribute, bool state)
 {
     MqttMsg msg{Topic::ATTRIBUTE_ME_UPLOAD, ""};
-    StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+    JsonDocument json;
     json[attribute] = state;
     serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
     xQueueSend(mqttPublishQueue, (void *)&msg, portMAX_DELAY);
+}
+
+void setVersionAttribute()
+{
+    MqttMsg msg{Topic::ATTRIBUTE_ME_UPLOAD, ""};
+    JsonDocument json;
+    JsonObject version = json["version"].to<JsonObject>();
+    version["date"] = __DATE__;
+    version["time"] = __TIME__;
+    version["version"] = VERSION;
+    version["method"] = CONNECTION_METHOD;
+    version["pio-env"] = PIO_ENV;
+    version["pio-plat"] = PIO_PLATFORM;
+    version["pio-plat-vers"] = PIO_PLATFORM_VERSION;
+    version["pio-framework"] = PIO_FRAMEWORK;
+    serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
+    xQueueSend(mqttPublishQueue, (void*)&msg, portMAX_DELAY);
 }

@@ -45,7 +45,7 @@ NetworkState networkState;
 uint32_t lastLoRaTime;
 TaskHandle_t ledTaskHandle;
 
-#define PIO_VERSION_STR "Env=" PIO_ENV ", Platform=" PIO_PLATFORM " (" PIO_PLATFORM_VERSION // "), FRAMEWORK=" PIO_FRAMEWORK "."
+#define PIO_VERSION_STR "Env=" PIO_ENV ", Platform=" PIO_PLATFORM " (" PIO_PLATFORM_VERSION "), FRAMEWORK=" PIO_FRAMEWORK "."
 
 void setup()
 {

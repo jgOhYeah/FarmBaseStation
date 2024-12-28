@@ -7,7 +7,6 @@
  * @date 2024-12-19
  */
 #pragma once
-#include "credentials.h"
 
 #include <Arduino.h>
 
@@ -16,9 +15,9 @@
 #include <ETH.h>
 #include <Network.h>
 #define CONNECTION_METHOD "Ethernet"
-// #else
+#else
 #include <WiFi.h>
-// #define CONNECTION_METHOD "WiFi" // TODO
+#define CONNECTION_METHOD "WiFi"
 #endif
 
 // Networking application layers

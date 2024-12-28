@@ -29,7 +29,7 @@ void pjonReceive(uint8_t *payload, uint16_t length, const PJON_Packet_Info &pack
     if (device)
     {
         // Decode
-        StaticJsonDocument<MAX_JSON_TEXT_LENGTH> json;
+        JsonDocument json;
         device->decodePacketFields(payload, length, json, rssi, snr);
 
         // Convert to a string
