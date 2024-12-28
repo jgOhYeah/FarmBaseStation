@@ -1,13 +1,11 @@
 <map id="BaseStationCode/src/src/alarm.cpp" name="BaseStationCode/src/src/alarm.cpp">
-<area shape="rect" id="node1" title="Handles alarms." alt="" coords="383,5,539,47"/>
-<area shape="rect" id="node2" href="$alarm_8h.html" title="Handles alarms." alt="" coords="425,95,497,121"/>
-<area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="415,169,508,196"/>
+<area shape="rect" id="node1" title="Handles alarms." alt="" coords="297,5,453,47"/>
+<area shape="rect" id="node2" href="$alarm_8h.html" title="Handles alarms." alt="" coords="339,95,411,121"/>
+<area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="328,169,421,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,244,112,271"/>
 <area shape="rect" id="node5" title=" " alt="" coords="137,244,221,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="245,244,307,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="332,244,452,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="477,244,587,271"/>
-<area shape="rect" id="node9" title=" " alt="" coords="612,244,759,271"/>
-<area shape="rect" id="node10" title=" " alt="" coords="783,244,887,271"/>
-<area shape="rect" id="node11" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,244,1007,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="245,244,365,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="390,244,501,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="525,244,672,271"/>
+<area shape="rect" id="node9" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="696,244,792,271"/>
 </map>

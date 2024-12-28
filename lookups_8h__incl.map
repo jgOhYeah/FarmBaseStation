@@ -1,12 +1,10 @@
 <map id="BaseStationCode/src/src/lookups.h" name="BaseStationCode/src/src/lookups.h">
-<area shape="rect" id="node1" title="Lookupable and lookupable manager base classes." alt="" coords="383,5,539,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="415,95,508,121"/>
+<area shape="rect" id="node1" title="Lookupable and lookupable manager base classes." alt="" coords="297,5,453,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="328,95,421,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,169,112,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="137,169,221,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="245,169,307,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="332,169,452,196"/>
-<area shape="rect" id="node7" title=" " alt="" coords="477,169,587,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="612,169,759,196"/>
-<area shape="rect" id="node9" title=" " alt="" coords="783,169,887,196"/>
-<area shape="rect" id="node10" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,169,1007,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="245,169,365,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="390,169,501,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="525,169,672,196"/>
+<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="696,169,792,196"/>
 </map>

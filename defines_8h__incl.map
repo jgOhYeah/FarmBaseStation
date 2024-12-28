@@ -1,11 +1,9 @@
 <map id="BaseStationCode/src/defines.h" name="BaseStationCode/src/defines.h">
-<area shape="rect" id="node1" title="Definitions and other preprocessor and global stuff." alt="" coords="383,5,539,47"/>
+<area shape="rect" id="node1" title="Definitions and other preprocessor and global stuff." alt="" coords="297,5,453,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,112,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="137,95,221,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="245,95,307,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="332,95,452,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="477,95,587,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="612,95,759,121"/>
-<area shape="rect" id="node8" title=" " alt="" coords="783,95,887,121"/>
-<area shape="rect" id="node9" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="911,95,1007,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="245,95,365,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="390,95,501,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="525,95,672,121"/>
+<area shape="rect" id="node7" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="696,95,792,121"/>
 </map>
