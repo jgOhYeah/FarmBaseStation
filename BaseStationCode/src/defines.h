@@ -10,9 +10,22 @@
 #include "credentials.h"
 
 #include <Arduino.h>
+
+// Networking physical layer
+#ifdef USE_ETHERNET
+#include <ETH.h>
+#include <Network.h>
+#define CONNECTION_METHOD "Ethernet"
+// #else
 #include <WiFi.h>
+// #define CONNECTION_METHOD "WiFi" // TODO
+#endif
+
+// Networking application layers
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+
+// LoRa
 #define PJON_INCLUDE_TL
 #include <PJONThroughLora.h>
 
@@ -22,7 +35,9 @@
 #endif
 
 // For alarm tunes
+#ifdef PIN_SPEAKER
 #include <TunePlayer.h>
+#endif
 
 #define VERSION "0.2.4"
 

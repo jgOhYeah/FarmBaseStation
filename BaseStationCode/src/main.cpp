@@ -11,8 +11,14 @@
  */
 #include "defines.h"
 
+#ifdef USE_ETHERNET
+NetworkClient client;
+PubSubClient mqtt(client);
+bool ethernetConnected = false;
+#else
 WiFiClient wifi;
 PubSubClient mqtt(wifi);
+#endif
 PJONThroughLora bus(PJON_DEVICE_ID);
 QueueHandle_t alarmQueue;
 #ifdef PIN_SPEAKER
@@ -39,6 +45,8 @@ NetworkState networkState;
 uint32_t lastLoRaTime;
 TaskHandle_t ledTaskHandle;
 
+#define PIO_VERSION_STR "Env=" PIO_ENV ", Platform=" PIO_PLATFORM " (" PIO_PLATFORM_VERSION // "), FRAMEWORK=" PIO_FRAMEWORK "."
+
 void setup()
 {
 #ifdef PIN_SPEAKER
@@ -60,6 +68,8 @@ void setup()
     Serial.begin(SERIAL_BAUD); // Already running from the bootloader.
     Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ". Compiled " __DATE__ ", " __TIME__ ". Connecting using " CONNECTION_METHOD ".");
+    // LOGI("Setup", PIO_VERSION_STR);
+    Serial.println(PIO_VERSION_STR);
 
     if (!alarmQueue ||
 #ifdef PIN_SPEAKER

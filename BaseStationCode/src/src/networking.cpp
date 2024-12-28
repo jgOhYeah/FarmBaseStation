@@ -8,7 +8,13 @@
  */
 #include "networking.h"
 
+#ifdef USE_ETHERNET
+extern NetworkClient client;
+extern bool ethernetConnected;
+#else
 extern WiFiClient wifi;
+#endif
+
 extern PubSubClient mqtt;
 extern QueueHandle_t mqttPublishQueue;
 extern SemaphoreHandle_t mqttMutex;
@@ -24,6 +30,57 @@ extern void mqttReceived(char *topic, byte *message, unsigned int length);
     networkState = STATE;                            \
     xSemaphoreGive(stateUpdateMutex)
 
+#ifdef USE_ETHERNET
+/**
+ * @brief Handles ethernet events.
+ *
+ * This is based on the ETH_LAN8720 example.
+ *
+ * @param event The event that occurred.
+ */
+void onEthernetEvent(arduino_event_id_t event)
+{
+    switch (event)
+    {
+    case ARDUINO_EVENT_ETH_START:
+        LOGI("ETH", "Started.");
+        // The hostname must be set after the interface is started, but needs
+        // to be set before DHCP, so set it from the event handler thread.
+        ETH.setHostname(OTA_HOSTNAME);
+        SET_NETWORK_STATE(NETWORK_NONE);
+        break;
+    case ARDUINO_EVENT_ETH_CONNECTED:
+        LOGI("ETH", "Connected.");
+        SET_NETWORK_STATE(NETWORK_WIFI_CONNECTING);
+        break;
+    case ARDUINO_EVENT_ETH_GOT_IP:
+        LOGI("ETH", "Got IP address:");
+        SERIAL_TAKE();
+        Serial.println(ETH);
+        SERIAL_GIVE();
+        ethernetConnected = true;
+        // SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
+        break;
+    case ARDUINO_EVENT_ETH_LOST_IP:
+        LOGI("ETH", "Lost IP address.");
+        ethernetConnected = false;
+        SET_NETWORK_STATE(NETWORK_NONE);
+        break;
+    case ARDUINO_EVENT_ETH_DISCONNECTED:
+        LOGI("ETH", "Disconnected.");
+        ethernetConnected = false;
+        SET_NETWORK_STATE(NETWORK_NONE);
+        break;
+    case ARDUINO_EVENT_ETH_STOP:
+        LOGI("ETH", "Stopped.");
+        ethernetConnected = false;
+        SET_NETWORK_STATE(NETWORK_NONE);
+        break;
+    default:
+        break;
+    }
+}
+#else
 /**
  * @brief Connects to WiFi.
  *
@@ -43,6 +100,7 @@ void wifiConnect()
     } while (WiFi.status() != WL_CONNECTED);
     LOGI("Networking", "Connected with IP address '%s'.", WiFi.localIP().toString().c_str());
 }
+#endif
 
 /**
  * @brief Connects to the MQTT broker.
@@ -58,14 +116,27 @@ void mqttConnect()
     int iterations = 0;
     while (!mqtt.connected())
     {
-        vTaskDelay(1000 / portTICK_RATE_MS);
+        vTaskDelay(1000 * portTICK_PERIOD_MS);
 
+#ifdef USE_ETHERNET
+        // Wait until ethernet is connected.
+        if (!ethernetConnected)
+        {
+            
+            while(!ethernetConnected)
+            {
+                vTaskDelay(10 * portTICK_PERIOD_MS);
+            }
+            SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
+        }
+#else
         // Check if WiFi is connected and reconnect if needed.
         if (WiFi.status() != WL_CONNECTED)
         {
             wifiConnect();
             SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
         }
+#endif
         // Attempt to start the connection every so often.
         iterations++;
         if (iterations == MQTT_RETRY_ITERATIONS)
@@ -97,8 +168,24 @@ void mqttSetup()
 void networkingTask(void *pvParameters)
 {
     SET_NETWORK_STATE(NETWORK_NONE);
+#ifdef USE_ETHERNET
+    Network.onEvent(onEthernetEvent);
+    ETH.begin();
+#endif
     while (true)
     {
+#ifdef USE_ETHERNET
+        if (!ethernetConnected)
+        {
+            LOGW("Networking", "Waiting for ethernet to become available.");
+            while (!ethernetConnected)
+            {
+                vTaskDelay(10/portTICK_PERIOD_MS);
+            }
+            vTaskDelay(RECONNECT_DELAY / portTICK_PERIOD_MS);
+            mqttConnect(); // Force reconnection.
+        }
+#else
         // Connect to WiFi
         if (WiFi.status() != WL_CONNECTED)
         {
@@ -109,7 +196,7 @@ void networkingTask(void *pvParameters)
             vTaskDelay(RECONNECT_DELAY / portTICK_PERIOD_MS);
             mqttConnect(); // Force reconnection to mqtt after messing with WiFi.
         }
-
+#endif
         // Connect to MQTT
         if (!mqtt.connected())
         {
