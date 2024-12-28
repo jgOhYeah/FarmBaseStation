@@ -1,13 +1,13 @@
 <map id="BaseStationCode/src/src/networking.h" name="BaseStationCode/src/src/networking.h">
-<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="437,5,593,47"/>
-<area shape="rect" id="node2" href="$main_8cpp.html" title=" " alt="" coords="199,273,355,315"/>
+<area shape="rect" id="node1" title="Header file for networking.cpp." alt="" coords="488,5,644,47"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title=" " alt="" coords="192,273,348,315"/>
 <area shape="rect" id="node3" href="$leds_8h.html" title="Controls the LEDs on the unit." alt="" coords="25,95,181,136"/>
-<area shape="rect" id="node5" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="745,184,901,225"/>
-<area shape="rect" id="node7" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="437,95,593,136"/>
-<area shape="rect" id="node8" href="$ota_8h.html" title="Handles over the air (OTA) updates." alt="" coords="257,95,413,136"/>
-<area shape="rect" id="node10" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="617,95,773,136"/>
+<area shape="rect" id="node5" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="900,184,1056,225"/>
+<area shape="rect" id="node7" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="488,184,644,225"/>
+<area shape="rect" id="node8" href="$ota_8h.html" title="Handles over the air (OTA) updates." alt="" coords="308,95,464,136"/>
+<area shape="rect" id="node10" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="604,95,760,136"/>
 <area shape="rect" id="node4" href="$leds_8cpp.html" title="Controls the LEDs on the unit." alt="" coords="25,184,181,225"/>
-<area shape="rect" id="node6" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="745,273,901,315"/>
-<area shape="rect" id="node9" href="$ota_8cpp.html" title="Handles over the air (OTA) updates." alt="" coords="315,184,471,225"/>
-<area shape="rect" id="node11" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="565,184,721,225"/>
+<area shape="rect" id="node6" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="900,273,1056,315"/>
+<area shape="rect" id="node9" href="$ota_8cpp.html" title="Handles over the air (OTA) updates." alt="" coords="308,184,464,225"/>
+<area shape="rect" id="node11" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="720,184,876,225"/>
 </map>

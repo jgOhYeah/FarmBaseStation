@@ -9,12 +9,12 @@
 <area shape="rect" id="node18" href="$audio_8h.html" title="Plays audio." alt="" coords="753,169,847,196"/>
 <area shape="rect" id="node19" href="$leds_8h.html" title="Controls the LEDs on the unit." alt="" coords="423,95,507,121"/>
 <area shape="rect" id="node20" href="$ota_8h.html" title="Handles over the air (OTA) updates." alt="" coords="531,95,610,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="372,692,479,719"/>
-<area shape="rect" id="node4" title=" " alt="" coords="503,692,587,719"/>
-<area shape="rect" id="node5" title=" " alt="" coords="612,692,732,719"/>
-<area shape="rect" id="node6" title=" " alt="" coords="757,692,867,719"/>
-<area shape="rect" id="node7" title=" " alt="" coords="201,692,348,719"/>
-<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="75,692,171,719"/>
+<area shape="rect" id="node3" title=" " alt="" coords="406,692,490,719"/>
+<area shape="rect" id="node4" title=" " alt="" coords="514,692,577,719"/>
+<area shape="rect" id="node5" title=" " alt="" coords="601,692,721,719"/>
+<area shape="rect" id="node6" title=" " alt="" coords="746,692,857,719"/>
+<area shape="rect" id="node7" title=" " alt="" coords="235,692,381,719"/>
+<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="91,692,187,719"/>
 <area shape="rect" id="node10" href="$fields_8h.html" title="Contains fields classes." alt="" coords="406,468,498,495"/>
 <area shape="rect" id="node13" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="383,393,489,420"/>
 <area shape="rect" id="node11" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="287,543,371,569"/>

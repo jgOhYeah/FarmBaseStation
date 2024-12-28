@@ -1,7 +1,7 @@
 <map id="fakeReceiveTask" name="fakeReceiveTask">
 <area shape="rect" id="node1" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="5,31,136,57"/>
 <area shape="rect" id="node2" href="$lora_8cpp.html#a73337b280bec4397780b012ccc949113" title="Handles an incoming packet received from the radio and adds the given snr and rssi to the packet." alt="" coords="184,31,287,57"/>
-<area shape="rect" id="node3" href="$class_device.html#add7ef6f786d670584e3bf5818ce134a0" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="335,5,537,32"/>
+<area shape="rect" id="node3" href="$class_device.html#a35eba370894e0e1ec39f2043e466b2f6" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="335,5,537,32"/>
 <area shape="rect" id="node5" href="$class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" title="Gets the object with the given symbol." alt="" coords="585,56,819,83"/>
 <area shape="rect" id="node4" href="$class_field.html#aa036e196f5805e9406b8169200e3915a" title="Decodes the value from bytes into an existing json document." alt="" coords="648,5,756,32"/>
 </map>

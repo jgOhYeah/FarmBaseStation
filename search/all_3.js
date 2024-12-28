@@ -5,7 +5,7 @@ var searchData=
   ['decode_5ffail_27',['DECODE_FAIL',['../devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1ea602a5d6b39c0eae17b42a8210d7f4021',1,'devices.h']]],
   ['decode_5fpartial_28',['DECODE_PARTIAL',['../devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1ea14af0c0d17567ddc5240aa187bae2d1a',1,'devices.h']]],
   ['decode_5fsuccess_29',['DECODE_SUCCESS',['../devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1ead1f1a6ac8f5379108ffe6f70f2639761',1,'devices.h']]],
-  ['decodepacketfields_30',['decodePacketFields',['../class_device.html#add7ef6f786d670584e3bf5818ce134a0',1,'Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument&lt; MAX_JSON_TEXT_LENGTH &gt; &amp;json)'],['../class_device.html#a44edcfdcd677e11331e1423ddfd26a5e',1,'Device::decodePacketFields(uint8_t *payload, uint8_t length, StaticJsonDocument&lt; MAX_JSON_TEXT_LENGTH &gt; &amp;json, int rssi, float snr)']]],
+  ['decodepacketfields_30',['decodePacketFields',['../class_device.html#a35eba370894e0e1ec39f2043e466b2f6',1,'Device::decodePacketFields(uint8_t *payload, uint8_t length, JsonDocument &amp;json)'],['../class_device.html#af62935178e82991678e319e5b840edbf',1,'Device::decodePacketFields(uint8_t *payload, uint8_t length, JsonDocument &amp;json, int rssi, float snr)']]],
   ['decoderesult_31',['DecodeResult',['../devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e',1,'devices.h']]],
   ['defines_2eh_32',['defines.h',['../defines_8h.html',1,'']]],
   ['device_33',['Device',['../class_device.html',1,'Device'],['../class_device.html#a55ced7203bc0bee1136905db43002639',1,'Device::Device()']]],

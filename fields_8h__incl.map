@@ -1,12 +1,12 @@
 <map id="BaseStationCode/src/src/fields.h" name="BaseStationCode/src/src/fields.h">
-<area shape="rect" id="node1" title="Contains fields classes." alt="" coords="297,5,453,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="328,169,421,196"/>
-<area shape="rect" id="node9" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="333,95,417,121"/>
-<area shape="rect" id="node10" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="441,95,553,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,244,112,271"/>
-<area shape="rect" id="node4" title=" " alt="" coords="137,244,221,271"/>
-<area shape="rect" id="node5" title=" " alt="" coords="245,244,365,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="390,244,501,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="525,244,672,271"/>
-<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="696,244,792,271"/>
+<area shape="rect" id="node1" title="Contains fields classes." alt="" coords="252,5,408,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,169,377,196"/>
+<area shape="rect" id="node9" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="288,95,372,121"/>
+<area shape="rect" id="node10" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="397,95,509,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,244,89,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,244,176,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="201,244,321,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="345,244,456,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="481,244,627,271"/>
+<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,244,747,271"/>
 </map>

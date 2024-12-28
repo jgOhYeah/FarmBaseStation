@@ -91,12 +91,12 @@ Collaboration diagram for Device:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a55ced7203bc0bee1136905db43002639"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a55ced7203bc0bee1136905db43002639">Device</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, const char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>, <a class="el" href="class_lookup_manager.html">LookupManager</a>&lt; <a class="el" href="class_field.html">Field</a> &gt; &amp;<a class="el" href="class_device.html#a9e26e38ca9917312c21bed16d0310d6e">fields</a>)</td></tr>
 <tr class="separator:a55ced7203bc0bee1136905db43002639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7ef6f786d670584e3bf5818ce134a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#add7ef6f786d670584e3bf5818ce134a0">decodePacketFields</a> (uint8_t *payload, uint8_t length, StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;json)</td></tr>
-<tr class="memdesc:add7ef6f786d670584e3bf5818ce134a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON.  <a href="class_device.html#add7ef6f786d670584e3bf5818ce134a0">More...</a><br /></td></tr>
-<tr class="separator:add7ef6f786d670584e3bf5818ce134a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44edcfdcd677e11331e1423ddfd26a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a44edcfdcd677e11331e1423ddfd26a5e">decodePacketFields</a> (uint8_t *payload, uint8_t length, StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;json, int rssi, float snr)</td></tr>
-<tr class="memdesc:a44edcfdcd677e11331e1423ddfd26a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet metadata.  <a href="class_device.html#a44edcfdcd677e11331e1423ddfd26a5e">More...</a><br /></td></tr>
-<tr class="separator:a44edcfdcd677e11331e1423ddfd26a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35eba370894e0e1ec39f2043e466b2f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#a35eba370894e0e1ec39f2043e466b2f6">decodePacketFields</a> (uint8_t *payload, uint8_t length, JsonDocument &amp;json)</td></tr>
+<tr class="memdesc:a35eba370894e0e1ec39f2043e466b2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON.  <a href="class_device.html#a35eba370894e0e1ec39f2043e466b2f6">More...</a><br /></td></tr>
+<tr class="separator:a35eba370894e0e1ec39f2043e466b2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af62935178e82991678e319e5b840edbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="devices_8h.html#ada0c5d60d58ee3f1c52825cc1f1a8f1e">DecodeResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#af62935178e82991678e319e5b840edbf">decodePacketFields</a> (uint8_t *payload, uint8_t length, JsonDocument &amp;json, int rssi, float snr)</td></tr>
+<tr class="memdesc:af62935178e82991678e319e5b840edbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet metadata.  <a href="class_device.html#af62935178e82991678e319e5b840edbf">More...</a><br /></td></tr>
+<tr class="separator:af62935178e82991678e319e5b840edbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac068e8e17f6536cc63e1631e0ba5837c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device.html#ac068e8e17f6536cc63e1631e0ba5837c">rpcWaiting</a> ()</td></tr>
 <tr class="memdesc:ac068e8e17f6536cc63e1631e0ba5837c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a transmission is required.  <a href="class_device.html#ac068e8e17f6536cc63e1631e0ba5837c">More...</a><br /></td></tr>
 <tr class="separator:ac068e8e17f6536cc63e1631e0ba5837c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,8 +163,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="add7ef6f786d670584e3bf5818ce134a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add7ef6f786d670584e3bf5818ce134a0">&#9670;&nbsp;</a></span>decodePacketFields() <span class="overload">[1/2]</span></h2>
+<a id="a35eba370894e0e1ec39f2043e466b2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35eba370894e0e1ec39f2043e466b2f6">&#9670;&nbsp;</a></span>decodePacketFields() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +184,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">JsonDocument &amp;&#160;</td>
           <td class="paramname"><em>json</em>&#160;</td>
         </tr>
         <tr>
@@ -207,20 +207,20 @@ Public Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_add7ef6f786d670584e3bf5818ce134a0_cgraph.svg" width="495" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_device_a35eba370894e0e1ec39f2043e466b2f6_cgraph.svg" width="495" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_device_add7ef6f786d670584e3bf5818ce134a0_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_device_a35eba370894e0e1ec39f2043e466b2f6_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
 </div>
 </div>
-<a id="a44edcfdcd677e11331e1423ddfd26a5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44edcfdcd677e11331e1423ddfd26a5e">&#9670;&nbsp;</a></span>decodePacketFields() <span class="overload">[2/2]</span></h2>
+<a id="af62935178e82991678e319e5b840edbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af62935178e82991678e319e5b840edbf">&#9670;&nbsp;</a></span>decodePacketFields() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +240,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">StaticJsonDocument&lt; <a class="el" href="defines_8h.html#ac4a50545c27f8b44f53c981a63e95d51">MAX_JSON_TEXT_LENGTH</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">JsonDocument &amp;&#160;</td>
           <td class="paramname"><em>json</em>, </td>
         </tr>
         <tr>
@@ -277,7 +277,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_device_a44edcfdcd677e11331e1423ddfd26a5e_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_device_af62935178e82991678e319e5b840edbf_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

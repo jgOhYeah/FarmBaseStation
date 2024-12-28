@@ -74,8 +74,8 @@ $(function() {
 
 <p>Definitions and other preprocessor and global stuff.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;credentials.h&quot;</code><br />
-<code>#include &lt;Arduino.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;WiFi.h&gt;</code><br />
 <code>#include &lt;PubSubClient.h&gt;</code><br />
 <code>#include &lt;ArduinoJson.h&gt;</code><br />
 <code>#include &lt;PJONThroughLora.h&gt;</code><br />
@@ -97,6 +97,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a6beb8b88630834ce4e5c204ea4404803"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a6beb8b88630834ce4e5c204ea4404803">CONNECTION_METHOD</a>&#160;&#160;&#160;&quot;WiFi&quot;</td></tr>
+<tr class="separator:a6beb8b88630834ce4e5c204ea4404803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeebf956fc71944a6237c3af6a038ff70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#aeebf956fc71944a6237c3af6a038ff70">PJON_INCLUDE_TL</a></td></tr>
 <tr class="separator:aeebf956fc71944a6237c3af6a038ff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c6d5de492ac61ad29aec7aa9a436bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a>&#160;&#160;&#160;&quot;0.2.4&quot;</td></tr>
@@ -154,6 +156,20 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-12-19 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6beb8b88630834ce4e5c204ea4404803"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6beb8b88630834ce4e5c204ea4404803">&#9670;&nbsp;</a></span>CONNECTION_METHOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONNECTION_METHOD&#160;&#160;&#160;&quot;WiFi&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afdf406b7d439825893ac12961fa69980"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdf406b7d439825893ac12961fa69980">&#9670;&nbsp;</a></span>LOGD</h2>
 
@@ -188,7 +204,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a>();                        \</div>
 <div class="line">    ESP_LOGD(tag, format, ##__VA_ARGS__); \</div>
 <div class="line">    SERIAL_GIVE()</div>
-<div class="ttc" id="adefines_8h_html_a77591d84a8504abdfde9af4434c3ef76"><div class="ttname"><a href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a></div><div class="ttdeci">#define SERIAL_TAKE()</div><div class="ttdef"><b>Definition:</b> defines.h:53</div></div>
+<div class="ttc" id="adefines_8h_html_a77591d84a8504abdfde9af4434c3ef76"><div class="ttname"><a href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a></div><div class="ttdeci">#define SERIAL_TAKE()</div><div class="ttdef"><b>Definition:</b> defines.h:52</div></div>
 </div><!-- fragment -->
 </div>
 </div>

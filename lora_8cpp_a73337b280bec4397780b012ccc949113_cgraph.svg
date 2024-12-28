@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_device.html#add7ef6f786d670584e3bf5818ce134a0" target="_top" xlink:title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON.">
+<g id="a_node2"><a xlink:href="class_device.html#a35eba370894e0e1ec39f2043e466b2f6" target="_top" xlink:title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON.">
 <polygon fill="white" stroke="black" points="113,-38.5 113,-57.5 265,-57.5 265,-38.5 113,-38.5"/>
 <text text-anchor="middle" x="189" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Device::decodePacketFields</text>
 </a>

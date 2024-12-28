@@ -1,13 +1,13 @@
 <map id="BaseStationCode/src/src/devices.h" name="BaseStationCode/src/src/devices.h">
-<area shape="rect" id="node1" title="Devices and manager for all known devices the base station connects to." alt="" coords="257,5,413,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="328,244,421,271"/>
-<area shape="rect" id="node9" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="293,169,377,196"/>
-<area shape="rect" id="node10" href="$fields_8h.html" title="Contains fields classes." alt="" coords="376,95,445,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,319,112,345"/>
-<area shape="rect" id="node4" title=" " alt="" coords="137,319,221,345"/>
-<area shape="rect" id="node5" title=" " alt="" coords="245,319,365,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="390,319,501,345"/>
-<area shape="rect" id="node7" title=" " alt="" coords="525,319,672,345"/>
-<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="696,319,792,345"/>
-<area shape="rect" id="node11" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="452,169,564,196"/>
+<area shape="rect" id="node1" title="Devices and manager for all known devices the base station connects to." alt="" coords="212,5,368,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,244,377,271"/>
+<area shape="rect" id="node9" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="248,169,332,196"/>
+<area shape="rect" id="node10" href="$fields_8h.html" title="Contains fields classes." alt="" coords="331,95,401,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,319,89,345"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,319,176,345"/>
+<area shape="rect" id="node5" title=" " alt="" coords="201,319,321,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="345,319,456,345"/>
+<area shape="rect" id="node7" title=" " alt="" coords="481,319,627,345"/>
+<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,319,747,345"/>
+<area shape="rect" id="node11" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="407,169,519,196"/>
 </map>

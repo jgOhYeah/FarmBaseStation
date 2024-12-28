@@ -204,23 +204,23 @@ var sectionId = 'dynsection-0';
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="275,-0.5 275,-19.5 355,-19.5 355,-0.5 275,-0.5"/>
-<text text-anchor="middle" x="315" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">credentials.h</text>
+<polygon fill="white" stroke="#bfbfbf" points="300.5,-0.5 300.5,-19.5 363.5,-19.5 363.5,-0.5 300.5,-0.5"/>
+<text text-anchor="middle" x="332" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Arduino.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node2&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M390.54,-56.32C376.5,-47.9 354.95,-34.97 338.46,-25.07"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="339.8,-21.8 329.42,-19.65 336.2,-27.8 339.8,-21.8"/>
+<path fill="none" stroke="midnightblue" d="M393.27,-56.32C382.16,-48.11 365.26,-35.6 352.02,-25.81"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="354.06,-22.97 343.94,-19.83 349.9,-28.59 354.06,-22.97"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
 <g id="a_node4"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="373.5,-0.5 373.5,-19.5 436.5,-19.5 436.5,-0.5 373.5,-0.5"/>
-<text text-anchor="middle" x="405" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Arduino.h</text>
+<polygon fill="white" stroke="#bfbfbf" points="381.5,-0.5 381.5,-19.5 428.5,-19.5 428.5,-0.5 381.5,-0.5"/>
+<text text-anchor="middle" x="405" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">WiFi.h</text>
 </a>
 </g>
 </g>
@@ -234,61 +234,61 @@ var sectionId = 'dynsection-0';
 <g id="node5" class="node">
 <title>Node5</title>
 <g id="a_node5"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="455,-0.5 455,-19.5 545,-19.5 545,-0.5 455,-0.5"/>
-<text text-anchor="middle" x="500" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PubSubClient.h</text>
+<polygon fill="white" stroke="#bfbfbf" points="447,-0.5 447,-19.5 537,-19.5 537,-0.5 447,-0.5"/>
+<text text-anchor="middle" x="492" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PubSubClient.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node5 -->
 <g id="edge4" class="edge">
 <title>Node2&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M420.26,-56.32C435.22,-47.82 458.25,-34.73 475.73,-24.8"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="477.81,-27.64 484.77,-19.65 474.35,-21.55 477.81,-27.64"/>
+<path fill="none" stroke="midnightblue" d="M418.98,-56.32C432.55,-47.9 453.38,-34.97 469.32,-25.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="471.41,-27.9 478.06,-19.65 467.71,-21.95 471.41,-27.9"/>
 </g>
 <!-- Node6 -->
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="563.5,-0.5 563.5,-19.5 646.5,-19.5 646.5,-0.5 563.5,-0.5"/>
-<text text-anchor="middle" x="605" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArduinoJson.h</text>
+<polygon fill="white" stroke="#bfbfbf" points="555.5,-0.5 555.5,-19.5 638.5,-19.5 638.5,-0.5 555.5,-0.5"/>
+<text text-anchor="middle" x="597" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">ArduinoJson.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node2&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M435.81,-56.68C470.11,-47.42 525.71,-32.41 563.75,-22.14"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="564.75,-25.49 573.49,-19.51 562.93,-18.73 564.75,-25.49"/>
+<path fill="none" stroke="midnightblue" d="M435.42,-56.44C468.28,-47.2 520.78,-32.44 556.97,-22.26"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="558.04,-25.59 566.72,-19.52 556.15,-18.85 558.04,-25.59"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="147,-0.5 147,-19.5 257,-19.5 257,-0.5 147,-0.5"/>
-<text text-anchor="middle" x="202" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PJONThroughLora.h</text>
+<polygon fill="white" stroke="#bfbfbf" points="172,-0.5 172,-19.5 282,-19.5 282,-0.5 172,-0.5"/>
+<text text-anchor="middle" x="227" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PJONThroughLora.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node2&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M374.17,-56.8C339.45,-47.56 282.83,-32.5 244.07,-22.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="244.69,-18.74 234.13,-19.55 242.89,-25.5 244.69,-18.74"/>
+<path fill="none" stroke="midnightblue" d="M376.8,-56.44C346.59,-47.28 298.49,-32.69 264.97,-22.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="265.66,-19.07 255.07,-19.52 263.63,-25.77 265.66,-19.07"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:href="topics_8h.html" target="_top" xlink:title="MQTT topics for a thingsboard gateway.">
-<polygon fill="white" stroke="black" points="52,-0.5 52,-19.5 124,-19.5 124,-0.5 52,-0.5"/>
-<text text-anchor="middle" x="88" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/topics.h</text>
+<polygon fill="white" stroke="black" points="64,-0.5 64,-19.5 136,-19.5 136,-0.5 64,-0.5"/>
+<text text-anchor="middle" x="100" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/topics.h</text>
 </a>
 </g>
 </g>
 <!-- Node2&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
 <title>Node2&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M374.15,-59.91C324.41,-51.69 223.44,-34.89 138,-20 136.73,-19.78 135.44,-19.55 134.14,-19.32"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="134.5,-15.83 124.04,-17.54 133.28,-22.73 134.5,-15.83"/>
+<path fill="none" stroke="midnightblue" d="M374.36,-59.58C320.7,-50.07 209.43,-30.37 146.32,-19.2"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="146.71,-15.72 136.25,-17.42 145.49,-22.61 146.71,-15.72"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
@@ -443,8 +443,8 @@ var sectionId = 'dynsection-0';
 <!-- Node16&#45;&gt;Node8 -->
 <g id="edge29" class="edge">
 <title>Node16&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M137.41,-280.34C119.33,-263.02 82,-222.03 82,-179 82,-179 82,-179 82,-121 82,-88.9 84.58,-51.61 86.36,-29.73"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="89.86,-29.81 87.22,-19.55 82.89,-29.22 89.86,-29.81"/>
+<path fill="none" stroke="midnightblue" d="M137.41,-280.34C119.33,-263.02 82,-222.03 82,-179 82,-179 82,-179 82,-121 82,-88.54 89.73,-51.38 95.06,-29.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="98.49,-30.32 97.57,-19.76 91.71,-28.59 98.49,-30.32"/>
 </g>
 <!-- Node16&#45;&gt;Node10 -->
 <g id="edge33" class="edge">

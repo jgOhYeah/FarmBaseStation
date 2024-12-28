@@ -1,10 +1,10 @@
 <map id="BaseStationCode/src/src/conversions.h" name="BaseStationCode/src/src/conversions.h">
-<area shape="rect" id="node1" title="General functions for converting to and from char arrays." alt="" coords="297,5,453,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="328,95,421,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,169,112,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="137,169,221,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="245,169,365,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="390,169,501,196"/>
-<area shape="rect" id="node7" title=" " alt="" coords="525,169,672,196"/>
-<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="696,169,792,196"/>
+<area shape="rect" id="node1" title="General functions for converting to and from char arrays." alt="" coords="252,5,408,47"/>
+<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,95,377,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,89,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="113,169,176,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="201,169,321,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="345,169,456,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="481,169,627,196"/>
+<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,169,747,196"/>
 </map>
