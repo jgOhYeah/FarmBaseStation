@@ -117,24 +117,24 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="defines_8h.html#a81dee8e36f61410d32bf9686d682e467">   53</a></span>&#160;<span class="preprocessor">#define SERIAL_GIVE() xSemaphoreGive(serialMutex)</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="defines_8h.html#a8ab3f271bb9e86231c5a9627d7cfd95f">   54</a></span>&#160;<span class="preprocessor">#define LOGV(tag, format, ...)            \</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    SERIAL_TAKE();                        \</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    ESP_LOGV(tag, format, ##__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    SERIAL_GIVE()</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    log_v(&quot;[&quot;</span> tag &quot;] &quot; format, ##__VA_ARGS__); \</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    SERIAL_GIVE()</div>
 <div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="defines_8h.html#afdf406b7d439825893ac12961fa69980">   58</a></span>&#160;<span class="preprocessor">#define LOGD(tag, format, ...)            \</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    SERIAL_TAKE();                        \</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    ESP_LOGD(tag, format, ##__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">    SERIAL_GIVE()</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    log_d(&quot;[&quot;</span> tag &quot;] &quot; format, ##__VA_ARGS__); \</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    SERIAL_GIVE()</div>
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="defines_8h.html#a1688db883baa23d21b46385ee1c1ce03">   62</a></span>&#160;<span class="preprocessor">#define LOGI(tag, format, ...)            \</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">    SERIAL_TAKE();                        \</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">    ESP_LOGI(tag, format, ##__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">    SERIAL_GIVE()</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">    log_i(&quot;[&quot;</span> tag &quot;] &quot; format, ##__VA_ARGS__); \</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    SERIAL_GIVE()</div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="defines_8h.html#a1d8f896407d20e4582abfae30edd3d65">   66</a></span>&#160;<span class="preprocessor">#define LOGW(tag, format, ...)            \</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">    SERIAL_TAKE();                        \</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">    ESP_LOGW(tag, format, ##__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">    SERIAL_GIVE()</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">    log_w(&quot;[&quot;</span> tag &quot;] &quot; format, ##__VA_ARGS__); \</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    SERIAL_GIVE()</div>
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="defines_8h.html#a8b7497afe2144f4901b6a3836de53235">   70</a></span>&#160;<span class="preprocessor">#define LOGE(tag, format, ...)            \</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">    SERIAL_TAKE();                        \</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    ESP_LOGE(tag, format, ##__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">    SERIAL_GIVE()</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">    log_e(&quot;[&quot;</span> tag &quot;] &quot; format, ##__VA_ARGS__); \</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    SERIAL_GIVE()</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// https://gcc.gnu.org/onlinedocs/gcc-4.8.5/cpp/Stringification.html</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="defines_8h.html#a0799be6ced379688a49c8a981927d1d5">   76</a></span>&#160;<span class="preprocessor">#define xstringify(s) stringify(s)</span></div>
