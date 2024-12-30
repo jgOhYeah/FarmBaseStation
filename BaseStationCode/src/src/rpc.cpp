@@ -219,5 +219,10 @@ void setVersionAttribute()
     version["pio-plat-vers"] = PIO_PLATFORM_VERSION;
     version["pio-framework"] = PIO_FRAMEWORK;
     serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
-    xQueueSend(mqttPublishQueue, (void*)&msg, portMAX_DELAY);
+    // Don't use a queue as that may be full if reconnecting after a long time being disconnected.
+    // xQueueSend(mqttPublishQueue, (void*)&msg, portMAX_DELAY);
+    xSemaphoreTake(mqttMutex, portMAX_DELAY);
+    LOGI("DEVICES", "Sending version attribute.");
+    mqtt.publish(msg.topic, msg.payload);
+    xSemaphoreGive(mqttMutex);
 }

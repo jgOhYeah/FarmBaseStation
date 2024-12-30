@@ -122,11 +122,12 @@ void mqttConnect()
         // Wait until ethernet is connected.
         if (!ethernetConnected)
         {
-            
+            LOGD("Networking", "Waiting for ethernet to connect.");
             while(!ethernetConnected)
             {
                 vTaskDelay(10 * portTICK_PERIOD_MS);
             }
+            LOGD("Networking", "Ethernet is now connected.");
             SET_NETWORK_STATE(NETWORK_MQTT_CONNECTING);
         }
 #else
@@ -148,7 +149,7 @@ void mqttConnect()
     }
     LOGI("Networking", "Connected to broker.");
     xSemaphoreGive(mqttMutex);
-    setVersionAttribute();
+    setVersionAttribute(); // Needs to publish directy in case queue is full.
     deviceManager.connectDevices(); // Publish the connected devices
 }
 

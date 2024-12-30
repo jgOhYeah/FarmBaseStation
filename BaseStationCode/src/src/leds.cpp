@@ -8,6 +8,7 @@
  */
 #include "leds.h"
 
+extern bool otaUpdating;
 extern NetworkState networkState;
 extern AlarmState alarmState;
 extern DeviceManager deviceManager;
@@ -66,99 +67,116 @@ void ledTask(void *pvParameters)
         NetworkState networkStateCopy = networkState;
         bool txRequired = deviceManager.txRequired(); // Still liable to change.
         uint32_t lastLoRaTimeCopy = lastLoRaTime;
+        bool otaUpdatingCopy = otaUpdating;
         xSemaphoreGive(stateUpdateMutex);
 
-        // Handle each state in the priority Alarms > Networking > Other stuff.
-        switch (alarmStateCopy)
+        // Handle each state in the priority OTA updates > Alarms > Networking > Other stuff.
+        if (!otaUpdatingCopy)
         {
-        case ALARM_HIGH:
-            // High priority alarms
-            ledBuiltin.set(true);
-            SET_LED_TOP(true);
-            SET_LED_INSIDE(true);
-            if (!NOTIFY_DELAY(500))
+            // Not in the middle of an update.
+            switch (alarmStateCopy)
             {
-                // No event, keep going
-                SET_LED_TOP(false);
-                SET_LED_INSIDE(false);
-                ledBuiltin.set(false);
-                NOTIFY_DELAY(500);
-            }
-            break;
-
-        case ALARM_OFF:
-            // No alarm, so use the LEDs for other status indication.
-            switch (networkStateCopy)
-            {
-            case NETWORK_NONE:
-                ledBuiltin.set(true); // Show that we are displaying the network state.
+            case ALARM_HIGH:
+                // High priority alarms
+                ledBuiltin.set(true);
                 SET_LED_TOP(true);
                 SET_LED_INSIDE(true);
-                break;
-
-            case NETWORK_WIFI_CONNECTING:
-                // On for a short time, off for long time.
-                SET_LED_TOP(false);
-                SET_LED_INSIDE(true);
-                ledBuiltin.set(true); // Show that we are displaying the network state.
-                if (!NOTIFY_DELAY(100))
+                if (!NOTIFY_DELAY(500))
                 {
                     // No event, keep going
+                    SET_LED_TOP(false);
                     SET_LED_INSIDE(false);
                     ledBuiltin.set(false);
-                    NOTIFY_DELAY(900);
+                    NOTIFY_DELAY(500);
                 }
                 break;
 
-            case NETWORK_MQTT_CONNECTING:
-                // On for a long time, off for a short time.
-                SET_LED_TOP(false);
-                SET_LED_INSIDE(true);
-                ledBuiltin.set(true); // Show that we are displaying the network state.
-                if (!NOTIFY_DELAY(900))
+            case ALARM_OFF:
+                // No alarm, so use the LEDs for other status indication.
+                switch (networkStateCopy)
                 {
-                    // No event, keep going
-                    SET_LED_INSIDE(false);
-                    ledBuiltin.set(false);
-                    NOTIFY_DELAY(100);
+                case NETWORK_NONE:
+                    ledBuiltin.set(true); // Show that we are displaying the network state.
+                    SET_LED_TOP(true);
+                    SET_LED_INSIDE(true);
+                    break;
+
+                case NETWORK_WIFI_CONNECTING:
+                    // On for a short time, off for long time.
+                    SET_LED_TOP(false);
+                    SET_LED_INSIDE(true);
+                    ledBuiltin.set(true); // Show that we are displaying the network state.
+                    if (!NOTIFY_DELAY(100))
+                    {
+                        // No event, keep going
+                        SET_LED_INSIDE(false);
+                        ledBuiltin.set(false);
+                        NOTIFY_DELAY(900);
+                    }
+                    break;
+
+                case NETWORK_MQTT_CONNECTING:
+                    // On for a long time, off for a short time.
+                    SET_LED_TOP(false);
+                    SET_LED_INSIDE(true);
+                    ledBuiltin.set(true); // Show that we are displaying the network state.
+                    if (!NOTIFY_DELAY(900))
+                    {
+                        // No event, keep going
+                        SET_LED_INSIDE(false);
+                        ledBuiltin.set(false);
+                        NOTIFY_DELAY(100);
+                    }
+                    break;
+
+                case NETWORK_CONNECTED:
+                default:
+                    // Network is happy, so show the radio status.
+                    // Show that we are not displaying the network state.
+                    SET_LED_INSIDE(true);
+                    if (millis() - lastLoRaTimeCopy < LORA_LED_FLASH_TIME)
+                    {
+                        // TX or RX happened recently.
+                        SET_LED_TOP(!txRequired);
+                        ledBuiltin.set(!txRequired);
+                    }
+                    else
+                    {
+                        // No TX or RX recently.
+                        SET_LED_TOP(txRequired);
+                        ledBuiltin.set(txRequired);
+                    }
                 }
                 break;
 
-            case NETWORK_CONNECTED:
+            case ALARM_MEDIUM:
             default:
-                // Network is happy, so show the radio status.
-                // Show that we are not displaying the network state.
+                // OTher alarms.
+                SET_LED_TOP(true);
                 SET_LED_INSIDE(true);
-                if (millis() - lastLoRaTimeCopy < LORA_LED_FLASH_TIME)
+                ledBuiltin.set(true);
+                if (!NOTIFY_DELAY(1000))
                 {
-                    // TX or RX happened recently.
-                    SET_LED_TOP(!txRequired);
-                    ledBuiltin.set(!txRequired);
-                }
-                else
-                {
-                    // No TX or RX recently.
-                    SET_LED_TOP(txRequired);
-                    ledBuiltin.set(txRequired);
+                    // No event, keep going
+                    SET_LED_TOP(false);
+                    SET_LED_INSIDE(false);
+                    ledBuiltin.set(true);
+                    NOTIFY_DELAY(4000);
                 }
             }
-            break;
-
-        case ALARM_MEDIUM:
-        default:
-            // OTher alarms.
+            taskYIELD();
+        }
+        else
+        {
+            // In the middle of an update, flash some LEDs.
             SET_LED_TOP(true);
             SET_LED_INSIDE(true);
             ledBuiltin.set(true);
-            if (!NOTIFY_DELAY(1000))
-            {
-                // No event, keep going
-                SET_LED_TOP(false);
-                SET_LED_INSIDE(false);
-                ledBuiltin.set(true);
-                NOTIFY_DELAY(4000);
-            }
+            NOTIFY_DELAY(100);
+            SET_LED_TOP(false);
+            SET_LED_INSIDE(false);
+            ledBuiltin.set(false);
+            NOTIFY_DELAY(100);
         }
-        taskYIELD();
     }
 }

@@ -44,6 +44,7 @@ AlarmState alarmState;
 NetworkState networkState;
 uint32_t lastLoRaTime;
 TaskHandle_t ledTaskHandle;
+bool otaUpdating = false;
 
 #define PIO_VERSION_STR "Env=" PIO_ENV ", Platform=" PIO_PLATFORM " (" PIO_PLATFORM_VERSION "), FRAMEWORK=" PIO_FRAMEWORK "."
 

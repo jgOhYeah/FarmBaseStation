@@ -71,7 +71,8 @@ Field *waterBabyFieldsList[] = {
 
 Field *fenceMonitorFieldsList[] = {
     new FIELD_BATTERY_VOLTAGE,
-    new FIELD_FENCE_VOLTAGE
+    new FIELD_FENCE_VOLTAGE,
+    new FIELD_TEMPERATURE
 };
 
 Field *gateMonitorFieldsList[] = {

@@ -10,22 +10,32 @@
 extern SemaphoreHandle_t serialMutex;
 extern SemaphoreHandle_t stateUpdateMutex;
 extern NetworkState networkState;
+extern bool otaUpdating;
+extern TaskHandle_t ledTaskHandle;
 
 #ifdef OTA_ENABLE
+
+#define SET_OTA_STATE(STATE)                         \
+    xSemaphoreTake(stateUpdateMutex, portMAX_DELAY); \
+    otaUpdating = STATE;                             \
+    xSemaphoreGive(stateUpdateMutex);                \
+    xTaskNotifyGive(ledTaskHandle) // Tell the led task something changed.
+
 void OTAManager::setupOTA()
 {
-    LOGV("OTA", "Waiting for network");
-    
+    LOGD("OTA", "Waiting for network");
+
     // Wait until the network is connected before initialising.
     NetworkState networkStateCopy;
-    do {
+    do
+    {
         xSemaphoreTake(stateUpdateMutex, portMAX_DELAY);
         networkStateCopy = networkState;
         xSemaphoreGive(stateUpdateMutex);
         vTaskDelay(100 / portTICK_PERIOD_MS);
     } while (networkStateCopy != NETWORK_CONNECTED && networkStateCopy != NETWORK_MQTT_CONNECTING);
 
-    LOGV("OTA", "OTA initialising");
+    LOGD("OTA", "OTA initialising");
 
     // Set config
     ArduinoOTA.setPort(OTA_PORT);
@@ -54,16 +64,18 @@ void OTAManager::otaStartCallback()
         // U_SPIFFS
         LOGI("OTA", "Filesystem updating");
     }
+    SET_OTA_STATE(true);
 }
 
 void OTAManager::otaEndCallback()
 {
     LOGI("OTA", "Update finished");
+    SET_OTA_STATE(false);
 }
 
 void OTAManager::otaProgressCallback(unsigned int progress, unsigned int total)
 {
-    LOGV("OTA", "Progress: (%u/%u) %u%%", progress, total, (progress / (total / 100)));
+    LOGD("OTA", "Progress: (%u/%u) %u%%", progress, total, (progress / (total / 100)));
 }
 
 void OTAManager::otaErrorCallback(ota_error_t error)

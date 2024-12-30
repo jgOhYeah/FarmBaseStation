@@ -38,7 +38,7 @@
 #include <TunePlayer.h>
 #endif
 
-#define VERSION "0.2.4"
+#define VERSION "0.2.5"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 

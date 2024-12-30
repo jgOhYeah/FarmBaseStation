@@ -64,6 +64,7 @@ void setAttributeState(const char* const attribute, bool state);
 
 /**
  * @brief Informs thingsboard what software version is running.
+ * This does not use a queue as this could be sent upon reconnecting when the queue is full and before it has had a chance to recover, thus blocking forever if a queue is used.
  * 
  */
 void setVersionAttribute();
