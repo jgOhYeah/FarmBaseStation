@@ -142,7 +142,7 @@ var sectionId = 'dynsection-6';
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="rpc_8cpp.html#a966e66eaf82bb85dffba775b5442f3f6" target="_top" xlink:title="Informs thingsboard what software version is running.">
+<g id="a_node12"><a xlink:href="rpc_8cpp.html#a966e66eaf82bb85dffba775b5442f3f6" target="_top" xlink:title="Informs thingsboard what software version is running. This does not use a queue as this could be sent...">
 <polygon fill="white" stroke="black" points="278,-38.5 278,-57.5 388,-57.5 388,-38.5 278,-38.5"/>
 <text text-anchor="middle" x="333" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">setVersionAttribute</text>
 </a>

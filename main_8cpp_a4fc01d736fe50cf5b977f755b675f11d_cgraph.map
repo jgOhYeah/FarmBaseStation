@@ -20,7 +20,7 @@
 <area shape="rect" id="node17" href="$class_device_manager.html#ac06f3334d0776ed6fd7fd0f71248d6b3" title="Registers each device to Thingsboard over MQTT." alt="" coords="507,715,741,741"/>
 <area shape="rect" id="node18" href="$networking_8cpp.html#a91d98374ed6fc205a7a2c9e2ef00dd97" title=" " alt="" coords="567,765,681,792"/>
 <area shape="rect" id="node25" href="$networking_8cpp.html#ab2d5192ed1436350b19a2a4ccb2053c3" title="Subscribes to the required topics." alt="" coords="579,613,669,640"/>
-<area shape="rect" id="node26" href="$rpc_8cpp.html#a966e66eaf82bb85dffba775b5442f3f6" title="Informs thingsboard what software version is running." alt="" coords="551,664,697,691"/>
+<area shape="rect" id="node26" href="$rpc_8cpp.html#a966e66eaf82bb85dffba775b5442f3f6" title="Informs thingsboard what software version is running. This does not use a queue as this could be sent..." alt="" coords="551,664,697,691"/>
 <area shape="rect" id="node19" href="$rpc_8cpp.html#a4cfe66424e5527493ec95bc8ffed5bc7" title="Handles an RPC message addressed to remote devices." alt="" coords="856,715,956,741"/>
 <area shape="rect" id="node22" href="$rpc_8cpp.html#ae128ecfe100603224c2fda1ff5f5ce0a" title="Handles an RPC message addressed to this device (not one of the remote devices)." alt="" coords="875,765,937,792"/>
 <area shape="rect" id="node24" href="$rpc_8cpp.html#adfc4d7c2e3b046a5fb41b597ebd9f727" title="Checks if one string starts with another (quicker than strstr?)" alt="" coords="861,816,951,843"/>

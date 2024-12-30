@@ -339,7 +339,7 @@
 <!-- Node26 -->
 <g id="node26" class="node">
 <title>Node26</title>
-<g id="a_node26"><a xlink:href="rpc_8cpp.html#a966e66eaf82bb85dffba775b5442f3f6" target="_top" xlink:title="Informs thingsboard what software version is running.">
+<g id="a_node26"><a xlink:href="rpc_8cpp.html#a966e66eaf82bb85dffba775b5442f3f6" target="_top" xlink:title="Informs thingsboard what software version is running. This does not use a queue as this could be sent...">
 <polygon fill="white" stroke="black" points="409,-114.5 409,-133.5 519,-133.5 519,-114.5 409,-114.5"/>
 <text text-anchor="middle" x="464" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">setVersionAttribute</text>
 </a>
