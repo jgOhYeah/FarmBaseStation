@@ -222,7 +222,7 @@ void setVersionAttribute()
     // Don't use a queue as that may be full if reconnecting after a long time being disconnected.
     // xQueueSend(mqttPublishQueue, (void*)&msg, portMAX_DELAY);
     xSemaphoreTake(mqttMutex, portMAX_DELAY);
-    LOGI("DEVICES", "Sending version attribute.");
+    LOGD("RPC", "Sending version attribute.");
     mqtt.publish(msg.topic, msg.payload);
     xSemaphoreGive(mqttMutex);
 }

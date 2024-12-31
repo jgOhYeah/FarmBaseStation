@@ -30,11 +30,11 @@ public:
      * @param length the amount of data remaining from the start of bytes.
      * @param json the document to place the results into.
      */
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+    int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
 
     /**
      * @brief Encodes the value to set into a packet ready to send if needed.
-     * 
+     *
      * @param bytes the payload to place in.
      * @param length the available length.
      * @returns the number of bytes used, including the symbol for the field.
@@ -51,7 +51,7 @@ public:
      *
      * @param reply
      */
-    virtual void handleRpc(JsonObject &data,  JsonObject &replyData);
+    virtual void handleRpc(JsonObject &data, JsonObject &replyData);
 
     const uint8_t encodedLength;
     bool txRequired = false;
@@ -65,6 +65,15 @@ protected:
      * @return false otherwise.
      */
     bool checkDecodeable(uint8_t length);
+
+    /**
+     * @brief Decodes the value from bytes into an existing json document. decode does the checking for length, so this doesn't need to.
+     *
+     * @param bytes the data to decode.
+     * @param length the amount of data remaining from the start of bytes.
+     * @param json the document to place the results into.
+     */
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -91,7 +100,7 @@ public:
      *
      * @param reply
      */
-    virtual void handleRpc(JsonObject &data,  JsonObject &replyData);
+    virtual void handleRpc(JsonObject &data, JsonObject &replyData);
 
 protected:
     /**
@@ -106,14 +115,15 @@ protected:
 
 /**
  * @brief Field for decoding 1 byte signed data in tenths.
- * 
+ *
  */
 class TenthsByteField : public Field
 {
 public:
     TenthsByteField(const char *name, char symbol) : Field(name, symbol, 1) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -125,7 +135,8 @@ class TenthsField : public Field
 public:
     TenthsField(const char *name, char symbol) : Field(name, symbol, 2) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -137,7 +148,8 @@ class LongUIntField : public Field
 public:
     LongUIntField(const char *name, char symbol) : Field(name, symbol, 4) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -149,7 +161,8 @@ class ByteField : public Field
 public:
     ByteField(const char *name, char symbol) : Field(name, symbol, 1) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -162,16 +175,17 @@ class SettableByteField : public SettableField<int8_t>
 public:
     SettableByteField(const char *name, char symbol) : SettableField(name, symbol, 1) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
-
     /**
      * @brief Encodes the value to set into a packet ready to send.
-     * 
+     *
      * @param bytes the payload to place in.
      * @param length the available length.
      * @returns the number of bytes used, including the symbol for the field.
      */
     virtual int8_t encode(uint8_t *bytes, uint8_t length);
+
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -183,7 +197,8 @@ class FlagField : public Field
 public:
     FlagField(const char *name, char symbol) : Field(name, symbol, 0) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -195,16 +210,17 @@ class SettableFlagField : public SettableField<int8_t>
 public:
     SettableFlagField(const char *name, char symbol) : SettableField(name, symbol, 0) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
-
     /**
      * @brief Encodes the value to set into a packet ready to send.
-     * 
+     *
      * @param bytes the payload to place in.
      * @param length the available length.
      * @returns the number of bytes used, including the symbol for the field.
      */
     virtual int8_t encode(uint8_t *bytes, uint8_t length);
+
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -216,7 +232,8 @@ class PumpOnTimeField : public Field
 public:
     PumpOnTimeField(const char *name, char symbol) : Field(name, symbol, 2) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
 
 /**
@@ -228,5 +245,6 @@ class UIntField : public Field
 public:
     UIntField(const char *name, char symbol) : Field(name, symbol, 2) {}
 
-    virtual int8_t decode(uint8_t *bytes, uint8_t length, JsonObject &json);
+protected:
+    virtual int8_t actuallyDecode(uint8_t *bytes, uint8_t length, JsonObject &json);
 };
