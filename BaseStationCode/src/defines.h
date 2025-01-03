@@ -26,6 +26,7 @@
 
 // LoRa
 #define PJON_INCLUDE_TL
+#define TL_RESPONSE_DELAY 50 // The PICAXE microcontrollers on the other end are pretty slow.
 #include <PJONThroughLora.h>
 
 // OTA (enable or disable in credentials.h)
