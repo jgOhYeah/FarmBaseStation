@@ -1,6 +1,8 @@
 <map id="Device::decodePacketFields" name="Device::decodePacketFields">
-<area shape="rect" id="node1" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet ..." alt="" coords="5,31,208,57"/>
-<area shape="rect" id="node2" href="$class_device.html#a35eba370894e0e1ec39f2043e466b2f6" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="256,31,459,57"/>
-<area shape="rect" id="node3" href="$class_field.html#aa036e196f5805e9406b8169200e3915a" title="Decodes the value from bytes into an existing json document." alt="" coords="569,5,677,32"/>
-<area shape="rect" id="node4" href="$class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" title="Gets the object with the given symbol." alt="" coords="507,56,740,83"/>
+<area shape="rect" id="node1" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet ..." alt="" coords="5,56,208,83"/>
+<area shape="rect" id="node2" href="$class_device.html#a35eba370894e0e1ec39f2043e466b2f6" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="256,56,459,83"/>
+<area shape="rect" id="node3" href="$class_field.html#aa036e196f5805e9406b8169200e3915a" title="Decodes the value from bytes into an existing json document." alt="" coords="569,31,677,57"/>
+<area shape="rect" id="node6" href="$class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" title="Gets the object with the given symbol." alt="" coords="507,81,740,108"/>
+<area shape="rect" id="node4" href="$class_field.html#a536d757818e186d83b2ab71415bb0bba" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="795,5,957,32"/>
+<area shape="rect" id="node5" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="788,56,964,83"/>
 </map>

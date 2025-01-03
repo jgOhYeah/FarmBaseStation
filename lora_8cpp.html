@@ -96,11 +96,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aef164eaa7a67eb3153407eb4b601f4f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aef164eaa7a67eb3153407eb4b601f4f0">pjonError</a> (uint8_t code, uint16_t data, void *customPointer)</td></tr>
 <tr class="memdesc:aef164eaa7a67eb3153407eb4b601f4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs PJON errors.  <a href="lora_8cpp.html#aef164eaa7a67eb3153407eb4b601f4f0">More...</a><br /></td></tr>
 <tr class="separator:aef164eaa7a67eb3153407eb4b601f4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8801dfe2a42386ac27371814cc9f987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987">fakeReceiveTask</a> (void *pvParameters)</td></tr>
-<tr class="memdesc:aa8801dfe2a42386ac27371814cc9f987"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Receives" some fake data for testing purposes.  <a href="lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987">More...</a><br /></td></tr>
-<tr class="separator:aa8801dfe2a42386ac27371814cc9f987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6042a1af9411d9eafc7088497f536eb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8">pjonTask</a> (void *pvParameters)</td></tr>
-<tr class="memdesc:a6042a1af9411d9eafc7088497f536eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that manages the pjon protocol and radio.  <a href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8">More...</a><br /></td></tr>
+<tr class="memdesc:a6042a1af9411d9eafc7088497f536eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Receives" some fake data for testing purposes.  <a href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8">More...</a><br /></td></tr>
 <tr class="separator:a6042a1af9411d9eafc7088497f536eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e6522afd1447f1520e4f4503af9ec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5">loraWatchdogTask</a> (void *pvParameters)</td></tr>
 <tr class="memdesc:ac5e6522afd1447f1520e4f4503af9ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task that checks if the radio is connected.  <a href="lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5">More...</a><br /></td></tr>
@@ -118,7 +115,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ab9cd66992a99394d4aa4030fcdbf6182"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for if there are packets left to send.  <a href="lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182">More...</a><br /></td></tr>
 <tr class="separator:ab9cd66992a99394d4aa4030fcdbf6182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d91a7f25182323f789a4e986c08cd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8">sendOnTxNotRequired</a> (bool previous)</td></tr>
-<tr class="memdesc:ab4d91a7f25182323f789a4e986c08cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the attribute waiting to false if required.  <a href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8">More...</a><br /></td></tr>
+<tr class="memdesc:ab4d91a7f25182323f789a4e986c08cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the attribute waiting to false if required.  <a href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8">More...</a><br /></td></tr>
 <tr class="separator:ab4d91a7f25182323f789a4e986c08cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -188,32 +185,6 @@ Variables</h2></td></tr>
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_afbd9f56608d04cb8a75d69112cd89885_icgraph.svg" width="394" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
-
-</div>
-</div>
-<a id="aa8801dfe2a42386ac27371814cc9f987"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8801dfe2a42386ac27371814cc9f987">&#9670;&nbsp;</a></span>fakeReceiveTask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fakeReceiveTask </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pvParameters</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>"Receives" some fake data for testing purposes. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_aa8801dfe2a42386ac27371814cc9f987_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -389,7 +360,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a0b02ed993c4ccbea85307991879844a6_cgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a0b02ed993c4ccbea85307991879844a6_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -453,13 +424,13 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_cgraph.svg" width="646" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_cgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_icgraph.svg" width="399" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="lora_8cpp_a73337b280bec4397780b012ccc949113_icgraph.svg" width="371" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -481,6 +452,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>"Receives" some fake data for testing purposes. </p>
 <p>Task that manages the pjon protocol and radio. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
@@ -513,7 +485,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>updates the attribute waiting to false if required. </p>
+<p>Updates the attribute waiting to false if required. </p>
+<p>The update occurs if no more messages need to be sent and a message was sent in the previous iteration (previous is true). If so, false is returned, otherwise previous.</p>
 <dl class="section return"><dt>Returns</dt><dd>the new value for whether there was a message to send in the previous loop. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>

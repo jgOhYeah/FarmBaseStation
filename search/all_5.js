@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['fakereceivetask_44',['fakeReceiveTask',['../lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987',1,'fakeReceiveTask(void *pvParameters):&#160;lora.cpp'],['../lora_8h.html#aa8801dfe2a42386ac27371814cc9f987',1,'fakeReceiveTask(void *pvParameters):&#160;lora.cpp']]],
   ['fencefieldslist_45',['fenceFieldsList',['../device__list_8h.html#af3ab56b2304bf0956530586379f2f884',1,'device_list.h']]],
   ['fencefieldsmanager_46',['fenceFieldsManager',['../device__list_8h.html#aa22abf19c8cc72a90882aea9563b70e0',1,'device_list.h']]],
   ['fencemonitorfieldslist_47',['fenceMonitorFieldsList',['../device__list_8h.html#a37613d90d9883ba23125d745649a426a',1,'device_list.h']]],

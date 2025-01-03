@@ -1,5 +1,5 @@
 <map id="sendOnTxNotRequired" name="sendOnTxNotRequired">
-<area shape="rect" id="node1" title="updates the attribute waiting to false if required." alt="" coords="252,5,420,32"/>
+<area shape="rect" id="node1" title="Updates the attribute waiting to false if required." alt="" coords="252,5,420,32"/>
 <area shape="rect" id="node2" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,5,204,32"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,32"/>
 </map>

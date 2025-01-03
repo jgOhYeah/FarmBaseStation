@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$lora_8cpp.html#afbd9f56608d04cb8a75d69112cd89885" title="Task for printing out a byte array." alt="" coords="165,5,301,32"/>
 <area shape="rect" id="node3" href="$class_device.html#a0fc7e0f4a048d2b7010c7bc6882bb987" title="Generates a packet containing all the fields and instructions to set." alt="" coords="145,56,320,83"/>
 <area shape="rect" id="node5" href="$class_device.html#ac068e8e17f6536cc63e1631e0ba5837c" title="Checks if a transmission is required." alt="" coords="161,107,305,133"/>
-<area shape="rect" id="node6" href="$lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" title="updates the attribute waiting to false if required." alt="" coords="149,208,317,235"/>
+<area shape="rect" id="node6" href="$lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" title="Updates the attribute waiting to false if required." alt="" coords="149,208,317,235"/>
 <area shape="rect" id="node7" href="$lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182" title="Sets the state for if there are packets left to send." alt="" coords="397,157,542,184"/>
 <area shape="rect" id="node4" href="$class_field.html#a8411bfb2768fb0ea256f83f40941ba75" title="Encodes the value to set into a packet ready to send if needed." alt="" coords="415,56,523,83"/>
 <area shape="rect" id="node9" href="$class_device_manager.html#ac356dbc3ba069ca92c67825081d7a8a8" title="Returns the number of packets that need to be sent across all devices." alt="" coords="368,208,571,235"/>

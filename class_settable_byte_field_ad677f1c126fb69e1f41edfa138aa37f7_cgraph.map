@@ -1,5 +1,0 @@
-<map id="SettableByteField::decode" name="SettableByteField::decode">
-<area shape="rect" id="node1" title="Decodes the value from bytes into an existing json document." alt="" coords="5,27,151,69"/>
-<area shape="rect" id="node2" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="199,5,375,32"/>
-<area shape="rect" id="node3" href="$class_settable_field.html#a6ee15f7dd88d8e012b9a01912134a905" title="Updates txRequired (if setValue == current, then not required)." alt="" coords="211,57,362,98"/>
-</map>

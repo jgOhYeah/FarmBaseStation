@@ -1,9 +1,8 @@
 <map id="Device::decodePacketFields" name="Device::decodePacketFields">
-<area shape="rect" id="node1" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="541,31,744,57"/>
-<area shape="rect" id="node2" href="$class_device.html#af62935178e82991678e319e5b840edbf" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet ..." alt="" coords="291,5,493,32"/>
-<area shape="rect" id="node3" href="$lora_8cpp.html#a73337b280bec4397780b012ccc949113" title="Handles an incoming packet received from the radio and adds the given snr and rssi to the packet." alt="" coords="341,56,443,83"/>
-<area shape="rect" id="node4" href="$lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="112,5,243,32"/>
-<area shape="rect" id="node5" href="$lora_8cpp.html#a0b02ed993c4ccbea85307991879844a6" title="Handles an incoming packet received from the radio. Uses the latest received snr and rssi." alt="" coords="126,56,229,83"/>
-<area shape="rect" id="node6" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="Task that manages the pjon protocol and radio." alt="" coords="138,107,217,133"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,107,64,133"/>
+<area shape="rect" id="node1" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="513,31,716,57"/>
+<area shape="rect" id="node2" href="$class_device.html#af62935178e82991678e319e5b840edbf" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON. Also adds on packet ..." alt="" coords="263,5,465,32"/>
+<area shape="rect" id="node3" href="$lora_8cpp.html#a73337b280bec4397780b012ccc949113" title="Handles an incoming packet received from the radio and adds the given snr and rssi to the packet." alt="" coords="313,56,415,83"/>
+<area shape="rect" id="node4" href="$lora_8cpp.html#a0b02ed993c4ccbea85307991879844a6" title="Handles an incoming packet received from the radio. Uses the latest received snr and rssi." alt="" coords="112,31,215,57"/>
+<area shape="rect" id="node5" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="124,81,203,108"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,81,64,108"/>
 </map>

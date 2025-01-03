@@ -63,6 +63,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_tenths_field-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TenthsField Class Reference</div>  </div>
@@ -90,12 +91,12 @@ Collaboration diagram for TenthsField:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a22f880e3fd6342369bc4728c19d01197"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tenths_field.html#a22f880e3fd6342369bc4728c19d01197">TenthsField</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>)</td></tr>
 <tr class="separator:a22f880e3fd6342369bc4728c19d01197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a559987579b531c15fcb383aad6487d43"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tenths_field.html#a559987579b531c15fcb383aad6487d43">decode</a> (uint8_t *bytes, uint8_t length, JsonObject &amp;json)</td></tr>
-<tr class="memdesc:a559987579b531c15fcb383aad6487d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the value from bytes into an existing json document.  <a href="class_tenths_field.html#a559987579b531c15fcb383aad6487d43">More...</a><br /></td></tr>
-<tr class="separator:a559987579b531c15fcb383aad6487d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_field"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_field')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_field.html">Field</a></td></tr>
 <tr class="memitem:ae23fc93339cdddaca00055e9b4624bad inherit pub_methods_class_field"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#ae23fc93339cdddaca00055e9b4624bad">Field</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>, const uint8_t <a class="el" href="class_field.html#a8690d36b4638befd0c9c1f05ef1522df">encodedLength</a>)</td></tr>
 <tr class="separator:ae23fc93339cdddaca00055e9b4624bad inherit pub_methods_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa036e196f5805e9406b8169200e3915a inherit pub_methods_class_field"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#aa036e196f5805e9406b8169200e3915a">decode</a> (uint8_t *bytes, uint8_t length, JsonObject &amp;json)</td></tr>
+<tr class="memdesc:aa036e196f5805e9406b8169200e3915a inherit pub_methods_class_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the value from bytes into an existing json document.  <a href="class_field.html#aa036e196f5805e9406b8169200e3915a">More...</a><br /></td></tr>
+<tr class="separator:aa036e196f5805e9406b8169200e3915a inherit pub_methods_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8411bfb2768fb0ea256f83f40941ba75 inherit pub_methods_class_field"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a8411bfb2768fb0ea256f83f40941ba75">encode</a> (uint8_t *bytes, uint8_t length)</td></tr>
 <tr class="memdesc:a8411bfb2768fb0ea256f83f40941ba75 inherit pub_methods_class_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes the value to set into a packet ready to send if needed.  <a href="class_field.html#a8411bfb2768fb0ea256f83f40941ba75">More...</a><br /></td></tr>
 <tr class="separator:a8411bfb2768fb0ea256f83f40941ba75 inherit pub_methods_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +110,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afceea6465cc34b00eb927e24d4810dd0 inherit pub_methods_class_lookupable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lookupable.html#afceea6465cc34b00eb927e24d4810dd0">Lookupable</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>)</td></tr>
 <tr class="separator:afceea6465cc34b00eb927e24d4810dd0 inherit pub_methods_class_lookupable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:acdb489d79e3d560f75c40513bf33df58"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tenths_field.html#acdb489d79e3d560f75c40513bf33df58">actuallyDecode</a> (uint8_t *bytes, uint8_t length, JsonObject &amp;json)</td></tr>
+<tr class="memdesc:acdb489d79e3d560f75c40513bf33df58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the value from bytes into an existing json document. decode does the checking for length, so this doesn't need to.  <a href="class_tenths_field.html#acdb489d79e3d560f75c40513bf33df58">More...</a><br /></td></tr>
+<tr class="separator:acdb489d79e3d560f75c40513bf33df58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_field"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_field')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_field.html">Field</a></td></tr>
+<tr class="memitem:a0f6c46168ecc1113ff61d9fb68d8c763 inherit pro_methods_class_field"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763">checkDecodeable</a> (uint8_t length)</td></tr>
+<tr class="memdesc:a0f6c46168ecc1113ff61d9fb68d8c763 inherit pro_methods_class_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the value can be decoded from the packet.  <a href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763">More...</a><br /></td></tr>
+<tr class="separator:a0f6c46168ecc1113ff61d9fb68d8c763 inherit pro_methods_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_field"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_field')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_field.html">Field</a></td></tr>
@@ -121,10 +132,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a3098652b534211d9fca075ab17be53a5 inherit pub_attribs_class_lookupable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7be126bfcc36ce707f77acfd7f5dd9da inherit pub_attribs_class_lookupable"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a></td></tr>
 <tr class="separator:a7be126bfcc36ce707f77acfd7f5dd9da inherit pub_attribs_class_lookupable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_field"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_field')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_field.html">Field</a></td></tr>
-<tr class="memitem:a0f6c46168ecc1113ff61d9fb68d8c763 inherit pro_methods_class_field"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763">checkDecodeable</a> (uint8_t length)</td></tr>
-<tr class="memdesc:a0f6c46168ecc1113ff61d9fb68d8c763 inherit pro_methods_class_field"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the value can be decoded from the packet.  <a href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763">More...</a><br /></td></tr>
-<tr class="separator:a0f6c46168ecc1113ff61d9fb68d8c763 inherit pro_methods_class_field"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_field.html" title="Class for handling data fields in messages.">Field</a> for decoding 2 byte signed data in tenths. </p>
@@ -166,8 +173,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a559987579b531c15fcb383aad6487d43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a559987579b531c15fcb383aad6487d43">&#9670;&nbsp;</a></span>decode()</h2>
+<a id="acdb489d79e3d560f75c40513bf33df58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdb489d79e3d560f75c40513bf33df58">&#9670;&nbsp;</a></span>actuallyDecode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +183,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int8_t TenthsField::decode </td>
+          <td class="memname">int8_t TenthsField::actuallyDecode </td>
           <td>(</td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>bytes</em>, </td>
@@ -201,12 +208,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Decodes the value from bytes into an existing json document. </p>
+<p>Decodes the value from bytes into an existing json document. decode does the checking for length, so this doesn't need to. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>the data to decode. </td></tr>
@@ -216,13 +223,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="class_field.html#aa036e196f5805e9406b8169200e3915a">Field</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_tenths_field_a559987579b531c15fcb383aad6487d43_cgraph.svg" width="386" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
-</div>
+<p>Reimplemented from <a class="el" href="class_field.html#a536d757818e186d83b2ab71415bb0bba">Field</a>.</p>
 
 </div>
 </div>

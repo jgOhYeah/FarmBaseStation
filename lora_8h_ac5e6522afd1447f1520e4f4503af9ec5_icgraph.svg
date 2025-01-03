@@ -21,7 +21,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" target="_top" xlink:title="Task that manages the pjon protocol and radio.">
+<g id="a_node2"><a xlink:href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" target="_top" xlink:title="&quot;Receives&quot; some fake data for testing purposes.">
 <polygon fill="white" stroke="black" points="80,-0.5 80,-19.5 139,-19.5 139,-0.5 80,-0.5"/>
 <text text-anchor="middle" x="109.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">pjonTask</text>
 </a>

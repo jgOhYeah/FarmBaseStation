@@ -1,7 +1,6 @@
 <map id="pjonReceive" name="pjonReceive">
-<area shape="rect" id="node1" title="Handles an incoming packet received from the radio and adds the given snr and rssi to the packet." alt="" coords="291,56,393,83"/>
-<area shape="rect" id="node2" href="$lora_8cpp.html#aa8801dfe2a42386ac27371814cc9f987" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="112,5,243,32"/>
-<area shape="rect" id="node3" href="$lora_8cpp.html#a0b02ed993c4ccbea85307991879844a6" title="Handles an incoming packet received from the radio. Uses the latest received snr and rssi." alt="" coords="126,56,229,83"/>
-<area shape="rect" id="node4" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="Task that manages the pjon protocol and radio." alt="" coords="138,107,217,133"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,107,64,133"/>
+<area shape="rect" id="node1" title="Handles an incoming packet received from the radio and adds the given snr and rssi to the packet." alt="" coords="263,31,365,57"/>
+<area shape="rect" id="node2" href="$lora_8cpp.html#a0b02ed993c4ccbea85307991879844a6" title="Handles an incoming packet received from the radio. Uses the latest received snr and rssi." alt="" coords="112,5,215,32"/>
+<area shape="rect" id="node3" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="124,56,203,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,56,64,83"/>
 </map>

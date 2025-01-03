@@ -81,7 +81,7 @@
 <!-- Node28 -->
 <g id="node28" class="node">
 <title>Node28</title>
-<g id="a_node28"><a xlink:href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" target="_top" xlink:title="Task that manages the pjon protocol and radio.">
+<g id="a_node28"><a xlink:href="lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" target="_top" xlink:title="&quot;Receives&quot; some fake data for testing purposes.">
 <polygon fill="white" stroke="black" points="97,-456.5 97,-475.5 156,-475.5 156,-456.5 97,-456.5"/>
 <text text-anchor="middle" x="126.5" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">pjonTask</text>
 </a>
@@ -192,7 +192,7 @@
 <!-- Node12 -->
 <g id="node12" class="node">
 <title>Node12</title>
-<g id="a_node12"><a xlink:href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" target="_top" xlink:title="updates the attribute waiting to false if required.">
+<g id="a_node12"><a xlink:href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" target="_top" xlink:title="Updates the attribute waiting to false if required.">
 <polygon fill="white" stroke="black" points="211.5,-342.5 211.5,-361.5 337.5,-361.5 337.5,-342.5 211.5,-342.5"/>
 <text text-anchor="middle" x="274.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">sendOnTxNotRequired</text>
 </a>
@@ -528,18 +528,18 @@
 <path fill="none" stroke="midnightblue" d="M313.44,-543.82C332,-544.71 355.15,-545.82 377.65,-546.9"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="377.76,-550.41 387.92,-547.4 378.1,-543.42 377.76,-550.41"/>
 </g>
-<!-- Node35 -->
-<g id="node35" class="node">
-<title>Node35</title>
-<g id="a_node35"><a xlink:href="class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" target="_top" xlink:title="Gets the object with the given symbol.">
+<!-- Node37 -->
+<g id="node37" class="node">
+<title>Node37</title>
+<g id="a_node37"><a xlink:href="class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" target="_top" xlink:title="Gets the object with the given symbol.">
 <polygon fill="white" stroke="black" points="588,-503.5 588,-522.5 763,-522.5 763,-503.5 588,-503.5"/>
 <text text-anchor="middle" x="675.5" y="-510.5" font-family="Helvetica,sans-Serif" font-size="10.00">LookupManager::getWithSymbol</text>
 </a>
 </g>
 </g>
-<!-- Node32&#45;&gt;Node35 -->
-<g id="edge40" class="edge">
-<title>Node32&#45;&gt;Node35</title>
+<!-- Node32&#45;&gt;Node37 -->
+<g id="edge42" class="edge">
+<title>Node32&#45;&gt;Node37</title>
 <path fill="none" stroke="midnightblue" d="M313.17,-537.93C332.03,-535.98 355.2,-533.7 376,-532 443.26,-526.52 519.15,-521.7 577.57,-518.29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="578.12,-521.77 587.9,-517.7 577.72,-514.78 578.12,-521.77"/>
 </g>
@@ -558,11 +558,41 @@
 <path fill="none" stroke="midnightblue" d="M540.04,-551C568.21,-551 599.51,-551 624.82,-551"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="624.91,-554.5 634.91,-551 624.91,-547.5 624.91,-554.5"/>
 </g>
-<!-- Node33&#45;&gt;Node35 -->
-<g id="edge39" class="edge">
-<title>Node33&#45;&gt;Node35</title>
+<!-- Node33&#45;&gt;Node37 -->
+<g id="edge41" class="edge">
+<title>Node33&#45;&gt;Node37</title>
 <path fill="none" stroke="midnightblue" d="M517.6,-541.46C546.24,-536.27 581.86,-529.8 611.92,-524.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.67,-527.77 621.88,-522.54 611.42,-520.88 612.67,-527.77"/>
+</g>
+<!-- Node35 -->
+<g id="node35" class="node">
+<title>Node35</title>
+<g id="a_node35"><a xlink:href="class_field.html#a536d757818e186d83b2ab71415bb0bba" target="_top" xlink:title="Decodes the value from bytes into an existing json document. decode does the checking for length,...">
+<polygon fill="white" stroke="black" points="821.5,-522.5 821.5,-541.5 943.5,-541.5 943.5,-522.5 821.5,-522.5"/>
+<text text-anchor="middle" x="882.5" y="-529.5" font-family="Helvetica,sans-Serif" font-size="10.00">Field::actuallyDecode</text>
+</a>
+</g>
+</g>
+<!-- Node34&#45;&gt;Node35 -->
+<g id="edge39" class="edge">
+<title>Node34&#45;&gt;Node35</title>
+<path fill="none" stroke="midnightblue" d="M716.03,-547.34C743.01,-544.84 779.49,-541.45 811.34,-538.5"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="811.86,-541.97 821.5,-537.56 811.22,-535 811.86,-541.97"/>
+</g>
+<!-- Node36 -->
+<g id="node36" class="node">
+<title>Node36</title>
+<g id="a_node36"><a xlink:href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" target="_top" xlink:title="Checks if the value can be decoded from the packet.">
+<polygon fill="white" stroke="black" points="816.5,-560.5 816.5,-579.5 948.5,-579.5 948.5,-560.5 816.5,-560.5"/>
+<text text-anchor="middle" x="882.5" y="-567.5" font-family="Helvetica,sans-Serif" font-size="10.00">Field::checkDecodeable</text>
+</a>
+</g>
+</g>
+<!-- Node34&#45;&gt;Node36 -->
+<g id="edge40" class="edge">
+<title>Node34&#45;&gt;Node36</title>
+<path fill="none" stroke="midnightblue" d="M716.03,-554.66C741.53,-557.03 775.53,-560.18 806.08,-563.01"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="806,-566.52 816.28,-563.96 806.65,-559.55 806,-566.52"/>
 </g>
 </g>
 </svg>

@@ -92,7 +92,7 @@ Collaboration diagram for Field:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae23fc93339cdddaca00055e9b4624bad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#ae23fc93339cdddaca00055e9b4624bad">Field</a> (const char *<a class="el" href="class_lookupable.html#a3098652b534211d9fca075ab17be53a5">name</a>, char <a class="el" href="class_lookupable.html#a7be126bfcc36ce707f77acfd7f5dd9da">symbol</a>, const uint8_t <a class="el" href="class_field.html#a8690d36b4638befd0c9c1f05ef1522df">encodedLength</a>)</td></tr>
 <tr class="separator:ae23fc93339cdddaca00055e9b4624bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa036e196f5805e9406b8169200e3915a"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#aa036e196f5805e9406b8169200e3915a">decode</a> (uint8_t *bytes, uint8_t length, JsonObject &amp;json)</td></tr>
+<tr class="memitem:aa036e196f5805e9406b8169200e3915a"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#aa036e196f5805e9406b8169200e3915a">decode</a> (uint8_t *bytes, uint8_t length, JsonObject &amp;json)</td></tr>
 <tr class="memdesc:aa036e196f5805e9406b8169200e3915a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the value from bytes into an existing json document.  <a href="class_field.html#aa036e196f5805e9406b8169200e3915a">More...</a><br /></td></tr>
 <tr class="separator:aa036e196f5805e9406b8169200e3915a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8411bfb2768fb0ea256f83f40941ba75"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a8411bfb2768fb0ea256f83f40941ba75">encode</a> (uint8_t *bytes, uint8_t length)</td></tr>
@@ -125,6 +125,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0f6c46168ecc1113ff61d9fb68d8c763"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763">checkDecodeable</a> (uint8_t length)</td></tr>
 <tr class="memdesc:a0f6c46168ecc1113ff61d9fb68d8c763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the value can be decoded from the packet.  <a href="class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763">More...</a><br /></td></tr>
 <tr class="separator:a0f6c46168ecc1113ff61d9fb68d8c763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536d757818e186d83b2ab71415bb0bba"><td class="memItemLeft" align="right" valign="top">virtual int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_field.html#a536d757818e186d83b2ab71415bb0bba">actuallyDecode</a> (uint8_t *bytes, uint8_t length, JsonObject &amp;json)</td></tr>
+<tr class="memdesc:a536d757818e186d83b2ab71415bb0bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decodes the value from bytes into an existing json document. decode does the checking for length, so this doesn't need to.  <a href="class_field.html#a536d757818e186d83b2ab71415bb0bba">More...</a><br /></td></tr>
+<tr class="separator:a536d757818e186d83b2ab71415bb0bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for handling data fields in messages. </p>
@@ -172,6 +175,66 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a536d757818e186d83b2ab71415bb0bba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536d757818e186d83b2ab71415bb0bba">&#9670;&nbsp;</a></span>actuallyDecode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t Field::actuallyDecode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JsonObject &amp;&#160;</td>
+          <td class="paramname"><em>json</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decodes the value from bytes into an existing json document. decode does the checking for length, so this doesn't need to. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>the data to decode. </td></tr>
+    <tr><td class="paramname">length</td><td>the amount of data remaining from the start of bytes. </td></tr>
+    <tr><td class="paramname">json</td><td>the document to place the results into. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_u_int_field.html#ae4a65d650f90c5d637594db2920bcf73">UIntField</a>, <a class="el" href="class_pump_on_time_field.html#a0a1c8d75840b12c4066c3fa2c7f0d884">PumpOnTimeField</a>, <a class="el" href="class_settable_flag_field.html#ae18572343a0541a83b765fe3cd28accb">SettableFlagField</a>, <a class="el" href="class_flag_field.html#aac49a56c85f921421961fda707ef9908">FlagField</a>, <a class="el" href="class_settable_byte_field.html#ab743a2db6741ff2c66de84bb327b3138">SettableByteField</a>, <a class="el" href="class_byte_field.html#a32e2edbbff2d5a014cd5ad7021a3704a">ByteField</a>, <a class="el" href="class_long_u_int_field.html#ac661f230affeb156df71a14b6a5c42b4">LongUIntField</a>, <a class="el" href="class_tenths_field.html#acdb489d79e3d560f75c40513bf33df58">TenthsField</a>, and <a class="el" href="class_tenths_byte_field.html#a2ca420c844be27dbaa4e92469eccf0ff">TenthsByteField</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_field_a536d757818e186d83b2ab71415bb0bba_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a0f6c46168ecc1113ff61d9fb68d8c763"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f6c46168ecc1113ff61d9fb68d8c763">&#9670;&nbsp;</a></span>checkDecodeable()</h2>
 
@@ -209,7 +272,7 @@ false otherwise. </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_field_a0f6c46168ecc1113ff61d9fb68d8c763_icgraph.svg" width="431" height="475"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_field_a0f6c46168ecc1113ff61d9fb68d8c763_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -220,9 +283,6 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int8_t Field::decode </td>
@@ -248,11 +308,6 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Decodes the value from bytes into an existing json document. </p>
@@ -264,12 +319,16 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-
-<p>Reimplemented in <a class="el" href="class_u_int_field.html#a72984fadf6b1619c513442c0036fe96f">UIntField</a>, <a class="el" href="class_pump_on_time_field.html#afc688cd2270f95d14f75fa31d4dbbd84">PumpOnTimeField</a>, <a class="el" href="class_settable_flag_field.html#a61f1589e7f86b94bfb956e5fa6711483">SettableFlagField</a>, <a class="el" href="class_flag_field.html#a5a5f75fee9d58da514f457cb0adfcb6c">FlagField</a>, <a class="el" href="class_settable_byte_field.html#ad677f1c126fb69e1f41edfa138aa37f7">SettableByteField</a>, <a class="el" href="class_byte_field.html#ab81d073f3c791b9a8e0ba15f7f6b1af0">ByteField</a>, <a class="el" href="class_long_u_int_field.html#a719f137da9de237d749644af4e1ffc2e">LongUIntField</a>, <a class="el" href="class_tenths_field.html#a559987579b531c15fcb383aad6487d43">TenthsField</a>, and <a class="el" href="class_tenths_byte_field.html#a71aff44c2db0542b592a99b9aa9b1799">TenthsByteField</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_field_aa036e196f5805e9406b8169200e3915a_cgraph.svg" width="343" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_field_aa036e196f5805e9406b8169200e3915a_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_field_aa036e196f5805e9406b8169200e3915a_icgraph.svg" width="100%" height="385"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 

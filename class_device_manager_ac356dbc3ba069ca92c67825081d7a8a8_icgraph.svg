@@ -82,7 +82,7 @@ var sectionId = 'dynsection-3';
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" target="_top" xlink:title="updates the attribute waiting to false if required.">
+<g id="a_node4"><a xlink:href="lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" target="_top" xlink:title="Updates the attribute waiting to false if required.">
 <polygon fill="white" stroke="black" points="185,-0.5 185,-19.5 311,-19.5 311,-0.5 185,-0.5"/>
 <text text-anchor="middle" x="248" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">sendOnTxNotRequired</text>
 </a>
