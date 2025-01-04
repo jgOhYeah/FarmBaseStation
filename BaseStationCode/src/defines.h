@@ -39,7 +39,11 @@
 #include <TunePlayer.h>
 #endif
 
-#define VERSION "0.2.5"
+#if defined(GENERATE_TIMESERIES) && defined(USE_BMP180)
+#include <Adafruit_BMP085.h>
+#endif
+
+#define VERSION "0.2.6"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 

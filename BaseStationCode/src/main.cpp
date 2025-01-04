@@ -37,6 +37,7 @@ SemaphoreHandle_t serialMutex;
 #include "src/audio.h"
 #include "src/leds.h"
 #include "src/ota.h"
+#include "src/timeseries.h"
 
 // States used for LED control.
 SemaphoreHandle_t stateUpdateMutex;
@@ -146,6 +147,17 @@ void setup()
         1,
         &ledTaskHandle,
         1);
+
+#ifdef GENERATE_TIMESERIES
+    xTaskCreatePinnedToCore(
+        timeseriesTask,
+        "TS",
+        4096,
+        NULL,
+        1,
+        NULL,
+        1);
+#endif
     // TODO: Actually measure ram and high water marks rather than guessing.
 
 #ifdef OTA_ENABLE
