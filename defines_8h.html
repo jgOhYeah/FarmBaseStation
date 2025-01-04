@@ -103,7 +103,7 @@ Macros</h2></td></tr>
 <tr class="separator:aeebf956fc71944a6237c3af6a038ff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bb9835cce8b6c6c7947350b3cd4e132"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a7bb9835cce8b6c6c7947350b3cd4e132">TL_RESPONSE_DELAY</a>&#160;&#160;&#160;50</td></tr>
 <tr class="separator:a7bb9835cce8b6c6c7947350b3cd4e132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6d5de492ac61ad29aec7aa9a436bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a>&#160;&#160;&#160;&quot;0.2.5&quot;</td></tr>
+<tr class="memitem:a1c6d5de492ac61ad29aec7aa9a436bbf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a>&#160;&#160;&#160;&quot;0.2.6&quot;</td></tr>
 <tr class="separator:a1c6d5de492ac61ad29aec7aa9a436bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94df10e7efe7613d074c105099c7fd0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a94df10e7efe7613d074c105099c7fd0e">SERIAL_BAUD</a>&#160;&#160;&#160;115200</td></tr>
 <tr class="separator:a94df10e7efe7613d074c105099c7fd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,9 +115,9 @@ Macros</h2></td></tr>
 <tr class="separator:aa278b4265d5b1a8f3f6982962a65a4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13acbfda501aa5a68d2591f366b5110b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a13acbfda501aa5a68d2591f366b5110b">WIFI_RECONNECT_ATTEMPT_TIME</a>&#160;&#160;&#160;60000</td></tr>
 <tr class="separator:a13acbfda501aa5a68d2591f366b5110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77591d84a8504abdfde9af4434c3ef76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a>()&#160;&#160;&#160;xSemaphoreTake(<a class="el" href="rpc_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>, portMAX_DELAY)</td></tr>
+<tr class="memitem:a77591d84a8504abdfde9af4434c3ef76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a>()&#160;&#160;&#160;xSemaphoreTake(<a class="el" href="timeseries_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>, portMAX_DELAY)</td></tr>
 <tr class="separator:a77591d84a8504abdfde9af4434c3ef76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81dee8e36f61410d32bf9686d682e467"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a81dee8e36f61410d32bf9686d682e467">SERIAL_GIVE</a>()&#160;&#160;&#160;xSemaphoreGive(<a class="el" href="rpc_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>)</td></tr>
+<tr class="memitem:a81dee8e36f61410d32bf9686d682e467"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a81dee8e36f61410d32bf9686d682e467">SERIAL_GIVE</a>()&#160;&#160;&#160;xSemaphoreGive(<a class="el" href="timeseries_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>)</td></tr>
 <tr class="separator:a81dee8e36f61410d32bf9686d682e467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ab3f271bb9e86231c5a9627d7cfd95f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defines_8h.html#a8ab3f271bb9e86231c5a9627d7cfd95f">LOGV</a>(tag,  format, ...)</td></tr>
 <tr class="separator:a8ab3f271bb9e86231c5a9627d7cfd95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,7 +206,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a>();                        \</div>
 <div class="line">    log_d(<span class="stringliteral">&quot;[&quot;</span> tag <span class="stringliteral">&quot;] &quot;</span> format, ##__VA_ARGS__); \</div>
 <div class="line">    SERIAL_GIVE()</div>
-<div class="ttc" id="adefines_8h_html_a77591d84a8504abdfde9af4434c3ef76"><div class="ttname"><a href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a></div><div class="ttdeci">#define SERIAL_TAKE()</div><div class="ttdef"><b>Definition:</b> defines.h:53</div></div>
+<div class="ttc" id="adefines_8h_html_a77591d84a8504abdfde9af4434c3ef76"><div class="ttname"><a href="defines_8h.html#a77591d84a8504abdfde9af4434c3ef76">SERIAL_TAKE</a></div><div class="ttdeci">#define SERIAL_TAKE()</div><div class="ttdef"><b>Definition:</b> defines.h:57</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -550,7 +550,7 @@ Macros</h2></td></tr>
           <td class="memname">#define SERIAL_GIVE</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;xSemaphoreGive(<a class="el" href="rpc_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>)</td>
+          <td>&#160;&#160;&#160;xSemaphoreGive(<a class="el" href="timeseries_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -567,7 +567,7 @@ Macros</h2></td></tr>
           <td class="memname">#define SERIAL_TAKE</td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td>&#160;&#160;&#160;xSemaphoreTake(<a class="el" href="rpc_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>, portMAX_DELAY)</td>
+          <td>&#160;&#160;&#160;xSemaphoreTake(<a class="el" href="timeseries_8cpp.html#ae1c899affa3f5b7282b6f09135ecfcc9">serialMutex</a>, portMAX_DELAY)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -641,7 +641,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VERSION&#160;&#160;&#160;&quot;0.2.5&quot;</td>
+          <td class="memname">#define VERSION&#160;&#160;&#160;&quot;0.2.6&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">

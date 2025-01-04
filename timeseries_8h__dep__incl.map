@@ -1,0 +1,5 @@
+<map id="BaseStationCode/src/src/timeseries.h" name="BaseStationCode/src/src/timeseries.h">
+<area shape="rect" id="node1" title="Measures the temperature and pressure and sends them every so often as timeseries." alt="" coords="95,5,251,47"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title=" " alt="" coords="5,95,161,136"/>
+<area shape="rect" id="node3" href="$timeseries_8cpp.html" title=" " alt="" coords="185,95,341,136"/>
+</map>
