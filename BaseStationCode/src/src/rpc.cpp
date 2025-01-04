@@ -14,6 +14,7 @@ extern QueueHandle_t mqttPublishQueue;
 extern SemaphoreHandle_t mqttMutex;
 extern SemaphoreHandle_t serialMutex;
 extern QueueHandle_t alarmQueue;
+extern QueueHandle_t audioQueue;
 extern DeviceManager deviceManager;
 
 void mqttReceived(char *topic, byte *message, unsigned int length)
@@ -41,7 +42,7 @@ void mqttReceived(char *topic, byte *message, unsigned int length)
     {
         LOGD("MQTT", "MQTT message is RPC me.");
         char id[MAX_ID_TEXT_LENGTH];
-        strncpy(id, strrchr(topic, '/')+1, MAX_ID_TEXT_LENGTH);
+        strncpy(id, strrchr(topic, '/') + 1, MAX_ID_TEXT_LENGTH);
         rpcMe(id, message, length);
     }
 }
@@ -57,48 +58,67 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
     }
 
     // Handle each known method
-    const char* method = json["method"];
-    if (method && STRINGS_MATCH(method, "alarm"))
+    const char *method = json["method"];
+    if (method)
     {
-        // Alarms
-        LOGI("MQTT", "Alarm method");
-
-        // Extract the alarm level
-        // TODO: Track individual alarms.
-        const char* params = json["params"];
-        AlarmState state = ALARM_OFF;
-        if (params)
+        if (STRINGS_MATCH(method, "alarm"))
         {
-            // Might not be any params provided.
-            if (STRINGS_MATCH(params, "Critical"))
+            // Alarms
+            LOGI("MQTT", "Alarm method");
+
+            // Extract the alarm level
+            // TODO: Track individual alarms.
+            const char *params = json["params"];
+            AlarmState state = ALARM_OFF;
+            if (params)
             {
-                state = ALARM_HIGH;
+                // Might not be any params provided.
+                if (STRINGS_MATCH(params, "Critical"))
+                {
+                    state = ALARM_HIGH;
+                }
+                else if (STRINGS_MATCH(params, "Major"))
+                {
+                    state = ALARM_HIGH;
+                }
+                else if (STRINGS_MATCH(params, "Minor"))
+                {
+                    state = ALARM_MEDIUM;
+                }
             }
-            else if (STRINGS_MATCH(params, "Major"))
-            {
-                state = ALARM_HIGH;
-            }
-            else if (STRINGS_MATCH(params, "Minor"))
-            {
-                state = ALARM_MEDIUM;
-            }
+
+            // Add to the queue
+            const unsigned int ALARM_TIMEOUT = 3000;
+            xQueueSend(alarmQueue, (void *)&state, ALARM_TIMEOUT / portTICK_PERIOD_MS);
+            replyMeRpc(id, (char *)"{}");
         }
-
-        // Add to the queue
-        const unsigned int ALARM_TIMEOUT = 3000;
-        xQueueSend(alarmQueue, (void*)&state, ALARM_TIMEOUT / portTICK_PERIOD_MS);
-        replyMeRpc(id, (char*)"{}");
-    } else if (method && STRINGS_MATCH(method, "reset"))
-    {
-        // Reset
-        LOGI("MQTT", "Reset method. Restarting in a few seconds");
-        replyMeRpc(id, (char*)"{}");
-        delay(10000);
-        ESP.restart();
-    } else {
-        LOGI("MQTT", "Unrecognised MQTT method '%s' for me.", method);
+        else if (STRINGS_MATCH(method, "reset"))
+        {
+            // Reset
+            LOGI("MQTT", "Reset method. Restarting in a few seconds");
+            replyMeRpc(id, (char *)"{}");
+            delay(10000);
+            ESP.restart();
+        }
+        else if (STRINGS_MATCH(method, "doorbell"))
+        {
+            // Doorbell noises
+            LOGI("MQTT", "Doorbell");
+#ifdef PIN_SPEAKER
+            AlarmState state = ALARM_DOORBELL;
+            xQueueSend(audioQueue, (void *)&state, portMAX_DELAY);
+#endif
+            replyMeRpc(id, (char *)"{}");
+        }
+        else
+        {
+            LOGI("MQTT", "Unrecognised MQTT method '%s' for me.", method);
+        }
     }
-
+    else
+    {
+        LOGI("MQTT", "Method doesn't exist.");
+    }
 }
 
 void replyMeRpc(char *id, char *reply)
@@ -196,7 +216,7 @@ bool startsWith(char *input, const char *compare)
     return true;
 }
 
-void setAttributeState(const char* const attribute, bool state)
+void setAttributeState(const char *const attribute, bool state)
 {
     MqttMsg msg{Topic::ATTRIBUTE_ME_UPLOAD, ""};
     JsonDocument json;

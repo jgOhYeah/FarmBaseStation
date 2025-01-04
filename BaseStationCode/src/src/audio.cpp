@@ -39,6 +39,13 @@ const uint16_t Doctor_Who_Theme_Tuneplayer[] PROGMEM = {
     0xf000 // End of tune. Stop playing.
 };
 
+// Converted from 'Doorbell' by TunePlayer Musescore plugin V1.9.0_debugging (MS3.6.2)
+const uint16_t Doorbell[] PROGMEM = {
+    0xe064, // Tempo change to 100 BPM
+    0xb638,0x7678,
+    0xf000 // End of tune. Stop playing.
+};
+
 FlashTuneLoader flashLoader;  // Where the notes come from
 ToneSound piezo(PIN_SPEAKER); // What plays the notes
 TunePlayer tune;              // Coordinates everything and does things at the right times.
@@ -64,7 +71,18 @@ void audioTask(void *pvParameters)
         {
             // Start playing
             LOGI("AUDIO", "Playing.");
-            flashLoader.setTune(Doctor_Who_Theme_Tuneplayer);
+            // Choose what to play
+            const uint16_t *selectedTune;
+            switch (state)
+            {
+                case ALARM_HIGH:
+                case ALARM_MEDIUM:
+                    selectedTune = Doctor_Who_Theme_Tuneplayer;
+                    break;
+                case ALARM_DOORBELL:
+                    selectedTune = Doorbell;
+            }
+            flashLoader.setTune(selectedTune);
             tune.begin(&flashLoader, &piezo);
             tune.play();
 

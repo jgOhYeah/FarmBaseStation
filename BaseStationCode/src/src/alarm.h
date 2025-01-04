@@ -10,7 +10,7 @@
 #pragma once
 #include "../defines.h"
 
-enum AlarmState {ALARM_OFF, ALARM_HIGH, ALARM_MEDIUM};
+enum AlarmState {ALARM_OFF, ALARM_HIGH, ALARM_MEDIUM, ALARM_DOORBELL};
 
 /**
  * @brief Task for managing the alarm mode.
