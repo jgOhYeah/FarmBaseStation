@@ -26,7 +26,7 @@
 
 // LoRa
 #define PJON_INCLUDE_TL
-#define TL_RESPONSE_DELAY 50 // The PICAXE microcontrollers on the other end are pretty slow.
+#define TL_RESPONSE_DELAY 30 // Started out at 50ms, 20ms is too short, >=30ms works. // The PICAXE microcontrollers on the other end are pretty slow.
 #include <PJONThroughLora.h>
 
 // OTA (enable or disable in credentials.h)
@@ -86,7 +86,12 @@
 #define MAX_TOPIC_LENGTH 50
 #define STRINGS_MATCH(A, B) (strcmp(A, B) == 0)
 
+#ifdef DISABLE_PJON
+#define PJON_DEVICE_ID 254
+#else
 #define PJON_DEVICE_ID 255
+#endif
+
 #define LORA_LED_FLASH_TIME 100
 
 // Pins

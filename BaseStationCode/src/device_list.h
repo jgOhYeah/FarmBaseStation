@@ -92,11 +92,15 @@ LookupManager<Field> fenceMonitorFieldsManager(fenceMonitorFieldsList, sizeof(fe
 LookupManager<Field> gateMonitorFieldsManager(gateMonitorFieldsList, sizeof(gateMonitorFieldsList) / sizeof(Field*));
 
 Device *deviceList[] = {
+#ifndef DISABLE_PJON
     new Device("Main Pressure Pump", 0x5A, pumpFieldsManager),
     new Device("Solar Electric Fence", 0x4A, fenceFieldsManager),
     new Device("Irrigation Water Detector", 167, waterBabyFieldsManager), // 0xA7
     new Device("Electric fence monitor", 168, fenceMonitorFieldsManager), // 0xA8
     new Device("Front gate monitor", 169, gateMonitorFieldsManager) // 0xA9
+#else
+    new Device("Fake Device", 0x1, pumpFieldsManager) // Fake device just in case it crashes with no actual devices: TODO: Remove.
+#endif
 };
 
 DeviceManager deviceManager(deviceList, sizeof(deviceList) / sizeof(Device*));
