@@ -17,6 +17,15 @@ extern QueueHandle_t alarmQueue;
 extern QueueHandle_t audioQueue;
 extern DeviceManager deviceManager;
 
+#ifdef PIN_IR
+#include "hvacir.h"
+extern HVAC airConditioner;
+HvacMode airConditionerMode = HVAC_AUTO;
+HvacFanMode airConditionerFanMode = FAN_SPEED_AUTO;
+int airConditionerTemp = 22;
+bool airConditionerOn = true;
+#endif
+
 void mqttReceived(char *topic, byte *message, unsigned int length)
 {
     // Check that the message isn't too long.
@@ -100,16 +109,39 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
             delay(10000);
             ESP.restart();
         }
+#ifdef PIN_SPEAKER
         else if (STRINGS_MATCH(method, "doorbell"))
         {
             // Doorbell noises
             LOGI("MQTT", "Doorbell");
-#ifdef PIN_SPEAKER
             AlarmState state = ALARM_DOORBELL;
             xQueueSend(audioQueue, (void *)&state, portMAX_DELAY);
-#endif
             replyMeRpc(id, (char *)"{}");
         }
+#endif
+#ifdef PIN_IR
+        else if (STRINGS_MATCH(method, "aircond"))
+        {
+            // Send a signal over IR to the air conditioner.
+            LOGI("MQTT", "Air conditioner");
+            JsonDocument reply;
+            sendAirConditioner(json["params"], reply);
+            airConditionerReplySettings(reply);
+            char buf[100];
+            serializeJson(reply, buf, sizeof(buf));
+            replyMeRpc(id, buf);
+        }
+        else if (STRINGS_MATCH(method, "aircondGet"))
+        {
+            // Return the previously used settings.
+            LOGI("MQTT", "Air conditioner get");
+            JsonDocument reply;
+            airConditionerReplySettings(reply);
+            char buf[100];
+            serializeJson(reply, buf, sizeof(buf));
+            replyMeRpc(id, buf);
+        }
+#endif
         else
         {
             LOGI("MQTT", "Unrecognised MQTT method '%s' for me.", method);
@@ -227,7 +259,7 @@ void setAttributeState(const char *const attribute, bool state)
 
 void setVersionAttribute()
 {
-    MqttMsg msg{Topic::ATTRIBUTE_ME_UPLOAD, ""};
+    char buf[400]; // Longer than a standard MqttMsg object as lots of details.
     JsonDocument json;
     JsonObject version = json["version"].to<JsonObject>();
     version["date"] = __DATE__;
@@ -238,11 +270,181 @@ void setVersionAttribute()
     version["pio-plat"] = PIO_PLATFORM;
     version["pio-plat-vers"] = PIO_PLATFORM_VERSION;
     version["pio-framework"] = PIO_FRAMEWORK;
-    serializeJson(json, msg.payload, MAX_JSON_TEXT_LENGTH);
+    version["connect-time"] = millis(); // So we can see if this reset itself recently.
+    version["reset-reas"] = resetReasonName(esp_reset_reason());
+    serializeJson(json, buf, sizeof(buf));
     // Don't use a queue as that may be full if reconnecting after a long time being disconnected.
-    // xQueueSend(mqttPublishQueue, (void*)&msg, portMAX_DELAY);
     xSemaphoreTake(mqttMutex, portMAX_DELAY);
     LOGD("RPC", "Sending version attribute.");
-    mqtt.publish(msg.topic, msg.payload);
+    mqtt.publish(Topic::ATTRIBUTE_ME_UPLOAD, buf);
     xSemaphoreGive(mqttMutex);
 }
+
+const char *resetReasonName(esp_reset_reason_t reason)
+{
+    switch (reason)
+    {
+    case ESP_RST_UNKNOWN:
+        return "Unknown";
+    case ESP_RST_POWERON:
+        return "PowerOn"; // Power on or RST pin toggled
+    case ESP_RST_EXT:
+        return "ExtPin"; // External pin - not applicable for ESP32
+    case ESP_RST_SW:
+        return "Reboot"; // esp_restart()
+    case ESP_RST_PANIC:
+        return "Crash"; // Exception/panic
+    case ESP_RST_INT_WDT:
+        return "WDT_Int"; // Interrupt watchdog (software or hardware)
+    case ESP_RST_TASK_WDT:
+        return "WDT_Task"; // Task watchdog
+    case ESP_RST_WDT:
+        return "WDT_Other"; // Other watchdog
+    case ESP_RST_DEEPSLEEP:
+        return "Sleep"; // Reset after exiting deep sleep mode
+    case ESP_RST_BROWNOUT:
+        return "BrownOut"; // Brownout reset (software or hardware)
+    case ESP_RST_SDIO:
+        return "SDIO"; // Reset over SDIO
+    default:
+        return "";
+    }
+}
+
+#ifdef PIN_IR
+#define AIR_CONDITIONER_ERROR(DESC) \
+    LOGI("IR", DESC);               \
+    reply["desc"] = DESC;           \
+    reply["result"] = false;        \
+    return false
+bool sendAirConditioner(JsonObject obj, JsonDocument &reply)
+{
+    // Air conditioner mode.
+    const char *modeStr = obj["mode"];
+    if (modeStr)
+    {
+        if (STRINGS_MATCH(modeStr, "heat"))
+        {
+            airConditionerMode = HVAC_HOT;
+        }
+        else if (STRINGS_MATCH(modeStr, "cool"))
+        {
+            airConditionerMode = HVAC_COLD;
+        }
+        else if (STRINGS_MATCH(modeStr, "dry"))
+        {
+            airConditionerMode = HVAC_DRY;
+        }
+        else if (STRINGS_MATCH(modeStr, "auto"))
+        {
+            airConditionerMode = HVAC_AUTO;
+        }
+        else
+        {
+            AIR_CONDITIONER_ERROR("Invalid mode");
+        }
+    }
+
+    // Air conditioner fan mode.
+    const char *fanModeStr = obj["fanmode"];
+    if (fanModeStr)
+    {
+        if (STRINGS_MATCH(fanModeStr, "FS1"))
+        {
+            airConditionerFanMode = FAN_SPEED_1;
+        }
+        else if (STRINGS_MATCH(fanModeStr, "FS2"))
+        {
+            airConditionerFanMode = FAN_SPEED_2;
+        }
+        else if (STRINGS_MATCH(fanModeStr, "FS3"))
+        {
+            airConditionerFanMode = FAN_SPEED_3;
+        }
+        else if (STRINGS_MATCH(fanModeStr, "FS4"))
+        {
+            airConditionerFanMode = FAN_SPEED_4;
+        }
+        else if (STRINGS_MATCH(fanModeStr, "FS5"))
+        {
+            airConditionerFanMode = FAN_SPEED_5;
+        }
+        else if (STRINGS_MATCH(fanModeStr, "auto"))
+        {
+            airConditionerFanMode = FAN_SPEED_AUTO;
+        }
+        else
+        {
+            AIR_CONDITIONER_ERROR("Invalid fan mode");
+        }
+    }
+
+    // Get the temperature and whether the air conditioner should be on.
+    if (obj["temperature"].is<int>())
+    {
+        airConditionerTemp = obj["temperature"];
+    }
+    if (obj["on"].is<bool>())
+    {
+        airConditionerOn = obj["on"];
+    }
+
+    airConditioner.sendHvacToshiba(airConditionerMode, airConditionerTemp, airConditionerFanMode, !airConditionerOn);
+    reply["result"] = true;
+    reply["desc"] = "";
+    return true;
+}
+
+void airConditionerReplySettings(JsonDocument &obj)
+{
+    // Mode
+    switch (airConditionerMode)
+    {
+    case HVAC_HOT:
+        obj["mode"] = "heat";
+        break;
+    case HVAC_COLD:
+        obj["mode"] = "cool";
+        break;
+    case HVAC_DRY:
+        obj["mode"] = "dry";
+        break;
+    case HVAC_AUTO:
+        obj["mode"] = "auto";
+        break;
+    default:
+        obj["mode"] = "unknown";
+    }
+
+    // Fan mode
+    switch (airConditionerFanMode)
+    {
+    case FAN_SPEED_1:
+        obj["fanmode"] = "FS1";
+        break;
+    case FAN_SPEED_2:
+        obj["fanmode"] = "FS2";
+        break;
+    case FAN_SPEED_3:
+        obj["fanmode"] = "FS3";
+        break;
+    case FAN_SPEED_4:
+        obj["fanmode"] = "FS4";
+        break;
+    case FAN_SPEED_5:
+        obj["fanmode"] = "FS5";
+        break;
+    case FAN_SPEED_AUTO:
+        obj["fanmode"] = "auto";
+        break;
+    default:
+        obj["fanmode"] = "unknown";
+    }
+
+    // Temperature
+    obj["temperature"] = airConditionerTemp;
+
+    // On and off
+    obj["on"] = airConditionerOn;
+}
+#endif

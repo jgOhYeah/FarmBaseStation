@@ -43,7 +43,7 @@
 #include <Adafruit_BMP085.h>
 #endif
 
-#define VERSION "0.2.6"
+#define VERSION "0.2.7"
 
 #define SERIAL_BAUD 115200 // Same as the bootloader.
 

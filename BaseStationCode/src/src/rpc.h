@@ -68,3 +68,31 @@ void setAttributeState(const char* const attribute, bool state);
  * 
  */
 void setVersionAttribute();
+
+/**
+ * @brief Converts a reset reason returned by `esp_reset_reason()` into a string.
+ * 
+ * This is copied from the ResetReason2 esp32 example.
+ * 
+ * @param reason the reset reason returned by `esp_reset_reason()`.
+ * @return const char* A string representing the reason.
+ */
+const char *resetReasonName(esp_reset_reason_t reason);
+
+#ifdef PIN_IR
+/**
+ * @brief Sends an infrared command to the air conditioner.
+ * 
+ * @param obj JSON containing parameters to send.
+ * @return true on success.
+ * @return false on parameter issues.
+ */
+bool sendAirConditioner(JsonObject obj, JsonDocument &reply);
+
+/**
+ * @brief Saves the current air conditioner settings to a JSON object.
+ * 
+ * @param obj object to save to.
+ */
+void airConditionerReplySettings(JsonDocument &obj);
+#endif

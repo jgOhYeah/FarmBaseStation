@@ -2089,6 +2089,12 @@
 		(uuid "13cd7f79-94a6-4080-ba1e-e630a90ba984")
 	)
 	(junction
+		(at 63.5 160.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "40e1cb92-922f-413a-b7c4-42a77e2aeb06")
+	)
+	(junction
 		(at 110.49 160.02)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2266,6 +2272,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 157.48) (xy 50.8 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33921faa-9a22-4d36-89bb-578268958cd0")
+	)
+	(wire
+		(pts
 			(xy 179.07 92.71) (xy 142.24 92.71)
 		)
 		(stroke
@@ -2303,6 +2319,16 @@
 			(type default)
 		)
 		(uuid "482b2c39-2927-4cdb-831f-4e37f02fdf61")
+	)
+	(wire
+		(pts
+			(xy 50.8 160.02) (xy 63.5 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49981575-a796-45f0-9449-c77bf69174f5")
 	)
 	(wire
 		(pts
@@ -2546,6 +2572,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 100.33) (xy 95.25 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab384476-827c-4646-95e8-edae838e554b")
+	)
+	(wire
+		(pts
 			(xy 87.63 59.69) (xy 142.24 59.69)
 		)
 		(stroke
@@ -2563,6 +2599,16 @@
 			(type default)
 		)
 		(uuid "ae8e23e2-f892-4966-95b0-69fb2f3b5a32")
+	)
+	(wire
+		(pts
+			(xy 50.8 139.7) (xy 50.8 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5081fba-665b-4e6b-ac1b-880849d79f8f")
 	)
 	(wire
 		(pts
@@ -2613,6 +2659,16 @@
 			(type default)
 		)
 		(uuid "bad4e2de-6505-46fa-9d1e-49939e10c543")
+	)
+	(wire
+		(pts
+			(xy 50.8 147.32) (xy 50.8 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf6811ed-3292-423b-ba20-6b4be03b3fa5")
 	)
 	(wire
 		(pts
@@ -2753,6 +2809,76 @@
 			(type default)
 		)
 		(uuid "fa34fab5-f23e-40d7-95eb-d8a33dfba5c0")
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 50.8 143.51 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1896fd50-91d0-4135-bbf2-bf846800447d")
+		(property "Reference" "D3"
+			(at 54.61 143.8274 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IR"
+			(at 54.61 146.3674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 50.8 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6fe271e-9cfe-4477-99a4-0d309084a676")
+		)
+		(pin "2"
+			(uuid "8d96f16d-99b8-4926-9391-d53a26348bad")
+		)
+		(instances
+			(project "BaseStationSchematics"
+				(path "/5e1c3aec-ae2c-4561-b8d9-09ecd3197e65"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:LED")
@@ -3589,6 +3715,76 @@
 			(project "BaseStationSchematics"
 				(path "/5e1c3aec-ae2c-4561-b8d9-09ecd3197e65"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 50.8 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b89782f7-f6b7-4d70-bf52-1cceee335237")
+		(property "Reference" "R3"
+			(at 53.34 152.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "120"
+			(at 53.34 154.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.578 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 50.8 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "410db4f5-5db8-4bb4-85dc-262fd8f5ee60")
+		)
+		(pin "2"
+			(uuid "c2e4cf8c-f250-4a8c-99e6-812e5f85fbac")
+		)
+		(instances
+			(project "BaseStationSchematics"
+				(path "/5e1c3aec-ae2c-4561-b8d9-09ecd3197e65"
+					(reference "R3")
 					(unit 1)
 				)
 			)

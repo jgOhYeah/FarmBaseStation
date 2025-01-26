@@ -47,6 +47,11 @@ uint32_t lastLoRaTime;
 TaskHandle_t ledTaskHandle;
 bool otaUpdating = false;
 
+#ifdef PIN_IR
+#include "hvacir.h"
+HVAC airConditioner(PIN_IR);
+#endif
+
 #define PIO_VERSION_STR "Env=" PIO_ENV ", Platform=" PIO_PLATFORM " (" PIO_PLATFORM_VERSION "), FRAMEWORK=" PIO_FRAMEWORK "."
 
 void setup()
@@ -71,7 +76,6 @@ void setup()
     // Serial.setDebugOutput(true);
     LOGI("Setup", "Farm PJON LoRa base station v" VERSION ". Compiled " __DATE__ ", " __TIME__ ". Connecting using " CONNECTION_METHOD ".");
     LOGI("Setup", PIO_VERSION_STR);
-    // Serial.println(PIO_VERSION_STR);
 
     if (!alarmQueue ||
 #ifdef PIN_SPEAKER
@@ -81,6 +85,11 @@ void setup()
     {
         LOGE("SETUP", "Could not create something!!!");
     }
+
+    // Setup IR pin if fitted
+#ifdef PIN_IR
+    airConditioner.begin();
+#endif
 
     // Create tasks
     xTaskCreatePinnedToCore(
@@ -173,6 +182,6 @@ void loop()
 {
 #ifdef OTA_ENABLE
     OTAManager::handleOTA();
-    vTaskDelay(1000/portTICK_PERIOD_MS);
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
 #endif
 }

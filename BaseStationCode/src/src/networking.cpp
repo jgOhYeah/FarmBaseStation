@@ -174,6 +174,7 @@ void networkingTask(void *pvParameters)
     Network.onEvent(onEthernetEvent);
     ETH.begin();
 #endif
+    mqtt.setBufferSize(500, 500);
     while (true)
     {
 #ifdef USE_ETHERNET
