@@ -1,6 +1,9 @@
 <map id="Field::encode" name="Field::encode">
-<area shape="rect" id="node1" title="Encodes the value to set into a packet ready to send if needed." alt="" coords="475,5,583,32"/>
-<area shape="rect" id="node2" href="$class_device.html#a0fc7e0f4a048d2b7010c7bc6882bb987" title="Generates a packet containing all the fields and instructions to set." alt="" coords="252,5,427,32"/>
-<area shape="rect" id="node3" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,5,204,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,32"/>
+<area shape="rect" id="Node000001" title="Encodes the value to set into a packet ready to send if needed." alt="" coords="475,5,583,31"/>
+<area shape="rect" id="Node000002" href="$class_device.html#a0fc7e0f4a048d2b7010c7bc6882bb987" title="Generates a packet containing all the fields and instructions to set." alt="" coords="252,5,427,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="461,21,427,21,427,15,461,15"/>
+<area shape="rect" id="Node000003" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,5,204,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="238,21,204,21,204,15,238,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
 </map>

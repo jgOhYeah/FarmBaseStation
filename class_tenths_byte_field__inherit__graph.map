@@ -1,5 +1,7 @@
 <map id="TenthsByteField" name="TenthsByteField">
-<area shape="rect" id="node1" title="Field for decoding 1 byte signed data in tenths." alt="" coords="5,155,131,181"/>
-<area shape="rect" id="node2" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="41,80,95,107"/>
-<area shape="rect" id="node3" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="20,5,116,32"/>
+<area shape="rect" id="Node000001" title="Field for decoding 1 byte signed data in tenths." alt="" coords="5,152,131,177"/>
+<area shape="rect" id="Node000002" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="41,79,95,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,118,71,152,65,152,65,118"/>
+<area shape="rect" id="Node000003" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="20,5,116,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="71,44,71,79,65,79,65,44"/>
 </map>

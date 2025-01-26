@@ -1,16 +1,30 @@
 <map id="Lookupable" name="Lookupable">
-<area shape="rect" id="node1" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="5,170,101,197"/>
-<area shape="rect" id="node2" href="$class_device.html" title="Each sensor / device on the PJON network." alt="" coords="151,145,217,171"/>
-<area shape="rect" id="node3" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="157,195,211,222"/>
-<area shape="rect" id="node4" href="$class_settable_field.html" title=" " alt="" coords="532,119,707,146"/>
-<area shape="rect" id="node7" href="$class_byte_field.html" title="Fields that contain an unsigned, single byte integer." alt="" coords="298,43,381,70"/>
-<area shape="rect" id="node8" href="$class_flag_field.html" title="Fields that don&#39;t have any value or payload." alt="" coords="299,94,380,121"/>
-<area shape="rect" id="node9" href="$class_long_u_int_field.html" title="Fields that contain an unsigned, 4 byte integer." alt="" coords="284,145,395,171"/>
-<area shape="rect" id="node10" href="$class_pump_on_time_field.html" title="Fields for pump on times (2 bytes in 0.5s increments)" alt="" coords="269,195,410,222"/>
-<area shape="rect" id="node11" href="$class_settable_field.html" title="Class for fields that can be set." alt="" coords="267,246,412,273"/>
-<area shape="rect" id="node12" href="$class_tenths_byte_field.html" title="Field for decoding 1 byte signed data in tenths." alt="" coords="277,297,402,323"/>
-<area shape="rect" id="node13" href="$class_tenths_field.html" title="Field for decoding 2 byte signed data in tenths." alt="" coords="292,347,387,374"/>
-<area shape="rect" id="node14" href="$class_u_int_field.html" title="Fields that contain an unsigned, 2 byte integer." alt="" coords="299,398,379,425"/>
-<area shape="rect" id="node5" href="$class_settable_byte_field.html" title="Fields that contain an unsigned, single byte integer that can be set using an RPC call." alt="" coords="756,94,893,121"/>
-<area shape="rect" id="node6" href="$class_settable_flag_field.html" title="Class for flags that can be set via an RPC call." alt="" coords="757,145,892,171"/>
+<area shape="rect" id="Node000001" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="5,168,101,193"/>
+<area shape="rect" id="Node000002" href="$class_device.html" title="Each sensor / device on the PJON network." alt="" coords="151,143,217,168"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,166,150,159,151,164,115,171"/>
+<area shape="rect" id="Node000003" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="157,192,211,217"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,189,158,197,157,202,115,195"/>
+<area shape="rect" id="Node000004" href="$class_settable_field.html" title=" " alt="" coords="532,117,707,143"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,181,215,178,226,157,231,137,233,98,238,62,248,45,265,29,287,16,310,8,359,3,409,11,458,27,504,49,545,73,604,115,601,119,542,78,501,54,456,32,408,16,359,9,312,13,289,21,268,33,252,48,243,64,238,99,236,138,231,159,220,181,217,184"/>
+<area shape="rect" id="Node000007" href="$class_byte_field.html" title="Fields that contain an unsigned, single byte integer." alt="" coords="298,44,381,69"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="212,181,215,178,230,151,237,127,245,103,265,79,296,62,299,66,268,83,250,105,242,128,235,153,220,181,216,184"/>
+<area shape="rect" id="Node000008" href="$class_flag_field.html" title="Fields that don&#39;t have any value or payload." alt="" coords="299,93,380,119"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="212,181,215,177,239,151,249,140,265,128,297,113,300,118,268,132,253,144,243,155,219,181,215,185"/>
+<area shape="rect" id="Node000009" href="$class_long_u_int_field.html" title="Fields that contain an unsigned, 4 byte integer." alt="" coords="284,143,395,168"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="223,189,241,183,297,165,298,170,242,188,225,194"/>
+<area shape="rect" id="Node000010" href="$class_pump_on_time_field.html" title="Fields for pump on times (2 bytes in 0.5s increments)" alt="" coords="269,192,410,217"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="224,202,268,202,268,207,224,207"/>
+<area shape="rect" id="Node000011" href="$class_settable_field.html" title="Class for fields that can be set." alt="" coords="267,241,412,267"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="225,215,299,239,298,244,223,220"/>
+<area shape="rect" id="Node000012" href="$class_tenths_byte_field.html" title="Field for decoding 1 byte signed data in tenths." alt="" coords="277,291,402,316"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="208,226,235,252,268,276,295,288,292,293,265,280,232,256,204,230"/>
+<area shape="rect" id="Node000013" href="$class_tenths_field.html" title="Field for decoding 2 byte signed data in tenths." alt="" coords="292,340,387,365"/>
+<area shape="poly" id="edge13_Node000003_Node000013" title=" " alt="" coords="198,228,226,278,245,303,268,325,293,339,291,343,265,329,241,307,221,280,194,231"/>
+<area shape="rect" id="Node000014" href="$class_u_int_field.html" title="Fields that contain an unsigned, 2 byte integer." alt="" coords="299,389,379,415"/>
+<area shape="poly" id="edge14_Node000003_Node000014" title=" " alt="" coords="193,230,203,263,218,302,239,342,268,376,283,386,300,392,298,397,281,390,265,380,235,345,213,305,198,265,188,231"/>
+<area shape="rect" id="Node000005" href="$class_settable_byte_field.html" title="Fields that contain an unsigned, single byte integer that can be set using an RPC call." alt="" coords="756,92,893,117"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="720,115,755,110,756,116,721,120"/>
+<area shape="rect" id="Node000006" href="$class_settable_flag_field.html" title="Class for flags that can be set via an RPC call." alt="" coords="757,141,892,167"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="721,139,758,143,757,149,720,144"/>
+<area shape="poly" id="edge11_Node000011_Node000004" title=" " alt="" coords="391,234,411,226,512,180,592,140,595,145,515,185,413,231,393,239"/>
 </map>

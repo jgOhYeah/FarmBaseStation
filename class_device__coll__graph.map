@@ -1,10 +1,24 @@
 <map id="Device" name="Device">
-<area shape="rect" id="node1" title="Each sensor / device on the PJON network." alt="" coords="257,288,323,315"/>
-<area shape="rect" id="node2" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="161,199,257,225"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,102,140,129"/>
-<area shape="rect" id="node4" title=" " alt="" coords="164,102,253,129"/>
-<area shape="rect" id="node5" href="$class_lookup_manager.html" title=" " alt="" coords="286,199,473,225"/>
-<area shape="rect" id="node6" href="$class_lookup_manager.html" title="Class for looking up and managing devices and fields." alt="" coords="277,95,492,136"/>
-<area shape="rect" id="node7" title=" " alt="" coords="243,5,393,32"/>
-<area shape="rect" id="node8" title=" " alt="" coords="417,5,483,32"/>
+<area shape="rect" id="Node000001" title="Each sensor / device on the PJON network." alt="" coords="138,372,205,397"/>
+<area shape="rect" id="Node000002" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="93,93,189,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,132,173,371,167,372,141,132"/>
+<area shape="rect" id="Node000006" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="262,189,315,214"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="172,124,272,186,269,191,169,128"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,140,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,40,133,91,129,94,88,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="164,5,253,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="193,43,152,94,148,91,189,40"/>
+<area shape="rect" id="Node000005" href="$class_lookup_manager.html" title=" " alt="" coords="326,284,513,309"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="374,317,206,374,204,369,372,311"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="317,220,405,282,402,286,314,224"/>
+<area shape="rect" id="Node000007" href="$classuint8__t.html" title=" " alt="" coords="433,93,499,119"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="462,133,425,284,420,283,457,132"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="420,117,382,128,345,145,318,167,299,190,295,187,314,163,342,140,380,123,419,112"/>
+<area shape="rect" id="Node000009" href="$class_lookup_manager.html" title="Class for looking up and managing devices and fields." alt="" coords="532,181,747,221"/>
+<area shape="poly" id="edge12_Node000009_Node000007" title=" " alt="" coords="500,123,605,179,603,184,498,127"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="213,93,263,119"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="236,132,239,156,252,173,269,186,265,191,248,177,234,158,230,133"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="583,229,447,286,445,281,581,224"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="565,93,714,119"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="642,132,642,181,637,181,637,132"/>
 </map>

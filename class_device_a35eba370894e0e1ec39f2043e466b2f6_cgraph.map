@@ -1,7 +1,11 @@
 <map id="Device::decodePacketFields" name="Device::decodePacketFields">
-<area shape="rect" id="node1" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="5,56,208,83"/>
-<area shape="rect" id="node2" href="$class_field.html#aa036e196f5805e9406b8169200e3915a" title="Decodes the value from bytes into an existing json document." alt="" coords="319,31,427,57"/>
-<area shape="rect" id="node5" href="$class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326" title="Gets the object with the given symbol." alt="" coords="256,81,489,108"/>
-<area shape="rect" id="node3" href="$class_field.html#a536d757818e186d83b2ab71415bb0bba" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="544,5,707,32"/>
-<area shape="rect" id="node4" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="537,56,713,83"/>
+<area shape="rect" id="Node000001" title="Decodes the payload from a PJON packet and converts it to thingsboard MQTT JSON." alt="" coords="5,55,208,80"/>
+<area shape="rect" id="Node000002" href="$class_field.html#aa036e196f5805e9406b8169200e3915a" title="Decodes the value from bytes into an existing json document." alt="" coords="319,29,427,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,55,305,46,305,51,209,60"/>
+<area shape="rect" id="Node000005" href="$class_lookup_manager.html#a03510999964fcb3a6e93719ae5b9cab3" title="Gets the object with the given symbol." alt="" coords="256,79,489,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="209,74,243,77,242,82,208,79"/>
+<area shape="rect" id="Node000003" href="$class_field.html#a536d757818e186d83b2ab71415bb0bba" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="544,5,707,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="427,34,530,24,531,30,427,40"/>
+<area shape="rect" id="Node000004" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="537,55,713,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="427,45,524,55,523,60,427,50"/>
 </map>

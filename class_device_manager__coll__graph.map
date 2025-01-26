@@ -1,7 +1,30 @@
 <map id="DeviceManager" name="DeviceManager">
-<area shape="rect" id="node1" title="Class for managing all devices." alt="" coords="83,275,207,301"/>
-<area shape="rect" id="node2" href="$class_lookup_manager.html" title=" " alt="" coords="45,199,245,225"/>
-<area shape="rect" id="node3" href="$class_lookup_manager.html" title="Class for looking up and managing devices and fields." alt="" coords="38,95,253,136"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,155,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="179,5,245,32"/>
+<area shape="rect" id="Node000001" title="Class for managing all devices." alt="" coords="567,535,691,560"/>
+<area shape="rect" id="Node000002" href="$class_lookup_manager.html" title=" " alt="" coords="529,460,729,485"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="631,500,631,534,626,534,626,500"/>
+<area shape="rect" id="Node000003" href="$class_device.html" title="Each sensor / device on the PJON network." alt="" coords="422,372,489,397"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="492,401,606,457,604,462,490,406"/>
+<area shape="rect" id="Node000004" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="93,93,189,119"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="160,128,196,172,241,219,294,265,352,307,440,370,437,374,348,311,291,270,237,223,192,175,156,132"/>
+<area shape="rect" id="Node000008" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="251,189,305,214"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="170,124,263,186,260,191,167,129"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,5,140,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="93,40,133,91,129,94,88,43"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="164,5,253,31"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="193,43,152,94,148,91,189,40"/>
+<area shape="rect" id="Node000007" href="$class_lookup_manager.html" title=" " alt="" coords="362,284,549,309"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="458,323,458,371,453,371,453,323"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="313,218,435,282,432,286,311,223"/>
+<area shape="rect" id="Node000009" href="$classuint8__t.html" title=" " alt="" coords="443,93,510,119"/>
+<area shape="poly" id="edge15_Node000002_Node000009" title=" " alt="" coords="524,113,676,140,715,157,750,179,767,186,774,191,777,200,777,386,775,401,769,415,749,436,722,452,692,462,690,457,720,447,746,432,764,412,769,400,771,386,771,200,770,194,765,191,747,184,712,162,675,145,523,118"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="476,133,459,284,454,283,471,133"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="431,117,388,128,345,145,313,167,290,190,286,187,310,163,342,140,386,122,429,112"/>
+<area shape="rect" id="Node000011" href="$class_lookup_manager.html" title="Class for looking up and managing devices and fields." alt="" coords="521,181,736,221"/>
+<area shape="poly" id="edge14_Node000011_Node000009" title=" " alt="" coords="508,123,599,179,596,183,505,128"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="213,93,263,119"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="236,132,239,156,250,173,264,187,260,190,246,176,234,158,231,133"/>
+<area shape="poly" id="edge16_Node000002_Node000011" title=" " alt="" coords="631,235,631,460,626,460,626,235"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="580,230,546,248,476,286,474,282,543,243,578,225"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="554,93,703,119"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="631,132,631,181,626,181,626,132"/>
 </map>

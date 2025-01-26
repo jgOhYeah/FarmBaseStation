@@ -1,5 +1,7 @@
 <map id="loraWatchdogTask" name="loraWatchdogTask">
-<area shape="rect" id="node1" title="Task that checks if the radio is connected." alt="" coords="5,5,145,32"/>
-<area shape="rect" id="node2" href="$lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="193,5,380,32"/>
-<area shape="rect" id="node3" href="$lora_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="428,5,561,32"/>
+<area shape="rect" id="Node000001" title="Task that checks if the radio is connected." alt="" coords="5,5,145,31"/>
+<area shape="rect" id="Node000002" href="$lora_8cpp.html#aeae7cd913b330750fef4bda6cadbf95b" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="193,5,380,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,15,180,15,180,21,146,21"/>
+<area shape="rect" id="Node000003" href="$rpc_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="428,5,561,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,15,414,15,414,21,380,21"/>
 </map>

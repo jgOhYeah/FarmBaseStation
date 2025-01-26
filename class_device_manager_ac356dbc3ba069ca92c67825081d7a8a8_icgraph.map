@@ -1,7 +1,12 @@
 <map id="DeviceManager::txRequired" name="DeviceManager::txRequired">
-<area shape="rect" id="node1" title="Returns the number of packets that need to be sent across all devices." alt="" coords="468,31,671,57"/>
-<area shape="rect" id="node2" href="$leds_8cpp.html#a0e9abc4adafb917c6af448aca6042e96" title="Task that manages the LEDs on the unit." alt="" coords="123,5,193,32"/>
-<area shape="rect" id="node4" href="$lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" title="Updates the attribute waiting to false if required." alt="" coords="252,56,420,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,31,64,57"/>
-<area shape="rect" id="node5" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,56,204,83"/>
+<area shape="rect" id="Node000001" title="Returns the number of packets that need to be sent across all devices." alt="" coords="468,29,671,55"/>
+<area shape="rect" id="Node000002" href="$leds_8cpp.html#a0e9abc4adafb917c6af448aca6042e96" title="Task that manages the LEDs on the unit." alt="" coords="123,5,193,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="454,38,194,23,194,17,454,33"/>
+<area shape="rect" id="Node000004" href="$lora_8cpp.html#ab4d91a7f25182323f789a4e986c08cd8" title="Updates the attribute waiting to false if required." alt="" coords="252,55,420,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="455,57,420,61,420,56,454,52"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,31,64,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,31,65,40,64,35,108,25"/>
+<area shape="rect" id="Node000005" href="$lora_8cpp.html#aa56d712b5af48cc40bd9ef0dac6cb797" title="Task for sending packets when needed." alt="" coords="112,55,204,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="238,70,204,70,204,65,238,65"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="98,58,64,52,65,46,99,53"/>
 </map>

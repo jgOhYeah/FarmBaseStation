@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['gatemonitorfieldslist_75',['gateMonitorFieldsList',['../device__list_8h.html#af8ef1b5107d54e047d2b94e5f4017a32',1,'device_list.h']]],
-  ['gatemonitorfieldsmanager_76',['gateMonitorFieldsManager',['../device__list_8h.html#a73b20a6d6af778966012c189641c1187',1,'device_list.h']]],
-  ['generatepacket_77',['generatePacket',['../class_device.html#a0fc7e0f4a048d2b7010c7bc6882bb987',1,'Device']]],
-  ['getwithname_78',['getWithName',['../class_lookup_manager.html#aaa9c3082dae381c5079f5346e3c9426b',1,'LookupManager']]],
-  ['getwithsymbol_79',['getWithSymbol',['../class_lookup_manager.html#a8d3d926f82bfb89594abd2430b9d4326',1,'LookupManager']]]
+  ['gatemonitorfieldslist_0',['gateMonitorFieldsList',['../device__list_8h.html#af8ef1b5107d54e047d2b94e5f4017a32',1,'device_list.h']]],
+  ['gatemonitorfieldsmanager_1',['gateMonitorFieldsManager',['../device__list_8h.html#a8ae30090aa074c09fca1236e1b2ffa39',1,'device_list.h']]],
+  ['generatepacket_2',['generatePacket',['../class_device.html#a0fc7e0f4a048d2b7010c7bc6882bb987',1,'Device']]],
+  ['getting_20started_3',['Getting started',['../index.html#autotoc_md2',1,'']]],
+  ['getwithname_4',['getWithName',['../class_lookup_manager.html#ad0d556a556e0b220629cf198d6f0de1a',1,'LookupManager']]],
+  ['getwithsymbol_5',['getWithSymbol',['../class_lookup_manager.html#a03510999964fcb3a6e93719ae5b9cab3',1,'LookupManager']]]
 ];

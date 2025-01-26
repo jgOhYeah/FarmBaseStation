@@ -1,0 +1,5 @@
+<map id="setVersionAttribute" name="setVersionAttribute">
+<area shape="rect" id="Node000001" title="Informs thingsboard what software version is running. This does not use a queue as this could be sent..." alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000002" href="$rpc_8cpp.html#a22f0de10e8da7246554c2221cc40f7a0" title="Converts a reset reason returned by esp_reset_reason() into a string." alt="" coords="200,5,343,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,15,186,15,186,21,152,21"/>
+</map>

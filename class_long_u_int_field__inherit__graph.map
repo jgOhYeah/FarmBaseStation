@@ -1,5 +1,7 @@
 <map id="LongUIntField" name="LongUIntField">
-<area shape="rect" id="node1" title="Fields that contain an unsigned, 4 byte integer." alt="" coords="5,155,116,181"/>
-<area shape="rect" id="node2" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="34,80,87,107"/>
-<area shape="rect" id="node3" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="13,5,109,32"/>
+<area shape="rect" id="Node000001" title="Fields that contain an unsigned, 4 byte integer." alt="" coords="5,152,116,177"/>
+<area shape="rect" id="Node000002" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="34,79,87,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,118,63,152,58,152,58,118"/>
+<area shape="rect" id="Node000003" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="13,5,109,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,44,63,79,58,79,58,44"/>
 </map>

@@ -1,13 +1,27 @@
 <map id="BaseStationCode/src/src/devices.h" name="BaseStationCode/src/src/devices.h">
-<area shape="rect" id="node1" title="Devices and manager for all known devices the base station connects to." alt="" coords="212,5,368,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,244,377,271"/>
-<area shape="rect" id="node9" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="248,169,332,196"/>
-<area shape="rect" id="node10" href="$fields_8h.html" title="Contains fields classes." alt="" coords="331,95,401,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,319,89,345"/>
-<area shape="rect" id="node4" title=" " alt="" coords="113,319,176,345"/>
-<area shape="rect" id="node5" title=" " alt="" coords="201,319,321,345"/>
-<area shape="rect" id="node6" title=" " alt="" coords="345,319,456,345"/>
-<area shape="rect" id="node7" title=" " alt="" coords="481,319,627,345"/>
-<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,319,747,345"/>
-<area shape="rect" id="node11" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="407,169,519,196"/>
+<area shape="rect" id="Node000001" title="Devices and manager for all known devices the base station connects to." alt="" coords="212,5,368,45"/>
+<area shape="rect" id="Node000002" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,240,377,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="276,47,256,76,238,113,229,153,231,172,238,191,258,215,285,232,282,236,255,219,233,193,226,173,224,153,233,111,252,73,272,44"/>
+<area shape="rect" id="Node000009" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="248,167,332,192"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="293,46,293,153,287,153,287,46"/>
+<area shape="rect" id="Node000010" href="$fields_8h.html" title="Contains fields classes." alt="" coords="331,93,401,119"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="310,44,347,81,343,85,306,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,313,89,339"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,268,103,313,102,308,284,263"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="113,313,176,339"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="301,268,188,311,187,306,299,263"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="201,313,321,339"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="320,268,283,305,279,302,317,264"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="345,313,456,339"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="344,264,382,302,378,306,340,268"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="481,313,627,339"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="367,263,506,307,504,312,365,268"/>
+<area shape="rect" id="Node000008" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,313,747,339"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="377,260,639,310,638,316,376,266"/>
+<area shape="poly" id="edge9_Node000009_Node000002" title=" " alt="" coords="299,191,319,227,314,229,294,194"/>
+<area shape="poly" id="edge11_Node000010_Node000002" title=" " alt="" coords="366,120,339,227,334,226,360,118"/>
+<area shape="poly" id="edge12_Node000010_Node000009" title=" " alt="" coords="356,121,314,159,311,155,352,117"/>
+<area shape="rect" id="Node000011" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="407,167,519,192"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="383,117,438,156,435,160,380,121"/>
+<area shape="poly" id="edge14_Node000011_Node000002" title=" " alt="" coords="443,194,365,236,363,231,441,190"/>
 </map>

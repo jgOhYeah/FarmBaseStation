@@ -1,16 +1,38 @@
 <map id="BaseStationCode/src/src/alarm.h" name="BaseStationCode/src/src/alarm.h">
-<area shape="rect" id="node1" title="Handles alarms." alt="" coords="824,5,980,47"/>
-<area shape="rect" id="node2" href="$main_8cpp.html" title=" " alt="" coords="185,452,341,493"/>
-<area shape="rect" id="node3" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="1056,95,1212,136"/>
-<area shape="rect" id="node4" href="$leds_8h.html" title="Controls the LEDs on the unit." alt="" coords="12,363,168,404"/>
-<area shape="rect" id="node6" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="683,95,839,136"/>
-<area shape="rect" id="node5" href="$leds_8cpp.html" title="Controls the LEDs on the unit." alt="" coords="5,452,161,493"/>
-<area shape="rect" id="node7" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="297,184,453,225"/>
-<area shape="rect" id="node10" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="657,363,813,404"/>
-<area shape="rect" id="node14" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="824,184,980,225"/>
-<area shape="rect" id="node8" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="40,273,196,315"/>
-<area shape="rect" id="node9" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="297,273,453,315"/>
-<area shape="rect" id="node11" href="$ota_8h.html" title="Handles over the air (OTA) updates." alt="" coords="297,363,453,404"/>
-<area shape="rect" id="node13" href="$timeseries_8cpp.html" title=" " alt="" coords="477,363,633,404"/>
-<area shape="rect" id="node12" href="$ota_8cpp.html" title="Handles over the air (OTA) updates." alt="" coords="365,452,521,493"/>
+<area shape="rect" id="Node000001" title="Handles alarms." alt="" coords="824,5,980,45"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="185,445,341,485"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="938,53,965,81,992,115,1013,156,1019,178,1021,200,1021,291,1017,320,1005,342,988,358,966,369,911,384,849,400,777,421,714,433,658,438,605,438,494,437,430,439,354,448,342,450,341,445,354,443,429,434,494,431,605,433,658,433,714,428,776,416,848,395,910,378,964,364,985,354,1001,339,1012,319,1015,290,1015,200,1013,178,1008,158,988,118,961,84,934,57"/>
+<area shape="rect" id="Node000003" href="$alarm_8cpp.html" title="Handles alarms." alt="" coords="1056,93,1212,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="967,48,1084,91,1082,96,965,53"/>
+<area shape="rect" id="Node000004" href="$leds_8h.html" title="Controls the LEDs on the unit." alt="" coords="12,357,168,397"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="811,40,615,70,497,92,377,118,262,149,161,185,117,205,80,226,51,248,30,271,24,281,23,292,31,315,48,337,67,355,64,359,44,340,27,317,18,293,19,280,25,268,47,244,78,221,115,200,159,180,261,144,376,113,496,86,614,65,810,35"/>
+<area shape="rect" id="Node000006" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="683,93,839,133"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="861,55,793,96,790,91,858,50"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="141,401,227,443,224,448,139,406"/>
+<area shape="rect" id="Node000005" href="$leds_8cpp.html" title="Controls the LEDs on the unit." alt="" coords="5,445,161,485"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="90,411,87,445,82,445,85,411"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="777,145,801,207,826,282,839,352,837,379,828,399,812,413,791,424,738,438,673,445,603,447,462,445,401,445,354,448,342,450,341,445,354,443,401,439,462,439,603,442,673,440,737,433,789,419,809,408,824,396,832,378,833,352,821,283,796,209,772,147"/>
+<area shape="rect" id="Node000007" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="297,181,453,221"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="670,138,454,185,453,180,668,132"/>
+<area shape="rect" id="Node000010" href="$networking_8cpp.html" title="File that handles connecting to WiFi and MQTT and staying connected." alt="" coords="657,357,813,397"/>
+<area shape="poly" id="edge21_Node000006_Node000010" title=" " alt="" coords="760,147,740,357,735,357,755,147"/>
+<area shape="rect" id="Node000014" href="$rpc_8cpp.html" title="Handles RPC calls." alt="" coords="824,181,980,221"/>
+<area shape="poly" id="edge22_Node000006_Node000014" title=" " alt="" coords="805,138,872,179,870,184,802,143"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="329,231,307,249,288,271,277,292,269,316,261,364,260,410,263,445,258,445,255,410,255,364,264,314,272,290,284,268,303,245,326,227"/>
+<area shape="rect" id="Node000008" href="$lora_8cpp.html" title="File that handles the LoRa radio and PJON." alt="" coords="40,269,196,309"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="307,228,175,272,174,267,305,223"/>
+<area shape="rect" id="Node000009" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="297,269,453,309"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="369,235,370,269,365,269,364,235"/>
+<area shape="poly" id="edge12_Node000009_Node000002" title=" " alt="" coords="329,319,307,337,288,359,278,380,271,403,266,445,261,445,266,402,273,378,284,356,303,333,326,315"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="300,316,153,360,152,355,299,311"/>
+<area shape="poly" id="edge19_Node000009_Node000006" title=" " alt="" coords="429,261,718,131,720,136,431,266"/>
+<area shape="poly" id="edge14_Node000009_Node000007" title=" " alt="" coords="381,256,380,222,386,222,387,256"/>
+<area shape="poly" id="edge15_Node000009_Node000010" title=" " alt="" coords="467,310,657,355,656,360,466,315"/>
+<area shape="rect" id="Node000011" href="$ota_8h.html" title="Handles over the air (OTA) updates." alt="" coords="297,357,453,397"/>
+<area shape="poly" id="edge16_Node000009_Node000011" title=" " alt="" coords="378,323,378,357,373,357,373,323"/>
+<area shape="rect" id="Node000013" href="$timeseries_8cpp.html" title=" " alt="" coords="477,357,633,397"/>
+<area shape="poly" id="edge20_Node000009_Node000013" title=" " alt="" coords="428,313,517,355,515,360,426,318"/>
+<area shape="poly" id="edge17_Node000011_Node000002" title=" " alt="" coords="341,408,290,447,287,443,338,404"/>
+<area shape="rect" id="Node000012" href="$ota_8cpp.html" title="Handles over the air (OTA) updates." alt="" coords="365,445,521,485"/>
+<area shape="poly" id="edge18_Node000011_Node000012" title=" " alt="" coords="401,407,430,443,426,447,397,410"/>
 </map>

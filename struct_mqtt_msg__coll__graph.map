@@ -1,5 +1,7 @@
 <map id="MqttMsg" name="MqttMsg">
-<area shape="rect" id="node1" title=" " alt="" coords="41,95,119,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node3" title=" " alt="" coords="81,5,181,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="65,93,144,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,105,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,41,100,91,95,94,66,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="130,5,181,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,44,128,71,114,94,110,92,124,68,139,41"/>
 </map>

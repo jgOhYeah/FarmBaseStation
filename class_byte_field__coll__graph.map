@@ -1,9 +1,15 @@
 <map id="ByteField" name="ByteField">
-<area shape="rect" id="node1" title="Fields that contain an unsigned, single byte integer." alt="" coords="225,260,307,287"/>
-<area shape="rect" id="node2" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="239,184,293,211"/>
-<area shape="rect" id="node3" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="93,95,189,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,140,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="164,5,253,32"/>
-<area shape="rect" id="node6" title=" " alt="" coords="213,95,319,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="375,95,426,121"/>
+<area shape="rect" id="Node000001" title="Fields that contain an unsigned, single byte integer." alt="" coords="205,256,287,281"/>
+<area shape="rect" id="Node000002" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="219,181,273,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,221,249,256,243,256,243,221"/>
+<area shape="rect" id="Node000003" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="93,93,189,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="167,125,233,179,230,183,164,129"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,140,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,40,133,91,129,94,88,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="164,5,253,31"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="193,43,152,94,148,91,189,40"/>
+<area shape="rect" id="Node000006" href="$classuint8__t.html" title=" " alt="" coords="213,93,279,119"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="249,133,249,181,243,181,243,133"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="355,93,406,119"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="373,133,353,159,334,172,313,181,273,192,272,186,311,176,331,167,350,155,369,130"/>
 </map>

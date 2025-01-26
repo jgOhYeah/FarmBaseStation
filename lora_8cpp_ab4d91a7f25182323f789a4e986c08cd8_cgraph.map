@@ -1,6 +1,9 @@
 <map id="sendOnTxNotRequired" name="sendOnTxNotRequired">
-<area shape="rect" id="node1" title="Updates the attribute waiting to false if required." alt="" coords="5,31,173,57"/>
-<area shape="rect" id="node2" href="$lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182" title="Sets the state for if there are packets left to send." alt="" coords="250,5,395,32"/>
-<area shape="rect" id="node4" href="$class_device_manager.html#ac356dbc3ba069ca92c67825081d7a8a8" title="Returns the number of packets that need to be sent across all devices." alt="" coords="221,56,424,83"/>
-<area shape="rect" id="node3" href="$lora_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="472,5,605,32"/>
+<area shape="rect" id="Node000001" title="Updates the attribute waiting to false if required." alt="" coords="5,31,173,56"/>
+<area shape="rect" id="Node000002" href="$lora_8cpp.html#ab9cd66992a99394d4aa4030fcdbf6182" title="Sets the state for if there are packets left to send." alt="" coords="250,5,395,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,32,236,25,236,30,174,37"/>
+<area shape="rect" id="Node000004" href="$class_device_manager.html#ac356dbc3ba069ca92c67825081d7a8a8" title="Returns the number of packets that need to be sent across all devices." alt="" coords="221,55,424,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,49,208,53,208,58,174,55"/>
+<area shape="rect" id="Node000003" href="$rpc_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="472,5,605,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,15,458,15,458,21,396,21"/>
 </map>

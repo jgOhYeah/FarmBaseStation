@@ -1,4 +1,5 @@
 <map id="sendRadioConnectedMsg" name="sendRadioConnectedMsg">
-<area shape="rect" id="node1" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="5,5,192,32"/>
-<area shape="rect" id="node2" href="$lora_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="240,5,373,32"/>
+<area shape="rect" id="Node000001" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="5,5,192,31"/>
+<area shape="rect" id="Node000002" href="$rpc_8cpp.html#adc3c5806492d2818ad6f5aff232765ec" title=" " alt="" coords="240,5,373,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,15,226,15,226,21,192,21"/>
 </map>

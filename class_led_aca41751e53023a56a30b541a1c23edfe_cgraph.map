@@ -1,4 +1,5 @@
 <map id="Led::begin" name="Led::begin">
-<area shape="rect" id="node1" title="Initialises the pins." alt="" coords="5,5,95,32"/>
-<area shape="rect" id="node2" href="$class_led.html#ad977cfca6965684f274d8d6e33ac3548" title="Turns the LED on or off." alt="" coords="143,5,216,32"/>
+<area shape="rect" id="Node000001" title="Initialises the pins." alt="" coords="5,5,95,31"/>
+<area shape="rect" id="Node000002" href="$class_led.html#ad977cfca6965684f274d8d6e33ac3548" title="Turns the LED on or off." alt="" coords="143,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,15,129,15,129,21,95,21"/>
 </map>

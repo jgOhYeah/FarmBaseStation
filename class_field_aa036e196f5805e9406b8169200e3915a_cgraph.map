@@ -1,5 +1,7 @@
 <map id="Field::decode" name="Field::decode">
-<area shape="rect" id="node1" title="Decodes the value from bytes into an existing json document." alt="" coords="5,31,113,57"/>
-<area shape="rect" id="node2" href="$class_field.html#a536d757818e186d83b2ab71415bb0bba" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="168,5,331,32"/>
-<area shape="rect" id="node3" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="161,56,337,83"/>
+<area shape="rect" id="Node000001" title="Decodes the value from bytes into an existing json document." alt="" coords="5,31,113,56"/>
+<area shape="rect" id="Node000002" href="$class_field.html#a536d757818e186d83b2ab71415bb0bba" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="168,5,331,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,34,154,28,155,33,114,39"/>
+<area shape="rect" id="Node000003" href="$class_field.html#a0f6c46168ecc1113ff61d9fb68d8c763" title="Checks if the value can be decoded from the packet." alt="" coords="161,55,337,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,47,148,52,148,57,113,53"/>
 </map>

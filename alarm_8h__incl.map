@@ -1,10 +1,17 @@
 <map id="BaseStationCode/src/src/alarm.h" name="BaseStationCode/src/src/alarm.h">
-<area shape="rect" id="node1" title="Handles alarms." alt="" coords="252,5,408,47"/>
-<area shape="rect" id="node2" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,95,377,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,169,89,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="113,169,176,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="201,169,321,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="345,169,456,196"/>
-<area shape="rect" id="node7" title=" " alt="" coords="481,169,627,196"/>
-<area shape="rect" id="node8" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,169,747,196"/>
+<area shape="rect" id="Node000001" title="Handles alarms." alt="" coords="252,5,408,45"/>
+<area shape="rect" id="Node000002" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="283,93,377,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="333,46,333,79,327,79,327,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,167,89,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,121,103,167,102,162,284,116"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="113,167,176,192"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="301,121,188,164,187,159,299,116"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="201,167,321,192"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="320,121,283,159,279,155,317,117"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="345,167,456,192"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="344,117,382,155,378,159,340,121"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="481,167,627,192"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="367,116,506,160,504,165,365,121"/>
+<area shape="rect" id="Node000008" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="651,167,747,192"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="377,114,639,164,638,169,376,119"/>
 </map>

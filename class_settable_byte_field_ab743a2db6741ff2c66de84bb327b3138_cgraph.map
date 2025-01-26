@@ -1,4 +1,5 @@
 <map id="SettableByteField::actuallyDecode" name="SettableByteField::actuallyDecode">
-<area shape="rect" id="node1" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="5,5,151,47"/>
-<area shape="rect" id="node2" href="$class_settable_field.html#a6ee15f7dd88d8e012b9a01912134a905" title="Updates txRequired (if setValue == current, then not required)." alt="" coords="199,5,349,47"/>
+<area shape="rect" id="Node000001" title="Decodes the value from bytes into an existing json document. decode does the checking for length,..." alt="" coords="5,5,151,45"/>
+<area shape="rect" id="Node000002" href="$class_settable_field.html#a6ee15f7dd88d8e012b9a01912134a905" title="Updates txRequired (if setValue == current, then not required)." alt="" coords="199,5,349,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,23,185,23,185,28,151,28"/>
 </map>

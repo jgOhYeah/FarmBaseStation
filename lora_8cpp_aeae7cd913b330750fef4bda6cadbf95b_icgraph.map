@@ -1,6 +1,9 @@
 <map id="sendRadioConnectedMsg" name="sendRadioConnectedMsg">
-<area shape="rect" id="node1" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="427,5,613,32"/>
-<area shape="rect" id="node2" href="$lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5" title="Task that checks if the radio is connected." alt="" coords="239,5,379,32"/>
-<area shape="rect" id="node3" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="112,5,191,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,32"/>
+<area shape="rect" id="Node000001" title="Sends an attribute over mqtt depending on the state of the radio connection." alt="" coords="427,5,613,31"/>
+<area shape="rect" id="Node000002" href="$lora_8cpp.html#ac5e6522afd1447f1520e4f4503af9ec5" title="Task that checks if the radio is connected." alt="" coords="239,5,379,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,21,379,21,379,15,413,15"/>
+<area shape="rect" id="Node000003" href="$lora_8cpp.html#a6042a1af9411d9eafc7088497f536eb8" title="&quot;Receives&quot; some fake data for testing purposes." alt="" coords="112,5,191,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,21,191,21,191,15,225,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title=" " alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,21,64,21,64,15,98,15"/>
 </map>

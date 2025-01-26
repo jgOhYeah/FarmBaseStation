@@ -1,4 +1,5 @@
 <map id="rpcMe" name="rpcMe">
-<area shape="rect" id="node1" title="Handles an RPC message addressed to this device (not one of the remote devices)." alt="" coords="5,5,68,32"/>
-<area shape="rect" id="node2" href="$rpc_8cpp.html#a8d99d63355a7dac3b1264ced57f255d9" title="Replies to an RPC message for this device." alt="" coords="116,5,215,32"/>
+<area shape="rect" id="Node000001" title="Handles an RPC message addressed to this device (not one of the remote devices)." alt="" coords="5,5,68,31"/>
+<area shape="rect" id="Node000002" href="$rpc_8cpp.html#a8d99d63355a7dac3b1264ced57f255d9" title="Replies to an RPC message for this device." alt="" coords="116,5,215,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,15,102,15,102,21,69,21"/>
 </map>

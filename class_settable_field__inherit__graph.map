@@ -1,8 +1,13 @@
 <map id="SettableField&lt; T &gt;" name="SettableField&lt; T &gt;">
-<area shape="rect" id="node1" title="Class for fields that can be set." alt="" coords="81,157,227,184"/>
-<area shape="rect" id="node4" href="$class_settable_field.html" title=" " alt="" coords="67,247,241,273"/>
-<area shape="rect" id="node2" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="127,81,181,108"/>
-<area shape="rect" id="node3" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="106,5,202,32"/>
-<area shape="rect" id="node5" href="$class_settable_byte_field.html" title="Fields that contain an unsigned, single byte integer that can be set using an RPC call." alt="" coords="5,323,143,349"/>
-<area shape="rect" id="node6" href="$class_settable_flag_field.html" title="Class for flags that can be set via an RPC call." alt="" coords="167,323,301,349"/>
+<area shape="rect" id="Node000001" title="Class for fields that can be set." alt="" coords="81,155,227,180"/>
+<area shape="rect" id="Node000004" href="$class_settable_field.html" title=" " alt="" coords="67,243,241,268"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,194,157,242,151,242,151,194"/>
+<area shape="rect" id="Node000002" href="$class_field.html" title="Class for handling data fields in messages." alt="" coords="127,80,181,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,120,157,154,151,154,151,120"/>
+<area shape="rect" id="Node000003" href="$class_lookupable.html" title="Class for fields and devices that can be managed by LookupManager." alt="" coords="106,5,202,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,45,157,80,151,80,151,45"/>
+<area shape="rect" id="Node000005" href="$class_settable_byte_field.html" title="Fields that contain an unsigned, single byte integer that can be set using an RPC call." alt="" coords="5,317,143,343"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="133,279,89,319,85,315,129,275"/>
+<area shape="rect" id="Node000006" href="$class_settable_flag_field.html" title="Class for flags that can be set via an RPC call." alt="" coords="167,317,301,343"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="179,275,223,315,219,319,175,279"/>
 </map>

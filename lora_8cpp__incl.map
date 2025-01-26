@@ -1,18 +1,48 @@
 <map id="BaseStationCode/src/src/lora.cpp" name="BaseStationCode/src/src/lora.cpp">
-<area shape="rect" id="node1" title="File that handles the LoRa radio and PJON." alt="" coords="185,5,341,47"/>
-<area shape="rect" id="node2" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="233,95,292,121"/>
-<area shape="rect" id="node3" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="337,543,431,569"/>
-<area shape="rect" id="node10" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="143,468,227,495"/>
-<area shape="rect" id="node11" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="245,319,329,345"/>
-<area shape="rect" id="node14" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="255,244,361,271"/>
-<area shape="rect" id="node15" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="422,169,477,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="457,617,541,644"/>
-<area shape="rect" id="node5" title=" " alt="" coords="565,617,627,644"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,617,125,644"/>
-<area shape="rect" id="node7" title=" " alt="" coords="150,617,261,644"/>
-<area shape="rect" id="node8" title=" " alt="" coords="285,617,432,644"/>
-<area shape="rect" id="node9" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="652,617,748,644"/>
-<area shape="rect" id="node12" href="$fields_8h.html" title="Contains fields classes." alt="" coords="303,393,372,420"/>
-<area shape="rect" id="node13" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="353,468,465,495"/>
-<area shape="rect" id="node16" href="$alarm_8h.html" title="Handles alarms." alt="" coords="591,319,663,345"/>
+<area shape="rect" id="Node000001" title="File that handles the LoRa radio and PJON." alt="" coords="185,5,341,45"/>
+<area shape="rect" id="Node000002" href="$lora_8h.html" title="File that handles the LoRa radio and PJON." alt="" coords="233,93,292,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,46,265,79,260,79,260,46"/>
+<area shape="rect" id="Node000003" href="$defines_8h.html" title="Definitions and other preprocessor and global stuff." alt="" coords="337,533,431,559"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,121,195,140,154,169,136,186,121,206,112,228,108,252,108,401,110,447,117,465,132,483,164,501,213,515,324,535,323,540,212,520,162,506,129,487,112,468,105,448,103,401,103,251,106,226,117,203,132,183,150,165,193,136,232,116"/>
+<area shape="rect" id="Node000010" href="$lookups_8h.html" title="Lookupable and lookupable manager base classes." alt="" coords="143,460,227,485"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="249,121,224,143,197,173,176,210,169,230,167,251,167,327,172,392,182,446,177,447,167,392,161,327,161,251,164,229,171,208,193,170,221,139,245,117"/>
+<area shape="rect" id="Node000011" href="$devices_8h.html" title="Devices and manager for all known devices the base station connects to." alt="" coords="245,313,329,339"/>
+<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="260,120,251,146,242,183,239,224,245,265,255,284,268,302,263,305,250,287,240,266,234,224,237,182,246,145,255,118"/>
+<area shape="rect" id="Node000014" href="$networking_8h.html" title="Header file for networking.cpp." alt="" coords="255,240,361,265"/>
+<area shape="poly" id="edge19_Node000002_Node000014" title=" " alt="" coords="264,118,276,170,296,227,291,228,271,171,259,120"/>
+<area shape="rect" id="Node000015" href="$rpc_8h.html" title="Handles RPC calls." alt="" coords="422,167,477,192"/>
+<area shape="poly" id="edge23_Node000002_Node000015" title=" " alt="" coords="293,116,410,160,408,165,291,121"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="457,607,541,632"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="404,556,470,597,467,602,401,561"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="565,607,627,632"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="419,556,553,601,551,606,417,561"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,607,125,632"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="338,560,131,606,129,601,337,555"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="150,607,261,632"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="356,561,248,604,246,599,354,556"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="285,607,432,632"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="382,560,370,595,365,593,377,558"/>
+<area shape="rect" id="Node000009" href="$topics_8h.html" title="MQTT topics for a thingsboard gateway." alt="" coords="652,607,748,632"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="432,555,639,602,638,607,430,560"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="218,483,339,526,338,531,216,488"/>
+<area shape="poly" id="edge12_Node000011_Node000003" title=" " alt="" coords="288,339,288,372,293,411,306,444,324,474,364,521,360,525,320,477,301,446,288,413,282,372,283,339"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="281,341,203,450,199,447,276,338"/>
+<area shape="rect" id="Node000012" href="$fields_8h.html" title="Contains fields classes." alt="" coords="303,387,372,412"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="297,337,323,374,319,377,293,341"/>
+<area shape="poly" id="edge15_Node000012_Node000003" title=" " alt="" coords="339,412,337,445,344,485,353,504,366,521,362,524,349,507,339,486,332,446,333,412"/>
+<area shape="poly" id="edge16_Node000012_Node000010" title=" " alt="" coords="314,414,223,457,221,452,312,410"/>
+<area shape="rect" id="Node000013" href="$conversions_8h.html" title="General functions for converting to and from char arrays." alt="" coords="353,460,465,485"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="351,410,390,448,386,452,347,414"/>
+<area shape="poly" id="edge18_Node000013_Node000003" title=" " alt="" coords="408,487,395,521,390,520,403,485"/>
+<area shape="poly" id="edge22_Node000014_Node000002" title=" " alt="" coords="307,240,295,189,275,132,280,131,300,188,312,239"/>
+<area shape="poly" id="edge20_Node000014_Node000003" title=" " alt="" coords="324,263,359,293,403,338,447,395,465,426,480,459,483,473,480,487,458,512,431,530,428,525,455,508,475,484,478,473,475,461,461,429,443,398,399,342,355,297,321,267"/>
+<area shape="poly" id="edge21_Node000014_Node000011" title=" " alt="" coords="307,266,297,301,291,299,302,265"/>
+<area shape="poly" id="edge24_Node000015_Node000003" title=" " alt="" coords="467,190,493,212,523,243,546,281,553,302,556,325,556,401,553,425,544,446,530,466,513,483,472,511,432,531,430,526,470,506,509,479,526,462,539,444,548,423,551,400,551,325,548,303,541,283,518,246,490,216,464,194"/>
+<area shape="poly" id="edge25_Node000015_Node000009" title=" " alt="" coords="478,181,540,192,577,202,614,217,648,235,676,259,696,289,703,324,703,474,703,593,697,593,697,474,697,325,691,291,672,263,645,240,612,221,575,208,539,197,477,186"/>
+<area shape="poly" id="edge28_Node000015_Node000011" title=" " alt="" coords="442,194,414,228,375,267,319,308,316,304,372,263,410,225,438,191"/>
+<area shape="poly" id="edge29_Node000015_Node000012" title=" " alt="" coords="446,194,352,375,347,373,441,191"/>
+<area shape="poly" id="edge30_Node000015_Node000014" title=" " alt="" coords="428,194,344,236,342,231,425,190"/>
+<area shape="rect" id="Node000016" href="$alarm_8h.html" title="Handles alarms." alt="" coords="591,313,663,339"/>
+<area shape="poly" id="edge26_Node000015_Node000016" title=" " alt="" coords="478,187,525,206,550,221,574,238,600,268,618,299,613,302,595,271,570,242,548,225,523,211,476,191"/>
+<area shape="poly" id="edge27_Node000016_Node000003" title=" " alt="" coords="629,339,625,368,617,408,601,450,574,487,545,509,512,525,477,536,445,542,444,537,476,531,510,520,542,505,570,483,596,448,612,406,620,367,623,338"/>
 </map>

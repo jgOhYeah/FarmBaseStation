@@ -1,5 +1,7 @@
 <map id="rpcGateway" name="rpcGateway">
-<area shape="rect" id="node1" title="Handles an RPC message addressed to remote devices." alt="" coords="5,31,105,57"/>
-<area shape="rect" id="node2" href="$class_lookup_manager.html#aaa9c3082dae381c5079f5346e3c9426b" title="Gets the object matching the given name." alt="" coords="153,5,376,32"/>
-<area shape="rect" id="node3" href="$class_field.html#a9b3b13d9abe0884a93b294edc0396f74" title="handles an RPC call for a field." alt="" coords="200,56,329,83"/>
+<area shape="rect" id="Node000001" title="Handles an RPC message addressed to remote devices." alt="" coords="5,31,105,56"/>
+<area shape="rect" id="Node000002" href="$class_lookup_manager.html#ad0d556a556e0b220629cf198d6f0de1a" title="Gets the object matching the given name." alt="" coords="153,5,376,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,35,146,30,147,35,106,40"/>
+<area shape="rect" id="Node000003" href="$class_field.html#a9b3b13d9abe0884a93b294edc0396f74" title="handles an RPC call for a field." alt="" coords="200,55,329,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,46,187,56,186,61,105,52"/>
 </map>

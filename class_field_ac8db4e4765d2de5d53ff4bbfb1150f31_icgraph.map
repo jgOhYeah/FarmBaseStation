@@ -1,5 +1,7 @@
 <map id="Field::writeSymbol" name="Field::writeSymbol">
-<area shape="rect" id="node1" title="Returns the symbol in write mode (MSB set to 1)." alt="" coords="199,46,341,73"/>
-<area shape="rect" id="node2" href="$class_settable_byte_field.html#ad9a73e287bbb6c844685dd06de96c5e8" title="Encodes the value to set into a packet ready to send." alt="" coords="5,5,151,47"/>
-<area shape="rect" id="node3" href="$class_settable_flag_field.html#ab24dbdb23e45a176c378b3d6c3f2345c" title="Encodes the value to set into a packet ready to send." alt="" coords="7,71,149,112"/>
+<area shape="rect" id="Node000001" title="Returns the symbol in write mode (MSB set to 1)." alt="" coords="199,45,341,70"/>
+<area shape="rect" id="Node000002" href="$class_settable_byte_field.html#ad9a73e287bbb6c844685dd06de96c5e8" title="Encodes the value to set into a packet ready to send." alt="" coords="5,5,151,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,46,151,40,152,35,185,41"/>
+<area shape="rect" id="Node000003" href="$class_settable_flag_field.html#ab24dbdb23e45a176c378b3d6c3f2345c" title="Encodes the value to set into a packet ready to send." alt="" coords="7,69,149,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,74,150,80,149,75,184,69"/>
 </map>
