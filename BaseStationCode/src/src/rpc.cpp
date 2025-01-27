@@ -130,6 +130,7 @@ void rpcMe(char *id, uint8_t *message, uint16_t length)
             char buf[100];
             serializeJson(reply, buf, sizeof(buf));
             replyMeRpc(id, buf);
+            setAirConditionerAttribute(buf);
         }
         else if (STRINGS_MATCH(method, "aircondGet"))
         {
@@ -446,5 +447,27 @@ void airConditionerReplySettings(JsonDocument &obj)
 
     // On and off
     obj["on"] = airConditionerOn;
+}
+
+void setAirConditionerAttribute(const char *payload)
+{
+    MqttMsg msg = {Topic::ATTRIBUTE_ME_UPLOAD, ""};
+    sprintf(msg.payload, "{\"aircond\":%s}", payload); // Add inside a key to make this a bit neater.
+    xQueueSend(mqttPublishQueue, (void *)&msg, portMAX_DELAY);
+}
+
+void setAirConditionerAttributeInitial()
+{
+    JsonDocument result;
+    airConditionerReplySettings(result);
+    char payload[200];
+    char buf[200];
+    serializeJson(result, payload, sizeof(payload));
+    sprintf(buf, "{\"aircond\":%s}", payload); // Add inside a key to make this a bit neater.
+    // Don't use a queue as that may be full if reconnecting after a long time being disconnected.
+    xSemaphoreTake(mqttMutex, portMAX_DELAY);
+    LOGD("RPC", "Sending air conditioner attributes.");
+    mqtt.publish(Topic::ATTRIBUTE_ME_UPLOAD, buf);
+    xSemaphoreGive(mqttMutex);
 }
 #endif

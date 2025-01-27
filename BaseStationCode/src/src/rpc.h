@@ -95,4 +95,17 @@ bool sendAirConditioner(JsonObject obj, JsonDocument &reply);
  * @param obj object to save to.
  */
 void airConditionerReplySettings(JsonDocument &obj);
+
+/**
+ * @brief Sets the air conditioner attributes. This is useful for some of the buttons.
+ * 
+ * @param payload the serialised JsonDocument set by airConditionerReplySettings().
+ */
+void setAirConditionerAttribute(const char* payload);
+
+/**
+ * @brief Sets the air conditioner attributes without using a queue. This is good for syncing the default settings with Thingsboard on first boot.
+ * 
+ */
+void setAirConditionerAttributeInitial();
 #endif

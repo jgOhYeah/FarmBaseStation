@@ -150,6 +150,7 @@ void mqttConnect()
     LOGI("Networking", "Connected to broker.");
     xSemaphoreGive(mqttMutex);
     setVersionAttribute(); // Needs to publish directy in case queue is full.
+    setAirConditionerAttributeInitial();  // Needs to publish directy in case queue is full.
     deviceManager.connectDevices(); // Publish the connected devices
 }
 
